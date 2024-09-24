@@ -8,7 +8,6 @@ SWEP.Purpose = "This weapon is made for Players and NPCs"
 SWEP.Instructions = "Controls are like a regular weapon."
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.MadeForNPCsOnly = true -- Is this weapon meant to be for NPCs only?
 SWEP.WorldModel = "models/weapons/w_sabrina_spas12.mdl"
 SWEP.HoldType = "shotgun"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------

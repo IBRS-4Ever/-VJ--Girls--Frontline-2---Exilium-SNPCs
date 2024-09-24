@@ -8,7 +8,6 @@ SWEP.Purpose = "This weapon is made for NPCs"
 SWEP.Instructions = ""
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.MadeForNPCsOnly = true -- Is this weapon meant to be for NPCs only?
 SWEP.WorldModel = "models/weapons/w_groza_ots14.mdl"
 SWEP.HoldType = "smg"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -35,34 +34,3 @@ SWEP.Secondary.Automatic = true -- Is it automatic?
 SWEP.Secondary.Ammo = "SMG1_Grenade" -- Ammo type
 
 SWEP.MagazingModel = "models/prop/gfl2_groza_ots14_magazine.mdl"
-
---[[
-function SWEP:CustomOnReload() 
-	local Magazing = ents.Create("prop_physics")
-	Magazing:SetModel("models/prop/gfl2_groza_ots14_magazine.mdl")
-	Magazing:SetPos(self:GetBonePosition(self:LookupBone("magazine")))
-	Magazing:SetAngles(self.Owner:GetAngles()+Angle(0,90,0))
-	Magazing:SetOwner(self)
-	Magazing:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
-
-	if self:Clip1() == 0 then
-		Magazing:SetBodygroup(Magazing:FindBodygroupByName( "bullets" ),1)
-	else
-		Magazing:SetBodygroup(Magazing:FindBodygroupByName( "bullets" ),0)
-	end
-	Magazing:Spawn()
-	Magazing:Activate()
-	self:SetBodygroup(self:FindBodygroupByName( "magazine" ),1)
-	
-	timer.Create( "Mag_Remove"..Magazing:EntIndex(), 15, 1, function() 
-		Magazing:Remove()
-	end)
-	
-	Magazing:CallOnRemove("RemoveTimer",function(Magazing) timer.Remove( "Mag_Remove"..Magazing:EntIndex() ) end)
-end
-
-function SWEP:CustomOnReload_Finish()
-	self:SetBodygroup(self:FindBodygroupByName( "magazine" ),0)
-	return true 
-end
-]]--

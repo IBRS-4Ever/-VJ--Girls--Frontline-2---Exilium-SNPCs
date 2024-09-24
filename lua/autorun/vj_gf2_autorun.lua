@@ -19,10 +19,11 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Groza_Tactical","npc_vj_gf2_groza_tactical",{"weapon_vj_gf2_ots14"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Peritya","npc_vj_gf2_peritya",{"weapon_vj_gf2_pkp_sp"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Qiongjiu","npc_vj_gf2_qiongjiu",{"weapon_vj_gf2_qbz191"},vCat)
-	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nagant","npc_vj_gf2_nagant",{"weapon_vj_gf2_nagant"},vCat)
-	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi","npc_vj_gf2_suomi",{},vCat)
-	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi_MidsummerPixie","npc_vj_gf2_suomi_midsummer_pixie",{},vCat)
+	--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nagant","npc_vj_gf2_nagant",{"weapon_vj_gf2_nagant"},vCat)
+	--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi","npc_vj_gf2_suomi",{},vCat)
+	--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi_MidsummerPixie","npc_vj_gf2_suomi_midsummer_pixie",{},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sabrina","npc_vj_gf2_sabrina",{"weapon_vj_gf2_spas12"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Mechty","npc_vj_gf2_mechty",{"weapon_vj_gf2_g11"},vCat)
 	
 	-- Weapons
 	VJ.AddNPCWeapon("OM50", "weapon_vj_gf2_om50", vCat)
@@ -33,6 +34,7 @@ if VJExists == true then
 	VJ.AddNPCWeapon("PKP-SP", "weapon_vj_gf2_pkp_sp", vCat)
 	VJ.AddNPCWeapon("QBZ-191", "weapon_vj_gf2_qbz191", vCat)
 	VJ.AddNPCWeapon("SPAS-12", "weapon_vj_gf2_spas12", vCat)
+	VJ.AddNPCWeapon("G11", "weapon_vj_gf2_g11", vCat)
 
 	-- Particles --
 	//
@@ -47,6 +49,7 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/groza_tactical.mdl")
 	util.PrecacheModel("models/gf2/peritya_combat.mdl")
 	util.PrecacheModel("models/gf2/qiongjiu_combat.mdl")
+	util.PrecacheModel("models/gf2/mechty_combat.mdl")
 	
 	-- Weapon Models
 	util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -56,6 +59,7 @@ if VJExists == true then
 	util.PrecacheModel("models/weapons/w_peritya_pkp_sp.mdl")
 	util.PrecacheModel("models/weapons/w_qiongjiu_qbz_191.mdl")
 	util.PrecacheModel("models/weapons/w_sabrina_spas12.mdl")
+	util.PrecacheModel("models/weapons/w_mechty_g11.mdl")
 
 	-- Magazine
 	util.PrecacheModel("models/prop/gfl2_nemesis_om50_nemesis_magazine.mdl")
@@ -64,7 +68,8 @@ if VJExists == true then
 	util.PrecacheModel("models/prop/gfl2_groza_ots14_magazine.mdl")
 	util.PrecacheModel("models/prop/gfl2_peritya_pkp_sp_magazine.mdl")
 	util.PrecacheModel("models/prop/gfl2_qiongjiu_qbz_191_magazine.mdl")
-	
+	util.PrecacheModel("models/prop/gfl2_mechty_g11_magazine.mdl")
+
 	-- Misc Models
 	util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_1.mdl")
 	util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_2.mdl")
@@ -80,7 +85,7 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_cheeta_d",50)
 	VJ.AddConVar("vj_gf2_groza_h",300)
 	VJ.AddConVar("vj_gf2_groza_d",70)
-	VJ.AddConVar("vj_gf2_peritya_h",1000)
+	VJ.AddConVar("vj_gf2_peritya_h",500)
 	VJ.AddConVar("vj_gf2_peritya_d",25)
 	VJ.AddConVar("vj_gf2_qiongjiu_h",300)
 	VJ.AddConVar("vj_gf2_qiongjiu_d",60)
@@ -90,6 +95,8 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_suomi_d",20)
 	VJ.AddConVar("vj_gf2_sabrina_h",350)
 	VJ.AddConVar("vj_gf2_sabrina_d",40)
+	VJ.AddConVar("vj_gf2_mechty_h",450)
+	VJ.AddConVar("vj_gf2_mechty_d",20)
 	
 	VJ.AddConVar("vj_gf2_om50_d",150)
 	VJ.AddConVar("vj_gf2_ak_alfa_d",40)
@@ -98,12 +105,13 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_pkp_sp_d",75)
 	VJ.AddConVar("vj_gf2_qbz191_d",50)
 	VJ.AddConVar("vj_gf2_spas12_d",25)
+	VJ.AddConVar("vj_gf2_g11_d",25)
 
 	-- Menu --
 	local AddConvars = {}
 	AddConvars["vj_gf2_drop_magazings"] = 1 -- Drop Magazines?
 	AddConvars["vj_gf2_magazingremovetime"] = 15 -- Magazine Remove time.
-	AddConvars["vj_gf2_death_expressions"] = 1 -- Drop Magazines?
+	AddConvars["vj_gf2_death_expressions"] = 1 -- Death Expressions?
 	for k, v in pairs(AddConvars) do
 		if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 	end

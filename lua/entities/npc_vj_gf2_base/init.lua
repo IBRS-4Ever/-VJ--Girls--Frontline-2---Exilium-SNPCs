@@ -1,29 +1,38 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
 
-ENT.Bleeds = false -- Does the SNPC bleed? (Blood decal, particle, etc.)
-ENT.BloodColor = "red" -- The blood type, this will determine what it should use (decal, particle, etc.)
-	-- Types: "Red" || "Yellow" || "Green" || "Orange" || "Blue" || "Purple" || "White" || "Oil"
-ENT.HasBloodParticle = false -- Does it spawn a particle when damaged?
-ENT.HasBloodPool = false -- Does it have a blood pool?
-ENT.HasBloodDecal = false -- Does it spawn a decal when damaged?
+ENT.Bleeds = false
+ENT.BloodColor = "red"
+ENT.HasBloodParticle = false
+ENT.HasBloodPool = false
+ENT.HasBloodDecal = false
+ENT.HullType = HULL_HUMAN
+---------------------------------------------------------------------------------------------------------------------------------------------
+ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_F", "CLASS_PLAYER_ALLY"}
+ENT.HasMeleeAttack = true
+ENT.HasGrenadeAttack = false
+ENT.FootStepTimeRun = 0.4
+ENT.FootStepTimeWalk = 0.5
 
+ENT.HasOnPlayerSight = true
+ENT.OnPlayerSightDistance = 2000
+ENT.OnPlayerSightDispositionLevel = 1
 ENT.CanFlinch = 2
 ENT.FlinchDamageTypes = {DMG_BLAST,DMG_DISSOLVE}
 ENT.FlinchChance = 1
+ENT.AnimTbl_Flinch = {ACT_FLINCH_PHYSICS}
 ENT.HitGroupFlinching_Values = {{HitGroup = {HITGROUP_HEAD}, Animation = {ACT_FLINCH_HEAD}}, {HitGroup = {HITGROUP_LEFTARM}, Animation = {ACT_FLINCH_LEFTARM}}, {HitGroup = {HITGROUP_RIGHTARM}, Animation = {ACT_FLINCH_RIGHTARM}}, {HitGroup = {HITGROUP_LEFTLEG}, Animation = {ACT_FLINCH_LEFTLEG}}, {HitGroup = {HITGROUP_RIGHTLEG}, Animation = {ACT_FLINCH_RIGHTLEG}}}
 
+ENT.OnPlayerSightSoundChance = 2
+
 function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
-	if dmginfo:IsDamageType(DMG_BULLET) or dmginfo:IsDamageType(DMG_SONIC) or dmginfo:IsDamageType(DMG_SHOCK) or dmginfo:IsDamageType(DMG_BUCKSHOT) or dmginfo:IsDamageType(DMG_SNIPER) then
+	if dmginfo:IsDamageType(DMG_BULLET + DMG_SONIC + DMG_SHOCK + DMG_BUCKSHOT + DMG_SNIPER + DMG_DISSOLVE) then
 		dmginfo:ScaleDamage(0.25)
-	elseif dmginfo:IsDamageType(DMG_DROWN) or dmginfo:IsDamageType(DMG_NERVEGAS) or dmginfo:IsDamageType(DMG_POISON) or dmginfo:IsDamageType(DMG_RADIATION) then
+	elseif dmginfo:IsDamageType(DMG_DROWN + DMG_NERVEGAS + DMG_POISON + DMG_RADIATION) then
 		dmginfo:ScaleDamage(0)
-	elseif dmginfo:IsDamageType(DMG_DISSOLVE) then
-		-- dmginfo:SetDamage(100)
-		dmginfo:ScaleDamage(0.25)
-	elseif dmginfo:IsDamageType(DMG_BLAST) or dmginfo:IsDamageType(DMG_ACID) then
+	elseif dmginfo:IsDamageType(DMG_BLAST + DMG_ACID + DMG_NEVERGIB) then
 		dmginfo:ScaleDamage(0.5)
-	elseif dmginfo:IsDamageType(DMG_BURN) or dmginfo:IsDamageType(DMG_CLUB) or dmginfo:IsDamageType(DMG_SLASH) then
+	elseif dmginfo:IsDamageType(DMG_BURN + DMG_CLUB + DMG_SLASH) then
 		dmginfo:ScaleDamage(0.75)
 	end
 end

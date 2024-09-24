@@ -40,8 +40,6 @@ function ENT:CustomPhysicsObjectOnInitialize(phys)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomOnInitialize()
-	//ParticleEffectAttach("smoke_gib_01", PATTACH_ABSORIGIN_FOLLOW, self, 0)
-	//ParticleEffectAttach("Rocket_Smoke_Trail", PATTACH_ABSORIGIN_FOLLOW, self, 0)
 	util.SpriteTrail( self, 0, Color( 255, 0, 0 ), false, 32, 0, 5, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
 	self:SetModelScale(5)
 end
@@ -57,11 +55,7 @@ function ENT:DeathEffects(data,phys)
 	
 	local effectData = EffectData()
 	effectData:SetOrigin(self:GetPos())
-	//effectData:SetScale(500)
-	//util.Effect("HelicopterMegaBomb", effectData)
-	//util.Effect("ThumperDust", effectData)
 	util.Effect("Explosion", effectData)
-	//util.Effect("VJ_Small_Explosion1", effectData)
 	
 	local expLight = ents.Create("light_dynamic")
 	expLight:SetKeyValue("brightness", "4")

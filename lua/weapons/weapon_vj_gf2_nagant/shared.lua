@@ -8,7 +8,6 @@ SWEP.Purpose = "This weapon is made for NPCs"
 SWEP.Instructions = ""
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.MadeForNPCsOnly = true -- Is this weapon meant to be for NPCs only?
 SWEP.WorldModel = "models/weapons/w_nemesis_om50.mdl"
 SWEP.HoldType = "revolver"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
