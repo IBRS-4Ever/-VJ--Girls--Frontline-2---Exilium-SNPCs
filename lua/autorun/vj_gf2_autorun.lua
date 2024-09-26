@@ -50,6 +50,7 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/peritya_combat.mdl")
 	util.PrecacheModel("models/gf2/qiongjiu_combat.mdl")
 	util.PrecacheModel("models/gf2/mechty_combat.mdl")
+	util.PrecacheModel("models/gf2/nagant_combat.mdl")
 	
 	-- Weapon Models
 	util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -60,6 +61,7 @@ if VJExists == true then
 	util.PrecacheModel("models/weapons/w_qiongjiu_qbz_191.mdl")
 	util.PrecacheModel("models/weapons/w_sabrina_spas12.mdl")
 	util.PrecacheModel("models/weapons/w_mechty_g11.mdl")
+	util.PrecacheModel("models/weapons/w_nagant_m1895_revolver.mdl")
 
 	-- Magazine
 	util.PrecacheModel("models/prop/gfl2_nemesis_om50_nemesis_magazine.mdl")
