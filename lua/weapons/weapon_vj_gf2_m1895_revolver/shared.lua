@@ -17,7 +17,7 @@ SWEP.NPC_ReloadSound = {"Weapon_SMG1.NPC_Reload"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_m1895_revolver_d")
-SWEP.Primary.Force = 25
+SWEP.Primary.Force = 10
 SWEP.Primary.ClipSize = 7
 SWEP.Primary.Ammo = "357"
 SWEP.NPC_CustomSpread = 0
