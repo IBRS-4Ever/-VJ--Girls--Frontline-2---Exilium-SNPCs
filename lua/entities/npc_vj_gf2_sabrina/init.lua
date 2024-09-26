@@ -3,14 +3,13 @@ include('shared.lua')
 ENT.Model = {"models/gf2/sabrina_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_sabrina_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_sabrina_d")
---[[
-ENT.SoundTbl_Idle = {"tololo/idle1.wav","tololo/idle2.wav","tololo/idle3.wav","tololo/idle4.wav","tololo/idle5.wav","tololo/idle6.wav","tololo/idle7.wav","tololo/idle8.wav","tololo/idle9.wav","tololo/idle10.wav"}
-ENT.SoundTbl_OnPlayerSight = {"tololo/player_sight1.wav","tololo/player_sight2.wav","tololo/player_sight3.wav","tololo/player_sight4.wav","tololo/player_sight5.wav","tololo/player_sight6.wav","tololo/player_sight7.wav","tololo/player_sight8.wav","tololo/player_sight9.wav","tololo/player_sight10.wav","tololo/player_sight11.wav","tololo/player_sight12.wav","tololo/player_sight13.wav"}
-ENT.SoundTbl_Alert = {"tololo/alert1.wav","tololo/alert2.wav"}
-ENT.SoundTbl_Pain = {"tololo/hit1.wav","tololo/hit2.wav","tololo/hit3.wav","tololo/hit4.wav","tololo/hit5.wav","tololo/hit6.wav","tololo/hit7.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"tololo/killed_enemy1.wav","tololo/killed_enemy2.wav","tololo/killed_enemy3.wav","tololo/killed_enemy4.wav","tololo/killed_enemy5.wav","tololo/killed_enemy6.wav"}
-ENT.SoundTbl_FollowPlayer = {"tololo/follow1.wav","tololo/follow2.wav","tololo/follow3.wav","tololo/follow4.wav","tololo/follow5.wav","tololo/follow6.wav"}
-ENT.SoundTbl_UnFollowPlayer = {"tololo/unfollow1.wav"}
-ENT.SoundTbl_Death = {"tololo/die1.wav"}
-ENT.SoundTbl_MedicReceiveHeal = {"tololo/get_heal1.wav","tololo/get_heal2.wav","tololo/get_heal3.wav","tololo/get_heal4.wav"}
-]]--
+
+ENT.SoundTbl_Idle = {"vo/jp/sabrina/idle1.wav","vo/jp/sabrina/idle2.wav","vo/jp/sabrina/idle3.wav","vo/jp/sabrina/idle4.wav","vo/jp/sabrina/idle5.wav","vo/jp/sabrina/idle6.wav","vo/jp/sabrina/idle7.wav","vo/jp/sabrina/idle8.wav","vo/jp/sabrina/idle9.wav","vo/jp/sabrina/idle10.wav"}
+ENT.SoundTbl_OnPlayerSight = {"vo/jp/sabrina/player_sight1.wav","vo/jp/sabrina/player_sight2.wav","vo/jp/sabrina/player_sight3.wav","vo/jp/sabrina/player_sight4.wav","vo/jp/sabrina/player_sight5.wav","vo/jp/sabrina/player_sight6.wav","vo/jp/sabrina/player_sight7.wav","vo/jp/sabrina/player_sight8.wav","vo/jp/sabrina/player_sight9.wav","vo/jp/sabrina/player_sight10.wav","vo/jp/sabrina/player_sight11.wav","vo/jp/sabrina/player_sight12.wav","vo/jp/sabrina/player_sight13.wav"}
+--ENT.SoundTbl_Alert = {"vo/jp/sabrina/alert1.wav","vo/jp/sabrina/alert2.wav"}
+ENT.SoundTbl_Pain = {"vo/jp/sabrina/hit1.wav","vo/jp/sabrina/hit2.wav","vo/jp/sabrina/hit3.wav","vo/jp/sabrina/hit4.wav","vo/jp/sabrina/hit5.wav","vo/jp/sabrina/hit6.wav","vo/jp/sabrina/hit7.wav"}
+--ENT.SoundTbl_OnKilledEnemy = {"vo/jp/sabrina/killed_enemy1.wav","vo/jp/sabrina/killed_enemy2.wav","vo/jp/sabrina/killed_enemy3.wav","vo/jp/sabrina/killed_enemy4.wav","vo/jp/sabrina/killed_enemy5.wav","vo/jp/sabrina/killed_enemy6.wav"}
+--ENT.SoundTbl_FollowPlayer = {"vo/jp/sabrina/follow1.wav","vo/jp/sabrina/follow2.wav","vo/jp/sabrina/follow3.wav","vo/jp/sabrina/follow4.wav","vo/jp/sabrina/follow5.wav","vo/jp/sabrina/follow6.wav"}
+--ENT.SoundTbl_UnFollowPlayer = {"vo/jp/sabrina/unfollow1.wav"}
+--ENT.SoundTbl_Death = {"vo/jp/sabrina/die1.wav"}
+--ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/sabrina/get_heal1.wav","vo/jp/sabrina/get_heal2.wav","vo/jp/sabrina/get_heal3.wav","vo/jp/sabrina/get_heal4.wav"}

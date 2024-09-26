@@ -4,19 +4,17 @@ ENT.Model = {"models/gf2/mechty_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_mechty_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_mechty_d")
 
---[[
-ENT.SoundTbl_Idle = {"qiongjiu/idle1.wav","qiongjiu/idle2.wav","qiongjiu/idle3.wav","qiongjiu/idle4.wav","qiongjiu/idle5.wav","qiongjiu/idle6.wav","qiongjiu/idle7.wav","qiongjiu/idle8.wav","qiongjiu/idle9.wav","qiongjiu/idle10.wav"}
+ENT.SoundTbl_Idle = {"vo/jp/mechty/idle1.wav","vo/jp/mechty/idle2.wav","vo/jp/mechty/idle3.wav","vo/jp/mechty/idle4.wav","vo/jp/mechty/idle5.wav","vo/jp/mechty/idle6.wav","vo/jp/mechty/idle7.wav","vo/jp/mechty/idle8.wav","vo/jp/mechty/idle9.wav","vo/jp/mechty/idle10.wav"}
 ENT.SoundTbl_CombatIdle = {""}
-ENT.SoundTbl_OnPlayerSight = {"qiongjiu/player_sight1.wav","qiongjiu/player_sight2.wav","qiongjiu/player_sight3.wav","qiongjiu/player_sight4.wav","qiongjiu/player_sight5.wav","qiongjiu/player_sight6.wav","qiongjiu/player_sight7.wav","qiongjiu/player_sight8.wav","qiongjiu/player_sight9.wav","qiongjiu/player_sight10.wav","qiongjiu/player_sight11.wav","qiongjiu/player_sight12.wav","qiongjiu/player_sight13.wav"}
-ENT.SoundTbl_Alert = {"qiongjiu/alert1.wav","qiongjiu/alert2.wav","qiongjiu/alert3.wav"}
+ENT.SoundTbl_OnPlayerSight = {"vo/jp/mechty/player_sight1.wav","vo/jp/mechty/player_sight2.wav","vo/jp/mechty/player_sight3.wav","vo/jp/mechty/player_sight4.wav","vo/jp/mechty/player_sight5.wav","vo/jp/mechty/player_sight6.wav","vo/jp/mechty/player_sight7.wav","vo/jp/mechty/player_sight8.wav","vo/jp/mechty/player_sight9.wav","vo/jp/mechty/player_sight10.wav","vo/jp/mechty/player_sight11.wav","vo/jp/mechty/player_sight12.wav","vo/jp/mechty/player_sight13.wav"}
+--ENT.SoundTbl_Alert = {"vo/jp/mechty/alert1.wav","vo/jp/mechty/alert2.wav","vo/jp/mechty/alert3.wav"}
 ENT.SoundTbl_OnReceiveOrder = {""}
 ENT.SoundTbl_Suppressing = {""}
 ENT.SoundTbl_GrenadeAttack = {""}
 ENT.SoundTbl_OnGrenadeSight = {""}
-ENT.SoundTbl_Pain = {"qiongjiu/hit1.wav","qiongjiu/hit2.wav","qiongjiu/hit3.wav","qiongjiu/hit4.wav","qiongjiu/hit5.wav","qiongjiu/hit6.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"qiongjiu/killed_enemy1.wav","qiongjiu/killed_enemy2.wav","qiongjiu/killed_enemy3.wav","qiongjiu/killed_enemy4.wav"}
-ENT.SoundTbl_FollowPlayer = {"qiongjiu/follow1.wav","qiongjiu/follow2.wav","qiongjiu/follow3.wav"}
-ENT.SoundTbl_UnFollowPlayer = {"qiongjiu/unfollow1.wav"}
-ENT.SoundTbl_Death = {"qiongjiu/die1.wav"}
-ENT.SoundTbl_MedicReceiveHeal = {"qiongjiu/get_heal1.wav"}
---]]
+ENT.SoundTbl_Pain = {"vo/jp/mechty/hit1.wav","vo/jp/mechty/hit2.wav","vo/jp/mechty/hit3.wav","vo/jp/mechty/hit4.wav","vo/jp/mechty/hit5.wav","vo/jp/mechty/hit6.wav","vo/jp/mechty/hit7.wav","vo/jp/mechty/hit8.wav","vo/jp/mechty/hit9.wav","vo/jp/mechty/hit10.wav","vo/jp/mechty/hit11.wav"}
+--ENT.SoundTbl_OnKilledEnemy = {"vo/jp/mechty/killed_enemy1.wav","vo/jp/mechty/killed_enemy2.wav","vo/jp/mechty/killed_enemy3.wav","vo/jp/mechty/killed_enemy4.wav"}
+--ENT.SoundTbl_FollowPlayer = {"vo/jp/mechty/follow1.wav","vo/jp/mechty/follow2.wav","vo/jp/mechty/follow3.wav"}
+--ENT.SoundTbl_UnFollowPlayer = {"vo/jp/mechty/unfollow1.wav"}
+ENT.SoundTbl_Death = {"vo/jp/mechty/die1.wav","vo/jp/mechty/die2.wav"}
+--ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/mechty/get_heal1.wav"}

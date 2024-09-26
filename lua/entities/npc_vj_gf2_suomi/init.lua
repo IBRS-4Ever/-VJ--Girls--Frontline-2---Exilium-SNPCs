@@ -5,13 +5,13 @@ ENT.StartHealth = GetConVarNumber("vj_gf2_suomi_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_suomi_d")
 
 --[[
-ENT.SoundTbl_Idle = {"tololo/idle1.wav","tololo/idle2.wav","tololo/idle3.wav","tololo/idle4.wav","tololo/idle5.wav","tololo/idle6.wav","tololo/idle7.wav","tololo/idle8.wav","tololo/idle9.wav","tololo/idle10.wav"}
-ENT.SoundTbl_OnPlayerSight = {"tololo/player_sight1.wav","tololo/player_sight2.wav","tololo/player_sight3.wav","tololo/player_sight4.wav","tololo/player_sight5.wav","tololo/player_sight6.wav","tololo/player_sight7.wav","tololo/player_sight8.wav","tololo/player_sight9.wav","tololo/player_sight10.wav","tololo/player_sight11.wav","tololo/player_sight12.wav","tololo/player_sight13.wav"}
-ENT.SoundTbl_Alert = {"tololo/alert1.wav","tololo/alert2.wav"}
-ENT.SoundTbl_Pain = {"tololo/hit1.wav","tololo/hit2.wav","tololo/hit3.wav","tololo/hit4.wav","tololo/hit5.wav","tololo/hit6.wav","tololo/hit7.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"tololo/killed_enemy1.wav","tololo/killed_enemy2.wav","tololo/killed_enemy3.wav","tololo/killed_enemy4.wav","tololo/killed_enemy5.wav","tololo/killed_enemy6.wav"}
-ENT.SoundTbl_FollowPlayer = {"tololo/follow1.wav","tololo/follow2.wav","tololo/follow3.wav","tololo/follow4.wav","tololo/follow5.wav","tololo/follow6.wav"}
-ENT.SoundTbl_UnFollowPlayer = {"tololo/unfollow1.wav"}
-ENT.SoundTbl_Death = {"tololo/die1.wav"}
-ENT.SoundTbl_MedicReceiveHeal = {"tololo/get_heal1.wav","tololo/get_heal2.wav","tololo/get_heal3.wav","tololo/get_heal4.wav"}
+ENT.SoundTbl_Idle = {"vo/jp/suomi/idle1.wav","vo/jp/suomi/idle2.wav","vo/jp/suomi/idle3.wav","vo/jp/suomi/idle4.wav","vo/jp/suomi/idle5.wav","vo/jp/suomi/idle6.wav","vo/jp/suomi/idle7.wav","vo/jp/suomi/idle8.wav","vo/jp/suomi/idle9.wav","vo/jp/suomi/idle10.wav"}
+ENT.SoundTbl_OnPlayerSight = {"vo/jp/suomi/player_sight1.wav","vo/jp/suomi/player_sight2.wav","vo/jp/suomi/player_sight3.wav","vo/jp/suomi/player_sight4.wav","vo/jp/suomi/player_sight5.wav","vo/jp/suomi/player_sight6.wav","vo/jp/suomi/player_sight7.wav","vo/jp/suomi/player_sight8.wav","vo/jp/suomi/player_sight9.wav","vo/jp/suomi/player_sight10.wav","vo/jp/suomi/player_sight11.wav","vo/jp/suomi/player_sight12.wav","vo/jp/suomi/player_sight13.wav"}
+ENT.SoundTbl_Alert = {"vo/jp/suomi/alert1.wav","vo/jp/suomi/alert2.wav"}
+ENT.SoundTbl_Pain = {"vo/jp/suomi/hit1.wav","vo/jp/suomi/hit2.wav","vo/jp/suomi/hit3.wav","vo/jp/suomi/hit4.wav","vo/jp/suomi/hit5.wav","vo/jp/suomi/hit6.wav","vo/jp/suomi/hit7.wav"}
+ENT.SoundTbl_OnKilledEnemy = {"vo/jp/suomi/killed_enemy1.wav","vo/jp/suomi/killed_enemy2.wav","vo/jp/suomi/killed_enemy3.wav","vo/jp/suomi/killed_enemy4.wav","vo/jp/suomi/killed_enemy5.wav","vo/jp/suomi/killed_enemy6.wav"}
+ENT.SoundTbl_FollowPlayer = {"vo/jp/suomi/follow1.wav","vo/jp/suomi/follow2.wav","vo/jp/suomi/follow3.wav","vo/jp/suomi/follow4.wav","vo/jp/suomi/follow5.wav","vo/jp/suomi/follow6.wav"}
+ENT.SoundTbl_UnFollowPlayer = {"vo/jp/suomi/unfollow1.wav"}
+ENT.SoundTbl_Death = {"vo/jp/suomi/die1.wav"}
+ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/suomi/get_heal1.wav","vo/jp/suomi/get_heal2.wav","vo/jp/suomi/get_heal3.wav","vo/jp/suomi/get_heal4.wav"}
 ]]--
