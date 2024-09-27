@@ -380,7 +380,7 @@ local newtable = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		textcol = TextColor
 	},
-
+	--[[]
 	{
 		snd = "vo/jp/tololo/killed_enemy1.wav",
 		subject = CharacterName,
@@ -457,7 +457,7 @@ local newtable = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		textcol = TextColor
 	},
-
+	]]--
 	{
 		snd = "vo/jp/tololo/player_sight1.wav",
 		subject = CharacterName,

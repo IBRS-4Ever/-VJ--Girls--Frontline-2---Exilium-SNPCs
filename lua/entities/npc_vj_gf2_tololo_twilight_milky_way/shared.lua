@@ -1,0 +1,8 @@
+ENT.Base 			= "npc_vj_gf2_tololo"
+ENT.Type 			= "ai"
+ENT.PrintName 		= "Tololo (Twilight Milky Way)"
+ENT.Author 			= "IBRS"
+ENT.Contact 		= ""
+ENT.Purpose 		= "Spawn it and fight with it!"
+ENT.Instructions 	= "Click on the spawnicon to spawn it."
+ENT.Category		= "Girls' Frontline 2"
