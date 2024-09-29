@@ -12,5 +12,5 @@ ENT.SoundTbl_Pain = {"vo/jp/nagant/hit1.wav","vo/jp/nagant/hit2.wav","vo/jp/naga
 --ENT.SoundTbl_OnKilledEnemy = {"vo/jp/nagant/killed_enemy1.wav","vo/jp/nagant/killed_enemy2.wav","vo/jp/nagant/killed_enemy3.wav","vo/jp/nagant/killed_enemy4.wav","vo/jp/nagant/killed_enemy5.wav","vo/jp/nagant/killed_enemy6.wav"}
 --ENT.SoundTbl_FollowPlayer = {"vo/jp/nagant/follow1.wav","vo/jp/nagant/follow2.wav","vo/jp/nagant/follow3.wav","vo/jp/nagant/follow4.wav","vo/jp/nagant/follow5.wav","vo/jp/nagant/follow6.wav"}
 --ENT.SoundTbl_UnFollowPlayer = {"vo/jp/nagant/unfollow1.wav"}
---ENT.SoundTbl_Death = {"vo/jp/nagant/die1.wav"}
+ENT.SoundTbl_Death = {"vo/jp/nagant/die1.wav"}
 --ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/nagant/get_heal1.wav","vo/jp/nagant/get_heal2.wav","vo/jp/nagant/get_heal3.wav","vo/jp/nagant/get_heal4.wav"}

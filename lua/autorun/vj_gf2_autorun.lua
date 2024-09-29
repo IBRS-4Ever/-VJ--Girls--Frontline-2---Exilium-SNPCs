@@ -124,23 +124,23 @@ if VJExists == true then
 	end
 	
 	if CLIENT then
-	local function VJ_GF2MENU_MAIN(Panel)
-		if !game.SinglePlayer() && !LocalPlayer():IsAdmin() then
-			Panel:AddControl("Label", {Text = "#vjbase.menu.general.admin.not"})
-			Panel:ControlHelp("#vjbase.menu.general.admin.only")
-			return
+		local function VJ_GF2MENU_MAIN(Panel)
+			if !game.SinglePlayer() && !LocalPlayer():IsAdmin() then
+				Panel:AddControl("Label", {Text = "#vjbase.menu.general.admin.not"})
+				Panel:ControlHelp("#vjbase.menu.general.admin.only")
+				return
+			end
+			Panel:AddControl( "Label", {Text = "#vjbase.menu.general.admin.only"})
+			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DropMagazines", Command = "vj_gf2_drop_magazings"})
+			Panel:ControlHelp("#vj_gf2_snpcs.settings.DropMagazines.Desc")
+			Panel:AddControl("Slider",{Label = "#vj_gf2_snpcs.settings.MagazineRemoveTimer",min = 5, max = 60, Command = "vj_gf2_magazingremovetime"})
+			Panel:ControlHelp("#vj_gf2_snpcs.settings.MagazineRemoveTimer.Desc")
+			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathExpressions", Command = "vj_gf2_death_expressions"})
+			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathFingerPose", Command = "vj_gf2_death_fingerpose"})
 		end
-		Panel:AddControl( "Label", {Text = "#vjbase.menu.general.admin.only"})
-		Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DropMagazines", Command = "vj_gf2_drop_magazings"})
-		Panel:ControlHelp("#vj_gf2_snpcs.settings.DropMagazines.Desc")
-		Panel:AddControl("Slider",{Label = "#vj_gf2_snpcs.settings.MagazineRemoveTimer",min = 5, max = 60, Command = "vj_gf2_magazingremovetime"})
-		Panel:ControlHelp("#vj_gf2_snpcs.settings.MagazineRemoveTimer.Desc")
-		Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathExpressions", Command = "vj_gf2_death_expressions"})
-		Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathFingerPose", Command = "vj_gf2_death_fingerpose"})
-	end
-	function VJ_ADDTOMENU_GF2()
-		spawnmenu.AddToolMenuOption( "DrVrej", "SNPC Configures", "Girls' Frontline 2: Exilium", "#vj_gf2_snpcs.settings.Title", "", "", VJ_GF2MENU_MAIN, {} )
-	end
+		function VJ_ADDTOMENU_GF2()
+			spawnmenu.AddToolMenuOption( "DrVrej", "SNPC Configures", "Girls' Frontline 2: Exilium", "#vj_gf2_snpcs.settings.Title", "", "", VJ_GF2MENU_MAIN, {} )
+		end
 		hook.Add( "PopulateToolMenu", "VJ_ADDTOMENU_GF2", VJ_ADDTOMENU_GF2 )
 	end
 
