@@ -15,6 +15,7 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo","npc_vj_gf2_tololo",{"weapon_vj_gf2_ak_alfa"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo_TwilightMilkyWay","npc_vj_gf2_tololo_twilight_milky_way",{"weapon_vj_gf2_ak_alfa"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Cheeta","npc_vj_gf2_cheeta",{"weapon_vj_gf2_mp7"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Cheeta_CircuitSparks","npc_vj_gf2_cheeta_circuit_sparks",{"weapon_vj_gf2_mp7"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Groza","npc_vj_gf2_groza",{"weapon_vj_gf2_ots14"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Groza_VioletRain","npc_vj_gf2_groza_violet_rain",{"weapon_vj_gf2_ots14"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Groza_Tactical","npc_vj_gf2_groza_tactical",{"weapon_vj_gf2_ots14"},vCat)
@@ -25,6 +26,7 @@ if VJExists == true then
 	--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi","npc_vj_gf2_suomi",{},vCat)
 	--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi_MidsummerPixie","npc_vj_gf2_suomi_midsummer_pixie",{},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sabrina","npc_vj_gf2_sabrina",{"weapon_vj_gf2_spas12"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sabrina_BerryZabaione","npc_vj_gf2_sabrina_berry_zabaione",{"weapon_vj_gf2_spas12"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Mechty","npc_vj_gf2_mechty",{"weapon_vj_gf2_g11"},vCat)
 	
 	-- Weapons
@@ -45,12 +47,16 @@ if VJExists == true then
 	-- NPC Models
 	util.PrecacheModel("models/gf2/nemesis_combat.mdl")
 	util.PrecacheModel("models/gf2/tololo_combat.mdl")
+	util.PrecacheModel("models/gf2/tololo_twilight_milky_way.mdl")
 	util.PrecacheModel("models/gf2/cheeta_combat.mdl")
+	util.PrecacheModel("models/gf2/cheeta_circuit_sparks.mdl")
 	util.PrecacheModel("models/gf2/groza_combat.mdl")
 	util.PrecacheModel("models/gf2/groza_violet_rain.mdl")
 	util.PrecacheModel("models/gf2/groza_tactical.mdl")
 	util.PrecacheModel("models/gf2/peritya_combat.mdl")
 	util.PrecacheModel("models/gf2/qiongjiu_combat.mdl")
+	util.PrecacheModel("models/gf2/sabrina_combat.mdl")
+	util.PrecacheModel("models/gf2/sabrina_berry_zabaione.mdl")
 	util.PrecacheModel("models/gf2/mechty_combat.mdl")
 	util.PrecacheModel("models/gf2/nagant_combat.mdl")
 	util.PrecacheModel("models/gf2/nagant_summer_pitcher.mdl")
