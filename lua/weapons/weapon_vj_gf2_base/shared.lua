@@ -26,8 +26,6 @@ function SWEP:CustomOnReload()
 
 		if self:Clip1() == 0 then
 			Magazing:SetBodygroup(Magazing:FindBodygroupByName( "bullets" ),1)
-		else
-			Magazing:SetBodygroup(Magazing:FindBodygroupByName( "bullets" ),0)
 		end
 		Magazing:Spawn()
 		Magazing:Activate()

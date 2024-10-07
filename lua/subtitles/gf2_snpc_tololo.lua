@@ -6,13 +6,12 @@ local TextColor = Color(255,255,255,255)
 
 local newtable = { -- add new tables inside here
 	
-	--[[
 	{
 		snd = "vo/jp/tololo/alert1.wav", 
 		subject = CharacterName, 
-		text = "好！", 
+		text = "小心！", 
 		range = 1024, 
-		duration = 1, 
+		duration = 2, 
 		closedcaption = false, 
 		subjectcol = CharacterColor,
 		textcol = TextColor
@@ -21,7 +20,7 @@ local newtable = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/alert2.wav",
 		subject = CharacterName,
-		text = "锵锵，现在登场的就是本世纪最伟大的天才，万能人形奇塔。",
+		text = "即将清除。",
 		range = 1024,
 		duration = 9,
 		closedcaption = false,
@@ -30,31 +29,9 @@ local newtable = { -- add new tables inside here
 	},
 
 	{
-		snd = "vo/jp/tololo/alert3.wav",
-		subject = CharacterName,
-		text = "还要来啊？",
-		range = 1024,
-		duration = 2,
-		closedcaption = false,
-		subjectcol = CharacterColor,
-		textcol = TextColor
-	},
-
-	{
-		snd = "vo/jp/tololo/alert4.wav",
-		subject = CharacterName,
-		text = "差不多得了吧？",
-		range = 1024,
-		duration = 2,
-		closedcaption = false,
-		subjectcol = CharacterColor,
-		textcol = TextColor
-	},
-
-	{
 		snd = "vo/jp/tololo/die1.wav",
 		subject = CharacterName,
-		text = "失、失败了？！",
+		text = "是我没有保护好大家...",
 		range = 1024,
 		duration = 3,
 		closedcaption = false,
@@ -62,28 +39,6 @@ local newtable = { -- add new tables inside here
 		textcol = TextColor
 	},
 
-	{
-		snd = "vo/jp/tololo/die2.wav",
-		subject = CharacterName,
-		text = "一定是，是情报出错了！",
-		range = 1024,
-		duration = 4,
-		closedcaption = false,
-		subjectcol = CharacterColor,
-		textcol = TextColor
-	},
-
-	{
-		snd = "vo/jp/tololo/die3.wav",
-		subject = CharacterName,
-		text = "失、失败了？！一定是，是情报出错了！",
-		range = 1024,
-		duration = 7,
-		closedcaption = false,
-		subjectcol = CharacterColor,
-		textcol = TextColor
-	},
-	]]--
 	{
 		snd = "vo/jp/tololo/follow1.wav",
 		subject = CharacterName,
@@ -105,13 +60,13 @@ local newtable = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		textcol = TextColor
 	},
-	--[[
+
 	{
 		snd = "vo/jp/tololo/follow3.wav",
 		subject = CharacterName,
-		text = "哦，在看什么呢？",
+		text = "引力改变了星的轨迹，将我牵引到这里。托洛洛，入队。",
 		range = 1024,
-		duration = 2,
+		duration = 9,
 		closedcaption = false,
 		subjectcol = CharacterColor,
 		textcol = TextColor
@@ -120,18 +75,7 @@ local newtable = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/follow4.wav",
 		subject = CharacterName,
-		text = "你好，饲养员！",
-		range = 1024,
-		duration = 3,
-		closedcaption = false,
-		subjectcol = CharacterColor,
-		textcol = TextColor
-	},
-
-	{
-		snd = "vo/jp/tololo/follow5.wav",
-		subject = CharacterName,
-		text = "好好好。",
+		text = "能力意味着责任。",
 		range = 1024,
 		duration = 2,
 		closedcaption = false,
@@ -140,9 +84,9 @@ local newtable = { -- add new tables inside here
 	},
 
 	{
-		snd = "vo/jp/tololo/get_heal1.wav",
+		snd = "vo/jp/tololo/follow5.wav",
 		subject = CharacterName,
-		text = "嗯...一般般吧。",
+		text = "我会保护你。",
 		range = 1024,
 		duration = 3,
 		closedcaption = false,
@@ -151,9 +95,31 @@ local newtable = { -- add new tables inside here
 	},
 
 	{
+		snd = "vo/jp/tololo/follow6.wav",
+		subject = CharacterName,
+		text = "不再渺小。",
+		range = 1024,
+		duration = 3,
+		closedcaption = false,
+		subjectcol = CharacterColor,
+		textcol = TextColor
+	},
+
+	{
+		snd = "vo/jp/tololo/get_heal1.wav",
+		subject = CharacterName,
+		text = "谢谢！",
+		range = 1024,
+		duration = 2,
+		closedcaption = false,
+		subjectcol = CharacterColor,
+		textcol = TextColor
+	},
+
+	{
 		snd = "vo/jp/tololo/get_heal2.wav",
 		subject = CharacterName,
-		text = "还、还有吗？全都给我！",
+		text = "星辰般美妙。",
 		range = 1024,
 		duration = 3,
 		closedcaption = false,
@@ -164,9 +130,9 @@ local newtable = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/get_heal3.wav",
 		subject = CharacterName,
-		text = "噢！还不错嘛！",
+		text = "我会珍惜。",
 		range = 1024,
-		duration = 2,
+		duration = 3,
 		closedcaption = false,
 		subjectcol = CharacterColor,
 		textcol = TextColor
@@ -175,7 +141,7 @@ local newtable = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/get_heal4.wav",
 		subject = CharacterName,
-		text = "还不够还不够！",
+		text = "真是意料不到。",
 		range = 1024,
 		duration = 2,
 		closedcaption = false,
@@ -183,17 +149,6 @@ local newtable = { -- add new tables inside here
 		textcol = TextColor
 	},
 
-	{
-		snd = "vo/jp/tololo/get_heal5.wav",
-		subject = CharacterName,
-		text = "现在，本天才是完全形态啦！",
-		range = 1024,
-		duration = 2,
-		closedcaption = false,
-		subjectcol = CharacterColor,
-		textcol = TextColor
-	},
-	]]--
 	{
 		snd = "vo/jp/tololo/hit1.wav",
 		subject = CharacterName,
@@ -380,11 +335,11 @@ local newtable = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		textcol = TextColor
 	},
-	--[[]
+
 	{
 		snd = "vo/jp/tololo/killed_enemy1.wav",
 		subject = CharacterName,
-		text = "呀哈！",
+		text = "碎裂吧。",
 		range = 1024,
 		duration = 2,
 		closedcaption = false,
@@ -395,7 +350,7 @@ local newtable = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/killed_enemy2.wav",
 		subject = CharacterName,
-		text = "拜拜！",
+		text = "逃不掉的。",
 		range = 1024,
 		duration = 2,
 		closedcaption = false,
@@ -406,9 +361,9 @@ local newtable = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/killed_enemy3.wav",
 		subject = CharacterName,
-		text = "哼哼！有我在，就没什么好担心的了！",
+		text = "溅射的星光。",
 		range = 1024,
-		duration = 4,
+		duration = 3,
 		closedcaption = false,
 		subjectcol = CharacterColor,
 		textcol = TextColor
@@ -417,7 +372,7 @@ local newtable = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/killed_enemy4.wav",
 		subject = CharacterName,
-		text = "哼！蜜罐做得到吗？",
+		text = "痛苦将结束。",
 		range = 1024,
 		duration = 2,
 		closedcaption = false,
@@ -426,9 +381,9 @@ local newtable = { -- add new tables inside here
 	},
 
 	{
-		snd = "vo/jp/tololo/unfollow1.wav",
+		snd = "vo/jp/tololo/killed_enemy5.wav",
 		subject = CharacterName,
-		text = "唉？",
+		text = "前路更加明亮了。",
 		range = 1024,
 		duration = 2,
 		closedcaption = false,
@@ -437,27 +392,16 @@ local newtable = { -- add new tables inside here
 	},
 
 	{
-		snd = "vo/jp/tololo/unfollow2.wav",
+		snd = "vo/jp/tololo/killed_enemy6.wav",
 		subject = CharacterName,
-		text = "真是的...",
+		text = "这样一来，就有时间去做自己喜欢的事了。",
 		range = 1024,
-		duration = 2,
+		duration = 4,
 		closedcaption = false,
 		subjectcol = CharacterColor,
 		textcol = TextColor
 	},
 
-	{
-		snd = "vo/jp/tololo/unfollow3.wav",
-		subject = CharacterName,
-		text = "啊？",
-		range = 1024,
-		duration = 2,
-		closedcaption = false,
-		subjectcol = CharacterColor,
-		textcol = TextColor
-	},
-	]]--
 	{
 		snd = "vo/jp/tololo/player_sight1.wav",
 		subject = CharacterName,
@@ -527,7 +471,7 @@ local newtable = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight7.wav",
 		subject = CharacterName,
-		text = "听听莫扎特吧，和我一起。那旋律里，只有快乐与幸福。",
+		text = "听听莫扎特吧，和我一起。那旋律里只有快乐与幸福。",
 		range = 1024,
 		duration = 7,
 		closedcaption = false,
@@ -545,11 +489,11 @@ local newtable = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		textcol = TextColor
 	},
-	--[[
+
 	{
 		snd = "vo/jp/tololo/player_sight9.wav",
 		subject = CharacterName,
-		text = "我说，之前那个素体还有现在这个素体，饲养员更喜欢哪个啊？啊，别在意，我只是随便问问，反正我都是要换回去的。",
+		text = "太空中的星星离我们很远，但有些星星离我很近。",
 		range = 1024,
 		duration = 9,
 		closedcaption = false,
@@ -560,9 +504,9 @@ local newtable = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight10.wav",
 		subject = CharacterName,
-		text = "饲养员，我的新发明，“睁眼拟态器”快完成啦。\n这样饲养员就算困到闭着眼睛工作，只要戴上它，在别人眼里也是睁着眼睛的，很厉害吧。",
+		text = "我们身体里的每一颗原子，都来自一颗已经毁灭的恒星。人类的左手和右手，可能来自于不同的星星...在久远的过去，我们的身体是否曾经属于同一颗星星呢？",
 		range = 1024,
-		duration = 14,
+		duration = 24,
 		closedcaption = false,
 		subjectcol = CharacterColor,
 		textcol = TextColor
@@ -571,7 +515,7 @@ local newtable = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight11.wav",
 		subject = CharacterName,
-		text = "饲养员，工作还要做多久啊，先陪我打一局《特工精英》吧，大不了我等一下陪你工作嘛。",
+		text = "科幻小说是作者理想的表达。我愿意与你共同创作这样的故事，并让它从理想变为现实。",
 		range = 1024,
 		duration = 13,
 		closedcaption = false,
@@ -582,9 +526,9 @@ local newtable = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight12.wav",
 		subject = CharacterName,
-		text = "锵锵，现在登场的就是本世纪最伟大的天才，万能人形奇塔。\n嘿嘿，你有什么愿望我都会帮你...额，尽力实现。",
+		text = "我将给你我所有的关怀与坦诚，谁也不会因此受到伤害。",
 		range = 1024,
-		duration = 19,
+		duration = 10,
 		closedcaption = false,
 		subjectcol = CharacterColor,
 		textcol = TextColor
@@ -593,14 +537,24 @@ local newtable = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight13.wav",
 		subject = CharacterName,
-		text = "您看最新的作战报告了吗？一下子炸掉整个作战区域的我，是不是超厉害？\n啊？差点也炸到基地车，哎呀，那种小事就别在意了。",
+		text = "“我像三千个太阳一般热烈地爱着你”，一位佚名作者的诗句，你喜欢它吗？",
 		range = 1024,
 		duration = 198,
 		closedcaption = false,
 		subjectcol = CharacterColor,
 		textcol = TextColor
 	},
-	]]--
+
+	{
+		snd = "vo/jp/tololo/unfollow1.wav",
+		subject = CharacterName,
+		text = "我和你没有那么熟，请别靠的这么近。",
+		range = 1024,
+		duration = 2,
+		closedcaption = false,
+		subjectcol = CharacterColor,
+		textcol = TextColor
+	},
 }
 
 table.insert(Subtitles_Table,newtable) -- don't touch

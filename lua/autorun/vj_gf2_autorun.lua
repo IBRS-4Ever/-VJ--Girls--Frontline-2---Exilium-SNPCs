@@ -28,6 +28,7 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sabrina","npc_vj_gf2_sabrina",{"weapon_vj_gf2_spas12"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sabrina_BerryZabaione","npc_vj_gf2_sabrina_berry_zabaione",{"weapon_vj_gf2_spas12"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Mechty","npc_vj_gf2_mechty",{"weapon_vj_gf2_g11"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vepley","npc_vj_gf2_vepley",{"weapon_vj_gf2_vepr_12"},vCat)
 	
 	-- Weapons
 	VJ.AddNPCWeapon("OM50", "weapon_vj_gf2_om50", vCat)
@@ -60,6 +61,7 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/mechty_combat.mdl")
 	util.PrecacheModel("models/gf2/nagant_combat.mdl")
 	util.PrecacheModel("models/gf2/nagant_summer_pitcher.mdl")
+	util.PrecacheModel("models/gf2/vepley_combat.mdl")
 	
 	-- Weapon Models
 	util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -71,6 +73,7 @@ if VJExists == true then
 	util.PrecacheModel("models/weapons/w_sabrina_spas12.mdl")
 	util.PrecacheModel("models/weapons/w_mechty_g11.mdl")
 	util.PrecacheModel("models/weapons/w_nagant_m1895_revolver.mdl")
+	util.PrecacheModel("models/weapons/w_vepley_vepr12_sr.mdl")
 
 	-- Magazine
 	util.PrecacheModel("models/prop/gfl2_nemesis_om50_nemesis_magazine.mdl")
@@ -80,6 +83,7 @@ if VJExists == true then
 	util.PrecacheModel("models/prop/gfl2_peritya_pkp_sp_magazine.mdl")
 	util.PrecacheModel("models/prop/gfl2_qiongjiu_qbz_191_magazine.mdl")
 	util.PrecacheModel("models/prop/gfl2_mechty_g11_magazine.mdl")
+	util.PrecacheModel("models/prop/gfl2_vepley_vepr12_sr_magazine.mdl")
 
 	-- Misc Models
 	util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_1.mdl")
@@ -108,6 +112,8 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_sabrina_d",40)
 	VJ.AddConVar("vj_gf2_mechty_h",450)
 	VJ.AddConVar("vj_gf2_mechty_d",20)
+	VJ.AddConVar("vj_gf2_vepley_h",300)
+	VJ.AddConVar("vj_gf2_vepley_d",75)
 	
 	VJ.AddConVar("vj_gf2_om50_d",150)
 	VJ.AddConVar("vj_gf2_ak_alfa_d",40)
@@ -118,6 +124,7 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_m1895_revolver_d",75)
 	VJ.AddConVar("vj_gf2_spas12_d",25)
 	VJ.AddConVar("vj_gf2_g11_d",25)
+	VJ.AddConVar("vj_gf2_vepr_12_d",25)
 
 	-- Menu --
 	local AddConvars = {}

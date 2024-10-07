@@ -1,45 +1,41 @@
 if (!file.Exists("autorun/vj_base_autorun.lua","LUA")) then return end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Base = "weapon_vj_gf2_base"
-SWEP.PrintName = "PKP-SP"
-SWEP.Author = "IBRS"
-SWEP.Contact = ""
-SWEP.Purpose = "This weapon is made for NPCs"
-SWEP.Instructions = ""
+SWEP.PrintName = "VEPR-12"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/weapons/w_peritya_pkp_sp.mdl"
+SWEP.WorldModel = "models/weapons/w_vepley_vepr12_sr.mdl"
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.NPC_NextPrimaryFire = 0.1
-SWEP.NPC_TimeUntilFire = 0.1
-SWEP.NPC_ReloadSound = {"weapons/ar2/npc_ar2_reload.wav"}
-SWEP.NPC_HasSecondaryFire = false
+SWEP.NPC_NextPrimaryFire = 0.6
+SWEP.NPC_ReloadSound = {"weapons/sg/reload.wav"}
+SWEP.NPC_FiringDistanceScale = 0.5
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.Primary.Damage = GetConVarNumber("vj_gf2_pkp_sp_d")
-SWEP.Primary.Force = 5
-SWEP.Primary.ClipSize = 100
-SWEP.Primary.Ammo = "SMG1"
-SWEP.NPC_CustomSpread = 0.5
-SWEP.Primary.Sound = {"weapons/mg/pkp_sp/fire1.wav","weapons/mg/pkp_sp/fire2.wav","weapons/mg/pkp_sp/fire3.wav","weapons/mg/pkp_sp/fire4.wav","weapons/mg/pkp_sp/fire5.wav","weapons/mg/pkp_sp/fire6.wav","weapons/mg/pkp_sp/fire7.wav","weapons/mg/pkp_sp/fire8.wav"}
-SWEP.Primary.DistantSound = {"weapons/mg/pkp_sp/fire_dist1.wav","weapons/mg/pkp_sp/fire_dist2.wav","weapons/mg/pkp_sp/fire_dist3.wav","weapons/mg/pkp_sp/fire_dist4.wav"}
+SWEP.Primary.Damage = GetConVarNumber("vj_gf2_vepr_12_d")
+SWEP.Primary.Force = 1
+SWEP.Primary.NumberOfShots = 12
+SWEP.Primary.ClipSize = 12
+SWEP.Primary.Ammo = "Buckshot"
+SWEP.NPC_CustomSpread = 1
+SWEP.Primary.Sound = {"weapons/sg/vepr12/fire1.wav","weapons/sg/vepr12/fire2.wav","weapons/sg/vepr12/fire3.wav","weapons/sg/vepr12/fire4.wav","weapons/sg/vepr12/fire5.wav","weapons/sg/vepr12/fire6.wav","weapons/sg/vepr12/fire7.wav","weapons/sg/vepr12/fire8.wav"}
+SWEP.Primary.DistantSound = {"weapons/sg/vepr12/fire_dist1.wav","weapons/sg/vepr12/fire_dist2.wav","weapons/sg/vepr12/fire_dist3.wav","weapons/sg/vepr12/fire_dist4.wav"}
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
-SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
+SWEP.PrimaryEffects_ShellType = "VJ_Weapon_ShotgunShell1"
 
-SWEP.MagazingModel = "models/prop/gfl2_peritya_pkp_sp_magazine.mdl"
+SWEP.MagazingModel = "models/prop/gfl2_vepley_vepr12_sr_magazine.mdl"
 
 function SWEP:CustomOnReload() 
 	if DropMagazine && self.MagazingModel != "null" then
 		local Magazing = ents.Create("prop_physics")
 		Magazing:SetModel(self.MagazingModel)
 		Magazing:SetPos(self.Owner:GetBonePosition(self.Owner:LookupBone("ValveBiped.Bip01_R_Hand")))
-		Magazing:SetAngles(self.Owner:GetAngles()+Angle(0,90,0))
+		Magazing:SetAngles(self.Owner:GetAngles()+Angle(0,180,0))
 		Magazing:SetOwner(self)
 		Magazing:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 
 		if self:Clip1() == 0 then
-			self:SetBodygroup(self:FindBodygroupByName( "bullets" ),1)
+			Magazing:SetBodygroup(Magazing:FindBodygroupByName( "shells" ),1)
 		end
 		Magazing:Spawn()
 		Magazing:Activate()
@@ -50,13 +46,5 @@ function SWEP:CustomOnReload()
 		end)
 		
 		Magazing:CallOnRemove("RemoveTimer",function(Magazing) timer.Remove( "Mag_Remove"..Magazing:EntIndex() ) end)
-	end
-end
-
-function SWEP:CustomOnReload_Finish()
-	if DropMagazine && self.MagazingModel != "null" then
-		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),0)
-		self:SetBodygroup(self:FindBodygroupByName( "bullets" ),0)
-		return true 
 	end
 end
