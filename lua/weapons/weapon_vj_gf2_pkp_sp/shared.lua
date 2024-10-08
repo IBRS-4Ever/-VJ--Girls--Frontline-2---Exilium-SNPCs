@@ -2,10 +2,6 @@ if (!file.Exists("autorun/vj_base_autorun.lua","LUA")) then return end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "PKP-SP"
-SWEP.Author = "IBRS"
-SWEP.Contact = ""
-SWEP.Purpose = "This weapon is made for NPCs"
-SWEP.Instructions = ""
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_peritya_pkp_sp.mdl"
@@ -28,35 +24,3 @@ SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_peritya_pkp_sp_magazine.mdl"
-
-function SWEP:CustomOnReload() 
-	if DropMagazine && self.MagazingModel != "null" then
-		local Magazing = ents.Create("prop_physics")
-		Magazing:SetModel(self.MagazingModel)
-		Magazing:SetPos(self.Owner:GetBonePosition(self.Owner:LookupBone("ValveBiped.Bip01_R_Hand")))
-		Magazing:SetAngles(self.Owner:GetAngles()+Angle(0,90,0))
-		Magazing:SetOwner(self)
-		Magazing:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
-
-		if self:Clip1() == 0 then
-			self:SetBodygroup(self:FindBodygroupByName( "bullets" ),1)
-		end
-		Magazing:Spawn()
-		Magazing:Activate()
-		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),1)
-		
-		timer.Create( "Mag_Remove"..Magazing:EntIndex(), MagazineRemoveTimer, 1, function() 
-			Magazing:Remove()
-		end)
-		
-		Magazing:CallOnRemove("RemoveTimer",function(Magazing) timer.Remove( "Mag_Remove"..Magazing:EntIndex() ) end)
-	end
-end
-
-function SWEP:CustomOnReload_Finish()
-	if DropMagazine && self.MagazingModel != "null" then
-		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),0)
-		self:SetBodygroup(self:FindBodygroupByName( "bullets" ),0)
-		return true 
-	end
-end

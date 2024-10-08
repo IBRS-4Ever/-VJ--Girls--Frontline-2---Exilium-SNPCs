@@ -14,6 +14,8 @@ ENT.HasGrenadeAttack = false
 ENT.FootStepTimeRun = 0.4
 ENT.FootStepTimeWalk = 0.5
 
+ENT.HasItemDropsOnDeath = false
+
 ENT.HasOnPlayerSight = true
 ENT.OnPlayerSightDistance = 2000
 ENT.OnPlayerSightDispositionLevel = 1

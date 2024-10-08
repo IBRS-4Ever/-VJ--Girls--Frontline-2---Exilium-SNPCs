@@ -2,8 +2,6 @@ if (!file.Exists("autorun/vj_base_autorun.lua","LUA")) then return end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Base = "weapon_vj_base"
 SWEP.PrintName = "WEAPON BASE"
-SWEP.Author = "IBRS"
-SWEP.Purpose = "WEAPON BASE"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.MadeForNPCsOnly = true -- Is this weapon meant to be for NPCs only?
@@ -26,6 +24,8 @@ function SWEP:CustomOnReload()
 
 		if self:Clip1() == 0 then
 			Magazing:SetBodygroup(Magazing:FindBodygroupByName( "bullets" ),1)
+			Magazing:SetBodygroup(Magazing:FindBodygroupByName( "shells" ),1) -- VEPR-12
+			self:SetBodygroup(self:FindBodygroupByName( "bullets" ),1) -- PKP-SP
 		end
 		Magazing:Spawn()
 		Magazing:Activate()
@@ -42,6 +42,7 @@ end
 function SWEP:CustomOnReload_Finish()
 	if DropMagazine && self.MagazingModel != "null" then
 		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),0)
+		self:SetBodygroup(self:FindBodygroupByName( "bullets" ),0)
 		return true 
 	end
 end

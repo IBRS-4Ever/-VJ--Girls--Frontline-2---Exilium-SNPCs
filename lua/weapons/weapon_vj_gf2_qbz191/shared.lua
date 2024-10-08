@@ -2,10 +2,6 @@ if (!file.Exists("autorun/vj_base_autorun.lua","LUA")) then return end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "QBZ-191"
-SWEP.Author = "IBRS"
-SWEP.Contact = ""
-SWEP.Purpose = "This weapon is made for NPCs"
-SWEP.Instructions = ""
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_qiongjiu_qbz_191.mdl"

@@ -2,10 +2,6 @@ if (!file.Exists("autorun/vj_base_autorun.lua","LUA")) then return end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "MP7"
-SWEP.Author = "IBRS"
-SWEP.Contact = ""
-SWEP.Purpose = "This weapon is made for NPCs"
-SWEP.Instructions = ""
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_cheeta_mp7.mdl"
@@ -18,7 +14,7 @@ SWEP.NPC_ReloadSound = {"weapons/smg/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_mp7_d")
-SWEP.Primary.Force = 5
+SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 20
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.6

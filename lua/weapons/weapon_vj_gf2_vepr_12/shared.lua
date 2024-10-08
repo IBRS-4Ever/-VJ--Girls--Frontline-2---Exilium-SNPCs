@@ -7,7 +7,7 @@ SWEP.Category = "GF2"
 SWEP.WorldModel = "models/weapons/w_vepley_vepr12_sr.mdl"
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.NPC_NextPrimaryFire = 0.6
+SWEP.NPC_NextPrimaryFire = 0.4
 SWEP.NPC_ReloadSound = {"weapons/sg/reload.wav"}
 SWEP.NPC_FiringDistanceScale = 0.5
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -24,27 +24,3 @@ SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_ShotgunShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_vepley_vepr12_sr_magazine.mdl"
-
-function SWEP:CustomOnReload() 
-	if DropMagazine && self.MagazingModel != "null" then
-		local Magazing = ents.Create("prop_physics")
-		Magazing:SetModel(self.MagazingModel)
-		Magazing:SetPos(self.Owner:GetBonePosition(self.Owner:LookupBone("ValveBiped.Bip01_R_Hand")))
-		Magazing:SetAngles(self.Owner:GetAngles()+Angle(0,180,0))
-		Magazing:SetOwner(self)
-		Magazing:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
-
-		if self:Clip1() == 0 then
-			Magazing:SetBodygroup(Magazing:FindBodygroupByName( "shells" ),1)
-		end
-		Magazing:Spawn()
-		Magazing:Activate()
-		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),1)
-		
-		timer.Create( "Mag_Remove"..Magazing:EntIndex(), MagazineRemoveTimer, 1, function() 
-			Magazing:Remove()
-		end)
-		
-		Magazing:CallOnRemove("RemoveTimer",function(Magazing) timer.Remove( "Mag_Remove"..Magazing:EntIndex() ) end)
-	end
-end

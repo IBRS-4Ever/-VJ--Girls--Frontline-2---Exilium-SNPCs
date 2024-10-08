@@ -1,18 +1,13 @@
 if (!file.Exists("autorun/vj_base_autorun.lua","LUA")) then return end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.Base = "weapon_vj_base"
+SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "M1895 Revolver"
-SWEP.Author = "IBRS"
-SWEP.Contact = ""
-SWEP.Purpose = "This weapon is made for NPCs"
-SWEP.Instructions = ""
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_nagant_m1895_revolver.mdl"
 SWEP.HoldType = "revolver"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 1
-SWEP.NPC_TimeUntilFire = 1
 SWEP.NPC_ReloadSound = {"Weapon_SMG1.NPC_Reload"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
