@@ -43,6 +43,10 @@ if VJExists == true then
 	VJ.AddNPCWeapon("G11", "weapon_vj_gf2_g11", vCat)
 	VJ.AddNPCWeapon("Taurus Curve", "weapon_vj_gf2_taurus_curve", vCat)
 
+	-- Items
+	VJ.AddEntity("#vj_gf2_items.Colphne_Healthkit", "sent_gf2_colphne_healthkit", "IBRS", false, 0, true, vCat)
+	VJ.AddEntity("#vj_gf2_items.Colphne_Syringe", "sent_gf2_colphne_syringe", "IBRS", false, 0, true, vCat)
+	VJ.AddEntity("#vj_gf2_items.Colphne_Bandage", "sent_gf2_colphne_bandage", "IBRS", false, 0, true, vCat)
 	-- Particles --
 	//
 	
@@ -97,6 +101,8 @@ if VJExists == true then
 	util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
 	util.PrecacheModel("models/prop/gfl2_peritya_grenade.mdl")
 	util.PrecacheModel("models/prop/gfl2_colphne_bandage.mdl")
+	util.PrecacheModel("models/prop/gfl2_colphne_medkit.mdl")
+	util.PrecacheModel("models/prop/gfl2_colphne_syringe.mdl")
 
 	-- ConVars --
 	VJ.AddConVar("vj_gf2_nemesis_h",200)

@@ -12,7 +12,7 @@ SWEP.NPC_ReloadSound = {"weapons/sg/reload.wav"}
 SWEP.NPC_FiringDistanceScale = 0.5
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_vepr_12_d")
-SWEP.Primary.Force = 1
+SWEP.Primary.Force = 5
 SWEP.Primary.NumberOfShots = 12
 SWEP.Primary.ClipSize = 12
 SWEP.Primary.Ammo = "Buckshot"
@@ -24,3 +24,4 @@ SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_ShotgunShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_vepley_vepr12_sr_magazine.mdl"
+SWEP.MagazineAngle = Angle(0,180,0)

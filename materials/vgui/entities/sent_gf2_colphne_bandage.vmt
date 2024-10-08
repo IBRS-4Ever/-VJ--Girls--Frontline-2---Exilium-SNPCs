@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/entities/sent_gf2_colphne_bandage"
+	"$nolod" 1
+	"$vertexalpha" 1
+	"$vertexcolor" 1
+}

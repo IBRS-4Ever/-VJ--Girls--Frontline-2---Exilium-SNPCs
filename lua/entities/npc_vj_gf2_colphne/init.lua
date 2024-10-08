@@ -15,7 +15,7 @@ ENT.AnimTbl_Medic_GiveHealth = "heal"
 
 ENT.HasItemDropsOnDeath = true
 ENT.ItemDropsOnDeathChance = 1
-ENT.ItemDropsOnDeath_EntityList = {"item_healthkit"}
+ENT.ItemDropsOnDeath_EntityList = {"sent_gf2_colphne_healthkit","sent_gf2_colphne_bandage","sent_gf2_colphne_syringe"}
 
 ENT.SoundTbl_Idle = {"vo/jp/colphne/idle1.wav","vo/jp/colphne/idle2.wav","vo/jp/colphne/idle3.wav","vo/jp/colphne/idle4.wav","vo/jp/colphne/idle5.wav","vo/jp/colphne/idle6.wav","vo/jp/colphne/idle7.wav","vo/jp/colphne/idle8.wav","vo/jp/colphne/idle9.wav","vo/jp/colphne/idle10.wav"}
 ENT.SoundTbl_OnPlayerSight = {"vo/jp/colphne/player_sight1.wav","vo/jp/colphne/player_sight2.wav","vo/jp/colphne/player_sight3.wav","vo/jp/colphne/player_sight4.wav","vo/jp/colphne/player_sight5.wav","vo/jp/colphne/player_sight6.wav","vo/jp/colphne/player_sight7.wav","vo/jp/colphne/player_sight8.wav","vo/jp/colphne/player_sight9.wav","vo/jp/colphne/player_sight10.wav","vo/jp/colphne/player_sight11.wav","vo/jp/colphne/player_sight12.wav","vo/jp/colphne/player_sight13.wav","vo/jp/colphne/player_sight14.wav"}

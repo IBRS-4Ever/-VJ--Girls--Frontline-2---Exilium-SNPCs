@@ -7,6 +7,7 @@ SWEP.Category = "GF2"
 SWEP.MadeForNPCsOnly = true -- Is this weapon meant to be for NPCs only?
 
 SWEP.MagazingModel = "null"
+SWEP.MagazineAngle = Angle(0,90,0)
 
 function SWEP:CustomOnInitialize() 
 	DropMagazine = GetConVar("vj_gf2_drop_magazings"):GetBool()
@@ -18,7 +19,7 @@ function SWEP:CustomOnReload()
 		local Magazing = ents.Create("prop_physics")
 		Magazing:SetModel(self.MagazingModel)
 		Magazing:SetPos(self.Owner:GetBonePosition(self.Owner:LookupBone("ValveBiped.Bip01_R_Hand")))
-		Magazing:SetAngles(self.Owner:GetAngles()+Angle(0,90,0))
+		Magazing:SetAngles(self.Owner:GetAngles()+self.MagazineAngle)
 		Magazing:SetOwner(self)
 		Magazing:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 
