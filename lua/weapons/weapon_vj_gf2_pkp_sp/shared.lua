@@ -13,7 +13,7 @@ SWEP.NPC_ReloadSound = {"weapons/ar2/npc_ar2_reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_pkp_sp_d")
-SWEP.Primary.Force = 5
+SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 100
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.5

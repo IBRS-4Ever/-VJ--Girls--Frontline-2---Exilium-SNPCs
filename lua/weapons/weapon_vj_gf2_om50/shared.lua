@@ -12,7 +12,7 @@ SWEP.NPC_ReloadSound = {"weapons/rf/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_om50_d")
-SWEP.Primary.Force = 10
+SWEP.Primary.Force = 5
 SWEP.Primary.ClipSize = 5
 SWEP.Primary.Ammo = "SniperRound"
 SWEP.Primary.Sound = {"weapons/rf/om50/fire1.wav","weapons/rf/om50/fire2.wav","weapons/rf/om50/fire3.wav","weapons/rf/om50/fire4.wav"}

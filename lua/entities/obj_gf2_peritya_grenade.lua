@@ -4,9 +4,6 @@ if (!file.Exists("autorun/vj_base_autorun.lua","LUA")) then return end
 ENT.Type 			= "anim"
 ENT.Base 			= "obj_vj_projectile_base"
 ENT.PrintName		= "Peritya's Grenade"
-ENT.Author 			= "IBRS"
-ENT.Contact 		= ""
-ENT.Information		= "Peritya's Grenade"
 ENT.Category		= "Projectiles"
 
 if (CLIENT) then

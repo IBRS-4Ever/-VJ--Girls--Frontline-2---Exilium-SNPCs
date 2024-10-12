@@ -16,7 +16,7 @@ SWEP.NPC_SecondaryFireSound = {"weapons/grenade_launcher1.wav"}
 SWEP.NPC_SecondaryFireChance = 4
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_ots14_d")
-SWEP.Primary.Force = 5
+SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 25
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.3
