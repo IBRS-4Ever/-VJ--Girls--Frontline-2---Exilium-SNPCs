@@ -45,6 +45,7 @@ function ENT:CustomOnDeath_AfterCorpseSpawned(dmginfo,hitgroup,GetCorpse)
 					["blink"] = math.Rand(0.5,1),
 					["brows_worry"] = math.Rand(0.5,1),
 					["mouth_surprised"] = math.Rand(0.5,1),
+					["mouth_teeth_angry"] = math.Rand(0.25,0.5),
 					["eyes_look_up"] = math.Rand(0.5,1)
 				}
 		local num_expressions = GetCorpse:GetFlexNum() -- 获取模型的表情数量

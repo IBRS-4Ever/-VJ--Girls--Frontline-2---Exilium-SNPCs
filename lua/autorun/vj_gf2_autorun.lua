@@ -29,6 +29,8 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sabrina_BerryZabaione","npc_vj_gf2_sabrina_berry_zabaione",{"weapon_vj_gf2_spas12"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Mechty","npc_vj_gf2_mechty",{"weapon_vj_gf2_g11"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vepley","npc_vj_gf2_vepley",{"weapon_vj_gf2_vepr_12"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vepley_SparklingWish","npc_vj_gf2_vepley_sparkling_wish",{"weapon_vj_gf2_vepr_12"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vepley_SummerEcho","npc_vj_gf2_vepley_summer_echo",{"weapon_vj_gf2_vepr_12"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Colphne","npc_vj_gf2_colphne",{"weapon_vj_gf2_taurus_curve"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vector","npc_vj_gf2_vector",{"weapon_vj_gf2_kriss_vector"},vCat)
 	
@@ -70,6 +72,8 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/nagant_combat.mdl")
 	util.PrecacheModel("models/gf2/nagant_summer_pitcher.mdl")
 	util.PrecacheModel("models/gf2/vepley_combat.mdl")
+	util.PrecacheModel("models/gf2/vepley_sparkling_wish.mdl")
+	util.PrecacheModel("models/gf2/vepley_summer_echo.mdl")
 	util.PrecacheModel("models/gf2/colphne_combat.mdl")
 	util.PrecacheModel("models/gf2/vector_combat.mdl")
 	
@@ -163,6 +167,9 @@ if VJExists == true then
 		if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 	end
 	
+	VJ.AddClientConVar("vj_gf2_subtitles", 0, "Display Subtitles.")
+	VJ.AddClientConVar("vj_gf2_subtitles_language", "schinese", "Subtitles' language.")
+
 	if CLIENT then
 		local function VJ_GF2MENU_MAIN(Panel)
 			if !game.SinglePlayer() && !LocalPlayer():IsAdmin() then
@@ -177,6 +184,19 @@ if VJExists == true then
 			Panel:ControlHelp("#vj_gf2_snpcs.settings.MagazineRemoveTimer.Desc")
 			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathExpressions", Command = "vj_gf2_death_expressions"})
 			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathFingerPose", Command = "vj_gf2_death_fingerpose"})
+
+			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.EnableSubtitles", Command = "vj_gf2_subtitles"})
+			local gf2_subtitle_language_combo_box = vgui.Create("DComboBox")
+			gf2_subtitle_language_combo_box:SetSize(100, 30)
+			gf2_subtitle_language_combo_box:SetValue("#vjbase.menu.clsettings.labellang")
+			gf2_subtitle_language_combo_box:AddChoice("English *", "english", false, "flags16/us.png")
+			gf2_subtitle_language_combo_box:AddChoice("简体中文", "schinese", false, "flags16/cn.png")
+			gf2_subtitle_language_combo_box.OnSelect = function(data, index, text)
+				RunConsoleCommand("vj_gf2_subtitles_language", gf2_subtitle_language_combo_box:GetOptionData(index))
+				RunConsoleCommand("gf2_subtitles_reload")
+			end
+			Panel:AddPanel(gf2_subtitle_language_combo_box)
+			Panel:ControlHelp("#vj_gf2_snpcs.settings.Subtitles_Language.Desc")
 		end
 		function VJ_ADDTOMENU_GF2()
 			spawnmenu.AddToolMenuOption( "DrVrej", "SNPC Configures", "Girls' Frontline 2: Exilium", "#vj_gf2_snpcs.settings.Title", "", "", VJ_GF2MENU_MAIN, {} )
