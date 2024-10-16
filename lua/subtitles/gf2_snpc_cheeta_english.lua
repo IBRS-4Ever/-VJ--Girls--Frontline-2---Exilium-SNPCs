@@ -13,15 +13,15 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+
 	{
 		snd = "vo/jp/cheeta/alert2.wav",
 		subject = CharacterName,
-		text = "He he, 锵锵，现在登场的就是本世纪最伟大的天才，万能人形奇塔。",
+		text = "And now, What is currently on stage is this century's greatest genius, the all-purpose T-Doll Cheeta!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	]]--
+
 	{
 		snd = "vo/jp/cheeta/alert3.wav",
 		subject = CharacterName,
@@ -29,27 +29,27 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+
 	{
 		snd = "vo/jp/cheeta/alert4.wav",
 		subject = CharacterName,
-		text = "差不多得了吧？",
+		text = "Isn't that about enough?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	]]--
+
 	{
 		snd = "vo/jp/cheeta/die1.wav",
 		subject = CharacterName,
-		text = "I...I Failed?!",
+		text = "F...Failure?!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+
 	{
 		snd = "vo/jp/cheeta/die2.wav",
 		subject = CharacterName,
-		text = "一定是，是情报出错了！",
+		text = "It must be, the information was wrong!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -57,11 +57,11 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/die3.wav",
 		subject = CharacterName,
-		text = "失、失败了？！一定是，是情报出错了！",
+		text = "F...Failure?! It must be, the information was wrong!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	]]--
+
 	{
 		snd = "vo/jp/cheeta/follow1.wav",
 		subject = CharacterName,
@@ -133,15 +133,15 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+
 	{
 		snd = "vo/jp/cheeta/get_heal5.wav",
 		subject = CharacterName,
-		text = "现在，本天才是完全形态啦！",
+		text = "Now, the genius is in her complete form!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	]]--
+
 	{
 		snd = "vo/jp/cheeta/grenade_attack1.wav",
 		subject = CharacterName,
@@ -205,15 +205,15 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+
 	{
 		snd = "vo/jp/cheeta/hit2.wav",
 		subject = CharacterName,
-		text = "切！",
+		text = "Tch!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	]]--
+
 	{
 		snd = "vo/jp/cheeta/hit3.wav",
 		subject = CharacterName,
@@ -221,11 +221,11 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+
 	{
 		snd = "vo/jp/cheeta/hit4.wav",
 		subject = CharacterName,
-		text = "切，碍眼。",
+		text = "Tch, eyesore.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -233,7 +233,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/hit5.wav",
 		subject = CharacterName,
-		text = "麻烦。",
+		text = "Troublesome.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -241,7 +241,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle1.wav",
 		subject = CharacterName,
-		text = "哦，这不是饲养员吗？今天也一副工作好烦好想睡觉的样子呢，哈哈哈。",
+		text = "Oh, isn't this the Breeder? Today you also look like you're so tired of work and just want to sleep, hahaha.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -249,7 +249,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle2.wav",
 		subject = CharacterName,
-		text = "不许盯着我看！变这么矮又不是我愿意的...都怪饲养员的饲养员那家伙！",
+		text = "Don't stare at me! It's not like I wanted to be this short... It's all the Breeder's Breeder's fault!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -257,7 +257,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle3.wav",
 		subject = CharacterName,
-		text = "饲养员有没有见到过蜜罐啊？我、我也不是很在意啦，就是...那家伙可不能先输给别人啊。",
+		text = "Have you seen the honey jar, Breeder? I-I don't really care, it's just... she can't lose to others first.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -265,7 +265,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle4.wav",
 		subject = CharacterName,
-		text = "饲养员，我想要最新的电子游戏，给我买。啊？为啥不行啊？饲养员不就是要照看身为天才的奇塔吗？",
+		text = "Breeder, I want the latest video game. Buy it for me. Huh? Why not? Isn't the Breeder supposed to take care of the genius Cheeta?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -273,7 +273,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle5.wav",
 		subject = CharacterName,
-		text = "唉...跟队长他们开视频会议好累啊，下次开会干脆让我的傀儡坐在屏幕前就好了，再给它加上不管被问到什么都会回答“啊对对对”的功能。",
+		text = "Sigh...Video meetings with the captain and team are so exhausting. Next time, I'll just put a puppet in front of the screen and add a function to make it answer 'Ah yes, yes, yes' to everything.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -281,7 +281,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle6.wav",
 		subject = CharacterName,
-		text = "上次作战我把无人机打下来的事情，饲养员可不要告诉饲养员的饲养员啊，嗯被她知道的话又要啰嗦了。",
+		text = "During the last mission, I shot down the drone. Don't tell your Breeder about it, okay? She'll start nagging again if she finds out.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -289,7 +289,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle7.wav",
 		subject = CharacterName,
-		text = "饲养员饲养员，托洛洛那家伙又不许我进她房间了，好过分啊。嗯，天才，果然都是孤独的呢。",
+		text = "Breeder, Breeder, Tololo isn't letting me into her room again. So unfair. Hm, geniuses really are lonely, aren't they?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -297,7 +297,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle8.wav",
 		subject = CharacterName,
-		text = "切，不就是给引擎加了个超过一定转速就能尖叫的警报嘛，美玲怎么也这么啰嗦。好好好，我知道了，下次一定注意，可以了吧？",
+		text = "Tch, it was just adding an alarm to the engine that screams if it goes over a certain RPM. Mei Ling is so nagging. Fine, fine, I get it. I'll be careful next time, okay?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -305,7 +305,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle9.wav",
 		subject = CharacterName,
-		text = "哈啰，饲养员，嗯，这个反应...忘了我的新名字？奇塔啦，奇塔，那个会吃蜜罐的猎豹，啊呜...啊不对，叫声应该是...啾啾，嘿嘿。",
+		text = "Hello, Breeder, hmm, that reaction... Forgot my new name? It's Cheeta, Cheeta, the cheetah that eats honey jars, ah-woo... oh wait, the sound should be... chirp chirp, hehe.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -313,11 +313,11 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle10.wav",
 		subject = CharacterName,
-		text = "好，这样就准备万全了。我接下来要进行一个非常厉害的实验，这是战胜蜜罐的重要一步，所以饲养员也要来帮忙。",
+		text = "Alright, everything is set. I'm about to conduct a very important experiment. This is a crucial step to defeating the honey jar, so the Breeder must come and help.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	]]--
+
 	{
 		snd = "vo/jp/cheeta/killed_enemy1.wav",
 		subject = CharacterName,
@@ -341,15 +341,15 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+
 	{
 		snd = "vo/jp/cheeta/killed_enemy4.wav",
 		subject = CharacterName,
-		text = "哼！蜜罐做得到吗？",
+		text = "Humph! Can the honey jar do that?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	]]--
+
 	{
 		snd = "vo/jp/cheeta/unfollow1.wav",
 		subject = CharacterName,
@@ -373,11 +373,11 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+
 	{
 		snd = "vo/jp/cheeta/player_sight1.wav",
 		subject = CharacterName,
-		text = "喂，饲养员的眼神...您在想“哇，好矮啊！”对吧？我都看出来了！",
+		text = "Hey, Breeder, that look in your eyes... You're thinking, 'Wow, so short!' right? I can totally see it!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -385,7 +385,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight2.wav",
 		subject = CharacterName,
-		text = "唉，战术什么的无所谓吧，反正我这种天才是不会输的啦。嗯？好好好，我会去看作战资料的，真的。",
+		text = "Sigh, tactics don't really matter, right? After all, a genius like me won't lose. Hmm? Fine, fine, I'll look at the battle data, really.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -393,7 +393,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight3.wav",
 		subject = CharacterName,
-		text = "啊，饲养员，在看什么呢，是不是《一百个创意发明大解析》？我也要看，让我也看看！",
+		text = "Ah, Breeder, what are you looking at? Is it 'A Hundred Creative Invention Analyses'? I want to see it too! Let me take a look!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -401,7 +401,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight4.wav",
 		subject = CharacterName,
-		text = "饲养员别睡了，快起来陪我玩游戏，快起来啦。唉，真是的，人类的身体几乎每天都要休眠，真麻烦，唉，不如让我来做个小道具吧。",
+		text = "Breeder, don't sleep. Get up and play games with me, get up. Sigh, humans' bodies need to rest almost every day, so troublesome. Sigh, let me make a little gadget instead.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -409,7 +409,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight5.wav",
 		subject = CharacterName,
-		text = "饲养员，您在干什么？呵呵，不会是背着我偷偷练习上次那个赛车游戏吧？别天真了，我这样的天才才不会输呢。",
+		text = "Breeder, what are you doing? Hehe, you're not secretly practicing that racing game from last time, are you? Don't be naive, a genius like me will never lose.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -417,7 +417,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight6.wav",
 		subject = CharacterName,
-		text = "那个，饲养员，我们关系很好对吧？我们是朋友对吧？嗯，那我刚刚把仓库炸掉了，饲养员应该也不会生气的对吧？",
+		text = "Well, Breeder, we have a good relationship, right? We are friends, right? Well, I just blew up the warehouse, so the Breeder shouldn't be angry, right?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -425,7 +425,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight7.wav",
 		subject = CharacterName,
-		text = "额...不想上班，嗯？干脆翘掉吧，啊，可是今天有任务安排啊。唉，要不饲养员替我去吧，好不好，好不好嘛？",
+		text = "Uh... don't feel like working. Hmm? How about skipping it? Ah, but there are tasks scheduled for today. Sigh, why don't you go in my place, Breeder? Please?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -433,7 +433,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight8.wav",
 		subject = CharacterName,
-		text = "我的新发明即将闪亮登场了，饲养员，期不期待，期不期待？诶呀，尽情期待，然后来崇拜我吧。",
+		text = "My new invention is about to make its grand debut, Breeder. Are you excited, are you excited? Ah, just look forward to it and come admire me.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -441,7 +441,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight9.wav",
 		subject = CharacterName,
-		text = "我说，之前那个素体还有现在这个素体，饲养员更喜欢哪个啊？啊，别在意，我只是随便问问，反正我都是要换回去的。",
+		text = "So, which body does the Breeder prefer: the previous body or this current one? Ah, never mind, I'm just asking out of curiosity. Anyway, I'll be switching back soon.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -449,7 +449,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight10.wav",
 		subject = CharacterName,
-		text = "饲养员，我的新发明，“睁眼拟态器”快完成啦。这样饲养员就算困到闭着眼睛工作，只要戴上它，在别人眼里也是睁着眼睛的，很厉害吧。",
+		text = "Breeder, my new invention, the 'Open-Eye Mimic Device,' is almost done. This way, even if you're so sleepy that you close your eyes while working, as long as you wear it, it'll look to others like your eyes are open. Isn't that impressive?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -457,7 +457,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight11.wav",
 		subject = CharacterName,
-		text = "饲养员，工作还要做多久啊，先陪我打一局《特工精英》吧，大不了我等一下陪你工作嘛。",
+		text = "Breeder, how much longer do you have to work? Play a round of 'Agent Elite' with me first. I'll help you with your work afterward.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -465,11 +465,11 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight12.wav",
 		subject = CharacterName,
-		text = "锵锵，现在登场的就是本世纪最伟大的天才，万能人形奇塔。嘿嘿，你有什么愿望我都会帮你...额，尽力实现。",
+		text = "And now, What is currently on stage is this century's greatest genius, the all-purpose T-Doll Cheeta! Hehe, whatever wish you have, I'll... do my best to make it come true.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	]]--
+
 	{
 		snd = "vo/jp/cheeta/player_sight13.wav",
 		subject = CharacterName,

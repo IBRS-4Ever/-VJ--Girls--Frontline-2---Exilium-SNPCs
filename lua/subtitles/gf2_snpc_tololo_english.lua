@@ -165,11 +165,11 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+
 	{
 		snd = "vo/jp/tololo/idle1.wav",
 		subject = CharacterName,
-		text = "人类以星辰为象征，寄托无数宏大的思考与规律的幻想。这些作品读来十分震撼。",
+		text = "Humans use the stars as symbols, embodying countless grand thoughts and dreams of order. These works are truly awe-inspiring to read.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -177,7 +177,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/idle2.wav",
 		subject = CharacterName,
-		text = "看似遥远的事务并非遥不可及，人类既然能上太空摘星，也就能实现个人的终极理想。",
+		text = "Seemingly distant matters are not unattainable. Since humans can reach the stars, they can also achieve their ultimate personal ideals.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -185,7 +185,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/idle3.wav",
 		subject = CharacterName,
-		text = "人们睁开眼睛，第一眼看到的就是光。它明亮而温暖，再遥远也令人向往。",
+		text = "When people open their eyes, the first thing they see is light. It’s bright and warm, and no matter how distant it seems, it always inspires longing.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -193,7 +193,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/idle4.wav",
 		subject = CharacterName,
-		text = "遇到麻烦了？一起好好思考寻找解决办法吧。嗯？我也不是完全脱离实际的人呢。",
+		text = "In trouble? Let's think it through together and find a solution. Hmm? I'm not entirely out of touch with reality, you know.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -201,11 +201,11 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/idle5.wav",
 		subject = CharacterName,
-		text = "这是琼玖队长送我的发饰，银银的月光石，有着天空的颜色。",
+		text = "This hair ornament was given to me by Captain Qiongjiu. It's made of silvery moonstone, the color of the sky.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	]]--
+
 	{
 		snd = "vo/jp/tololo/idle6.wav",
 		subject = CharacterName,
@@ -213,11 +213,11 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+
 	{
 		snd = "vo/jp/tololo/idle7.wav",
 		subject = CharacterName,
-		text = "“我们都在阴沟里，但仍有人仰望星空”。这句话很美妙，你觉得呢？",
+		text = "'We are all in the gutter, but some of us are looking at the stars.' It's beautiful indeed. It captures the essence of hope and aspiration amidst the struggles of life. What do you think it means to look at the stars from the gutter?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -225,7 +225,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/idle8.wav",
 		subject = CharacterName,
-		text = "和闪电小姐讨论了许多关于红酒的事情，能够遇到喜欢品酒的人形，实属意外。",
+		text = "Discussed many things about wine with Miss Groza. It was quite a pleasant surprise to meet a T-Doll who enjoys wine tasting.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -233,7 +233,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/idle9.wav",
 		subject = CharacterName,
-		text = "比起浩瀚宇宙，我们当然是渺小的。无论在时间还是空间上，都像尘埃。但也不能因此否认，我们的存在。",
+		text = "Compared to the vast universe, we are indeed small. In both time and space, we are like dust. But this doesn't mean we should deny our existence. Our presence, no matter how small, carries its own significance. How do you find meaning in such an expansive cosmos?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -241,11 +241,11 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/idle10.wav",
 		subject = CharacterName,
-		text = "说起想去的地方...我想走进自己的名字里——塞罗·托洛洛天文台...",
+		text = "Speaking of places I'd like to visit... I want to step into my name—Cerro Tololo Observatory...",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	]]--
+
 	{
 		snd = "vo/jp/tololo/killed_enemy1.wav",
 		subject = CharacterName,
@@ -285,15 +285,15 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+
 	{
 		snd = "vo/jp/tololo/killed_enemy6.wav",
 		subject = CharacterName,
-		text = "这样一来，就有时间去做自己喜欢的事了。",
+		text = "Now, we have more time to do what we love.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	]]--
+
 	{
 		snd = "vo/jp/tololo/player_sight1.wav",
 		subject = CharacterName,
@@ -301,11 +301,11 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+
 	{
 		snd = "vo/jp/tololo/player_sight2.wav",
 		subject = CharacterName,
-		text = "闲暇时间，我会眺望星空，与朋友联系。过去的那些事情告诉我，要学会坦诚与信赖。",
+		text = "In my spare time, I gaze at the stars and connect with friends. Past experiences have taught me the importance of honesty and trust.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -313,7 +313,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight3.wav",
 		subject = CharacterName,
-		text = "美妙的音乐和卓绝的想象，都能让疲劳的大脑得到放松。至于我...我选择啤酒。",
+		text = "Beautiful music and extraordinary imagination can relax a tired mind. As for me... I choose beer.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -321,7 +321,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight4.wav",
 		subject = CharacterName,
-		text = "星辰和心，很像，都足够遥远，足够美丽。当你叩问群星，也就是在叩问自己。",
+		text = "Stars and the heart are much alike—both distant, both beautiful. When you question the stars, you are truly questioning yourself. It’s in this introspection that we find the echoes of our own souls. Ever felt that cosmic connection yourself?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -329,7 +329,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight5.wav",
 		subject = CharacterName,
-		text = "美好与善良理所当然，但并不意味着粗鲁与邪恶就丧失了意义。相互辉映，更能显示彼此的独特。",
+		text = "Beauty and kindness are natural, but that doesn’t mean rudeness and evil are devoid of significance. They reflect each other, highlighting their unique qualities. Duality and contrast make life richer and deeper, don’t they?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -337,7 +337,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight6.wav",
 		subject = CharacterName,
-		text = "要和我一起完成这本星空摄影集吗？我想，它还缺一个主角。",
+		text = "Want to finish this starry sky photography collection with me? I think it still needs a main character.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -345,7 +345,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight7.wav",
 		subject = CharacterName,
-		text = "听听莫扎特吧，和我一起。那旋律里只有快乐与幸福。",
+		text = "Listen to Mozart with me. There's only joy and happiness in those melodies.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -353,7 +353,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight8.wav",
 		subject = CharacterName,
-		text = "当你想喝酒的时候，就可以尽情畅饮。醉了也没关系，我会在你身边。",
+		text = "When you want to drink, you can indulge to your heart's content. It's okay if you get drunk, I'll be by your side.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -361,7 +361,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight9.wav",
 		subject = CharacterName,
-		text = "太空中的星星离我们很远，但有些星星离我很近。",
+		text = "The stars in space are far away from us, but some stars are very close to me.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -369,7 +369,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight10.wav",
 		subject = CharacterName,
-		text = "我们身体里的每一颗原子，都来自一颗已经毁灭的恒星。人类的左手和右手，可能来自于不同的星星...在久远的过去，我们的身体是否曾经属于同一颗星星呢？",
+		text = "Every atom in our bodies comes from a star that has perished. Our left and right hands might come from different stars... In the distant past, could our bodies have belonged to the same star?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -377,7 +377,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight11.wav",
 		subject = CharacterName,
-		text = "科幻小说是作者理想的表达。我愿意与你共同创作这样的故事，并让它从理想变为现实。",
+		text = "Science fiction is an author’s expression of their ideals. I'd love to co-create such a story with you, turning it from an ideal into reality.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -385,7 +385,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight12.wav",
 		subject = CharacterName,
-		text = "我将给你我所有的关怀与坦诚，谁也不会因此受到伤害。",
+		text = "I will give you all my care and honesty, and no one will be hurt because of it.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -393,11 +393,11 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/player_sight13.wav",
 		subject = CharacterName,
-		text = "“我像三千个太阳一般热烈地爱着你”，一位佚名作者的诗句，你喜欢它吗？",
+		text = "'I love you as fiercely as three thousand suns,' says an anonymous poet. It's a powerful line, don't you think?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--]]
+
 	{
 		snd = "vo/jp/tololo/unfollow1.wav",
 		subject = CharacterName,

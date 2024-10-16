@@ -64,7 +64,7 @@ local function GF2_LoadSubtitles()
 			local col = v2.textcol or color_white
 			str = str .. string.format("<clr:%d,%d,%d>%s", col.r, col.g, col.b, v2.text)
 
-			GF2_RegisterSubtitle(v2.snd, str, SoundDuration(v2.snd), v2.range or 1024)
+			GF2_RegisterSubtitle(v2.snd, str, SoundDuration(v2.snd), v2.range or 2048)
 		end
 	end
 end
