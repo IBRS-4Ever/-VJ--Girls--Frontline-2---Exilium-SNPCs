@@ -33,7 +33,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/follow1.wav",
 		subject = CharacterName,
-		text = "yes.",
+		text = "Yes.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -41,7 +41,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/follow2.wav",
 		subject = CharacterName,
-		text = "Ha!",
+		text = "Roger that.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -424,7 +424,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/unfollow2.wav",
 		subject = CharacterName,
-		text = "Taht's it.",
+		text = "That's it.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},

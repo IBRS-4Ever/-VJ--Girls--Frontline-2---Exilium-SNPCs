@@ -41,7 +41,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/follow2.wav",
 		subject = CharacterName,
-		text = "哈！",
+		text = "明白。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
