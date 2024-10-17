@@ -25,7 +25,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/die1.wav",
 		subject = CharacterName,
-		text = "失败...任务...移交成功...原来我...会...是我...",
+		text = "...失败...任务...移交成功...原来我...会...是我...",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},

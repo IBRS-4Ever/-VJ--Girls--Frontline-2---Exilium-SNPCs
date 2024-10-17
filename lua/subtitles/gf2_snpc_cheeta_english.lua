@@ -1,7 +1,7 @@
 GF2_Subtitles_Table = GF2_Subtitles_Table or {} -- don't touch
 
 local CharacterName = "Cheeta: "
-local CharacterColor = Color(174,74,74,255)
+local CharacterColor = Color(175,75,75,255)
 local Language = "english"
 
 local GF2Subtitle = { -- add new tables inside here
