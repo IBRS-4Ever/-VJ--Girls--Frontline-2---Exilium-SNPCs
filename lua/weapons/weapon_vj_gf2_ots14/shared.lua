@@ -7,9 +7,7 @@ SWEP.Category = "GF2"
 SWEP.WorldModel = "models/weapons/w_groza_ots14.mdl"
 SWEP.HoldType = "smg"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.NPC_NextPrimaryFire = 1
-SWEP.NPC_TimeUntilFire = 0.1
-SWEP.NPC_TimeUntilFireExtraTimers = {0.1,0.2,0.3,0.4,0.5,0.6}
+SWEP.NPC_NextPrimaryFire = 0.1
 SWEP.NPC_ReloadSound = {"weapons/ar/reload.wav"}
 SWEP.NPC_HasSecondaryFire = true
 SWEP.NPC_SecondaryFireSound = {"weapons/grenade_launcher1.wav"}
@@ -17,7 +15,7 @@ SWEP.NPC_SecondaryFireChance = 4
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_ots14_d")
 SWEP.Primary.Force = 1
-SWEP.Primary.ClipSize = 25
+SWEP.Primary.ClipSize = 20
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.3
 SWEP.Primary.Sound = {"weapons/ar/ots14/fire1.wav","weapons/ar/ots14/fire2.wav","weapons/ar/ots14/fire3.wav","weapons/ar/ots14/fire4.wav"}

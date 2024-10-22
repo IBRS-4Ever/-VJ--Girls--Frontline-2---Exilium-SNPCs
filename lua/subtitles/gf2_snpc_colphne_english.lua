@@ -173,11 +173,11 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-	--[[
+	
 	{
 		snd = "vo/jp/colphne/idle2.wav",
 		subject = CharacterName,
-		text = "早上好呀，指挥官。哦，看起来精神不佳，提神醒脑的药剂需要吗？完~全~无~害~哦~",
+		text = "Good Morning, Commander! Well... You looks tired, Do you need a refreshing potion? Completely harmless~",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -185,11 +185,11 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/colphne/idle3.wav",
 		subject = CharacterName,
-		text = "啊？都这个时间了，指挥官还在工作吗？劳逸结合可是很重要的，医生的话，要~听~的~呦~",
+		text = "Huh? Is the commander still working at this hour? It's important to combine work and rest, listen to what the doctor says~",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-
+	--[[
 	{
 		snd = "vo/jp/colphne/idle4.wav",
 		subject = CharacterName,
@@ -225,7 +225,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/colphne/idle8.wav",
 		subject = CharacterName,
-		text = "克罗丽科，纳美西丝，记下了，记下了，最佳拍档养成计划。",
+		text = "Charolic, Nemesis, 记下了，记下了，最佳拍档养成计划。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -381,15 +381,15 @@ local GF2Subtitle = { -- add new tables inside here
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-
+	]]--
 	{
 		snd = "vo/jp/colphne/player_sight12.wav",
 		subject = CharacterName,
-		text = "指...指挥官，我可以留下来吗？像现在这样就好。像...现在这样...",
+		text = "Com... Commander, can I stay? Just like now. Just like... now...",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-
+	--[[
 	{
 		snd = "vo/jp/colphne/player_sight13.wav",
 		subject = CharacterName,

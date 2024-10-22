@@ -5,11 +5,11 @@ local CharacterColor = Color(215,90,30,255)
 local Language = "schinese"
 
 local GF2Subtitle = { -- add new tables inside here
-	--[[
+
 	{
 		snd = "vo/jp/groza/alert1.wav", 
 		subject = CharacterName, 
-		text = "好！", 
+		text = "目标确认！", 
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -17,7 +17,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/alert2.wav",
 		subject = CharacterName,
-		text = "锵锵，现在登场的就是本世纪最伟大的天才，万能人形奇塔。",
+		text = "跑得掉吗？",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -25,7 +25,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/alert3.wav",
 		subject = CharacterName,
-		text = "还要来啊？",
+		text = "行动！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -33,7 +33,31 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/alert4.wav",
 		subject = CharacterName,
-		text = "差不多得了吧？",
+		text = "结束吧！",
+		subjectcol = CharacterColor,
+		lang = Language,
+	},
+
+	{
+		snd = "vo/jp/groza/alert5.wav",
+		subject = CharacterName,
+		text = "破绽！",
+		subjectcol = CharacterColor,
+		lang = Language,
+	},
+
+	{
+		snd = "vo/jp/groza/alert6.wav",
+		subject = CharacterName,
+		text = "结束吧！",
+		subjectcol = CharacterColor,
+		lang = Language,
+	},
+
+	{
+		snd = "vo/jp/groza/alert7.wav",
+		subject = CharacterName,
+		text = "还有想反抗的家伙？",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -41,7 +65,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/die1.wav",
 		subject = CharacterName,
-		text = "失、失败了？！",
+		text = "还不够...",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -49,15 +73,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/die2.wav",
 		subject = CharacterName,
-		text = "一定是，是情报出错了！",
-		subjectcol = CharacterColor,
-		lang = Language,
-	},
-
-	{
-		snd = "vo/jp/groza/die3.wav",
-		subject = CharacterName,
-		text = "失、失败了？！一定是，是情报出错了！",
+		text = "撤退！大家都没事吧？休整一下，这是必要的判断，也不会再...",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -65,7 +81,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/follow1.wav",
 		subject = CharacterName,
-		text = "嗯嗯。",
+		text = "我明白。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -73,7 +89,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/follow2.wav",
 		subject = CharacterName,
-		text = "哈！",
+		text = "准备就绪。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -81,7 +97,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/follow3.wav",
 		subject = CharacterName,
-		text = "哦，在看什么呢？",
+		text = "这么匆忙？别担心，闪电，乐意效劳！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -89,15 +105,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/follow4.wav",
 		subject = CharacterName,
-		text = "你好，饲养员！",
-		subjectcol = CharacterColor,
-		lang = Language,
-	},
-
-	{
-		snd = "vo/jp/groza/follow5.wav",
-		subject = CharacterName,
-		text = "好好好。",
+		text = "遇到难以解决的问题了？我很乐意为您分担，指挥官。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -105,7 +113,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/get_heal1.wav",
 		subject = CharacterName,
-		text = "嗯...一般般吧。",
+		text = "变强了？",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -113,7 +121,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/get_heal2.wav",
 		subject = CharacterName,
-		text = "还、还有吗？全都给我！",
+		text = "熟练很多。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -121,7 +129,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/get_heal3.wav",
 		subject = CharacterName,
-		text = "噢！还不错嘛！",
+		text = "非常感谢！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -129,7 +137,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/get_heal4.wav",
 		subject = CharacterName,
-		text = "还不够还不够！",
+		text = "这种感觉...",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -137,7 +145,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/get_heal5.wav",
 		subject = CharacterName,
-		text = "现在，本天才是完全形态啦！",
+		text = "感谢您的及时援助，指挥官！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -145,7 +153,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/grenade_attack1.wav",
 		subject = CharacterName,
-		text = "耶耶！",
+		text = "爆破，开始。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -153,56 +161,15 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/grenade_attack2.wav",
 		subject = CharacterName,
-		text = "啧啧啧。",
+		text = "榴弹发射！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
 
-	{
-		snd = "vo/jp/groza/grenade_attack3.wav",
-		subject = CharacterName,
-		text = "变成碎片吧！",
-		subjectcol = CharacterColor,
-		lang = Language,
-	},
-
-	{
-		snd = "vo/jp/groza/grenade_attack4.wav",
-		subject = CharacterName,
-		text = "看我看我！",
-		subjectcol = CharacterColor,
-		lang = Language,
-	},
-
-	{
-		snd = "vo/jp/groza/grenade_attack5.wav",
-		subject = CharacterName,
-		text = "笨蛋！",
-		subjectcol = CharacterColor,
-		lang = Language,
-	},
-
-	{
-		snd = "vo/jp/groza/grenade_attack6.wav",
-		subject = CharacterName,
-		text = "这里这里！",
-		subjectcol = CharacterColor,
-		lang = Language,
-	},
-
-	{
-		snd = "vo/jp/groza/grenade_attack7.wav",
-		subject = CharacterName,
-		text = "差不多行了！",
-		subjectcol = CharacterColor,
-		lang = Language,
-	},
-	]]--
-	--[[
 	{
 		snd = "vo/jp/groza/hit1.wav",
 		subject = CharacterName,
-		text = "啊！",
+		text = "呃！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -210,7 +177,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/hit2.wav",
 		subject = CharacterName,
-		text = "切！",
+		text = "呵！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -218,7 +185,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/hit3.wav",
 		subject = CharacterName,
-		text = "真无聊...",
+		text = "啊...",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -226,7 +193,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/hit4.wav",
 		subject = CharacterName,
-		text = "切，碍眼。",
+		text = "呃啊...！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -234,7 +201,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/hit5.wav",
 		subject = CharacterName,
-		text = "麻烦。",
+		text = "啊！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -242,23 +209,23 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/hit6.wav",
 		subject = CharacterName,
-		text = "切，碍眼。",
-		subjectcol = CharacterColor,
-		lang = Language,
-	},
-
-	{
-		snd = "vo/jp/groza/hit7.wav",
-		subject = CharacterName,
-		text = "麻烦。",
+		text = "没事...！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
 	
 	{
+		snd = "vo/jp/groza/hit7.wav",
+		subject = CharacterName,
+		text = "没事...呃！",
+		subjectcol = CharacterColor,
+		lang = Language,
+	},
+
+	{
 		snd = "vo/jp/groza/idle1.wav",
 		subject = CharacterName,
-		text = "哦，这不是饲养员吗？今天也一副工作好烦好想睡觉的样子呢，哈哈哈。",
+		text = "是新的任务？嗯，交给我吧。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -266,7 +233,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/idle2.wav",
 		subject = CharacterName,
-		text = "不许盯着我看！变这么矮又不是我愿意的...都怪饲养员的饲养员那家伙！",
+		text = "今天的日程还没有完成，需要现在查阅一下吗，指挥官？",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -274,7 +241,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/idle3.wav",
 		subject = CharacterName,
-		text = "饲养员有没有见到过蜜罐啊？我、我也不是很在意啦，就是...那家伙可不能先输给别人啊。",
+		text = "呃，是...克罗丽科...和纳美西丝？唉，至少在夜晚，希望她们可以保持安静。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -282,7 +249,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/idle4.wav",
 		subject = CharacterName,
-		text = "饲养员，我想要最新的电子游戏，给我买。啊？为啥不行啊？饲养员不就是要照看身为天才的奇塔吗？",
+		text = "指挥官，本次作战计划，请过... 嗯，就算是简单的任务，也不能偷懒哦。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -290,7 +257,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/idle5.wav",
 		subject = CharacterName,
-		text = "唉...跟队长他们开视频会议好累啊，下次开会干脆让我的傀儡坐在屏幕前就好了，再给它加上不管被问到什么都会回答“啊对对对”的功能。",
+		text = "稳定的信赖关系，能够带来完美的胜利。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -298,7 +265,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/idle6.wav",
 		subject = CharacterName,
-		text = "上次作战我把无人机打下来的事情，饲养员可不要告诉饲养员的饲养员啊，嗯被她知道的话又要啰嗦了。",
+		text = "指挥官，美玲在找她的收藏品，您有看... 请问，您背后藏的是...？",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -306,7 +273,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/idle7.wav",
 		subject = CharacterName,
-		text = "饲养员饲养员，托洛洛那家伙又不许我进她房间了，好过分啊。嗯，天才，果然都是孤独的呢。",
+		text = "任务开始，我们出发了，请安心，小队全员，将平安返回。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -314,7 +281,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/idle8.wav",
 		subject = CharacterName,
-		text = "切，不就是给引擎加了个超过一定转速就能尖叫的警报嘛，美玲怎么也这么啰嗦。好好好，我知道了，下次一定注意，可以了吧？",
+		text = "呃...啊，是...指挥官吗，我...我刚刚...不，确认一切机能正常，不必担心。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -322,7 +289,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/idle9.wav",
 		subject = CharacterName,
-		text = "哈啰，饲养员，嗯，这个反应...忘了我的新名字？奇塔啦，奇塔，那个会吃蜜罐的猎豹，啊呜...啊不对，叫声应该是...啾啾，嘿嘿。",
+		text = "本月收支平衡。松了口气？可以轻松一些了，指挥官。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -330,7 +297,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/idle10.wav",
 		subject = CharacterName,
-		text = "好，这样就准备万全了。我接下来要进行一个非常厉害的实验，这是战胜蜜罐的重要一步，所以饲养员也要来帮忙。",
+		text = "是新的定制茶具，指挥官，来休息一下，喝杯茶如何？",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -338,7 +305,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/killed_enemy1.wav",
 		subject = CharacterName,
-		text = "呀哈！",
+		text = "清除完成！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -346,7 +313,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/killed_enemy2.wav",
 		subject = CharacterName,
-		text = "拜拜！",
+		text = "一切都在可控范围内，有我在，指挥官不用担心。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -354,37 +321,13 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/killed_enemy3.wav",
 		subject = CharacterName,
-		text = "哼哼！有我在，就没什么好担心的了！",
-		subjectcol = CharacterColor,
-		lang = Language,
-	},
-
-	{
-		snd = "vo/jp/groza/killed_enemy4.wav",
-		subject = CharacterName,
-		text = "哼！蜜罐做得到吗？",
+		text = "任务结束！各位，保持警惕，在安全返回之前，还不能放松！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
 
 	{
 		snd = "vo/jp/groza/unfollow1.wav",
-		subject = CharacterName,
-		text = "唉？",
-		subjectcol = CharacterColor,
-		lang = Language,
-	},
-
-	{
-		snd = "vo/jp/groza/unfollow2.wav",
-		subject = CharacterName,
-		text = "真是的...",
-		subjectcol = CharacterColor,
-		lang = Language,
-	},
-
-	{
-		snd = "vo/jp/groza/unfollow3.wav",
 		subject = CharacterName,
 		text = "啊？",
 		subjectcol = CharacterColor,
@@ -394,7 +337,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight1.wav",
 		subject = CharacterName,
-		text = "喂，饲养员的眼神...您在想“哇，好矮啊！”对吧？我都看出来了！",
+		text = "嗯？欢迎打扰，那么，悉听遵命，指挥官。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -402,7 +345,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight2.wav",
 		subject = CharacterName,
-		text = "唉，战术什么的无所谓吧，反正我这种天才是不会输的啦。嗯？好好好，我会去看作战资料的，真的。",
+		text = "让我猜猜...这种表情，是不是遇到麻烦了？啊？我以前也说过类似的话？",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -410,7 +353,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight3.wav",
 		subject = CharacterName,
-		text = "啊，饲养员，在看什么呢，是不是《一百个创意发明大解析》？我也要看，让我也看看！",
+		text = "新的作战报告...已经整理完毕，指挥官现在是否需要查看？嗯，目前一切正常，核对之后，指挥官可以好好休息。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -418,7 +361,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight4.wav",
 		subject = CharacterName,
-		text = "饲养员别睡了，快起来陪我玩游戏，快起来啦。唉，真是的，人类的身体几乎每天都要休眠，真麻烦，唉，不如让我来做个小道具吧。",
+		text = "加班工作的深夜，很适合摄入高热量吧，吃一块蛋糕怎么样？放心，这次我有克制自己的创新欲望哦。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -426,7 +369,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight5.wav",
 		subject = CharacterName,
-		text = "饲养员，您在干什么？呵呵，不会是背着我偷偷练习上次那个赛车游戏吧？别天真了，我这样的天才才不会输呢。",
+		text = "这个？是新的烹饪用着装，或许能给食物带来有趣的新风味。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -434,7 +377,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight6.wav",
 		subject = CharacterName,
-		text = "那个，饲养员，我们关系很好对吧？我们是朋友对吧？嗯，那我刚刚把仓库炸掉了，饲养员应该也不会生气的对吧？",
+		text = "夜晚的时间，很适合专注于自己的事情，但是，和指挥官一起度过，也是不错的选择。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -442,7 +385,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight7.wav",
 		subject = CharacterName,
-		text = "额...不想上班，嗯？干脆翘掉吧，啊，可是今天有任务安排啊。唉，要不饲养员替我去吧，好不好，好不好嘛？",
+		text = "指挥官，最近我研究了巧克力蛋糕的新做法，试验后成品看起来不错，向美玲确认过味道，指挥官，请尝尝看。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -450,7 +393,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight8.wav",
 		subject = CharacterName,
-		text = "我的新发明即将闪亮登场了，饲养员，期不期待，期不期待？诶呀，尽情期待，然后来崇拜我吧。",
+		text = "指挥官吃过寿司吗？我最近想试试看，美玲说大米煮熟后的气味很香，烹饪寿司所需要的服装我也已经准备好了，指挥官，请期待最后的作品。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -458,7 +401,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight9.wav",
 		subject = CharacterName,
-		text = "我说，之前那个素体还有现在这个素体，饲养员更喜欢哪个啊？啊，别在意，我只是随便问问，反正我都是要换回去的。",
+		text = "昨晚的温度是 4 摄氏度，对指挥官而言，应该属于寒冷的范畴，指挥官是否有做好保暖措施，新采购的围巾已经到了，就在指挥室，夜晚降温时，我会提醒您系上的。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -466,7 +409,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight10.wav",
 		subject = CharacterName,
-		text = "饲养员，我的新发明，“睁眼拟态器”快完成啦。这样饲养员就算困到闭着眼睛工作，只要戴上它，在别人眼里也是睁着眼睛的，很厉害吧。",
+		text = "指挥官，您看起来很疲惫，要不要躺下睡会儿？嗯？希望我在旁边？好，醒来后的热茶，也会准备好。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -474,7 +417,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight11.wav",
 		subject = CharacterName,
-		text = "饲养员，工作还要做多久啊，先陪我打一局《特工精英》吧，大不了我等一下陪你工作嘛。",
+		text = "可靠...吗？非常感谢，指挥官！对我来说，这是...最高的评价！",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -482,7 +425,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight12.wav",
 		subject = CharacterName,
-		text = "锵锵，现在登场的就是本世纪最伟大的天才，万能人形奇塔。嘿嘿，你有什么愿望我都会帮你...额，尽力实现。",
+		text = "能够被您所信赖，是我的荣幸，今后，也请继续依靠我吧，指挥官。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -490,11 +433,11 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/groza/player_sight13.wav",
 		subject = CharacterName,
-		text = "您看最新的作战报告了吗？一下子炸掉整个作战区域的我，是不是超厉害？啊？差点也炸到基地车，哎呀，那种小事就别在意了。",
+		text = "我...需要什么？指挥官不是一直都知道吗？从我加入指挥官的队伍开始，一直以来，我需要的，指挥官最终都会给我，现在，我只希望，这一刻的平静，能够一直持续下去。",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
-]]--
+
 }
 
 table.insert(GF2_Subtitles_Table,GF2Subtitle) -- don't touch

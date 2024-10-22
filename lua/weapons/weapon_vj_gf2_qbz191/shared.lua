@@ -7,9 +7,7 @@ SWEP.Category = "GF2"
 SWEP.WorldModel = "models/weapons/w_qiongjiu_qbz_191.mdl"
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.NPC_NextPrimaryFire = 1
-SWEP.NPC_TimeUntilFire = 0.1
-SWEP.NPC_TimeUntilFireExtraTimers = {0.1,0.2,0.3,0.4,0.5,0.6}
+SWEP.NPC_NextPrimaryFire = 0.1
 SWEP.NPC_ReloadSound = {"weapons/ar/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------

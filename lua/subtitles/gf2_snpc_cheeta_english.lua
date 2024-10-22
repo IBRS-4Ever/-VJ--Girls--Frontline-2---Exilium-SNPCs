@@ -297,7 +297,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle8.wav",
 		subject = CharacterName,
-		text = "Tch, it was just adding an alarm to the engine that screams if it goes over a certain RPM. Mei Ling is so nagging. Fine, fine, I get it. I'll be careful next time, okay?",
+		text = "Tch, it was just adding an alarm to the engine that screams if it goes over a certain RPM. Mayling is so nagging. Fine, fine, I get it. I'll be careful next time, okay?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},

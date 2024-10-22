@@ -233,7 +233,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/idle9.wav",
 		subject = CharacterName,
-		text = "It's not that Wuqi always follows me, but that I have been following Wuqi all along. Does it sound strange? But this is how I maintain my friendship.",
+		text = "It's not that PP-90 always follows me, but that I have been following PP-90 all along. Does it sound strange? But this is how I maintain my friendship.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
