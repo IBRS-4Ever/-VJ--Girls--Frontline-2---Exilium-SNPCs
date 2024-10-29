@@ -273,7 +273,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/killed_enemy4.wav",
 		subject = CharacterName,
-		text = "You are over.",
+		text = "You are finished.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
