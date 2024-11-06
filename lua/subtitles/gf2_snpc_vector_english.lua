@@ -185,7 +185,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/idle3.wav",
 		subject = CharacterName,
-		text = "I became the leader of the second Team 404 only because... Klukai's accidental misjudgment...",
+		text = "I became the leader of H.I.D.E. 404's Team 2 only because... Klukai's accidental misjudgment...",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
