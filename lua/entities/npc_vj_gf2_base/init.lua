@@ -27,6 +27,20 @@ ENT.HitGroupFlinching_Values = {{HitGroup = {HITGROUP_HEAD}, Animation = {ACT_FL
 
 ENT.OnPlayerSightSoundChance = 2
 
+function ENT:CustomOnInitialize()
+	if GetConVar( "vj_gf2_npc_random_bodygroups" ):GetBool() then
+	local num_bodygroups = self:GetNumBodyGroups()
+	for i = 0, num_bodygroups - 1 do
+		local bodygroup_name = self:GetBodygroupName(i)
+			local num_choices = self:GetBodygroupCount(i)
+			if num_choices > 1 then
+				local choice = math.random(0, num_choices - 1)
+				self:SetBodygroup(i, choice)
+			end
+		end
+	end
+end
+
 function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
 	if dmginfo:IsDamageType(DMG_BULLET + DMG_SONIC + DMG_SHOCK + DMG_BUCKSHOT + DMG_SNIPER + DMG_DISSOLVE) then
 		dmginfo:ScaleDamage(0.25)

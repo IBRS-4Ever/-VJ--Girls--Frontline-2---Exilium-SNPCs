@@ -166,6 +166,7 @@ if VJExists == true then
 	AddConvars["vj_gf2_magazingremovetime"] = 15 -- Magazine Remove time.
 	AddConvars["vj_gf2_death_expressions"] = 1 -- Death Expressions?
 	AddConvars["vj_gf2_death_fingerpose"] = 1 -- Death Finger Pose?
+	AddConvars["vj_gf2_npc_random_bodygroups"] = 0 -- Random Bodygroup for SNPCs?
 	for k, v in pairs(AddConvars) do
 		if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 	end
@@ -180,6 +181,7 @@ if VJExists == true then
 				Panel:ControlHelp("#vjbase.menu.general.admin.only")
 				return
 			end
+			Panel:AddControl( "Label", {Text = "#vjbase.menu.svsettings"})
 			Panel:AddControl( "Label", {Text = "#vjbase.menu.general.admin.only"})
 			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DropMagazines", Command = "vj_gf2_drop_magazings"})
 			Panel:ControlHelp("#vj_gf2_snpcs.settings.DropMagazines.Desc")
@@ -187,7 +189,10 @@ if VJExists == true then
 			Panel:ControlHelp("#vj_gf2_snpcs.settings.MagazineRemoveTimer.Desc")
 			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathExpressions", Command = "vj_gf2_death_expressions"})
 			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathFingerPose", Command = "vj_gf2_death_fingerpose"})
+			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_RandomBodygroups", Command = "vj_gf2_npc_random_bodygroups"})
 
+			Panel:AddControl( "Label", {Text = ""})
+			Panel:AddControl( "Label", {Text = "#vjbase.menu.clsettings"})
 			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.EnableSubtitles", Command = "vj_gf2_subtitles"})
 			local gf2_subtitle_language_combo_box = vgui.Create("DComboBox")
 			gf2_subtitle_language_combo_box:SetSize(100, 30)

@@ -5,7 +5,7 @@ SWEP.PrintName = "KRISS Vector"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_vector_kriss_vector.mdl"
-SWEP.HoldType = "smg"
+SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.1
 SWEP.NPC_ReloadSound = {"weapons/smg/reload.wav"}
@@ -24,3 +24,28 @@ SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_vector_kriss_vector_magazine.mdl"
+
+--[[
+SWEP.MuzzleDevice = false 
+SWEP.ForeGrip = false 
+
+function SWEP:CustomOnInitialize() 
+	DropMagazine = GetConVar("vj_gf2_drop_magazings"):GetBool()
+	MagazineRemoveTimer = GetConVar("vj_gf2_magazingremovetime"):GetInt()
+	
+	if math.random(0,1) == 1 then
+		self.MuzzleDevice = true
+		self:SetBodygroup(self:FindBodygroupByName( "muzzle_device" ),1)
+		self.Primary.Sound = {"weapons/smg/kriss_vector/fire_silenced1.wav","weapons/smg/kriss_vector/fire_silenced2.wav","weapons/smg/kriss_vector/fire_silenced3.wav","weapons/smg/kriss_vector/fire_silenced4.wav"}
+		self.Primary.HasDistantSound = false
+		self.PrimaryEffects_MuzzleFlash = false
+		self.PrimaryEffects_SpawnDynamicLight = false
+	end
+
+	local ForeGrip = math.random(0,1)
+	self:SetBodygroup(self:FindBodygroupByName( "foregrip" ),ForeGrip)
+	if ForeGrip == 1 then
+		self.HoldType = "smg"
+	end
+end
+]]--
