@@ -178,12 +178,8 @@ if VJExists == true then
 
 	if CLIENT then
 		local function VJ_GF2MENU_MAIN(Panel)
-			if !game.SinglePlayer() && !LocalPlayer():IsAdmin() then
-				Panel:AddControl("Label", {Text = "#vjbase.menu.general.admin.not"})
-				Panel:ControlHelp("#vjbase.menu.general.admin.only")
-				return
-			end
-			Panel:AddControl( "Label", {Text = "#vjbase.menu.svsettings"})
+			if game.SinglePlayer() or LocalPlayer():IsAdmin() then
+				Panel:AddControl( "Label", {Text = "#vjbase.menu.svsettings"})
 			Panel:AddControl( "Label", {Text = "#vjbase.menu.general.admin.only"})
 			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DropMagazines", Command = "vj_gf2_drop_magazings"})
 			Panel:ControlHelp("#vj_gf2_snpcs.settings.DropMagazines.Desc")
@@ -192,7 +188,10 @@ if VJExists == true then
 			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathExpressions", Command = "vj_gf2_death_expressions"})
 			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathFingerPose", Command = "vj_gf2_death_fingerpose"})
 			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_RandomBodygroups", Command = "vj_gf2_npc_random_bodygroups"})
-
+			else
+				Panel:AddControl("Label", {Text = "#vjbase.menu.general.admin.not"})
+				Panel:ControlHelp("#vjbase.menu.general.admin.only")
+			end
 			Panel:AddControl( "Label", {Text = ""})
 			Panel:AddControl( "Label", {Text = "#vjbase.menu.clsettings"})
 			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.EnableSubtitles", Command = "vj_gf2_subtitles"})
