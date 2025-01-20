@@ -25,7 +25,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/alert3.wav",
 		subject = CharacterName,
-		text = "There's More?",
+		text = "More coming, huh ...?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -41,7 +41,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/die1.wav",
 		subject = CharacterName,
-		text = "F...Failure?!",
+		text = "F-Failed ?!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -49,7 +49,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/die2.wav",
 		subject = CharacterName,
-		text = "It must be, the information was wrong!",
+		text = "It must be ... because the intel was wrong!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -57,7 +57,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/die3.wav",
 		subject = CharacterName,
-		text = "F...Failure?! It must be, the information was wrong!",
+		text = "F-Failed ?! It must be ... because the intel was wrong!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -89,7 +89,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/follow4.wav",
 		subject = CharacterName,
-		text = "Hello! Breeder!",
+		text = "Hello! Caretaker!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -97,7 +97,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/follow5.wav",
 		subject = CharacterName,
-		text = "yes, yes.",
+		text = "Okay, okay!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -113,7 +113,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/get_heal2.wav",
 		subject = CharacterName,
-		text = "M-More? I want all!",
+		text = "M-More? Give it all to me!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -121,7 +121,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/get_heal3.wav",
 		subject = CharacterName,
-		text = "Oh! Not Bad!",
+		text = "Uwoh-not bad!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -129,7 +129,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/get_heal4.wav",
 		subject = CharacterName,
-		text = "I want more!",
+		text = "Not enough, not enough!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -137,7 +137,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/get_heal5.wav",
 		subject = CharacterName,
-		text = "Now, the genius is in her complete form!",
+		text = "This genius has reached her ideal form!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -145,7 +145,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/grenade_attack1.wav",
 		subject = CharacterName,
-		text = "Yeah!",
+		text = "Yay~ Yay-!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -153,7 +153,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/grenade_attack2.wav",
 		subject = CharacterName,
-		text = "Well well well.",
+		text = "Meh~",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -161,7 +161,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/grenade_attack3.wav",
 		subject = CharacterName,
-		text = "Turn into fragments!",
+		text = "Shatter into pieces!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -169,7 +169,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/grenade_attack4.wav",
 		subject = CharacterName,
-		text = "Take this!",
+		text = "Watch me!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -177,7 +177,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/grenade_attack5.wav",
 		subject = CharacterName,
-		text = "Idiot!",
+		text = "Stuuupid!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -185,7 +185,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/grenade_attack6.wav",
 		subject = CharacterName,
-		text = "Over here!",
+		text = "Over-here!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -193,7 +193,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/grenade_attack7.wav",
 		subject = CharacterName,
-		text = "You are going down!",
+		text = "That should be enough, right?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -217,7 +217,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/hit3.wav",
 		subject = CharacterName,
-		text = "Boring...",
+		text = "How disappointing.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -225,7 +225,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/hit4.wav",
 		subject = CharacterName,
-		text = "Tch, eyesore.",
+		text = "Tsk-What en eyesore.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -241,7 +241,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle1.wav",
 		subject = CharacterName,
-		text = "Oh, isn't this the Breeder? Today you also look like you're so tired of work and just want to sleep, hahaha.",
+		text = "Oh, isn't this the Caretaker? Today you also look like you're so tired of work and just want to sleep, hahaha.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -249,7 +249,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle2.wav",
 		subject = CharacterName,
-		text = "Don't stare at me! It's not like I wanted to be this short... It's all the Breeder's Breeder's fault!",
+		text = "Don't stare at me! It's not like I wanted to be this short... It's all the Caretaker's Caretaker's fault!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -257,7 +257,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle3.wav",
 		subject = CharacterName,
-		text = "Have you seen the honey jar, Breeder? I-I don't really care, it's just... she can't lose to others first.",
+		text = "Have you seen the Honey Badger, Caretaker? I-I don't really care, it's just... she can't lose to others first.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -265,7 +265,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle4.wav",
 		subject = CharacterName,
-		text = "Breeder, I want the latest video game. Buy it for me. Huh? Why not? Isn't the Breeder supposed to take care of the genius Cheeta?",
+		text = "Caretaker, I want the latest video game, buy it for me -! Huh? Why not? Isn't Caretaker supposed to take care of the genius Cheeta?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -273,7 +273,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle5.wav",
 		subject = CharacterName,
-		text = "Sigh...Video meetings with the captain and team are so exhausting. Next time, I'll just put a puppet in front of the screen and add a function to make it answer 'Ah yes, yes, yes' to everything.",
+		text = "Uweh ... video meetings with the Leader and the others are exhausting ... Next time, I'll just put a dummy in front of the screen! And I'll program it to respond with 'Oh, yes, yes, yes' no matter what it's asked!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -281,7 +281,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle6.wav",
 		subject = CharacterName,
-		text = "During the last mission, I shot down the drone. Don't tell your Breeder about it, okay? She'll start nagging again if she finds out.",
+		text = "Hey, do me a solid and keep your mouth shut about that drone I blasted during our last mission, okay? If Caretaker's Caretaker finds out, she'll go into lecture mode again!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -289,7 +289,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle7.wav",
 		subject = CharacterName,
-		text = "Breeder, Breeder, Tololo isn't letting me into her room again. So unfair. Hm, geniuses really are lonely, aren't they?",
+		text = "Caretaker, Caretaker, Tololo isn't letting me into her room again. So unfair. Hm, geniuses really are lonely, aren't they?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -305,7 +305,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle9.wav",
 		subject = CharacterName,
-		text = "Hello, Breeder, hmm, that reaction... Forgot my new name? It's Cheeta, Cheeta, the cheetah that eats honey jars, ah-woo... oh wait, the sound should be... chirp chirp, hehe.",
+		text = "Hello, Caretaker~ Huh? Based on your reaction, you forgot my new name? It's CHEETA! Yes, Cheeta, like the cheetah who can take down honey badgers! Gao! Oh, wait ... the sound should be 'chirp-chirp', right?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -313,7 +313,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/idle10.wav",
 		subject = CharacterName,
-		text = "Alright, everything is set. I'm about to conduct a very important experiment. This is a crucial step to defeating the honey jar, so the Breeder must come and help.",
+		text = "Alright! Everything is set. Now, I'm going to conduct a very impressive experiment-this is an important step in defeating Honey Badger, so you'll have to help me, Caretaker!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -329,7 +329,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/killed_enemy2.wav",
 		subject = CharacterName,
-		text = "Bye-Bye!",
+		text = "Byebye-",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -337,7 +337,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/killed_enemy3.wav",
 		subject = CharacterName,
-		text = "Hmph! With me here, there's nothing to worry about!",
+		text = "Hmmm~ There's nothing to worry about with me around!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -345,7 +345,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/killed_enemy4.wav",
 		subject = CharacterName,
-		text = "Humph! Can the honey jar do that?",
+		text = "Humph! Can the Honey Badger do that?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -361,7 +361,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/unfollow2.wav",
 		subject = CharacterName,
-		text = "Well...",
+		text = "What a hassle.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -377,7 +377,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight1.wav",
 		subject = CharacterName,
-		text = "Hey, Breeder, that look in your eyes... You're thinking, 'Wow, so short!' right? I can totally see it!",
+		text = "Hey, Caretaker, that look in your eyes... You're thinking, 'Wow, so short!' right? I can totally see it!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -393,7 +393,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight3.wav",
 		subject = CharacterName,
-		text = "Ah, Breeder, what are you looking at? Is it 'A Hundred Creative Invention Analyses'? I want to see it too! Let me take a look!",
+		text = "Ah, Caretaker, what are you looking at? Is it 'A Hundred Creative Invention Analyses'? I want to see it too! Let me take a look!",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -401,7 +401,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight4.wav",
 		subject = CharacterName,
-		text = "Breeder, don't sleep. Get up and play games with me, get up. Sigh, humans' bodies need to rest almost every day, so troublesome. Sigh, let me make a little gadget instead.",
+		text = "Caretaker, don't sleep. Get up and play games with me, get up. Sigh, humans' bodies need to rest almost every day, so troublesome. Sigh, let me make a little gadget instead.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -409,7 +409,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight5.wav",
 		subject = CharacterName,
-		text = "Breeder, what are you doing? Hehe, you're not secretly practicing that racing game from last time, are you? Don't be naive, a genius like me will never lose.",
+		text = "Caretaker, what are you doing? Hehe, you're not secretly practicing that racing game from last time, are you? Don't be naive, a genius like me will never lose.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -417,7 +417,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight6.wav",
 		subject = CharacterName,
-		text = "Well, Breeder, we have a good relationship, right? We are friends, right? Well, I just blew up the warehouse, so the Breeder shouldn't be angry, right?",
+		text = "Well, Caretaker, we have a good relationship, right? We are friends, right? Well, I just blew up the warehouse, so the Caretaker shouldn't be angry, right?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -425,7 +425,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight7.wav",
 		subject = CharacterName,
-		text = "Uh... don't feel like working. Hmm? How about skipping it? Ah, but there are tasks scheduled for today. Sigh, why don't you go in my place, Breeder? Please?",
+		text = "Uh... don't feel like working. Hmm? How about skipping it? Ah, but there are tasks scheduled for today. Sigh, why don't you go in my place, Caretaker? Please?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -433,7 +433,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight8.wav",
 		subject = CharacterName,
-		text = "My new invention is about to make its grand debut, Breeder. Are you excited, are you excited? Ah, just look forward to it and come admire me.",
+		text = "My new invention is about to make its grand debut, Caretaker. Are you excited, are you excited? Ah, just look forward to it and come admire me.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -441,7 +441,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight9.wav",
 		subject = CharacterName,
-		text = "So, which body does the Breeder prefer: the previous body or this current one? Ah, never mind, I'm just asking out of curiosity. Anyway, I'll be switching back soon.",
+		text = "So, which body does the Caretaker prefer: the previous body or this current one? Ah, never mind, I'm just asking out of curiosity. Anyway, I'll be switching back soon.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -449,7 +449,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight10.wav",
 		subject = CharacterName,
-		text = "Breeder, my new invention, the 'Open-Eye Mimic Device,' is almost done. This way, even if you're so sleepy that you close your eyes while working, as long as you wear it, it'll look to others like your eyes are open. Isn't that impressive?",
+		text = "Caretaker, my new invention, the 'Open-Eye Mimic Device,' is almost done. This way, even if you're so sleepy that you close your eyes while working, as long as you wear it, it'll look to others like your eyes are open. Isn't that impressive?",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},
@@ -457,7 +457,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/cheeta/player_sight11.wav",
 		subject = CharacterName,
-		text = "Breeder, how much longer do you have to work? Play a round of 'Agent Elite' with me first. I'll help you with your work afterward.",
+		text = "Caretaker, how much longer do you have to work? Play a round of 'Agent Elite' with me first. I'll help you with your work afterward.",
 		subjectcol = CharacterColor,
 		lang = Language,
 	},

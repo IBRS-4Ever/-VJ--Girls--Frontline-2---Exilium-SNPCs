@@ -17,6 +17,7 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Cheeta","npc_vj_gf2_cheeta",{"weapon_vj_gf2_mp7"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Cheeta_CircuitSparks","npc_vj_gf2_cheeta_circuit_sparks",{"weapon_vj_gf2_mp7"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Groza","npc_vj_gf2_groza",{"weapon_vj_gf2_ots14"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Groza_DawnOfBattle","npc_vj_gf2_groza_dawn_of_battle",{"weapon_vj_gf2_ots14"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Groza_VioletRain","npc_vj_gf2_groza_violet_rain",{"weapon_vj_gf2_ots14"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Groza_Tactical","npc_vj_gf2_groza_tactical",{"weapon_vj_gf2_ots14"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Peritya","npc_vj_gf2_peritya",{"weapon_vj_gf2_pkp_sp"},vCat)
@@ -33,6 +34,7 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vepley_SparklingWish","npc_vj_gf2_vepley_sparkling_wish",{"weapon_vj_gf2_vepr_12"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vepley_SummerEcho","npc_vj_gf2_vepley_summer_echo",{"weapon_vj_gf2_vepr_12"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Colphne","npc_vj_gf2_colphne",{"weapon_vj_gf2_taurus_curve"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Colphne_Tactical","npc_vj_gf2_colphne_tactical",{"weapon_vj_gf2_taurus_curve"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vector","npc_vj_gf2_vector",{"weapon_vj_gf2_kriss_vector"},vCat)
 	
 	-- Weapons
@@ -66,6 +68,7 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/cheeta_combat.mdl")
 	util.PrecacheModel("models/gf2/cheeta_circuit_sparks.mdl")
 	util.PrecacheModel("models/gf2/groza_combat.mdl")
+	util.PrecacheModel("models/gf2/groza_dawn_of_battle.mdl")
 	util.PrecacheModel("models/gf2/groza_violet_rain.mdl")
 	util.PrecacheModel("models/gf2/groza_tactical.mdl")
 	util.PrecacheModel("models/gf2/peritya_combat.mdl")
@@ -80,6 +83,7 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/vepley_sparkling_wish.mdl")
 	util.PrecacheModel("models/gf2/vepley_summer_echo.mdl")
 	util.PrecacheModel("models/gf2/colphne_combat.mdl")
+	util.PrecacheModel("models/gf2/colphne_tactical.mdl")
 	util.PrecacheModel("models/gf2/vector_combat.mdl")
 	
 	-- Weapon Models

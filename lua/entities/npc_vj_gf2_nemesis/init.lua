@@ -11,5 +11,5 @@ ENT.SoundTbl_Pain = {"vo/jp/nemesis/hit1.wav","vo/jp/nemesis/hit2.wav","vo/jp/ne
 ENT.SoundTbl_OnKilledEnemy = {"vo/jp/nemesis/killed_enemy1.wav","vo/jp/nemesis/killed_enemy2.wav","vo/jp/nemesis/killed_enemy3.wav","vo/jp/nemesis/killed_enemy4.wav"}
 ENT.SoundTbl_FollowPlayer = {"vo/jp/nemesis/follow1.wav","vo/jp/nemesis/follow2.wav","vo/jp/nemesis/follow3.wav"}
 ENT.SoundTbl_UnFollowPlayer = {"vo/jp/nemesis/unfollow1.wav"}
-ENT.SoundTbl_Death = {"vo/jp/nemesis/die1.wav"}
+ENT.SoundTbl_Death = {"vo/jp/nemesis/die1.wav","vo/jp/nemesis/hit3.wav","vo/jp/nemesis/hit5.wav","vo/jp/nemesis/hit6.wav"}
 ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/nemesis/get_heal1.wav"}
