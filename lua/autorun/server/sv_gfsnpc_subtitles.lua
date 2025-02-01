@@ -1,6 +1,6 @@
 
-for _, file in ipairs(file.Find("subtitles/gf2_snpc_*.lua", "LUA") or {}) do
-	AddCSLuaFile("subtitles/" .. file)
+for _, file in ipairs(file.Find("subtitles/girls_frontline_2/*.lua", "LUA") or {}) do
+	AddCSLuaFile("subtitles/girls_frontline_2/" .. file)
 end
 
 util.AddNetworkString("GF2_SNPC_SUBTITLE_SOUND")
