@@ -3,6 +3,7 @@ GF2_Subtitles_Table = GF2_Subtitles_Table or {} -- don't touch
 local CharacterName = {
 	["schinese"] = "纳美西丝：",
 	["english"] = "Nemesis: ",
+	["japanese"] = "ネメシス：",
 	}
 local CharacterColor = Color(160,60,110)
 
@@ -20,6 +21,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...消隐...", 
+			["english"] = "...Fading away...", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -36,6 +38,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...以真理与庄严...奉上！", 
+			["english"] = "...With truth and dignity... brought forth...!",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -45,6 +48,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...Pontus 之灵结...", 
+			["english"] = "...Spirit of Pontus...",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -54,6 +58,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...火焰...ruptis...", 
+			["english"] = "...Flame...ruptis...!",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -63,6 +68,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...席卷、林木的狂风...沉溺...侵入...辰、星温凉...", 
+			["english"] = "...The wind whispers through the forest... Submerging... Piercing... the quiet warmth of celestial fire...",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -82,6 +88,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...众星...推移与纵横的轨道之上...", 
+			["english"] = "...Stars... shifting along their myriad paths...", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -91,6 +98,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...纸页...轻拂的山风...延伸...", 
+			["english"] = "...The pages... whispering mountain breeze... expanding...", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -107,6 +115,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...呼唤...", 
+			["english"] = "...Calling...", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -140,6 +149,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...呃啊...！", 
+			["english"] = "...Erra...!", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -149,6 +159,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...呃嗯...！", 
+			["english"] = "...Hmh...!", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -178,6 +189,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...咳！", 
+			["english"] = "...Ke!", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -187,6 +199,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...呵呵...！", 
+			["english"] = "...Heh...!", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -259,6 +272,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...一击...！", 
+			["english"] = "...One shot...!",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -268,6 +282,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...镜像...疾驰...！", 
+			["english"] = "...Mirage... Rush...!",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -277,6 +292,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...静止...！", 
+			["english"] = "...Stand still...!",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -286,6 +302,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...与永恒的国度告别...祈求降临...无边的星光...翳影安宁...", 
+			["english"] = "...Part from the timeless realm... Whisper prayers for the fall... the infinite starlight... the peace cloaked in shadow...",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -295,6 +312,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "...归还...", 
+			["english"] = "...Return...",
 		},
 		subjectcol = CharacterColor,
 	},

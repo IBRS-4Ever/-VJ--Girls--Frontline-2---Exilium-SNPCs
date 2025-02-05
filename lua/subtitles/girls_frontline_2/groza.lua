@@ -3,6 +3,7 @@ GF2_Subtitles_Table = GF2_Subtitles_Table or {} -- don't touch
 local CharacterName = {
 	["schinese"] = "闪电：",
 	["english"] = "Groza: ",
+	["japanese"] = "グローザ：",
 	}
 local CharacterColor = Color(215,90,30)
 
@@ -13,7 +14,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName, 
 		text = {
 			["schinese"] = "目标确认！", 
-			["english"] = "Target locked!", 
+			["english"] = "Target comfirmed.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -23,7 +24,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "跑得掉吗？", 
-			["english"] = "You think you can escape?", 
+			["english"] = "Think you can get away?", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -33,7 +34,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "行动！", 
-			["english"] = "Move!", 
+			["english"] = "Move out.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -43,6 +44,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "结束吧！", 
+			["english"] = "Let's finish this.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -52,6 +54,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "破绽！", 
+			["english"] = "A weakness!", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -70,6 +73,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "还有想反抗的家伙？", 
+			["english"] = "Anyone else want to resist?", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -88,7 +92,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "撤退！大家都没事吧？休整一下，这是必要的判断，也不会再...", 
-			--["english"] = "Fall back! Is everyone OK?", 
+			["english"] = "Retreat! Is everyone alright? Take a moment to regroup-this is a necessary decision... I won't let it happen again...", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -98,7 +102,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "我明白。", 
-			["english"] = "I understand.", 
+			["english"] = "Understood.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -108,7 +112,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "准备就绪。", 
-			["english"] = "Ready.", 
+			["english"] = "Ready to go.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -118,6 +122,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "这么匆忙？别担心，闪电，乐意效劳！", 
+			["english"] = "In a rush? Don't worry. Groza is at your service.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -136,6 +141,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "变强了？", 
+			["english"] = "Stronger, huh...?", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -145,7 +151,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "熟练很多。", 
-			["english"] = "Better and better.", 
+			["english"] = "Plenty more proficient.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -155,7 +161,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "非常感谢！", 
-			["english"] = "Thanks a lot!", 
+			["english"] = "Much obliged.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -185,6 +191,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "爆破，开始。", 
+			["english"] = "Commence demolition.",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -264,7 +271,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "没事...呃！", 
-			["english"] = "I'm fine...ah!", 
+			["english"] = "I'm fine... ah!", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -283,6 +290,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "今天的日程还没有完成，需要现在查阅一下吗，指挥官？", 
+			["english"] = "We're not done with what's been scheduled today. Do you need to look it over, Commander?",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -310,6 +318,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "稳定的信赖关系，能够带来完美的胜利。", 
+			["english"] = "Stable trust leads to perfect victories.",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -319,6 +328,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "指挥官，美玲在找她的收藏品，您有看... 请问，您背后藏的是...？", 
+			["english"] = "Commander, Mayling is looking for her collection, have you seen-excuse me, what are you hiding behind your back?",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -346,6 +356,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "本月收支平衡。松了口气？可以轻松一些了，指挥官。", 
+			["english"] = "This month's budget is balanced. Feeling relieved? You can relax a bit now, Commander.",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -355,6 +366,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "是新的定制茶具，指挥官，来休息一下，喝杯茶如何？", 
+			["english"] = "It's a new custom tea set. Commander, how about taking a break and having a cup of tea?",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -364,6 +376,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "清除完成！", 
+			["english"] = "Elimination complete.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -373,6 +386,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "一切都在可控范围内，有我在，指挥官不用担心。", 
+			["english"] = "All variables within acceptable ranges. Rest easy, Commander. I'm here.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -382,6 +396,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "任务结束！各位，保持警惕，在安全返回之前，还不能放松！", 
+			["english"] = "Mission accomplished. Stay alert, everyone. We can't relax until we return safely.", 
 		},
 		subjectcol = CharacterColor,
 	},
