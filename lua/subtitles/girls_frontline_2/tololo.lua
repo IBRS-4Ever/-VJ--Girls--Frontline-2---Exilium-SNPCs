@@ -14,7 +14,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName, 
 		text = {
 			["schinese"] = "小心！", 
-			["english"] = "Watch out!", 
+			["english"] = "Look out!", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -34,7 +34,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "是我没有保护好大家...", 
-			["english"] = "I failed to protect everyone...", 
+			["english"] = "I couldn't protect everyone...", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -54,7 +54,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "孤星。", 
-			["english"] = "Isolated star.", 
+			["english"] = "Lone star.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -64,7 +64,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "引力改变了星的轨迹，将我牵引到这里。托洛洛，入队。", 
-			["english"] = "Gravity changed the trajectory of the star, pulling me here. Tololo, join the team.", 
+			["english"] = "Gravity altered the course of the stars, pulling me here. Tololo, reporting in.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -74,7 +74,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "能力意味着责任。", 
-			["english"] = "Ability means responsibility.", 
+			["english"] = "With great power comes great responsibility.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -84,7 +84,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "我会保护你。", 
-			["english"] = "I will protect you.", 
+			["english"] = "I'll protect you.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -114,7 +114,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "星辰般美妙。", 
-			["english"] = "Beautiful like stars.", 
+			["english"] = "As wondrous as the stars.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -124,7 +124,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "我会珍惜。", 
-			["english"] = "I will cherish it.", 
+			["english"] = "I'II treasure it.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -224,7 +224,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "看似遥远的事务并非遥不可及，人类既然能上太空摘星，也就能实现个人的终极理想。", 
-			["english"] = "Seemingly distant matters are not unattainable. Since humans can reach the stars, they can also achieve their ultimate personal ideals.", 
+			["english"] = "What seems distant is never truly out of reach. If humanity can reach for the stars, then we can certainly achieve our ultimate dreams.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -244,7 +244,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "遇到麻烦了？一起好好思考寻找解决办法吧。嗯？我也不是完全脱离实际的人呢。", 
-			["english"] = "In trouble? Let's think it through together and find a solution. Hmm? I'm not entirely out of touch with reality, you know.", 
+			["english"] = "Running into trouble? Let's put our heads together and figure it out. Huh? I'm not completely out of touch with reality, you know.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -254,7 +254,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "这是琼玖队长送我的发饰，银银的月光石，有着天空的颜色。", 
-			["english"] = "This hair ornament was given to me by Captain Qiongjiu. It's made of silvery moonstone, the color of the sky.", 
+			["english"] = "This hair accessory was a gift from Leader Qiongjiu. The shimmering moonstone gleams softly, carrying the color of the sky.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -264,7 +264,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "星星失去生命，会变为陨石，人类和人形呢？", 
-			["english"] = "Stars lose their radiance and turn into meteorites. What about humans and T-Dolls?", 
+			["english"] = "When a star dies, it becomes a meteor. But what happens to humans and Dolls?", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -304,7 +304,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "说起想去的地方...我想走进自己的名字里 —— 塞罗·托洛洛天文台...", 
-			["english"] = "Speaking of places I'd like to visit... I want to step into my name — Cerro Tololo Observatory...", 
+			["english"] = "As for places I'd like to visit... I want to go see the place that shares my name-the Cerro-Tololo Observatory.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -314,7 +314,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "碎裂吧。", 
-			["english"] = "Become pieces.", 
+			["english"] = "Break it.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -324,7 +324,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "逃不掉的。", 
-			["english"] = "You can't escape.", 
+			["english"] = "There is no escape.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -334,7 +334,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "溅射的星光。", 
-			["english"] = "Sputtering starlight.", 
+			["english"] = "Scattered starlight.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -354,7 +354,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "前路更加明亮了。", 
-			["english"] = "The road ahead is brighter.", 
+			["english"] = "The path ahead has become even brighter.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -364,7 +364,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "这样一来，就有时间去做自己喜欢的事了。", 
-			["english"] = "Now, we have more time to do what we love.", 
+			["english"] = "This way, there will be time to do what I love.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -384,7 +384,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "闲暇时间，我会眺望星空，与朋友联系。过去的那些事情告诉我，要学会坦诚与信赖。", 
-			["english"] = "In my spare time, I gaze at the stars and connect with friends. Past experiences have taught me the importance of honesty and trust.", 
+			["english"] = "In my free time, I stargaze and catch up with friends. The past taught me the importance of honesty and trust.", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -394,7 +394,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "美妙的音乐和卓绝的想象，都能让疲劳的大脑得到放松。至于我...我选择啤酒。", 
-			["english"] = "Beautiful music and extraordinary imagination can relax a tired mind. As for me... I choose beer.", 
+			["english"] = "Beautiful music and vivid imagination can relax a tired mind. As for me-I choose beer.", 
 		},
 		subjectcol = CharacterColor,
 	},

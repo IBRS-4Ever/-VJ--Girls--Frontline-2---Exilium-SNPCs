@@ -5,7 +5,7 @@ local CharacterName = {
 	["english"] = "Nagant: ",
 	["japanese"] = "ナガン：",
 	}
-local CharacterColor = Color(50,100,165,255)
+local CharacterColor = Color(50,100,165)
 local Language = "schinese2"
 
 local GF2Subtitle = { -- add new tables inside here

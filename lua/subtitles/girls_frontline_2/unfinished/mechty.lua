@@ -4,7 +4,7 @@ local CharacterName = {
 	["schinese"] = "米什缇：",
 	["english"] = "Mechty: ",
 	}
-local CharacterColor = Color(70,140,135,255)
+local CharacterColor = Color(70,140,135)
 local Language = "schinese2"
 
 local GF2Subtitle = { -- add new tables inside here
