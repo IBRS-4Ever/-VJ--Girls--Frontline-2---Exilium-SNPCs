@@ -91,6 +91,8 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/colphne_tactical.mdl")
 	util.PrecacheModel("models/gf2/vector_combat.mdl")
 	util.PrecacheModel("models/gf2/lenna_combat.mdl")
+	util.PrecacheModel("models/gf2/lenna_energetic_magic.mdl")
+	util.PrecacheModel("models/gf2/lenna_flying_phantom.mdl")
 	
 	-- Weapon Models
 	util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
