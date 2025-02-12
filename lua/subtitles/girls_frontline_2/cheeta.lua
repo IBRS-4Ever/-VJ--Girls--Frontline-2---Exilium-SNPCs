@@ -33,8 +33,8 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/alert3.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "还要来啊？", 
-			["english"] = "More coming, huh ...?", 
+			["schinese"] = "还要来啊……", 
+			["english"] = "More coming, huh...?", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -54,7 +54,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "失、失败了？！", 
-			["english"] = "F-Failed ?!", 
+			["english"] = "F-Failed?!", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -64,7 +64,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "一定是，是情报出错了！", 
-			["english"] = "It must be ... because the intel was wrong!", 
+			["english"] = "It must be... because the intel was wrong!", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -73,8 +73,8 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/die3.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "失、失败了？！一定是，是情报出错了！", 
-			["english"] = "F-Failed ?! It must be ... because the intel was wrong!", 
+			["schinese"] = "失、失败了？！一定是……是因为情报出错了！", 
+			["english"] = "F-Failed?! It must be... because the intel was wrong!", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -153,7 +153,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/get_heal3.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "噢！还不错嘛！", 
+			["schinese"] = "呜哦——还不错嘛！", 
 			["english"] = "Uwoh-not bad!", 
 		},
 		subjectcol = CharacterColor,
@@ -183,7 +183,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/grenade_attack1.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "耶耶！", 
+			["schinese"] = "耶耶——！", 
 			["english"] = "Yay~ Yay-!", 
 		},
 		subjectcol = CharacterColor,
@@ -193,7 +193,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/grenade_attack2.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "啧啧啧。", 
+			["schinese"] = "略——", 
 			["english"] = "Meh~", 
 		},
 		subjectcol = CharacterColor,
@@ -203,7 +203,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/grenade_attack3.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "变成碎片吧！", 
+			["schinese"] = "变成碎片！", 
 			["english"] = "Shatter into pieces!", 
 		},
 		subjectcol = CharacterColor,
@@ -223,7 +223,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/grenade_attack5.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "笨蛋！", 
+			["schinese"] = "笨~蛋！", 
 			["english"] = "Stuuupid!", 
 		},
 		subjectcol = CharacterColor,
@@ -243,7 +243,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/grenade_attack7.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "差不多行了！", 
+			["schinese"] = "差不多就行了吧。", 
 			["english"] = "That should be enough, right?", 
 		},
 		subjectcol = CharacterColor,
@@ -273,7 +273,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/hit3.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "真无聊...", 
+			["schinese"] = "真差劲。", 
 			["english"] = "How disappointing.", 
 		},
 		subjectcol = CharacterColor,

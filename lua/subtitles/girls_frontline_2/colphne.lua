@@ -33,7 +33,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/colphne/die1.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "必须要做的事...还没有完成...我还不能...在这里停下...绝不能...！", 
+			["schinese"] = "必须要做的事……还没有完成。我还不能、在这里停下……决不能——", 
 			["english"] = "The things I must do... aren't finished yet. I can't stop here... I mustn't-", 
 		},
 		subjectcol = CharacterColor,
@@ -328,7 +328,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/colphne/killed_enemy3.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "赢了？理所当然啦~人家可是不会手下留情的呢~没错，所有挡在我面前的...", 
+			["schinese"] = "赢了？理——所当然啦，人家可是不会手下留情的呢~没错，所有、挡在我面前的……", 
 			["english"] = "We won? Of course we did, I didn't hold back, you know~ Yes, against all of those... standing in my way...", 
 		},
 		subjectcol = CharacterColor,

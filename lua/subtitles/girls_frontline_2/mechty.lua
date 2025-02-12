@@ -36,8 +36,8 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/mechty/die1.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "今天的我已经燃尽了......这次就先战术性撤退吧，下次一定......", 
-			["english"] = "I'm too tired today...... Let's start with a tactical retreat this time, We will fight next time......", 
+			["schinese"] = "今天的我已经燃尽了……这次就先战术性撤退吧，下次一定……", 
+			["english"] = "I'm burned out for today... Let us make a tactical retreet for now, but next time, definitely...", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -56,8 +56,8 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/mechty/follow1.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "来了，来了。", 
-			["english"] = "I'm coming, I'm coming.", 
+			["schinese"] = "来了来了。", 
+			["english"] = "Coming...", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -192,7 +192,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "欧拉欧拉！", 
-			["english"] = "Ola ola!", 
+			["english"] = "Ora Ora!", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -202,7 +202,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "闭嘴吧你！", 
-			["english"] = "Shut up!", 
+			["english"] = "Shut up, you!", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -212,7 +212,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "不是吧？", 
-			["english"] = "No way?", 
+			["english"] = "Really?", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -231,6 +231,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "我的最新版安睡套装已经准备带过来了，艾莫号上那么多房间，哪一间是我的啊？", 
+			["english"] = "I have brought over the newest edition of my sleeping kit. There's a lot of rooms in the Elmo, but which one is mine?", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -239,8 +240,8 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/mechty/player_sight3.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "唔......不是还没到出发时间吗？我再睡一会儿吧，就五分钟......Zzzzz......", 
-			["english"] = "Um...... Isn't it still time for departure? I'll sleep a little longer, just five minutes...... Zzzzz......", 
+			["schinese"] = "唔……不是还没到出发时间吗？我再睡一会儿吧，就五分钟……Zzzzz……", 
+			["english"] = "Uuu... It's not time to head out yet, right? Let me sleep a bit longer, just five minutes... Zzzzz...", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -258,8 +259,8 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/mechty/player_sight5.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "听可露凯说，这段时间她把“掌控我命运的开关”交给你了，那就请永远不要......欸欸欸！不要用啊！", 
-			["english"] = "Klukai said she has entrusted you with the 'switch that controls my destiny', so please never...... Wait wait! Don't use it!", 
+			["schinese"] = "听可露凯说，这段时间她把“掌控我命运的开关”交给你了，那就请永远不要……欸欸欸！不要用啊！", 
+			["english"] = "According to Klukai, she has given the \"Switch that determines my fate\" to you recently, so please don't ever... Ehhh! Don't use it!", 
 		},
 		subjectcol = CharacterColor,
 	},

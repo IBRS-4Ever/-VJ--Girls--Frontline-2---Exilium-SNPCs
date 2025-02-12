@@ -33,8 +33,9 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/tololo/die1.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "是我没有保护好大家...", 
+			["schinese"] = "是我没有保护好大家……", 
 			["english"] = "I couldn't protect everyone...", 
+			["japanese"] = "みんなを、守れなかった……",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -45,6 +46,7 @@ local GF2Subtitle = { -- add new tables inside here
 		text = {
 			["schinese"] = "相信我。", 
 			["english"] = "Trust me.", 
+			["japanese"] = "信じてください。",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -55,6 +57,7 @@ local GF2Subtitle = { -- add new tables inside here
 		text = {
 			["schinese"] = "孤星。", 
 			["english"] = "Lone star.", 
+			["japanese"] = "残星。",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -65,6 +68,7 @@ local GF2Subtitle = { -- add new tables inside here
 		text = {
 			["schinese"] = "引力改变了星的轨迹，将我牵引到这里。托洛洛，入队。", 
 			["english"] = "Gravity altered the course of the stars, pulling me here. Tololo, reporting in.", 
+			["japanese"] = "引力により星の軌跡は変えられ、私たちは引き合わされました。トロロ、入隊いたします。",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -75,6 +79,7 @@ local GF2Subtitle = { -- add new tables inside here
 		text = {
 			["schinese"] = "能力意味着责任。", 
 			["english"] = "With great power comes great responsibility.", 
+			["japanese"] = "力には責任が伴います。",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -85,6 +90,7 @@ local GF2Subtitle = { -- add new tables inside here
 		text = {
 			["schinese"] = "我会保护你。", 
 			["english"] = "I'll protect you.", 
+			["japanese"] = "あなたのことは、私が守ってみせます。",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -115,6 +121,7 @@ local GF2Subtitle = { -- add new tables inside here
 		text = {
 			["schinese"] = "星辰般美妙。", 
 			["english"] = "As wondrous as the stars.", 
+			["japanese"] = "星辰のような美しさです。",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -125,6 +132,7 @@ local GF2Subtitle = { -- add new tables inside here
 		text = {
 			["schinese"] = "我会珍惜。", 
 			["english"] = "I'II treasure it.", 
+			["japanese"] = "大事にします。",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -193,8 +201,9 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/tololo/hit6.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "相信我！", 
-			["english"] = "Trust me!", 
+			["schinese"] = "相信我。", 
+			["english"] = "Trust me.", 
+			["japanese"] = "信じてください。",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -214,7 +223,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = {
 			["schinese"] = "人类以星辰为象征，寄托无数宏大的思考与规律的幻想。这些作品读来十分震撼。", 
-			["english"] = "Humans use the stars as symbols, embodying countless grand thoughts and dreams of order. These works are truly awe-inspiring to read.", 
+			["english"] = "Humans use the stars as symbols, embodying countless grand thoughts and dreams of order. These works are truly awe-inspiring to read.",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -303,8 +312,9 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/tololo/idle10.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "说起想去的地方...我想走进自己的名字里 —— 塞罗·托洛洛天文台...", 
+			["schinese"] = "说起想去的地方……我想走进自己的名字里——塞罗·托洛洛天文台。", 
 			["english"] = "As for places I'd like to visit... I want to go see the place that shares my name-the Cerro-Tololo Observatory.", 
+			["japanese"] = "行きたいところといえば……私の名前の由来にもなった――セロ・トロロ天文台に行ってみたいです。",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -345,6 +355,7 @@ local GF2Subtitle = { -- add new tables inside here
 		text = {
 			["schinese"] = "痛苦将结束。", 
 			["english"] = "The pain will end.", 
+			["japanese"] = "安らかに眠って。",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -365,6 +376,7 @@ local GF2Subtitle = { -- add new tables inside here
 		text = {
 			["schinese"] = "这样一来，就有时间去做自己喜欢的事了。", 
 			["english"] = "This way, there will be time to do what I love.", 
+			["japanese"] = "これで、好きなことをする時間ができましたね。",
 		},
 		subjectcol = CharacterColor,
 	},
