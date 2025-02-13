@@ -12,7 +12,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/alert1.wav", 
 		subject = CharacterName, 
-		text = {
+		text = { -- ID: 78482
 			["schinese"] = "为您的轻率举动付出代价。", 
 			["english"] = "You will pay for your reckless actions.", 
 			["japanese"] = "浅はかな行動を悔い改めなさい。",
@@ -23,7 +23,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/alert2.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78483
 			["schinese"] = "不躲开吗——就算会受伤？", 
 			["english"] = "Not going to dodge—even if it means getting hurt?", 
 			["japanese"] = "避けないんですか？……怪我しますよ？",
@@ -34,7 +34,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/die1.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78487
 			["schinese"] = "……失败……？……任务……移交成功……原来我……会……是我……", 
 			["english"] = "...Failure...? ...Mission... successfully handed over... So that me... will be... me...", 
 			["japanese"] = "……失敗……？……任務……移譲成功……この私が……失敗だ、なんて……",
@@ -45,7 +45,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/follow1.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78389
 			["schinese"] = "确认。", 
 			["english"] = "Confirmed.", 
 			["japanese"] = "了解。",
@@ -56,7 +56,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/follow2.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78166
 			["schinese"] = "指挥官……？您好。", 
 			["english"] = "Commander...? Hello.", 
 			["japanese"] = "指揮官……？こんにちは。",
@@ -77,7 +77,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/follow4.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 154583
 			["schinese"] = "您的邀请，我听到了哦。", 
 			["english"] = "I heard your invitation loud and clear.", 
 			["japanese"] = "あなたの呼びかけ、しっかりと聞こえましたよ。",
@@ -88,7 +88,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/get_heal1.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78167
 			["schinese"] = "这是、获得了……？", 
 			["english"] = "Is this... something I've obtained...?", 
 			["japanese"] = "これは、いったい、何が……？",
@@ -99,7 +99,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/get_heal2.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78168
 			["schinese"] = "谢谢您。", 
 			["english"] = "Thank you.", 
 			["japanese"] = "ありがとうございます。",
@@ -110,7 +110,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/get_heal3.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78169
 			["schinese"] = "这种性能是……", 
 			["english"] = "This kind of performance is...", 
 			["japanese"] = "この性能は……",
@@ -131,7 +131,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/get_heal5.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78385
 			["schinese"] = "谢谢……是不是道过谢了？", 
 			["english"] = "Thank you... did I say that already?", 
 			["japanese"] = "ありがとうございます……お礼はもうしましたっけ？",
@@ -142,7 +142,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/get_heal6.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78386
 			["schinese"] = "嗯，我记下了。", 
 			["english"] = "Alright, I've noted it down.", 
 			["japanese"] = "はい、憶えましたよ。",
@@ -184,7 +184,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/grenade_attack2.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78480
 			["schinese"] = "再见。", 
 			["english"] = "Goodbye.", 
 			["japanese"] = "さよなら。",
@@ -195,7 +195,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/hit1.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78387
 			["schinese"] = "唔。", 
 			["english"] = "Hmm.", 
 			["japanese"] = "フッ……！",
@@ -206,7 +206,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/hit2.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78388
 			["schinese"] = "呼。", 
 			["english"] = "Whew.", 
 			["japanese"] = "ホッ。",
@@ -314,60 +314,76 @@ local GF2Subtitle = { -- add new tables inside here
 		text = "啊？都这个时间了，指挥官还在工作吗？劳逸结合可是很重要的，医生的话，要~听~的~呦~",
 		subjectcol = CharacterColor,
 	},
-
+	]]
 	{
 		snd = "vo/jp/peritya/idle4.wav",
 		subject = CharacterName,
-		text = "嗯...原来是这样...唉？人家在研究纳美西丝的占卜哦，嗯~需不需要帮指挥官预测一下，什么时候会比较倒霉？",
+		text = { -- ID: 78162
+			["schinese"] = "克罗……丽科……似乎有些印象。一种新奇的食物？",
+			["english"] = "Charo... lic... Sounds vaguely familiar. Is it some kind of exotic food?", 
+			["japanese"] = "キャロ……リック……どこかで聞いたことがあるような。食べ物の一種ですか？", 
+		},
 		subjectcol = CharacterColor,
 	},
-
+	--[[
 	{
 		snd = "vo/jp/peritya/idle5.wav",
 		subject = CharacterName,
 		text = "闪电队长真的很帅气，而且还很温柔，就像是...姐姐那样...",
 		subjectcol = CharacterColor,
 	},
-
+]]
 	{
 		snd = "vo/jp/peritya/idle6.wav",
 		subject = CharacterName,
-		text = "这里加快一拍是不是比较好？嗯嗯，对，就这样。啊，指挥官，是维普蕾的新秘籍哦。喂，指挥官？",
+		text = { -- ID: 78163
+			["schinese"] = "绘画……是一件很有意思的事情。把记不得的事情画下来，以后再来回忆。对了，我的这幅画怎么样？",
+			["english"] = "Drawing... is quite an interesting activity. You can sketch things you can't remember, and come back later to reflect on them. By the way, what do you think of my latest piece?", 
+			["japanese"] = "お絵かきは……楽しいですよね。忘れそうなことを描きとめておけば、また思い出せますし。そうだ、私のこの絵、どう思います？", 
+		},
 		subjectcol = CharacterColor,
 	},
-
+--[[
 	{
 		snd = "vo/jp/peritya/idle7.wav",
 		subject = CharacterName,
 		text = "啊，哈哈哈，吓到了吗，指挥官？嘿嘿，对不起啦。没事呦，只是太闲了，就想来打扰一下认~真~工~作~的指挥官呢。",
 		subjectcol = CharacterColor,
 	},
-
+]]
 	{
 		snd = "vo/jp/peritya/idle8.wav",
 		subject = CharacterName,
-		text = "克罗丽科，纳美西丝，记下了，记下了，最佳拍档养成计划。",
+		text = { -- ID: 78164
+			["schinese"] = "……任何可疑目标都需要排除……当然，是在说这块看起来很美味的茶点。",
+			["english"] = "...Any suspicious targets need to be eliminated... Well, I mean these delicious goodies.", 
+			["japanese"] = "……疑わしいターゲットは全て排除すべきです……もちろん、この美味しそうなお菓子のことですよ。", 
+		},
 		subjectcol = CharacterColor,
 	},
-
+--[[
 	{
 		snd = "vo/jp/peritya/idle9.wav",
 		subject = CharacterName,
 		text = "随便摸人家的头可是要付出代价呦~就算是指挥官也不行。",
 		subjectcol = CharacterColor,
 	},
-
+]]
 	{
 		snd = "vo/jp/peritya/idle10.wav",
 		subject = CharacterName,
-		text = "没什么没什么，大家感情真好。嗯，如果我是美玲，可能指挥官已经...",
+		text = { -- ID: 78165
+			["schinese"] = "重要的信息总能够被记录下来，不重要的信息需要被删除。",
+			["english"] = "Important data must always be recorded, while unimportant details need to be removed.", 
+			["japanese"] = "大事な情報は記録して、いらない情報は消してしまいましょう。", 
+		},
 		subjectcol = CharacterColor,
 	},
-	]]--
+	
 	{
 		snd = "vo/jp/peritya/killed_enemy1.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78486
 			["schinese"] = "这不过是理应出现的结果。很遗憾，您没有再次尝试的机会了。", 
 			["english"] = "This is simply the expected outcome. Unfortunately, you won't have the chance to try again.", 
 			["japanese"] = "当然の結果ですね。残念ですが、あなたはここまでです。",
@@ -378,7 +394,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/killed_enemy2.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78484
 			["schinese"] = "就是现在。", 
 			["english"] = "Now's the time.", 
 			["japanese"] = "今です。",
@@ -389,7 +405,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/peritya/killed_enemy3.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78485
 			["schinese"] = "消除成功。", 
 			["english"] = "Eradication successful.", 
 			["japanese"] = "駆逐成功。",

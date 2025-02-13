@@ -12,7 +12,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/alert1.wav", 
 		subject = CharacterName, 
-		text = {
+		text = { -- ID: 127829
 			["schinese"] = "那就来吧。", 
 			["english"] = "Then come.", 
 			["japanese"] = "じゃあ、始めよっか。",
@@ -23,7 +23,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/alert2.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127830
 			["schinese"] = "停下来！", 
 			["english"] = "Stop!", 
 			["japanese"] = "止まれ！",
@@ -34,7 +34,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/die1.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127635
 			["schinese"] = "意料之中的结局……", 
 			["english"] = "An unexpected ending...", 
 			["japanese"] = "想像通りの結果だね……",
@@ -66,7 +66,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/follow3.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127831
 			["schinese"] = "前进。", 
 			["english"] = "Forward.", 
 			["japanese"] = "前進。",
@@ -87,7 +87,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/follow5.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127600
 			["schinese"] = "浪费。", 
 			["english"] = "A waste.", 
 			["japanese"] = "資源の無駄。",
@@ -98,7 +98,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/follow6.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127601
 			["schinese"] = "别后悔。", 
 			["english"] = "Don't regret this.", 
 			["japanese"] = "後悔しても知らないよ。",
@@ -109,7 +109,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/follow7.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127827
 			["schinese"] = "有什么用呢？", 
 			["english"] = "What's the use?", 
 			["japanese"] = "何の意味があるの？",
@@ -120,7 +120,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/follow8.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127828
 			["schinese"] = "会保护你。", 
 			["english"] = "I'll protect you.", 
 			["japanese"] = "あたしがあなたを守る。",
@@ -131,7 +131,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/grenade_attack1.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127629
 			["schinese"] = "就这样消失吧。", 
 			["english"] = "Disappear.", 
 			["japanese"] = "そのまま消えて。",
@@ -142,7 +142,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/grenade_attack2.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127630
 			["schinese"] = "还在期待什么呢？", 
 			["english"] = "What are you expecting?", 
 			["japanese"] = "逃げられるとでも？",
@@ -243,7 +243,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/idle3.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127593
 			["schinese"] = "……我成为404的2队队长，只是因为可露凯一次偶然的错误判断。", 
 			["english"] = "...I became Squad 404's team 2 leader only because of a random misjudgement from Klukai.", 
 			["japanese"] = "……あたしを2番隊の隊長にしたのは、クルカイの数少ない判断ミス。",
@@ -274,7 +274,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/idle6.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127594
 			["schinese"] = "人类见面都喜欢寒暄，是因为精力过剩无处消耗，还是人类天生就喜欢这种无意义的仪式？", 
 			["english"] = "Do humans like exchanging pleasantries when they meet because of an overabundance of energy with nowhere to expend it, or is it because humans are just naturally drawn to such meaningless formalities?", 
 			["japanese"] = "人間は他愛もない世間話をするのが好きなようだけど、余程気力が有り余ってるってこと……？",
@@ -285,7 +285,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/idle7.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127595
 			["schinese"] = "闪电和可露凯作为队长的风格截然不同，但都很有效，嗯……我可以借鉴的地方很多……", 
 			["english"] = "Groza and Klukai are obviously different in their styles of leadership, but both are effective leaders. Hmm... There is much I can learn from them...",
 			["japanese"] = "グローザとクルカイは隊長像が異なるけど、どちらも参考になる……",
@@ -306,7 +306,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/idle9.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127596
 			["schinese"] = "不是乌琪总跟着我，而是我一直跟着乌琪。听起来很奇怪吧，但这就是我维持友谊的做法了。", 
 			["english"] = "It's not that Ruchey is always following me, it's me always following Ruchey. It probably sounds weird, but this is how I maintain me friendship with her.",
 			["japanese"] = "ルチェーがあたしに付きまとってるんじゃない、むしろ逆。変に聞こえるかもしれないけど、これがあたしなりの友達との付き合い方なの。", 
@@ -317,7 +317,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/idle10.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127736
 			["schinese"] = "收留了这么多无家可归的人形，您的善良程度……要远远高过绝大多数人类……", 
 			["english"] = "Someone like you, who has taken in so many homeless Dolls, has kindness... that far exceeds most of humanity...", 
 			["japanese"] = "これだけ身寄りのない人形を引き取っていたなんて……あなたの優しさは常人を凌駕しているね。", 
@@ -328,7 +328,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/killed_enemy1.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127634
 			["schinese"] = "任务结束，一起回去吧。", 
 			["english"] = "Mission accomplished, let us return.", 
 			["japanese"] = "作戦終了、帰ろっか。", 
@@ -339,7 +339,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/killed_enemy2.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127631
 			["schinese"] = "有进展了。", 
 			["english"] = "Progress made.", 
 			["japanese"] = "戦局は傾いた。", 
@@ -350,7 +350,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/killed_enemy3.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127633
 			["schinese"] = "问题已解决。", 
 			["english"] = "Problem solved.", 
 			["japanese"] = "これで終わり。", 
@@ -361,7 +361,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/killed_enemy4.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127832
 			["schinese"] = "倒下吧。", 
 			["english"] = "Down with you.", 
 			["japanese"] = "死んで。", 
@@ -371,7 +371,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/killed_enemy5.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127833
 			["schinese"] = "没意义。", 
 			["english"] = "Meaningless.", 
 			["japanese"] = "何の意味もない。", 
@@ -392,7 +392,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/killed_enemy7.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127627
 			["schinese"] = "想逃吗？", 
 			["english"] = "You're fleeing?", 
 			["japanese"] = "逃がさない。", 
@@ -424,7 +424,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/player_sight2.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127728
 			["schinese"] = "不用强行找话题，我不值得您这么做……", 
 			["english"] = "No need to forcibly find a topic for discussion, I'm not worth your time...", 
 			["japanese"] = "無理に話題を振らなくてもいいから……", 
@@ -445,7 +445,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/player_sight4.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127729
 			["schinese"] = "我平常虽然会画画，但我画出来的画没有任何价值，请把它们扔进垃圾堆吧……", 
 			["english"] = "I usually draw, but my drawings are not worth anything, so please throw them in the trash...", 
 			["japanese"] = "あたしの描いた絵には何の価値もない……ゴミ箱があったら捨てておいて。", 
@@ -486,7 +486,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/player_sight8.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127730
 			["schinese"] = "我并不觉得这个世界糟糕，它只是自相矛盾，让我不知道怎么做才好……", 
 			["english"] = "I don't think that this world is a terrible one. It's just paradoxical and conflicted with itself. It causes me to have no idea what to do about it...", 
 			["japanese"] = "この世界は、理不尽で矛盾したことだらけ……時々どうしたらいいかわからなくなる。", 
@@ -497,7 +497,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/player_sight9.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127731
 			["schinese"] = "总会有人用实际行动告诉我，世界还很美好，但相信这种美好，需要勇气，我愿意……为您变得更勇敢一些……", 
 			["english"] = "There's always people telling me through their actions that the world is still beautiful. But believing in this kind of beauty requires bravery. I'm willing... to be braver for your sake...", 
 			["japanese"] = "ルチェーと……あなたのおかげで、この世界もまだ捨てたものじゃないと思えるようになってきた。", 
@@ -508,7 +508,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/player_sight10.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127732
 			["schinese"] = "您应该注重劳逸结合，累到昏倒那种事不能发生在您身上。", 
 			["english"] = "You should take work-life balance more seriously. We can't let you collapse from overwork.", 
 			["japanese"] = "適度な休息は取るように。過労で倒れたりしたらシャレにならないから。", 
@@ -519,7 +519,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/player_sight11.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127733
 			["schinese"] = "我不知道现在的一切是真是假，但哪怕您是在骗我，我也……希望您能骗得久一些……", 
 			["english"] = "I don't know if everything I'm experiencing is real or fake, but even if you are lying to me, I... hope that you can continue this lie for longer...", 
 			["japanese"] = "あなたがあたしに言ったことが全て噓だったとしても、どうかその噓をつき続けていてほしい……", 
@@ -530,7 +530,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/player_sight12.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127734
 			["schinese"] = "我的画很难懂吗？如果您想了解，我愿意将我在作画时的想法告诉您。", 
 			["english"] = "Are my drawings hard to understand? If you wish to understand them, I'm willing to share my thoughts from when I was drawing them.", 
 			["japanese"] = "あたしの絵がわかりづらい？あなたさえ良ければ、今度描く時に説明してあげてもいいけど……", 
@@ -541,7 +541,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/player_sight13.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127735
 			["schinese"] = "如果您需要我，我会竭尽全力地运行下去，一直待在您的身边。", 
 			["english"] = "If you still need me, I'll put my all into continuing to function, to be with you always.", 
 			["japanese"] = "あたしを必要としている限り、あたしはずっとあなたのそばに居続ける。", 
@@ -563,7 +563,7 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/vector/unfollow2.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 127628
 			["schinese"] = "就这样吧。", 
 			["english"] = "That will be that.", 
 			["japanese"] = "好きにして。", 

@@ -12,7 +12,7 @@ local GF2Subtitle = {
 	{
 		snd = "vo/jp/lenna/die1.wav",
 		subject = CharacterName,
-		text = {
+		text = { -- ID: 78160
 			["schinese"] = "呜……对不起，指挥官……不过我和莱娅姐都在，一切都能解决的，别担心啦♪", 
 			["english"] = "Uuu... Sorry, Commander... But with Leva and me here, we can handle everything, so don't worry♪", 
 			["japanese"] = "うぅ……ごめんなさい、指揮官……でも、わたしとリヴァ姉さえいれば、なんとかなるはずだよ、心配しないで♪"
