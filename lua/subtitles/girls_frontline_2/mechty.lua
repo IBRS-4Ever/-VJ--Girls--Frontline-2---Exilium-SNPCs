@@ -35,7 +35,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/mechty/die2.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "呜...!", 
+			["schinese"] = "呜……!", 
 			["english"] = "Wu...!", 
 		},
 		subjectcol = CharacterColor,
@@ -141,7 +141,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/mechty/player_sight4.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "总觉得艾莫号上差点什么，唔......哦！差个懒人沙发，我之前买的那个特别舒服，这就把链接分享给你指挥官。", 
+			["schinese"] = "总觉得艾莫号上差点什么，唔……哦！差个懒人沙发，我之前买的那个特别舒服，这就把链接分享给你指挥官。", 
 		},
 		subjectcol = CharacterColor,
 	},
