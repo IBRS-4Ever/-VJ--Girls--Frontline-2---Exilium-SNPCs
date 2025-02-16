@@ -175,7 +175,7 @@ local GF2Subtitle = { -- add new tables inside here
 	},
 	
 	{
-		snd = "vo/jp/vepley/follow2.wav", 
+		snd = "vo/jp/vepley/unfollow2.wav", 
 		subject = CharacterName, 
 		text = { -- ID: 78229
 			["schinese"] = "哎？哎哎？！", 
