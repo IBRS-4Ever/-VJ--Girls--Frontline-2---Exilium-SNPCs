@@ -25,8 +25,8 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Qiongjiu","npc_vj_gf2_qiongjiu",{"weapon_vj_gf2_qbz191"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nagant","npc_vj_gf2_nagant",{"weapon_vj_gf2_m1895_revolver"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nagant_SummerPitcher","npc_vj_gf2_nagant_summer_pitcher",{"weapon_vj_gf2_m1895_revolver"},vCat)
-	--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi","npc_vj_gf2_suomi",{"weapon_vj_gf2_kp_31"},vCat)
-	--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi_MidsummerPixie","npc_vj_gf2_suomi_midsummer_pixie",{"weapon_vj_gf2_kp_31"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi","npc_vj_gf2_suomi",{"weapon_vj_gf2_kp31"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi_MidsummerPixie","npc_vj_gf2_suomi_midsummer_pixie",{"weapon_vj_gf2_kp31"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sabrina","npc_vj_gf2_sabrina",{"weapon_vj_gf2_spas12"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sabrina_BerryZabaione","npc_vj_gf2_sabrina_berry_zabaione",{"weapon_vj_gf2_spas12"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Mechty","npc_vj_gf2_mechty",{"weapon_vj_gf2_g11"},vCat)
@@ -54,6 +54,7 @@ if VJExists == true then
 	VJ.AddNPCWeapon("Taurus Curve", "weapon_vj_gf2_taurus_curve", vCat)
 	VJ.AddNPCWeapon("KRISS Vector", "weapon_vj_gf2_kriss_vector", vCat)
 	VJ.AddNPCWeapon("UMP9", "weapon_vj_gf2_ump9", vCat)
+	VJ.AddNPCWeapon("KP/-31", "weapon_vj_gf2_kp31", vCat)
 
 	-- Items
 	VJ.AddEntity("#vj_gf2_items.Colphne_Healthkit", "sent_gf2_colphne_healthkit", "IBRS", false, 0, true, vCat)
@@ -93,6 +94,8 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/lenna_combat.mdl")
 	util.PrecacheModel("models/gf2/lenna_energetic_magic.mdl")
 	util.PrecacheModel("models/gf2/lenna_flying_phantom.mdl")
+	util.PrecacheModel("models/gf2/suomi_combat.mdl")
+	util.PrecacheModel("models/gf2/suomi_midsummer_pixie.mdl")
 	
 	-- Weapon Models
 	util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -108,6 +111,7 @@ if VJExists == true then
 	util.PrecacheModel("models/weapons/w_colphne_taurus_curve.mdl")
 	util.PrecacheModel("models/weapons/w_vector_kriss_vector.mdl")
 	util.PrecacheModel("models/weapons/w_lenna_hk_ump9.mdl")
+	util.PrecacheModel("models/weapons/w_suomi_kp31.mdl")
 
 	-- Magazine Models
 	util.PrecacheModel("models/prop/gfl2_nemesis_om50_nemesis_magazine.mdl")
@@ -121,6 +125,7 @@ if VJExists == true then
 	util.PrecacheModel("models/prop/gfl2_colphne_taurus_curve_magazine.mdl")
 	util.PrecacheModel("models/prop/gfl2_vector_kriss_vector_magazine.mdl")
 	util.PrecacheModel("models/prop/gfl2_lenna_ump9_magazine.mdl")
+	util.PrecacheModel("models/prop/gfl2_suomi_kp31_magazine.mdl")
 
 	-- Grenade Models
 	util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -178,6 +183,7 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_taurus_curve_d",15)
 	VJ.AddConVar("vj_gf2_kriss_vector_d",30)
 	VJ.AddConVar("vj_gf2_ump9_d",30)
+	VJ.AddConVar("vj_gf2_kp31_d",25)
 
 	-- Menu --
 	local AddConvars = {}
