@@ -10,12 +10,67 @@ local CharacterColor = Color(50,100,165)
 local GF2Subtitle = { -- add new tables inside here
 	
 	{
+		snd = "vo/jp/nagant/alert1.wav", 
+		subject = CharacterName, 
+		text = { -- ID: 78170
+			["schinese"] = "当心！", 
+			["english"] = "Watch out!", 
+			["japanese"] = "気をつけるのじゃ！",
+		},
+		subjectcol = CharacterColor,
+	},
+
+	{
+		snd = "vo/jp/nagant/alert2.wav", 
+		subject = CharacterName, 
+		text = { -- ID: 78177
+			["schinese"] = "就让老人家来给你上一课吧！", 
+			["english"] = "Now, let this old veteran teach you a lesson!", 
+			["japanese"] = "この年寄りが戦い方というものを教えてやろう！",
+		},
+		subjectcol = CharacterColor,
+	},
+
+	{
 		snd = "vo/jp/nagant/die1.wav", 
 		subject = CharacterName, 
 		text = { -- ID: 78176
 			["schinese"] = "这些家伙，懂不懂什么是尊老爱幼啊！呜，我的帽子……", 
 			["english"] = "Do these guys even understand the concept of respecting elders? Ugh, my hat...", 
 			["japanese"] = "こやつめ、「老人を尊び、子どもを愛する」ということを知らんのか！うわぁっ、わしの帽子がぁ……",
+		},
+		subjectcol = CharacterColor,
+	},
+	
+	{
+		snd = "vo/jp/nagant/follow1.wav", 
+		subject = CharacterName, 
+		text = { -- ID: 78610
+			["schinese"] = "吭……", 
+			["english"] = "Hmm...", 
+			["japanese"] = "ゴホン",
+		},
+		subjectcol = CharacterColor,
+	},
+	
+	{
+		snd = "vo/jp/nagant/follow2.wav", 
+		subject = CharacterName, 
+		text = { -- ID: 78614
+			["schinese"] = "牛奶吗……", 
+			["english"] = "Milk...?", 
+			["japanese"] = "牛乳か……",
+		},
+		subjectcol = CharacterColor,
+	},
+	
+	{
+		snd = "vo/jp/nagant/follow3.wav", 
+		subject = CharacterName, 
+		text = { -- ID: 43391
+			["schinese"] = "你好~", 
+			["english"] = "Hi~", 
+			["japanese"] = "こんにちは～。",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -115,6 +170,39 @@ local GF2Subtitle = { -- add new tables inside here
 			["schinese"] = "哼哼，看到了吗？这就是前辈和你们这些新人的差距。", 
 			["english"] = "Hehe, see that? That's the difference between a veteran like me and you rookies.", 
 			["japanese"] = "ふふん、見たか。これがベテランとおぬしら新人との差じゃ。",
+		},
+		subjectcol = CharacterColor,
+	},
+	
+	{
+		snd = "vo/jp/nagant/killed_enemy4.wav", 
+		subject = CharacterName, 
+		text = { -- ID: 78171
+			["schinese"] = "可别小瞧前辈！", 
+			["english"] = "Don't underestimate your senior!", 
+			["japanese"] = "先輩を甘く見ないことじゃ！",
+		},
+		subjectcol = CharacterColor,
+	},
+	
+	{
+		snd = "vo/jp/nagant/killed_enemy5.wav", 
+		subject = CharacterName, 
+		text = { -- ID: 78172
+			["schinese"] = "还差得远呢，小屁孩。", 
+			["english"] = "A thousand years too early, kiddo.", 
+			["japanese"] = "まだまだ青二才よのう。",
+		},
+		subjectcol = CharacterColor,
+	},
+	
+	{
+		snd = "vo/jp/nagant/unfollow1.wav", 
+		subject = CharacterName, 
+		text = { -- ID: 78612
+			["schinese"] = "哦呀。", 
+			["english"] = "Oya.", 
+			["japanese"] = "おやおや。",
 		},
 		subjectcol = CharacterColor,
 	},
