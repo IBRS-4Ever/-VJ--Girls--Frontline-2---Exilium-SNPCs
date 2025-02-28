@@ -39,6 +39,7 @@ function ENT:CustomOnTakeDamage_AfterDamage(dmginfo, hitgroup)
 			if IsValid(Drink) then Drink:Remove() end
 		end)
 
+        self.MeleeAttackDamage = self.MeleeAttackDamage * 2
         local Weapon = self:GetActiveWeapon()
         Weapon.Primary.Damage = Weapon.Primary.Damage * 2
         Weapon.NPC_TimeUntilFireExtraTimers = {}

@@ -139,6 +139,7 @@ if VJExists == true then
 	util.PrecacheModel("models/prop/gfl2_colphne_bandage.mdl")
 	util.PrecacheModel("models/prop/gfl2_colphne_medkit.mdl")
 	util.PrecacheModel("models/prop/gfl2_colphne_syringe.mdl")
+	util.PrecacheModel("models/prop/gfl2_mechty_energy_drink.mdl")
 
 	-- ConVars --
 	VJ.AddConVar("vj_gf2_nemesis_h",200)
