@@ -1,7 +1,7 @@
 GF2_Subtitles_Table = GF2_Subtitles_Table or {} -- don't touch
 
 local CharacterName = {
-	["schinese"] = "佩里提亚：",
+	["schinese"] = "佩里缇亚：",
 	["english"] = "Peritya: ",
 	["japanese"] = "ペリティア：",
 	}

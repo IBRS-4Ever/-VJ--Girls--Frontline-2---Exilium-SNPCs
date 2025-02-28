@@ -22,8 +22,8 @@ ENT.MoveCollideType = nil
 ENT.CollisionGroupType = nil
 ENT.SolidType = SOLID_VPHYSICS
 ENT.DoesRadiusDamage = true -- Should it do a blast damage when it hits something?
-ENT.RadiusDamageRadius = 250 -- How far the damage go? The farther away it's from its enemy, the less damage it will do | Counted in world units
-ENT.RadiusDamage = 125 -- How much damage should it deal? Remember this is a radius damage, therefore it will do less damage the farther away the entity is from its enemy
+ENT.RadiusDamageRadius = 500 -- How far the damage go? The farther away it's from its enemy, the less damage it will do | Counted in world units
+ENT.RadiusDamage = 40 -- How much damage should it deal? Remember this is a radius damage, therefore it will do less damage the farther away the entity is from its enemy
 ENT.RadiusDamageUseRealisticRadius = true -- Should the damage decrease the farther away the enemy is from the position that the projectile hit?
 ENT.RadiusDamageType = DMG_BURN -- Damage type
 ENT.RadiusDamageForce = 90 -- Put the force amount it should apply | false = Don't apply any force
@@ -78,4 +78,14 @@ function ENT:DeathEffects(data,phys)
 	self:DoDamageCode()
 	self:SetDeathVariablesTrue(nil, nil, false)
 	self:Remove()
+end
+
+function ENT:CustomOnDoDamage(data, phys, hitEnts)
+	if hitEnts then
+		for id, ent in ipairs(hitEnts) do
+			if ent:IsNPC() or ent:GetClass() == "prop_physics" or ent:GetClass() == "prop_ragdoll" then
+				ent:Ignite(10)
+			end
+		end
+	end
 end

@@ -16,6 +16,8 @@ ENT.FootStepTimeWalk = 0.5
 
 ENT.HasItemDropsOnDeath = false
 
+ENT.Weapon_FindCoverOnReload = false
+
 ENT.HasOnPlayerSight = true
 ENT.OnPlayerSightDistance = 2000
 ENT.OnPlayerSightDispositionLevel = 1

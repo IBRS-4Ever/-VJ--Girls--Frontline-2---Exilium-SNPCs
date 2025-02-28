@@ -21,7 +21,7 @@ function SWEP:CustomOnReload()
 		Magazing:SetPos(self.Owner:GetBonePosition(self.Owner:LookupBone("ValveBiped.Bip01_R_Hand")))
 		Magazing:SetAngles(self.Owner:GetAngles()+self.MagazineAngle)
 		Magazing:SetOwner(self)
-		Magazing:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
+		Magazing:SetCollisionGroup(COLLISION_GROUP_WEAPON)
 
 		if self:Clip1() == 0 then
 			Magazing:SetBodygroup(Magazing:FindBodygroupByName( "bullets" ),1)
@@ -32,16 +32,14 @@ function SWEP:CustomOnReload()
 		Magazing:Activate()
 		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),1)
 		
-		timer.Create( "Mag_Remove"..Magazing:EntIndex(), MagazineRemoveTimer, 1, function() 
-			Magazing:Remove()
+		timer.Simple( MagazineRemoveTimer, function() 
+			if IsValid(Magazing) then Magazing:Remove() end
 		end)
-		
-		Magazing:CallOnRemove("RemoveTimer",function(Magazing) timer.Remove( "Mag_Remove"..Magazing:EntIndex() ) end)
 	end
 end
 
 function SWEP:CustomOnReload_Finish()
-	if DropMagazine && self.MagazingModel != "null" then
+	if DropMagazine && self.MagazingModel then
 		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),0)
 		self:SetBodygroup(self:FindBodygroupByName( "bullets" ),0)
 		return true 
