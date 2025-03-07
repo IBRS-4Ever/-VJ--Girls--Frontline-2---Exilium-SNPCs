@@ -13,7 +13,7 @@ SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_kp31_d")
 SWEP.Primary.Force = 1
-SWEP.Primary.ClipSize = 50
+SWEP.Primary.ClipSize = 70
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.6
 SWEP.NPC_FiringDistanceScale = 0.85

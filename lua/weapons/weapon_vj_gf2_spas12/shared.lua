@@ -8,7 +8,9 @@ SWEP.WorldModel = "models/weapons/w_sabrina_spas12.mdl"
 SWEP.HoldType = "shotgun"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.9
-SWEP.NPC_ExtraFireSound = {"weapons/shotgun/shotgun_cock.wav"}
+SWEP.NPC_TimeUntilFire = 0.3
+SWEP.NPC_TimeUntilFireExtraTimers = {0.3}
+--SWEP.NPC_ExtraFireSound = {"weapons/shotgun/shotgun_cock.wav"}
 SWEP.NPC_ReloadSound = {"weapons/sg/reload.wav"}
 SWEP.NPC_FiringDistanceScale = 0.5
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------

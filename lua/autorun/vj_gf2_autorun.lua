@@ -37,9 +37,11 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Colphne_Tactical","npc_vj_gf2_colphne_tactical",{"weapon_vj_gf2_taurus_curve"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Colphne_SilentVoice","npc_vj_gf2_colphne_silent_voice",{"weapon_vj_gf2_taurus_curve"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vector","npc_vj_gf2_vector",{"weapon_vj_gf2_kriss_vector"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vector_MolotovBunny","npc_vj_gf2_vector_molotov_bunny",{"weapon_vj_gf2_kriss_vector"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lenna","npc_vj_gf2_lenna",{"weapon_vj_gf2_ump9"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lenna_EnergeticMagic","npc_vj_gf2_lenna_energetic_magic",{"weapon_vj_gf2_ump9"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lenna_FlyingPhantom","npc_vj_gf2_lenna_flying_phantom",{"weapon_vj_gf2_ump9"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Jiangyu","npc_vj_gf2_jiangyu",{"weapon_vj_gf2_qbz97"},vCat)
 	
 	-- Weapons
 	VJ.AddNPCWeapon("OM50", "weapon_vj_gf2_om50", vCat)
@@ -55,6 +57,7 @@ if VJExists == true then
 	VJ.AddNPCWeapon("KRISS Vector", "weapon_vj_gf2_kriss_vector", vCat)
 	VJ.AddNPCWeapon("UMP9", "weapon_vj_gf2_ump9", vCat)
 	VJ.AddNPCWeapon("KP/-31", "weapon_vj_gf2_kp31", vCat)
+	VJ.AddNPCWeapon("QBZ-97", "weapon_vj_gf2_qbz97", vCat)
 
 	-- Items
 	VJ.AddEntity("#vj_gf2_items.Colphne_Healthkit", "sent_gf2_colphne_healthkit", "IBRS", false, 0, true, vCat)
@@ -91,11 +94,13 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/colphne_combat.mdl")
 	util.PrecacheModel("models/gf2/colphne_tactical.mdl")
 	util.PrecacheModel("models/gf2/vector_combat.mdl")
+	util.PrecacheModel("models/gf2/vector_molotov_bunny.mdl")
 	util.PrecacheModel("models/gf2/lenna_combat.mdl")
 	util.PrecacheModel("models/gf2/lenna_energetic_magic.mdl")
 	util.PrecacheModel("models/gf2/lenna_flying_phantom.mdl")
 	util.PrecacheModel("models/gf2/suomi_combat.mdl")
 	util.PrecacheModel("models/gf2/suomi_midsummer_pixie.mdl")
+	util.PrecacheModel("models/gf2/jiangyu_combat.mdl")
 	
 	-- Weapon Models
 	util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -112,6 +117,7 @@ if VJExists == true then
 	util.PrecacheModel("models/weapons/w_vector_kriss_vector.mdl")
 	util.PrecacheModel("models/weapons/w_lenna_hk_ump9.mdl")
 	util.PrecacheModel("models/weapons/w_suomi_kp31.mdl")
+	util.PrecacheModel("models/weapons/w_jiangyu_qbz_97.mdl")
 
 	-- Magazine Models
 	util.PrecacheModel("models/prop/gfl2_nemesis_om50_nemesis_magazine.mdl")
@@ -126,6 +132,7 @@ if VJExists == true then
 	util.PrecacheModel("models/prop/gfl2_vector_kriss_vector_magazine.mdl")
 	util.PrecacheModel("models/prop/gfl2_lenna_ump9_magazine.mdl")
 	util.PrecacheModel("models/prop/gfl2_suomi_kp31_magazine.mdl")
+	util.PrecacheModel("models/prop/gfl2_jiangyu_qbz_97_magazine.mdl")
 
 	-- Grenade Models
 	util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -170,6 +177,8 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_vector_d",60)
 	VJ.AddConVar("vj_gf2_lenna_h",300)
 	VJ.AddConVar("vj_gf2_lenna_d",60)
+	VJ.AddConVar("vj_gf2_jiangyu_h",250)
+	VJ.AddConVar("vj_gf2_jiangyu_d",50)
 	
 	VJ.AddConVar("vj_gf2_om50_d",150)
 	VJ.AddConVar("vj_gf2_ak_alfa_d",40)
@@ -185,6 +194,7 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_kriss_vector_d",30)
 	VJ.AddConVar("vj_gf2_ump9_d",30)
 	VJ.AddConVar("vj_gf2_kp31_d",25)
+	VJ.AddConVar("vj_gf2_qbz97_d",40)
 
 	-- Menu --
 	local AddConvars = {}
@@ -204,14 +214,14 @@ if VJExists == true then
 		local function VJ_GF2MENU_MAIN(Panel)
 			if game.SinglePlayer() or LocalPlayer():IsAdmin() then
 				Panel:AddControl( "Label", {Text = "#vjbase.menu.svsettings"})
-			Panel:AddControl( "Label", {Text = "#vjbase.menu.general.admin.only"})
-			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DropMagazines", Command = "vj_gf2_drop_magazings"})
-			Panel:ControlHelp("#vj_gf2_snpcs.settings.DropMagazines.Desc")
-			Panel:AddControl("Slider",{Label = "#vj_gf2_snpcs.settings.MagazineRemoveTimer",min = 5, max = 60, Command = "vj_gf2_magazingremovetime"})
-			Panel:ControlHelp("#vj_gf2_snpcs.settings.MagazineRemoveTimer.Desc")
-			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathExpressions", Command = "vj_gf2_death_expressions"})
-			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathFingerPose", Command = "vj_gf2_death_fingerpose"})
-			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_RandomBodygroups", Command = "vj_gf2_npc_random_bodygroups"})
+				Panel:AddControl( "Label", {Text = "#vjbase.menu.general.admin.only"})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DropMagazines", Command = "vj_gf2_drop_magazings"})
+				Panel:ControlHelp("#vj_gf2_snpcs.settings.DropMagazines.Desc")
+				Panel:AddControl("Slider",{Label = "#vj_gf2_snpcs.settings.MagazineRemoveTimer",min = 5, max = 60, Command = "vj_gf2_magazingremovetime"})
+				Panel:ControlHelp("#vj_gf2_snpcs.settings.MagazineRemoveTimer.Desc")
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathExpressions", Command = "vj_gf2_death_expressions"})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathFingerPose", Command = "vj_gf2_death_fingerpose"})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_RandomBodygroups", Command = "vj_gf2_npc_random_bodygroups"})
 			else
 				Panel:AddControl("Label", {Text = "#vjbase.menu.general.admin.not"})
 				Panel:ControlHelp("#vjbase.menu.general.admin.only")

@@ -11,5 +11,5 @@ ENT.SoundTbl_Pain = {"vo/jp/tololo/hit1.wav","vo/jp/tololo/hit2.wav","vo/jp/tolo
 ENT.SoundTbl_OnKilledEnemy = {"vo/jp/tololo/killed_enemy1.wav","vo/jp/tololo/killed_enemy2.wav","vo/jp/tololo/killed_enemy3.wav","vo/jp/tololo/killed_enemy4.wav","vo/jp/tololo/killed_enemy5.wav","vo/jp/tololo/killed_enemy6.wav"}
 ENT.SoundTbl_FollowPlayer = {"vo/jp/tololo/follow1.wav","vo/jp/tololo/follow2.wav","vo/jp/tololo/follow3.wav","vo/jp/tololo/follow4.wav","vo/jp/tololo/follow5.wav","vo/jp/tololo/follow6.wav"}
 ENT.SoundTbl_UnFollowPlayer = {"vo/jp/tololo/unfollow1.wav"}
-ENT.SoundTbl_Death = {"vo/jp/tololo/die1.wav"}
+ENT.SoundTbl_Death = {"vo/jp/tololo/die1.wav","vo/jp/tololo/hit6.wav","vo/jp/tololo/hit7.wav"}
 ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/tololo/get_heal1.wav","vo/jp/tololo/get_heal2.wav","vo/jp/tololo/get_heal3.wav","vo/jp/tololo/get_heal4.wav"}
