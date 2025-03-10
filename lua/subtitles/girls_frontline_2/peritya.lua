@@ -293,28 +293,7 @@ local GF2Subtitle = { -- add new tables inside here
 		},
 		subjectcol = CharacterColor,
 	},
-	--[[
-	{
-		snd = "vo/jp/peritya/idle1.wav",
-		subject = CharacterName,
-		text = "嗨嗨，指挥官，有什么需要帮忙的吗？人家现在日~程~空~白~哦~",
-		subjectcol = CharacterColor,
-	},
 
-	{
-		snd = "vo/jp/peritya/idle2.wav",
-		subject = CharacterName,
-		text = "早上好呀，指挥官。哦，看起来精神不佳，提神醒脑的药剂需要吗？完~全~无~害~哦~",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/idle3.wav",
-		subject = CharacterName,
-		text = "啊？都这个时间了，指挥官还在工作吗？劳逸结合可是很重要的，医生的话，要~听~的~呦~",
-		subjectcol = CharacterColor,
-	},
-	]]
 	{
 		snd = "vo/jp/peritya/idle4.wav",
 		subject = CharacterName,
@@ -325,14 +304,7 @@ local GF2Subtitle = { -- add new tables inside here
 		},
 		subjectcol = CharacterColor,
 	},
-	--[[
-	{
-		snd = "vo/jp/peritya/idle5.wav",
-		subject = CharacterName,
-		text = "闪电队长真的很帅气，而且还很温柔，就像是...姐姐那样...",
-		subjectcol = CharacterColor,
-	},
-]]
+
 	{
 		snd = "vo/jp/peritya/idle6.wav",
 		subject = CharacterName,
@@ -343,14 +315,7 @@ local GF2Subtitle = { -- add new tables inside here
 		},
 		subjectcol = CharacterColor,
 	},
---[[
-	{
-		snd = "vo/jp/peritya/idle7.wav",
-		subject = CharacterName,
-		text = "啊，哈哈哈，吓到了吗，指挥官？嘿嘿，对不起啦。没事呦，只是太闲了，就想来打扰一下认~真~工~作~的指挥官呢。",
-		subjectcol = CharacterColor,
-	},
-]]
+
 	{
 		snd = "vo/jp/peritya/idle8.wav",
 		subject = CharacterName,
@@ -361,14 +326,7 @@ local GF2Subtitle = { -- add new tables inside here
 		},
 		subjectcol = CharacterColor,
 	},
---[[
-	{
-		snd = "vo/jp/peritya/idle9.wav",
-		subject = CharacterName,
-		text = "随便摸人家的头可是要付出代价呦~就算是指挥官也不行。",
-		subjectcol = CharacterColor,
-	},
-]]
+
 	{
 		snd = "vo/jp/peritya/idle10.wav",
 		subject = CharacterName,
@@ -443,98 +401,6 @@ local GF2Subtitle = { -- add new tables inside here
 		},
 		subjectcol = CharacterColor,
 	},
-	--[[
-	{
-		snd = "vo/jp/peritya/player_sight1.wav",
-		subject = CharacterName,
-		text = "嗯？指挥官有什么需要吗？只要是医疗方面的事，都可以告诉人家呦。",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/player_sight2.wav",
-		subject = CharacterName,
-		text = "没关系，不管多重的伤，人家都能帮大家治疗，啊，前提是，可要活着才行。",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/player_sight3.wav",
-		subject = CharacterName,
-		text = "医疗用品怎么不够了，最近指挥官经常受伤，指挥官，最近请好好休息呦，身体出问题的话，可会带来很多麻烦呢。",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/player_sight4.wav",
-		subject = CharacterName,
-		text = "怎么又把自己搞得破破烂烂的，指挥官可不能换素体，也不能保留心智。啊，这个表情，痛苦倒下的指挥官，很期待的呦。",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/player_sight5.wav",
-		subject = CharacterName,
-		text = "指挥官，指挥官。哈，原来在这里，偷懒可不行哦，需要人家制研一支干劲提升的药剂吗？啊，副作用？怎么可能~",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/player_sight6.wav",
-		subject = CharacterName,
-		text = "指挥官我想...我...不，没什么，确定要继续问下去吗，指挥官？",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/player_sight7.wav",
-		subject = CharacterName,
-		text = "这种心情...有点奇怪...啊！指挥官，是做了什么？被我发现的话，后果自负呀。",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/player_sight8.wav",
-		subject = CharacterName,
-		text = "指挥官最近是做了什么奇怪的事吗？啊啊，不，不是，这是个笨问题，可是指挥官看起来和之前不一样了，有种...啊，肯定是错觉。",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/player_sight9.wav",
-		subject = CharacterName,
-		text = "指挥官，指挥官是不会抛弃同伴的，对吗？只是随便问问啦，但是答案是肯定的吗，指挥官？人家，哼，不许指挥官回答“会”！",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/player_sight10.wav",
-		subject = CharacterName,
-		text = "指挥官，指挥官，好像做了个梦，人形也会做梦吗...？还是...那是真的...？",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/player_sight11.wav",
-		subject = CharacterName,
-		text = "哟哟，指挥官，人家做了蔓越莓巧克力呦，啊，指挥官这是什么表情啦，根据颜色和形状判断，味道不会差呦。总、总之，指挥官吃一点吧。",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/player_sight12.wav",
-		subject = CharacterName,
-		text = "指...指挥官，我可以留下来吗？像现在这样就好。像...现在这样...",
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/player_sight13.wav",
-		subject = CharacterName,
-		text = "嗯...指挥官，人家刚刚做了很重要的决定呦，是...指挥官问人家是什么？指挥官会知道的，只要指挥官在这里...",
-		subjectcol = CharacterColor,
-	},
-	]]--
 
 }
 

@@ -42,6 +42,9 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lenna_EnergeticMagic","npc_vj_gf2_lenna_energetic_magic",{"weapon_vj_gf2_ump9"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lenna_FlyingPhantom","npc_vj_gf2_lenna_flying_phantom",{"weapon_vj_gf2_ump9"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Jiangyu","npc_vj_gf2_jiangyu",{"weapon_vj_gf2_qbz97"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai","npc_vj_gf2_klukai",{"weapon_vj_gf2_hk416"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_AstralLuminous","npc_vj_gf2_klukai_astral_luminous",{"weapon_vj_gf2_hk416"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_SpeedStar","npc_vj_gf2_klukai_speed_star",{"weapon_vj_gf2_hk416"},vCat)
 	
 	-- Weapons
 	VJ.AddNPCWeapon("OM50", "weapon_vj_gf2_om50", vCat)
@@ -58,6 +61,7 @@ if VJExists == true then
 	VJ.AddNPCWeapon("UMP9", "weapon_vj_gf2_ump9", vCat)
 	VJ.AddNPCWeapon("KP/-31", "weapon_vj_gf2_kp31", vCat)
 	VJ.AddNPCWeapon("QBZ-97", "weapon_vj_gf2_qbz97", vCat)
+	VJ.AddNPCWeapon("HK416", "weapon_vj_gf2_hk416", vCat)
 
 	-- Items
 	VJ.AddEntity("#vj_gf2_items.Colphne_Healthkit", "sent_gf2_colphne_healthkit", "IBRS", false, 0, true, vCat)
@@ -119,21 +123,6 @@ if VJExists == true then
 	util.PrecacheModel("models/weapons/w_suomi_kp31.mdl")
 	util.PrecacheModel("models/weapons/w_jiangyu_qbz_97.mdl")
 
-	-- Magazine Models
-	util.PrecacheModel("models/prop/gfl2_nemesis_om50_nemesis_magazine.mdl")
-	util.PrecacheModel("models/prop/gfl2_ak_alfa_magazine.mdl")
-	util.PrecacheModel("models/prop/gfl2_mp7_magazine.mdl")
-	util.PrecacheModel("models/prop/gfl2_groza_ots14_magazine.mdl")
-	util.PrecacheModel("models/prop/gfl2_peritya_pkp_sp_magazine.mdl")
-	util.PrecacheModel("models/prop/gfl2_qiongjiu_qbz_191_magazine.mdl")
-	util.PrecacheModel("models/prop/gfl2_mechty_g11_magazine.mdl")
-	util.PrecacheModel("models/prop/gfl2_vepley_vepr12_sr_magazine.mdl")
-	util.PrecacheModel("models/prop/gfl2_colphne_taurus_curve_magazine.mdl")
-	util.PrecacheModel("models/prop/gfl2_vector_kriss_vector_magazine.mdl")
-	util.PrecacheModel("models/prop/gfl2_lenna_ump9_magazine.mdl")
-	util.PrecacheModel("models/prop/gfl2_suomi_kp31_magazine.mdl")
-	util.PrecacheModel("models/prop/gfl2_jiangyu_qbz_97_magazine.mdl")
-
 	-- Grenade Models
 	util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
 	util.PrecacheModel("models/prop/gfl2_peritya_grenade.mdl")
@@ -179,6 +168,8 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_lenna_d",60)
 	VJ.AddConVar("vj_gf2_jiangyu_h",250)
 	VJ.AddConVar("vj_gf2_jiangyu_d",50)
+	VJ.AddConVar("vj_gf2_klukai_h",300)
+	VJ.AddConVar("vj_gf2_klukai_d",60)
 	
 	VJ.AddConVar("vj_gf2_om50_d",150)
 	VJ.AddConVar("vj_gf2_ak_alfa_d",40)
@@ -195,6 +186,7 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_ump9_d",30)
 	VJ.AddConVar("vj_gf2_kp31_d",25)
 	VJ.AddConVar("vj_gf2_qbz97_d",40)
+	VJ.AddConVar("vj_gf2_hk416_d",45)
 
 	-- Menu --
 	local AddConvars = {}

@@ -234,21 +234,7 @@ local GF2Subtitle = { -- add new tables inside here
 		},
 		subjectcol = CharacterColor,
 	},
-	--[[
-	{
-		snd = "vo/jp/nemesis/idle1.wav",
-		subject = CharacterName,
-		text = "哦，这不是饲养员吗？今天也一副工作好烦好想睡觉的样子呢，哈哈哈。",
-		subjectcol = CharacterColor,
-	},
 
-	{
-		snd = "vo/jp/nemesis/idle2.wav",
-		subject = CharacterName,
-		text = "不许盯着我看！变这么矮又不是我愿意的...都怪饲养员的饲养员那家伙！",
-		subjectcol = CharacterColor,
-	},
-]]
 	{
 		snd = "vo/jp/nemesis/idle3.wav",
 		subject = CharacterName,
@@ -281,21 +267,7 @@ local GF2Subtitle = { -- add new tables inside here
 		},
 		subjectcol = CharacterColor,
 	},
---[[
-	{
-		snd = "vo/jp/nemesis/idle6.wav",
-		subject = CharacterName,
-		text = "上次作战我把无人机打下来的事情，饲养员可不要告诉饲养员的饲养员啊，嗯被她知道的话又要啰嗦了。",
-		subjectcol = CharacterColor,
-	},
 
-	{
-		snd = "vo/jp/nemesis/idle7.wav",
-		subject = CharacterName,
-		text = "饲养员饲养员，托洛洛那家伙又不许我进她房间了，好过分啊。嗯，天才，果然都是孤独的呢。",
-		subjectcol = CharacterColor,
-	},
-]]
 	{
 		snd = "vo/jp/nemesis/idle8.wav",
 		subject = CharacterName,

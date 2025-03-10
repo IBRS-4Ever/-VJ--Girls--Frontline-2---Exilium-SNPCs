@@ -12,10 +12,11 @@ SWEP.MagazineAngle = Angle(0,90,0)
 function SWEP:CustomOnInitialize() 
 	DropMagazine = GetConVar("vj_gf2_drop_magazings"):GetBool()
 	MagazineRemoveTimer = GetConVar("vj_gf2_magazingremovetime"):GetInt()
+	if self.MagazingModel then util.PrecacheModel( self.MagazingModel ) end
 end
 
 function SWEP:CustomOnReload() 
-	if DropMagazine && self.MagazingModel then
+	if DropMagazine and self.MagazingModel then
 		local Magazing = ents.Create("prop_physics")
 		Magazing:SetModel(self.MagazingModel)
 		Magazing:SetPos(self.Owner:GetBonePosition(self.Owner:LookupBone("ValveBiped.Bip01_R_Hand")))
@@ -39,7 +40,7 @@ function SWEP:CustomOnReload()
 end
 
 function SWEP:CustomOnReload_Finish()
-	if DropMagazine && self.MagazingModel then
+	if DropMagazine and self.MagazingModel then
 		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),0)
 		self:SetBodygroup(self:FindBodygroupByName( "bullets" ),0)
 		return true 
