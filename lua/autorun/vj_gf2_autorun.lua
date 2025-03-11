@@ -201,7 +201,7 @@ if VJExists == true then
 	
 	VJ.AddClientConVar("vj_gf2_subtitles", 0, "Display Subtitles.")
 	VJ.AddClientConVar("vj_gf2_subtitles_language", "schinese", "Subtitles' language.")
-
+	
 	if CLIENT then
 		local function VJ_GF2MENU_MAIN(Panel)
 			if game.SinglePlayer() or LocalPlayer():IsAdmin() then

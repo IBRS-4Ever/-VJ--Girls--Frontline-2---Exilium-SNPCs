@@ -23,3 +23,39 @@ SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_jiangyu_qbz_97_magazine.mdl"
+
+function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
+	local Target = tr.Entity
+	local HitPos = tr.HitPos
+	local Normal = tr.Normal
+	local elec = EffectData()
+	elec:SetStart(HitPos)
+	elec:SetOrigin(HitPos)
+	elec:SetMagnitude(3)
+	elec:SetNormal(Normal)
+	util.Effect("ElectricSpark", elec)
+
+	for id, ent in pairs( ents.FindInSphere( HitPos, 125 ) ) do
+		if IsValid(Target) and ent == Target then continue end
+		if ent == self.Owner then continue end
+		if ent:GetClass() == "obj_vj_bullseye" then continue end
+		if ent:IsNPC() and ent:Alive() then
+			if ent:Disposition(self.Owner) == "D_HT" then
+				local DmgInfo = DamageInfo()
+				DmgInfo:SetDamage( 5 )
+				DmgInfo:SetAttacker( self.Owner )
+				DmgInfo:SetInflictor( self )
+				DmgInfo:SetDamageType( DMG_SHOCK ) 
+	
+				ent:TakeDamageInfo( DmgInfo )
+
+				local elec = EffectData()
+				elec:SetStart(ent:GetBonePosition(0))
+				elec:SetOrigin(ent:GetBonePosition(0))
+				elec:SetMagnitude(3)
+				elec:SetNormal(Normal)
+				util.Effect("ElectricSpark", elec)
+			end
+		end
+	end
+end
