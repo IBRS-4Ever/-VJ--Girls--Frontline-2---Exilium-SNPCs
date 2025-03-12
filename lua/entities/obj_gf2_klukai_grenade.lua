@@ -85,10 +85,12 @@ function ENT:CustomOnDoDamage(data, phys, hitEnts)
 		for id, ent in ipairs(hitEnts) do
 			if ent:IsNPC() and !ent.KlukaiTarget then
 				local GrenadeOwner = self.Owner
+				local Pos = ent:GetPos()
+				local Angles = ent:GetAngles()
 				timer.Simple( 0.5, function()
 					local Grenade = ents.Create("obj_gf2_klukai_grenade")
-					Grenade:SetPos(ent:GetPos())
-					Grenade:SetAngles(ent:GetAngles())
+					Grenade:SetPos(Pos)
+					Grenade:SetAngles(Angles)
 					Grenade:SetOwner(GrenadeOwner)
 					Grenade:Spawn()
 					Grenade:Activate()
