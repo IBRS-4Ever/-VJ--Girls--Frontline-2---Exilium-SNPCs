@@ -30,15 +30,15 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 	local Normal = tr.Normal
 	local elec = EffectData()
 	elec:SetOrigin(HitPos)
-	elec:SetNormal(Normal)
+	elec:SetNormal(-Normal)
 	util.Effect("MetalSpark", elec)
 
-	for id, ent in pairs( ents.FindInSphere( HitPos, 125 ) ) do
+	for id, ent in pairs( ents.FindInSphere( HitPos, 150 ) ) do
 		if (IsValid(Target) and ent == Target) or ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
 		if ent:IsNPC() and ent:Alive() then
 			if ent:Disposition(self.Owner) == 1 then -- D_HT
 				local DmgInfo = DamageInfo()
-				DmgInfo:SetDamage( 5 )
+				DmgInfo:SetDamage( 10 )
 				DmgInfo:SetAttacker( self.Owner )
 				DmgInfo:SetInflictor( self )
 				DmgInfo:SetDamageType( DMG_SHOCK ) 
@@ -47,7 +47,7 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 
 				local elec = EffectData()
 				elec:SetOrigin(ent:GetBonePosition(0))
-				elec:SetNormal(Normal)
+				elec:SetNormal(-Normal)
 				util.Effect("MetalSpark", elec)
 			end
 		end
