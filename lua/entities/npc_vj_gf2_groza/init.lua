@@ -14,3 +14,7 @@ ENT.SoundTbl_UnFollowPlayer = {"vo/jp/groza/unfollow1.wav"}
 ENT.SoundTbl_Death = {"vo/jp/groza/die1.wav","vo/jp/groza/die2.wav"}
 ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/groza/get_heal1.wav","vo/jp/groza/get_heal2.wav","vo/jp/groza/get_heal3.wav","vo/jp/groza/get_heal4.wav","vo/jp/groza/get_heal5.wav"}
 ENT.SoundTbl_GrenadeAttack = {"vo/jp/groza/grenade_attack1.wav","vo/jp/groza/grenade_attack2.wav"}
+
+ENT.Shield = 50
+ENT.ShieldRadius = 100
+ENT.ShieldRate = 0.1

@@ -203,6 +203,7 @@ if VJExists == true then
 	
 	VJ.AddClientConVar("vj_gf2_subtitles", 0, "Display Subtitles.")
 	VJ.AddClientConVar("vj_gf2_subtitles_language", "schinese", "Subtitles' language.")
+	VJ.AddClientConVar("vj_gf2_draw_shield", 1, "Draw Shield.")
 	
 	if CLIENT then
 		local function VJ_GF2MENU_MAIN(Panel)
@@ -235,6 +236,7 @@ if VJExists == true then
 			end
 			Panel:AddPanel(gf2_subtitle_language_combo_box)
 			Panel:ControlHelp("#vj_gf2_snpcs.settings.Subtitles_Language.Desc")
+			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DrawShield", Command = "vj_gf2_draw_shield"})
 		end
 		function VJ_ADDTOMENU_GF2()
 			spawnmenu.AddToolMenuOption( "DrVrej", "SNPC Configures", "Girls' Frontline 2: Exilium", "#vj_gf2_snpcs.settings.Title", "", "", VJ_GF2MENU_MAIN, {} )

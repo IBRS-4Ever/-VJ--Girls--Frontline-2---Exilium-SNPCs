@@ -53,3 +53,13 @@ function SWEP:CustomOnReload_Finish()
 		return true 
 	end
 end
+
+function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
+	local Target = tr.Entity
+	local HitPos = tr.HitPos
+	local Water = EffectData()
+	Water:SetOrigin(HitPos)
+	Water:SetFlags(2)
+	Water:SetScale(5)
+	util.Effect("watersplash", Water)
+end

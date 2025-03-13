@@ -1,6 +1,7 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
 
+ENT.IsGF2SNPC = true
 ENT.Bleeds = false
 ENT.BloodColor = "red"
 ENT.HasBloodParticle = false
@@ -29,6 +30,10 @@ ENT.HitGroupFlinching_Values = {{HitGroup = {HITGROUP_HEAD}, Animation = {ACT_FL
 
 ENT.OnPlayerSightSoundChance = 2
 
+ENT.Shield = 0
+ENT.ShieldRadius = false
+ENT.ShieldRate = 0.25
+
 function ENT:CustomOnInitialize()
 	if GetConVar( "vj_gf2_npc_random_bodygroups" ):GetBool() then
 	local num_bodygroups = self:GetNumBodyGroups()
@@ -41,9 +46,44 @@ function ENT:CustomOnInitialize()
 			end
 		end
 	end
+	self:SetNWInt( "Shield", self.Shield )
+	if !self.ShieldRadius then return end
+	for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.ShieldRadius ) ) do
+		if ent == self then continue end
+		if ent.IsGF2SNPC then
+			ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self:GetNWInt( "Shield" ) * self.ShieldRate )
+			ent:EmitSound("items/battery_pickup.wav")
+		end
+	end
 end
 
 function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
+	if self:GetNWInt( "Shield" ) > 0 then
+		if dmginfo:GetDamage() < self:GetNWInt( "Shield" ) then
+			self:SetNWInt( "Shield", self:GetNWInt( "Shield" ) - dmginfo:GetDamage() )
+
+			local Pos = dmginfo:GetDamagePosition()
+			local Normal = dmginfo:GetDamageForce()
+			local elec = EffectData()
+			elec:SetOrigin(Pos)
+			elec:SetNormal(-Normal)
+			util.Effect("MetalSpark", elec)
+
+			self:EmitSound("FX_RicochetSound.Ricochet")
+		else
+			self:SetNWInt( "Shield", 0 )
+
+			local ball = ents.Create( "prop_combine_ball" )
+			ball:SetAngles( self:GetAngles() )
+			ball:SetPos( self:GetBonePosition(0) )
+			ball:Spawn()
+			ball:Activate()
+			ball:SetOwner(self.Owner)
+			ball:Fire("explode","", 0)
+		end
+		dmginfo:ScaleDamage(0)
+	end
+	
 	if dmginfo:IsDamageType(DMG_BULLET + DMG_SONIC + DMG_SHOCK + DMG_BUCKSHOT + DMG_DISSOLVE) then
 		dmginfo:ScaleDamage(0.25)
 	elseif dmginfo:IsDamageType(DMG_DROWN + DMG_NERVEGAS + DMG_POISON + DMG_RADIATION) then
