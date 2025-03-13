@@ -44,13 +44,13 @@ function ENT:CustomOnInitialize()
 end
 
 function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
-	if dmginfo:IsDamageType(DMG_BULLET + DMG_SONIC + DMG_SHOCK + DMG_BUCKSHOT + DMG_SNIPER + DMG_DISSOLVE) then
+	if dmginfo:IsDamageType(DMG_BULLET + DMG_SONIC + DMG_SHOCK + DMG_BUCKSHOT + DMG_DISSOLVE) then
 		dmginfo:ScaleDamage(0.25)
 	elseif dmginfo:IsDamageType(DMG_DROWN + DMG_NERVEGAS + DMG_POISON + DMG_RADIATION) then
 		dmginfo:ScaleDamage(0)
 	elseif dmginfo:IsDamageType(DMG_BLAST + DMG_ACID + DMG_NEVERGIB) then
 		dmginfo:ScaleDamage(0.5)
-	elseif dmginfo:IsDamageType(DMG_BURN + DMG_CLUB + DMG_SLASH) then
+	elseif dmginfo:IsDamageType(DMG_BURN + DMG_CLUB + DMG_SLASH + DMG_SNIPER) then
 		dmginfo:ScaleDamage(0.75)
 	end
 end

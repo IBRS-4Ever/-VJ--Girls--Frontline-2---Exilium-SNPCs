@@ -23,3 +23,19 @@ SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_qiongjiu_qbz_191_magazine.mdl"
+
+function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
+	local Target = tr.Entity
+	local HitPos = tr.HitPos
+	local Normal = tr.Normal
+	local elec = EffectData()
+	elec:SetOrigin(HitPos)
+	elec:SetNormal(-Normal)
+	util.Effect("MetalSpark", elec)
+	
+	if Target:IsNPC() and Target:Alive() then
+		if Target:Disposition(self.Owner) == 1 then 
+			Target:Ignite(3)
+		end
+	end
+end

@@ -63,6 +63,8 @@ if VJExists == true then
 	VJ.AddNPCWeapon("QBZ-97", "weapon_vj_gf2_qbz97", vCat)
 	VJ.AddNPCWeapon("HK416", "weapon_vj_gf2_hk416", vCat)
 
+	VJ.AddNPCWeapon("Klukai's Axe", "weapon_vj_gf2_klukai_axe", vCat)
+
 	-- Items
 	VJ.AddEntity("#vj_gf2_items.Colphne_Healthkit", "sent_gf2_colphne_healthkit", "IBRS", false, 0, true, vCat)
 	VJ.AddEntity("#vj_gf2_items.Colphne_Syringe", "sent_gf2_colphne_syringe", "IBRS", false, 0, true, vCat)
