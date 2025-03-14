@@ -25,18 +25,5 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_mp7_magazine.mdl"
 
-function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
-	local Target = tr.Entity
-	local HitPos = tr.HitPos
-	local Normal = tr.Normal
-	local elec = EffectData()
-	elec:SetOrigin(HitPos)
-	elec:SetNormal(-Normal)
-	util.Effect("MetalSpark", elec)
-	
-	if Target:IsNPC() and Target:Alive() then
-		if Target:Disposition(self.Owner) == 1 then 
-			Target:Ignite(1)
-		end
-	end
-end
+SWEP.Element = "fire"
+SWEP.Element_FireIgniteTime = 3

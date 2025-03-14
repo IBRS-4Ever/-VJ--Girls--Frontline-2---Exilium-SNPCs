@@ -96,6 +96,10 @@ function ENT:CustomOnDoDamage(data, phys, hitEnts)
 					Grenade:Activate()
 				end)
 				ent.KlukaiTarget = true
+				timer.Simple( 5, function() 
+					if !IsValid(ent) then return end
+					ent.KlukaiTarget = false
+				end)
 			end
 		end
 	end

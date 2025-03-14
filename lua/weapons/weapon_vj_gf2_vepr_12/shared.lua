@@ -7,7 +7,7 @@ SWEP.Category = "GF2"
 SWEP.WorldModel = "models/weapons/w_vepley_vepr12_sr.mdl"
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.NPC_NextPrimaryFire = 0.6
+SWEP.NPC_NextPrimaryFire = 0.4
 SWEP.NPC_ReloadSound = {"weapons/sg/reload.wav"}
 SWEP.NPC_FiringDistanceScale = 0.5
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------

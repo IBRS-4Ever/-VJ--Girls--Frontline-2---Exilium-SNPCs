@@ -26,12 +26,4 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_ak_alfa_magazine.mdl"
 
-function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
-	local Target = tr.Entity
-	local HitPos = tr.HitPos
-	local Water = EffectData()
-	Water:SetOrigin(HitPos)
-	Water:SetFlags(2)
-	Water:SetScale(5)
-	util.Effect("watersplash", Water)
-end
+SWEP.Element = "water"

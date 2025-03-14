@@ -25,3 +25,5 @@ SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.MagazingModel = "models/prop/gfl2_mechty_g11_magazine.mdl"
 
 SWEP.PrimaryEffects_SpawnShells = false
+
+SWEP.Element = "poison"

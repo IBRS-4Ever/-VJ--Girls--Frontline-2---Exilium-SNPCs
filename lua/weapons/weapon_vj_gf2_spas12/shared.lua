@@ -26,12 +26,4 @@ SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_ShotgunShell1"
 
-function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
-	local Target = tr.Entity
-	local HitPos = tr.HitPos
-	local Water = EffectData()
-	Water:SetOrigin(HitPos)
-	Water:SetFlags(2)
-	Water:SetScale(5)
-	util.Effect("watersplash", Water)
-end
+SWEP.Element = "water"

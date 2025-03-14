@@ -190,6 +190,10 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_qbz97_d",40)
 	VJ.AddConVar("vj_gf2_hk416_d",45)
 
+	hook.Add("OnNPCKilled", "VJ_GF2_NPC_Killed", function(NPC, Attacker, Inflictor )
+		--print(NPC.Poisoned)
+	end)
+
 	-- Menu --
 	local AddConvars = {}
 	AddConvars["vj_gf2_drop_magazings"] = 1 -- Drop Magazines?

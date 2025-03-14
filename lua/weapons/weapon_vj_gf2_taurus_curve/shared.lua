@@ -23,6 +23,8 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_colphne_taurus_curve_magazine.mdl"
 
+SWEP.Element = "water"
+
 function SWEP:CustomOnReload() 
 	if DropMagazine && self.MagazingModel != "null" then
 		local Magazing = ents.Create("prop_physics")
@@ -52,14 +54,4 @@ function SWEP:CustomOnReload_Finish()
 		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),0)
 		return true 
 	end
-end
-
-function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
-	local Target = tr.Entity
-	local HitPos = tr.HitPos
-	local Water = EffectData()
-	Water:SetOrigin(HitPos)
-	Water:SetFlags(2)
-	Water:SetScale(5)
-	util.Effect("watersplash", Water)
 end

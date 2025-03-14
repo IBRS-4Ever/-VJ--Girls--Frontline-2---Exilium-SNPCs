@@ -22,3 +22,5 @@ SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_klukai_hk416_magazine.mdl"
+
+SWEP.Element = "poison"

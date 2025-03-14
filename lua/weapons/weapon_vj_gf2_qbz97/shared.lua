@@ -24,32 +24,6 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_jiangyu_qbz_97_magazine.mdl"
 
-function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
-	local Target = tr.Entity
-	local HitPos = tr.HitPos
-	local Normal = tr.Normal
-	local elec = EffectData()
-	elec:SetOrigin(HitPos)
-	elec:SetNormal(-Normal)
-	util.Effect("MetalSpark", elec)
-
-	for id, ent in pairs( ents.FindInSphere( HitPos, 150 ) ) do
-		if (IsValid(Target) and ent == Target) or ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
-		if ent:IsNPC() and ent:Alive() then
-			if ent:Disposition(self.Owner) == 1 then -- D_HT
-				local DmgInfo = DamageInfo()
-				DmgInfo:SetDamage( 10 )
-				DmgInfo:SetAttacker( self.Owner )
-				DmgInfo:SetInflictor( self )
-				DmgInfo:SetDamageType( DMG_SHOCK ) 
-	
-				ent:TakeDamageInfo( DmgInfo )
-
-				local elec = EffectData()
-				elec:SetOrigin(ent:GetBonePosition(0))
-				elec:SetNormal(-Normal)
-				util.Effect("MetalSpark", elec)
-			end
-		end
-	end
-end
+SWEP.Element = "electric"
+SWEP.Element_ElectricRadius = 150
+SWEP.Element_ElectricDamage = 10

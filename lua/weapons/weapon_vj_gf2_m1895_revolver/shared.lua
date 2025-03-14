@@ -21,3 +21,5 @@ SWEP.Primary.DistantSound = {"weapons/hg/m1895_revolver/fire_dist1.wav","weapons
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 
 SWEP.PrimaryEffects_SpawnShells = false
+
+SWEP.Element = "poison"

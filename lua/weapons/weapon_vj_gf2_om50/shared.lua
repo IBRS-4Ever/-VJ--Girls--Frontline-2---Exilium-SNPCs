@@ -24,3 +24,5 @@ SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_nemesis_om50_nemesis_magazine.mdl"
+
+SWEP.Element = "poison"
