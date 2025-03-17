@@ -201,6 +201,9 @@ if VJExists == true then
 	AddConvars["vj_gf2_death_expressions"] = 1 -- Death Expressions?
 	AddConvars["vj_gf2_death_fingerpose"] = 1 -- Death Finger Pose?
 	AddConvars["vj_gf2_npc_random_bodygroups"] = 0 -- Random Bodygroup for SNPCs?
+	AddConvars["vj_gf2_npc_shield_multipler"] = 1 -- Shield multipler.
+	AddConvars["vj_gf2_npc_shield_radius_multipler"] = 1 -- Shield radius multipler.
+	AddConvars["vj_gf2_npc_shield_rate_multipler"] = 1 -- Shield rate multipler.
 	for k, v in pairs(AddConvars) do
 		if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 	end
@@ -221,6 +224,9 @@ if VJExists == true then
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathExpressions", Command = "vj_gf2_death_expressions"})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathFingerPose", Command = "vj_gf2_death_fingerpose"})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_RandomBodygroups", Command = "vj_gf2_npc_random_bodygroups"})
+				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_ShieldMultipler", Command = "vj_gf2_npc_shield_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_ShieldRadiusMultipler", Command = "vj_gf2_npc_shield_radius_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_ShieldRateMultipler", Command = "vj_gf2_npc_shield_rate_multipler", Min = 0, Max = 5})
 			else
 				Panel:AddControl("Label", {Text = "#vjbase.menu.general.admin.not"})
 				Panel:ControlHelp("#vjbase.menu.general.admin.only")

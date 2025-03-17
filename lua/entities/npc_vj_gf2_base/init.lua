@@ -46,12 +46,12 @@ function ENT:CustomOnInitialize()
 			end
 		end
 	end
-	self:SetNWInt( "Shield", self.Shield )
+	self:SetNWInt( "Shield", self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetInt() )
 	if !self.ShieldRadius then return end
-	for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.ShieldRadius ) ) do
+	for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.ShieldRadius * GetConVar("vj_gf2_npc_shield_radius_multipler"):GetInt() ) ) do
 		if ent == self then continue end
 		if ent.IsGF2SNPC then
-			ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self:GetNWInt( "Shield" ) * self.ShieldRate )
+			ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self:GetNWInt( "Shield" ) * self.ShieldRate * GetConVar("vj_gf2_npc_shield_rate_multipler"):GetInt() )
 			ent:EmitSound("items/battery_pickup.wav")
 		end
 	end
