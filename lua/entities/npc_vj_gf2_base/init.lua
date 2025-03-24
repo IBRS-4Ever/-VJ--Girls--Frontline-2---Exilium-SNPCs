@@ -51,13 +51,14 @@ function ENT:CustomOnInitialize()
 	for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.ShieldRadius * GetConVar("vj_gf2_npc_shield_radius_multipler"):GetInt() ) ) do
 		if ent == self then continue end
 		if ent.IsGF2SNPC then
-			ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self:GetNWInt( "Shield" ) * self.ShieldRate * GetConVar("vj_gf2_npc_shield_rate_multipler"):GetInt() )
+			ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * self.ShieldRate * GetConVar("vj_gf2_npc_shield_rate_multipler"):GetInt() )
 			ent:EmitSound("items/battery_pickup.wav")
 		end
 	end
 end
 
 function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
+	if dmginfo:IsDamageType(DMG_DROWN + DMG_NERVEGAS + DMG_POISON + DMG_RADIATION) then dmginfo:ScaleDamage(0) return end
 	if self:GetNWInt( "Shield" ) > 0 then
 		if dmginfo:GetDamage() < self:GetNWInt( "Shield" ) then
 			self:SetNWInt( "Shield", self:GetNWInt( "Shield" ) - dmginfo:GetDamage() )
@@ -86,8 +87,6 @@ function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup)
 	
 	if dmginfo:IsDamageType(DMG_BULLET + DMG_SONIC + DMG_SHOCK + DMG_BUCKSHOT + DMG_DISSOLVE) then
 		dmginfo:ScaleDamage(0.25)
-	elseif dmginfo:IsDamageType(DMG_DROWN + DMG_NERVEGAS + DMG_POISON + DMG_RADIATION) then
-		dmginfo:ScaleDamage(0)
 	elseif dmginfo:IsDamageType(DMG_BLAST + DMG_ACID + DMG_NEVERGIB) then
 		dmginfo:ScaleDamage(0.5)
 	elseif dmginfo:IsDamageType(DMG_BURN + DMG_CLUB + DMG_SLASH + DMG_SNIPER) then

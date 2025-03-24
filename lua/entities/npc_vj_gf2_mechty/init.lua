@@ -17,35 +17,34 @@ ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/mechty/get_heal1.wav"}
 ENT.BoostMode = false 
 
 function ENT:CustomOnTakeDamage_AfterDamage(dmginfo, hitgroup) 
-    if self.BoostMode then return end
-    if self:Health() <= (self:GetMaxHealth() / 2) then
-        self:SetHealth(self:Health() + self:GetMaxHealth() / 4)
-        self:SetPlaybackRate(2)
-        self:EmitSound("items/battery_pickup.wav")
-        
-        util.SpriteTrail( self, self:LookupAttachment("eyes"), Color( 65, 205, 255), false, 32, 0, 5, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
-        
-        local Drink = ents.Create("prop_physics")
+	if self.BoostMode then return end
+	if self:Health() <= (self:GetMaxHealth() / 2) then
+		self:SetHealth(self:Health() + self:GetMaxHealth() / 4)
+		self:SetPlaybackRate(2)
+		self:EmitSound("items/battery_pickup.wav")
+		
+		util.SpriteTrail( self, self:LookupAttachment("eyes"), Color( 65, 205, 255), false, 32, 0, 5, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
+		
+		local Drink = ents.Create("prop_physics")
 		Drink:SetModel("models/prop/gfl2_mechty_energy_drink.mdl")
 		Drink:SetPos(self:GetBonePosition(self:LookupBone("ValveBiped.Bip01_Head1")))
 		Drink:SetAngles(self:GetAngles())
 		Drink:SetOwner(self)
 		Drink:SetCollisionGroup(COLLISION_GROUP_WEAPON)
-        Drink:SetBodygroup(0,1)
-        Drink:Spawn()
-		Drink:Activate()
-        
-        timer.Simple( 5, function() 
+		Drink:SetBodygroup(0,1)
+		Drink:Spawn()
+		
+		timer.Simple( 5, function() 
 			if IsValid(Drink) then Drink:Remove() end
 		end)
 
-        self.MeleeAttackDamage = self.MeleeAttackDamage * 2
-        local Weapon = self:GetActiveWeapon()
-        Weapon.Primary.Damage = Weapon.Primary.Damage * 2
-        Weapon.NPC_TimeUntilFireExtraTimers = {}
-        Weapon.NPC_TimeUntilFire = 0
-        Weapon.NPC_NextPrimaryFire = 0.05
+		self.MeleeAttackDamage = self.MeleeAttackDamage * 2
+		local Weapon = self:GetActiveWeapon()
+		Weapon.Primary.Damage = Weapon.Primary.Damage * 2
+		Weapon.NPC_TimeUntilFireExtraTimers = {}
+		Weapon.NPC_TimeUntilFire = 0
+		Weapon.NPC_NextPrimaryFire = 0.05
 
-        self.BoostMode = true
-    end
+		self.BoostMode = true
+	end
 end

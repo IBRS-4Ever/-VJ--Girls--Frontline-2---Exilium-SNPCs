@@ -191,7 +191,8 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_hk416_d",45)
 
 	hook.Add("OnNPCKilled", "VJ_GF2_NPC_Killed", function(NPC, Attacker, Inflictor )
-		--print(NPC.Poisoned)
+		if NPC.Poisoned then
+		end
 	end)
 
 	-- Menu --
@@ -204,6 +205,10 @@ if VJExists == true then
 	AddConvars["vj_gf2_npc_shield_multipler"] = 1 -- Shield multipler.
 	AddConvars["vj_gf2_npc_shield_radius_multipler"] = 1 -- Shield radius multipler.
 	AddConvars["vj_gf2_npc_shield_rate_multipler"] = 1 -- Shield rate multipler.
+	AddConvars["vj_gf2_npc_element_electric_damage_multipler"] = 1 -- Electric damage multipler.
+	AddConvars["vj_gf2_npc_element_electric_radius_multipler"] = 1 -- Electric radius multipler.
+	AddConvars["vj_gf2_npc_element_freezing_radius_multipler"] = 1 -- Freezing radius multipler.
+	AddConvars["vj_gf2_infinite_ammo"] = 0 -- Infinite Ammo.
 	for k, v in pairs(AddConvars) do
 		if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 	end
@@ -215,8 +220,8 @@ if VJExists == true then
 	if CLIENT then
 		local function VJ_GF2MENU_MAIN(Panel)
 			if game.SinglePlayer() or LocalPlayer():IsAdmin() then
-				Panel:AddControl( "Label", {Text = "#vjbase.menu.svsettings"})
-				Panel:AddControl( "Label", {Text = "#vjbase.menu.general.admin.only"})
+				Panel:AddControl("Label", {Text = "#vjbase.menu.svsettings"})
+				Panel:AddControl("Label", {Text = "#vjbase.menu.general.admin.only"})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DropMagazines", Command = "vj_gf2_drop_magazings"})
 				Panel:ControlHelp("#vj_gf2_snpcs.settings.DropMagazines.Desc")
 				Panel:AddControl("Slider",{Label = "#vj_gf2_snpcs.settings.MagazineRemoveTimer",min = 5, max = 60, Command = "vj_gf2_magazingremovetime"})
@@ -224,9 +229,15 @@ if VJExists == true then
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathExpressions", Command = "vj_gf2_death_expressions"})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathFingerPose", Command = "vj_gf2_death_fingerpose"})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_RandomBodygroups", Command = "vj_gf2_npc_random_bodygroups"})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.InfiniteAmmo", Command = "vj_gf2_infinite_ammo"})
+				Panel:AddControl("Label", {Text = "#vj_gf2_snpcs.settings.NPC_Shield.Title"})
 				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_ShieldMultipler", Command = "vj_gf2_npc_shield_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_ShieldRadiusMultipler", Command = "vj_gf2_npc_shield_radius_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_ShieldRateMultipler", Command = "vj_gf2_npc_shield_rate_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Label", {Text = "#vj_gf2_snpcs.settings.NPC_Element.Title"})
+				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricDamageMultipler", Command = "vj_gf2_npc_element_electric_damage_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricRadiusMultipler", Command = "vj_gf2_npc_element_electric_radius_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.FreezingRadiusMultipler", Command = "vj_gf2_npc_element_freezing_radius_multipler", Min = 0, Max = 5})
 			else
 				Panel:AddControl("Label", {Text = "#vjbase.menu.general.admin.not"})
 				Panel:ControlHelp("#vjbase.menu.general.admin.only")

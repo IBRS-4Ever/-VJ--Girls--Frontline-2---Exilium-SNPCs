@@ -21,6 +21,10 @@ function SWEP:CustomOnInitialize()
 	if self.MagazingModel then util.PrecacheModel( self.MagazingModel ) end
 end
 
+function SWEP:CustomOnPrimaryAttack_AfterShoot()
+	if GetConVar("vj_gf2_infinite_ammo"):GetBool() then self:SetClip1(self.Primary.ClipSize) end
+end
+
 function SWEP:CustomOnReload() 
 	if DropMagazine and self.MagazingModel then
 		local Magazing = ents.Create("prop_physics")
@@ -36,7 +40,6 @@ function SWEP:CustomOnReload()
 			self:SetBodygroup(self:FindBodygroupByName( "bullets" ),1) -- PKP-SP
 		end
 		Magazing:Spawn()
-		Magazing:Activate()
 		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),1)
 		
 		timer.Simple( MagazineRemoveTimer, function() 
@@ -73,12 +76,12 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 			HitSpark:SetNormal(-Normal)
 		util.Effect("MetalSpark", HitSpark, true, true )
 
-		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_ElectricRadius ) ) do
+		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_ElectricRadius * GetConVar("vj_gf2_npc_element_electric_radius_multipler"):GetInt() ) ) do
 			if ent == Target or ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
 			if ent:IsNPC() and ent:Alive() then
 				if ent:Disposition(self.Owner) == 1 then -- D_HT
 					local DmgInfo = DamageInfo()
-					DmgInfo:SetDamage( self.Element_ElectricDamage )
+					DmgInfo:SetDamage( self.Element_ElectricDamage * GetConVar("vj_gf2_npc_element_electric_damage_multipler"):GetInt()  )
 					DmgInfo:SetAttacker( self.Owner )
 					DmgInfo:SetInflictor( self )
 					DmgInfo:SetDamageType( DMG_PLASMA ) 
@@ -108,11 +111,11 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 	end
 
 	if self.Element == "poison" then
-		--[[ if Target:IsNPC() and Target:Alive() then
+		if Target:IsNPC() and Target:Alive() then
 			if Target:Disposition(self.Owner) == 1 then 
 				Target.Poisoned = true
 			end
-		end ]]
+		end
 	end
 
 	if self.Element == "freezing" then
@@ -122,7 +125,7 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 			FreezeEffect:SetMagnitude( 1 )
 		util.Effect( "GlassImpact", FreezeEffect, true, true )
 
-		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_FreezingRadius ) ) do
+		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_FreezingRadius * GetConVar("vj_gf2_npc_element_freezing_radius_multipler"):GetInt()  ) ) do
 			if ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
 			if ent:IsNPC() and ent:Alive() then
 				if ent:Disposition(self.Owner) == 1 then -- D_HT
