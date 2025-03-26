@@ -12,6 +12,7 @@ if VJExists == true then
 	local vCat = "#vj_gf2_snpcs.spawnmenu.Title"
 	
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis","npc_vj_gf2_nemesis",{"weapon_vj_gf2_om50"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_WanderingStarTrial","npc_vj_gf2_nemesis_wandering_star_trial",{"weapon_vj_gf2_om50"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo","npc_vj_gf2_tololo",{"weapon_vj_gf2_ak_alfa"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo_TwilightMilkyWay","npc_vj_gf2_tololo_twilight_milky_way",{"weapon_vj_gf2_ak_alfa"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Cheeta","npc_vj_gf2_cheeta",{"weapon_vj_gf2_mp7"},vCat)
@@ -78,6 +79,7 @@ if VJExists == true then
 	-- Precache Models --
 	-- NPC Models
 	util.PrecacheModel("models/gf2/nemesis_combat.mdl")
+	util.PrecacheModel("models/gf2/nemesis_wandering_star_trial.mdl")
 	util.PrecacheModel("models/gf2/tololo_combat.mdl")
 	util.PrecacheModel("models/gf2/tololo_twilight_milky_way.mdl")
 	util.PrecacheModel("models/gf2/cheeta_combat.mdl")
