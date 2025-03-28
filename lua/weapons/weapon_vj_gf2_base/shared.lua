@@ -77,7 +77,7 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 		util.Effect("MetalSpark", HitSpark, true, true )
 
 		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_ElectricRadius * GetConVar("vj_gf2_npc_element_electric_radius_multipler"):GetInt() ) ) do
-			if ent == Target or ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
+			if ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
 			if ent:IsNPC() and ent:Alive() then
 				if ent:Disposition(self.Owner) == 1 then -- D_HT
 					local DmgInfo = DamageInfo()
@@ -88,6 +88,7 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 		
 					ent:TakeDamageInfo( DmgInfo )
 
+					if ent == Target then continue end
 					local ElectricSpark = EffectData()
 						ElectricSpark:SetOrigin(ent:GetBonePosition(0))
 						ElectricSpark:SetNormal(-Normal)
