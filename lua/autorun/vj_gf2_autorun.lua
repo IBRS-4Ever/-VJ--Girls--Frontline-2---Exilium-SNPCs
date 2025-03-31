@@ -49,6 +49,8 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai","npc_vj_gf2_klukai",{"weapon_vj_gf2_hk416"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_AstralLuminous","npc_vj_gf2_klukai_astral_luminous",{"weapon_vj_gf2_hk416"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_SpeedStar","npc_vj_gf2_klukai_speed_star",{"weapon_vj_gf2_hk416"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Zhaohui","npc_vj_gf2_zhaohui",{"weapon_vj_gf2_csls06"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Zhaohui_RapidGrid","npc_vj_gf2_zhaohui_rapid_grid",{"weapon_vj_gf2_csls06"},vCat)
 	
 	-- Weapons
 	VJ.AddNPCWeapon("OM50", "weapon_vj_gf2_om50", vCat)
@@ -67,6 +69,7 @@ if VJExists == true then
 	VJ.AddNPCWeapon("KP/-31", "weapon_vj_gf2_kp31", vCat)
 	VJ.AddNPCWeapon("QBZ-97", "weapon_vj_gf2_qbz97", vCat)
 	VJ.AddNPCWeapon("HK416", "weapon_vj_gf2_hk416", vCat)
+	VJ.AddNPCWeapon("CS/LS06", "weapon_vj_gf2_csls06", vCat)
 
 	VJ.AddNPCWeapon("Klukai's Axe", "weapon_vj_gf2_klukai_axe", vCat)
 
@@ -116,6 +119,8 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/suomi_combat.mdl")
 	util.PrecacheModel("models/gf2/suomi_midsummer_pixie.mdl")
 	util.PrecacheModel("models/gf2/jiangyu_combat.mdl")
+	util.PrecacheModel("models/gf2/zhaohui_combat.mdl")
+	util.PrecacheModel("models/gf2/zhaohui_rapid_grid.mdl")
 	
 	-- Weapon Models
 	util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -134,6 +139,7 @@ if VJExists == true then
 	util.PrecacheModel("models/weapons/w_leva_hk_ump45.mdl")
 	util.PrecacheModel("models/weapons/w_suomi_kp31.mdl")
 	util.PrecacheModel("models/weapons/w_jiangyu_qbz_97.mdl")
+	util.PrecacheModel("models/weapons/w_zhaohui_csls06.mdl")
 
 	-- Grenade Models
 	util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -184,6 +190,8 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_jiangyu_d",50)
 	VJ.AddConVar("vj_gf2_klukai_h",300)
 	VJ.AddConVar("vj_gf2_klukai_d",60)
+	VJ.AddConVar("vj_gf2_zhaohui_h",350)
+	VJ.AddConVar("vj_gf2_zhaohui_d",40)
 	
 	VJ.AddConVar("vj_gf2_om50_d",150)
 	VJ.AddConVar("vj_gf2_ak_alfa_d",40)
@@ -202,6 +210,7 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_kp31_d",25)
 	VJ.AddConVar("vj_gf2_qbz97_d",40)
 	VJ.AddConVar("vj_gf2_hk416_d",45)
+	VJ.AddConVar("vj_gf2_csls06_d",30)
 
 	hook.Add("OnNPCKilled", "VJ_GF2_NPC_Killed", function(NPC, Attacker, Inflictor )
 		if NPC.Poisoned then

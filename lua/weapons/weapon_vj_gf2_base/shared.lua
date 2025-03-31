@@ -89,6 +89,7 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 					ent:TakeDamageInfo( DmgInfo )
 
 					if ent == Target then continue end
+					if !(ent:GetBonePosition(0)) then continue end
 					local ElectricSpark = EffectData()
 						ElectricSpark:SetOrigin(ent:GetBonePosition(0))
 						ElectricSpark:SetNormal(-Normal)
