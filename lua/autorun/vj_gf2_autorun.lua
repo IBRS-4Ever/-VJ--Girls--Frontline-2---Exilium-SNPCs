@@ -226,7 +226,7 @@ if VJExists == true then
 	AddConvars["vj_gf2_npc_random_bodygroups"] = 0 -- Random Bodygroup for SNPCs?
 	AddConvars["vj_gf2_npc_shield_multipler"] = 1 -- Shield multipler.
 	AddConvars["vj_gf2_npc_shield_radius_multipler"] = 1 -- Shield radius multipler.
-	AddConvars["vj_gf2_npc_shield_rate_multipler"] = 1 -- Shield rate multipler.
+	AddConvars["vj_gf2_npc_shield"] = 1 -- Shield rate multipler.
 	AddConvars["vj_gf2_npc_element_electric_damage_multipler"] = 1 -- Electric damage multipler.
 	AddConvars["vj_gf2_npc_element_electric_radius_multipler"] = 1 -- Electric radius multipler.
 	AddConvars["vj_gf2_npc_element_freezing_radius_multipler"] = 1 -- Freezing radius multipler.
@@ -253,9 +253,9 @@ if VJExists == true then
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_RandomBodygroups", Command = "vj_gf2_npc_random_bodygroups"})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.InfiniteAmmo", Command = "vj_gf2_infinite_ammo"})
 				Panel:AddControl("Label", {Text = "#vj_gf2_snpcs.settings.NPC_Shield.Title"})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_Shield", Command = "vj_gf2_npc_shield"})
 				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_ShieldMultipler", Command = "vj_gf2_npc_shield_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_ShieldRadiusMultipler", Command = "vj_gf2_npc_shield_radius_multipler", Min = 0, Max = 5})
-				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_ShieldRateMultipler", Command = "vj_gf2_npc_shield_rate_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Label", {Text = "#vj_gf2_snpcs.settings.NPC_Element.Title"})
 				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricDamageMultipler", Command = "vj_gf2_npc_element_electric_damage_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricRadiusMultipler", Command = "vj_gf2_npc_element_electric_radius_multipler", Min = 0, Max = 5})

@@ -17,4 +17,4 @@ ENT.SoundTbl_GrenadeAttack = {"vo/jp/groza/grenade_attack1.wav","vo/jp/groza/gre
 
 ENT.Shield = 50
 ENT.ShieldRadius = 100
-ENT.ShieldRate = 0.1
+ENT.ShieldCoolDown = 45

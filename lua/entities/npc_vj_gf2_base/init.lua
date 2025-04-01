@@ -30,9 +30,30 @@ ENT.HitGroupFlinching_Values = {{HitGroup = {HITGROUP_HEAD}, Animation = {ACT_FL
 
 ENT.OnPlayerSightSoundChance = 2
 
-ENT.Shield = 0
+ENT.Shield = false
 ENT.ShieldRadius = false
-ENT.ShieldRate = 0.25
+ENT.ShieldCoolDown = false
+
+function ENT:GiveShield()
+	if !GetConVar("vj_gf2_npc_shield"):GetBool() then return end
+	if !self.ShieldRadius then return end
+	if self.ShieldRadius != -1 then
+		for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.ShieldRadius * GetConVar("vj_gf2_npc_shield_radius_multipler"):GetInt() ) ) do
+			if ent.IsGF2SNPC then
+				ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetInt() )
+				ent:EmitSound("items/battery_pickup.wav")
+			end
+		end
+	else
+		for id, ent in ents.Iterator() do
+			if ent.IsGF2SNPC then
+				if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
+				ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetInt() )
+				ent:EmitSound("items/battery_pickup.wav")
+			end
+		end
+	end
+end
 
 function ENT:CustomOnInitialize()
 	if GetConVar( "vj_gf2_npc_random_bodygroups" ):GetBool() then
@@ -46,14 +67,18 @@ function ENT:CustomOnInitialize()
 			end
 		end
 	end
-	self:SetNWInt( "Shield", self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetInt() )
-	if !self.ShieldRadius then return end
-	for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.ShieldRadius * GetConVar("vj_gf2_npc_shield_radius_multipler"):GetInt() ) ) do
-		if ent == self then continue end
-		if ent.IsGF2SNPC then
-			ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * self.ShieldRate * GetConVar("vj_gf2_npc_shield_rate_multipler"):GetInt() )
-			ent:EmitSound("items/battery_pickup.wav")
-		end
+end
+
+function ENT:CustomInitialize()
+	if self.ShieldCoolDown then self:SetNWFloat( "ShieldCoolDown", self.ShieldCoolDown + CurTime() ) end
+	if self.Shield then self:GiveShield() end
+end
+
+function ENT:CustomOnThink()
+	if !self.ShieldCoolDown then return end
+	if self:GetNWFloat( "ShieldCoolDown" ) <= CurTime() then
+		self:GiveShield()
+		self:SetNWFloat( "ShieldCoolDown", self.ShieldCoolDown + CurTime() )
 	end
 end
 
@@ -66,6 +91,7 @@ function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup)
 			local Pos = dmginfo:GetDamagePosition()
 			local Normal = dmginfo:GetDamageForce()
 			local elec = EffectData()
+			if Pos == Vector(0,0,0) then Pos = self:GetBonePosition(0) end
 			elec:SetOrigin(Pos)
 			elec:SetNormal(-Normal)
 			util.Effect("MetalSpark", elec)

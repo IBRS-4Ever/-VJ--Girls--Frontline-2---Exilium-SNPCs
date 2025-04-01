@@ -16,4 +16,4 @@ ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/suomi/get_heal1.wav","vo/jp/suomi/get_he
 
 ENT.Shield = 150
 ENT.ShieldRadius = 250
-ENT.ShieldRate = 0.4
+ENT.ShieldCoolDown = 90

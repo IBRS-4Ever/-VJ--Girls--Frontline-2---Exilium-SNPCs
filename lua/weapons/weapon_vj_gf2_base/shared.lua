@@ -75,11 +75,11 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 			HitSpark:SetOrigin(HitPos)
 			HitSpark:SetNormal(-Normal)
 		util.Effect("MetalSpark", HitSpark, true, true )
-
+		
 		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_ElectricRadius * GetConVar("vj_gf2_npc_element_electric_radius_multipler"):GetInt() ) ) do
 			if ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
-			if ent:IsNPC() and ent:Alive() then
-				if ent:Disposition(self.Owner) == 1 then -- D_HT
+			if ent:IsNPC() or ent:IsPlayer() and ent:Alive() then
+				if self.Owner:CheckRelationship(ent) == D_HT then
 					local DmgInfo = DamageInfo()
 					DmgInfo:SetDamage( self.Element_ElectricDamage * GetConVar("vj_gf2_npc_element_electric_damage_multipler"):GetInt()  )
 					DmgInfo:SetAttacker( self.Owner )
@@ -87,6 +87,20 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 					DmgInfo:SetDamageType( DMG_PLASMA ) 
 		
 					ent:TakeDamageInfo( DmgInfo )
+
+					if self.Owner.BodyModel == "DUAL DSI-8" then -- Leva
+						local chance = math.random(1,100)
+						if chance <= 5 then
+							if ent:IsNPC() then ent:AddEntityRelationship( self.Owner, D_LI, 99 ) end
+							for id, EntTarget in ents.Iterator() do
+								if EntTarget == self.Owner or EntTarget == ent or EntTarget:GetClass() == "obj_vj_bullseye" then continue end
+								if self.Owner:CheckRelationship(EntTarget) == D_HT then
+									ent:AddEntityRelationship( EntTarget, D_HT, 99 )
+									EntTarget:AddEntityRelationship( ent, D_HT, 99 )
+								end
+							end
+						end
+					end
 
 					if ent == Target then continue end
 					if !(ent:GetBonePosition(0)) then continue end
@@ -105,16 +119,16 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 			Spark:SetNormal(-Normal)
 		util.Effect("MetalSpark", Spark)
 		
-		if Target:IsNPC() and Target:Alive() then
-			if Target:Disposition(self.Owner) == 1 then 
+		if Target:IsNPC() or Target:IsPlayer() and Target:Alive() then
+			if self.Owner:CheckRelationship(Target) == D_HT then 
 				Target:Ignite( self.Element_FireIgniteTime )
 			end
 		end
 	end
 
 	if self.Element == "poison" then
-		if Target:IsNPC() and Target:Alive() then
-			if Target:Disposition(self.Owner) == 1 then 
+		if Target:IsNPC() or Target:IsPlayer() and Target:Alive() then
+			if self.Owner:CheckRelationship(Target) == D_HT then 
 				Target.Poisoned = true
 			end
 		end
@@ -129,9 +143,10 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 
 		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_FreezingRadius * GetConVar("vj_gf2_npc_element_freezing_radius_multipler"):GetInt()  ) ) do
 			if ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
-			if ent:IsNPC() and ent:Alive() then
-				if ent:Disposition(self.Owner) == 1 then -- D_HT
-					ent:SetSchedule(SCHED_SLEEP)
+			if ent:Alive() then
+				if self.Owner:CheckRelationship(ent) == D_HT then
+					if ent:IsNPC() then ent:SetSchedule(SCHED_SLEEP) end
+					-- if ent:IsPlayer() then ent:SetLaggedMovementValue(0.5) end
 
 					if ent == Target then continue end
 					local FreezeEffect = EffectData()
