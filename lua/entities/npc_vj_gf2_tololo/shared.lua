@@ -3,4 +3,5 @@ ENT.Type 			= "ai"
 ENT.PrintName 		= "Tololo"
 ENT.Category		= "Girls' Frontline 2"
 
-ENT.SquadName		= "Groza Squad"
+ENT.SquadName		= "Frostfall Squad"
+ENT.BodyModel		= "SST-05"

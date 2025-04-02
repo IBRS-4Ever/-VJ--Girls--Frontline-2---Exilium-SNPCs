@@ -4,3 +4,4 @@ ENT.PrintName 		= "Klukai"
 ENT.Category		= "Girls' Frontline 2"
 
 ENT.SquadName		= "H.I.D.E. 404"
+ENT.BodyModel		= "SST-05"

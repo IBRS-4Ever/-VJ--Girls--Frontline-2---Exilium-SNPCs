@@ -12,6 +12,7 @@ if VJExists == true then
 	local vCat = "#vj_gf2_snpcs.spawnmenu.Title"
 	
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis","npc_vj_gf2_nemesis",{"weapon_vj_gf2_om50"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_Tactical","npc_vj_gf2_nemesis_tactical",{"weapon_vj_gf2_om50"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_WanderingStarTrial","npc_vj_gf2_nemesis_wandering_star_trial",{"weapon_vj_gf2_om50"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_SereneDarkRiver","npc_vj_gf2_nemesis_serene_dark_river",{"weapon_vj_gf2_om50"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo","npc_vj_gf2_tololo",{"weapon_vj_gf2_ak_alfa"},vCat)
@@ -25,6 +26,7 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Peritya","npc_vj_gf2_peritya",{"weapon_vj_gf2_pkp_sp"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Peritya_BornHuntress","npc_vj_gf2_peritya_born_huntress",{"weapon_vj_gf2_pkp_sp"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Qiongjiu","npc_vj_gf2_qiongjiu",{"weapon_vj_gf2_qbz191"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Qiongjiu_BoundlessValor","npc_vj_gf2_qiongjiu_boundless_valor",{"weapon_vj_gf2_qbz191"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nagant","npc_vj_gf2_nagant",{"weapon_vj_gf2_m1895_revolver"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nagant_SummerPitcher","npc_vj_gf2_nagant_summer_pitcher",{"weapon_vj_gf2_m1895_revolver"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi","npc_vj_gf2_suomi",{"weapon_vj_gf2_kp31"},vCat)
@@ -88,6 +90,7 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/nemesis_combat.mdl")
 	util.PrecacheModel("models/gf2/nemesis_wandering_star_trial.mdl")
 	util.PrecacheModel("models/gf2/nemesis_serene_dark_river.mdl")
+	util.PrecacheModel("models/gf2/nemesis_tactical.mdl")
 	util.PrecacheModel("models/gf2/tololo_combat.mdl")
 	util.PrecacheModel("models/gf2/tololo_twilight_milky_way.mdl")
 	util.PrecacheModel("models/gf2/cheeta_combat.mdl")
@@ -99,6 +102,7 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/peritya_combat.mdl")
 	util.PrecacheModel("models/gf2/peritya_born_huntress.mdl")
 	util.PrecacheModel("models/gf2/qiongjiu_combat.mdl")
+	util.PrecacheModel("models/gf2/qiongjiu_boundless_valor.mdl")
 	util.PrecacheModel("models/gf2/sabrina_combat.mdl")
 	util.PrecacheModel("models/gf2/sabrina_berry_zabaione.mdl")
 	util.PrecacheModel("models/gf2/mechty_combat.mdl")

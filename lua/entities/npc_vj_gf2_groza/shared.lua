@@ -4,3 +4,4 @@ ENT.PrintName 		= "Groza"
 ENT.Category		= "Girls' Frontline 2"
 
 ENT.SquadName		= "Groza Squad"
+ENT.BodyModel		= "SST-05A2"

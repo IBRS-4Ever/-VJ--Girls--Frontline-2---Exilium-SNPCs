@@ -4,3 +4,4 @@ ENT.PrintName 		= "Jiangyu"
 ENT.Category		= "Girls' Frontline 2"
 
 ENT.SquadName		= "Monsoon Squad"
+ENT.BodyModel		= "SSD-62D"

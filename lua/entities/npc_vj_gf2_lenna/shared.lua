@@ -4,3 +4,4 @@ ENT.PrintName 		= "Lenna"
 ENT.Category		= "Girls' Frontline 2"
 
 ENT.SquadName		= "H.I.D.E. 404"
+ENT.BodyModel		= "SSD-62D"
