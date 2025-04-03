@@ -13,3 +13,5 @@ ENT.SoundTbl_FollowPlayer = {"vo/jp/zhaohui/follow1.wav","vo/jp/zhaohui/follow2.
 ENT.SoundTbl_UnFollowPlayer = {"vo/jp/zhaohui/unfollow1.wav","vo/jp/zhaohui/unfollow2.wav"}
 ENT.SoundTbl_Death = {"vo/jp/zhaohui/die1.wav","vo/jp/zhaohui/hit6.wav","vo/jp/zhaohui/hit7.wav"}
 ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/zhaohui/get_heal1.wav","vo/jp/zhaohui/get_heal2.wav","vo/jp/zhaohui/get_heal3.wav","vo/jp/zhaohui/get_heal4.wav","vo/jp/zhaohui/get_heal5.wav","vo/jp/zhaohui/get_heal6.wav","vo/jp/zhaohui/get_heal7.wav","vo/jp/zhaohui/get_heal8.wav"}
+
+ENT.AnimationSpeed = 1.5

@@ -14,6 +14,8 @@ ENT.SoundTbl_UnFollowPlayer = {"vo/jp/suomi/unfollow1.wav","vo/jp/suomi/unfollow
 ENT.SoundTbl_Death = {"vo/jp/suomi/die1.wav","vo/jp/suomi/hit6.wav","vo/jp/suomi/hit7.wav"}
 ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/suomi/get_heal1.wav","vo/jp/suomi/get_heal2.wav","vo/jp/suomi/get_heal3.wav","vo/jp/suomi/get_heal4.wav","vo/jp/suomi/get_heal5.wav","vo/jp/suomi/get_heal6.wav","vo/jp/suomi/get_heal7.wav","vo/jp/suomi/get_heal8.wav"}
 
+ENT.AnimationSpeed = 1.5
+
 ENT.Shield = 150
 ENT.ShieldRadius = 250
 ENT.ShieldCoolDown = 90

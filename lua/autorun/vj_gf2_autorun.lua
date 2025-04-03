@@ -235,6 +235,7 @@ if VJExists == true then
 	AddConvars["vj_gf2_npc_element_electric_radius_multipler"] = 1 -- Electric radius multipler.
 	AddConvars["vj_gf2_npc_element_freezing_radius_multipler"] = 1 -- Freezing radius multipler.
 	AddConvars["vj_gf2_infinite_ammo"] = 0 -- Infinite Ammo.
+	AddConvars["vj_gf2_speed_modifier"] = 1 -- Speed Modifier.
 	for k, v in pairs(AddConvars) do
 		if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 	end
@@ -264,6 +265,7 @@ if VJExists == true then
 				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricDamageMultipler", Command = "vj_gf2_npc_element_electric_damage_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricRadiusMultipler", Command = "vj_gf2_npc_element_electric_radius_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.FreezingRadiusMultipler", Command = "vj_gf2_npc_element_freezing_radius_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_SpeedModifier", Command = "vj_gf2_speed_modifier"})
 			else
 				Panel:AddControl("Label", {Text = "#vjbase.menu.general.admin.not"})
 				Panel:ControlHelp("#vjbase.menu.general.admin.only")

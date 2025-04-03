@@ -20,7 +20,7 @@ function ENT:CustomOnTakeDamage_AfterDamage(dmginfo, hitgroup)
 	if self.BoostMode then return end
 	if self:Health() <= (self:GetMaxHealth() / 2) then
 		self:SetHealth(self:Health() + self:GetMaxHealth() / 4)
-		self:SetPlaybackRate(2)
+		self.AnimationSpeed = 2
 		self:EmitSound("items/battery_pickup.wav")
 		
 		util.SpriteTrail( self, self:LookupAttachment("eyes"), Color( 65, 205, 255), false, 32, 0, 5, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )

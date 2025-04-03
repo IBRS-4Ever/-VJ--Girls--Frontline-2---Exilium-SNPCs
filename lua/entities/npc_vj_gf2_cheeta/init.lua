@@ -24,3 +24,5 @@ ENT.SoundTbl_FollowPlayer = {"vo/jp/cheeta/follow1.wav","vo/jp/cheeta/follow2.wa
 ENT.SoundTbl_UnFollowPlayer = {"vo/jp/cheeta/unfollow1.wav","vo/jp/cheeta/unfollow2.wav","vo/jp/cheeta/unfollow3.wav"}
 ENT.SoundTbl_Death = {"vo/jp/cheeta/die1.wav","vo/jp/cheeta/die2.wav","vo/jp/cheeta/die3.wav"}
 ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/cheeta/get_heal1.wav","vo/jp/cheeta/get_heal2.wav","vo/jp/cheeta/get_heal3.wav","vo/jp/cheeta/get_heal4.wav","vo/jp/cheeta/get_heal5.wav"}
+
+ENT.AnimationSpeed = 1.5

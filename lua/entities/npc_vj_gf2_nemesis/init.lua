@@ -13,3 +13,5 @@ ENT.SoundTbl_FollowPlayer = {"vo/jp/nemesis/follow1.wav","vo/jp/nemesis/follow2.
 ENT.SoundTbl_UnFollowPlayer = {"vo/jp/nemesis/unfollow1.wav"}
 ENT.SoundTbl_Death = {"vo/jp/nemesis/die1.wav","vo/jp/nemesis/hit3.wav","vo/jp/nemesis/hit5.wav","vo/jp/nemesis/hit6.wav"}
 ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/nemesis/get_heal1.wav"}
+
+--ENT.AnimationSpeed = 0.75

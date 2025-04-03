@@ -16,3 +16,5 @@ ENT.SoundTbl_OnKilledEnemy = {"vo/jp/vector/killed_enemy1.wav","vo/jp/vector/kil
 ENT.SoundTbl_FollowPlayer = {"vo/jp/vector/follow1.wav","vo/jp/vector/follow2.wav","vo/jp/vector/follow3.wav","vo/jp/vector/follow4.wav","vo/jp/vector/follow5.wav","vo/jp/vector/follow6.wav","vo/jp/vector/follow7.wav","vo/jp/vector/follow8.wav"}
 ENT.SoundTbl_UnFollowPlayer = {"vo/jp/vector/unfollow1.wav","vo/jp/vector/unfollow2.wav","vo/jp/vector/unfollow3.wav","vo/jp/vector/unfollow4.wav"}
 ENT.SoundTbl_Death = {"vo/jp/vector/die1.wav","vo/jp/vector/hit6.wav","vo/jp/vector/hit7.wav"}
+
+ENT.AnimationSpeed = 1.5

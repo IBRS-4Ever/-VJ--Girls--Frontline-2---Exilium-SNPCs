@@ -18,6 +18,10 @@ ENT.FootStepTimeWalk = 0.5
 ENT.HasItemDropsOnDeath = false
 
 ENT.Weapon_FindCoverOnReload = false
+--ENT.Weapon_MaxDistance = 6000 -- 3000
+
+--ENT.SightDistance = 25000 -- 6500
+--ENT.TurningSpeed = 40 -- 20
 
 ENT.HasOnPlayerSight = true
 ENT.OnPlayerSightDistance = 2000
@@ -33,6 +37,8 @@ ENT.OnPlayerSightSoundChance = 2
 ENT.Shield = false
 ENT.ShieldRadius = false
 ENT.ShieldCoolDown = false
+
+ENT.AnimationSpeed = 1
 
 function ENT:GiveShield()
 	if !GetConVar("vj_gf2_npc_shield"):GetBool() then return end
@@ -79,6 +85,17 @@ function ENT:CustomOnThink()
 	if self:GetNWFloat( "ShieldCoolDown" ) <= CurTime() then
 		self:GiveShield()
 		self:SetNWFloat( "ShieldCoolDown", self.ShieldCoolDown + CurTime() )
+	end
+end
+
+function ENT:CustomOnThink_AIEnabled()
+	if GetConVar("vj_gf2_speed_modifier"):GetBool() then
+		if !self:IsOnGround() then return end
+		if self:GetActivity() == ACT_IDLE or self:GetActivity() == ACT_IDLE_ANGRY then return end
+		--print(util.GetActivityNameByID(self:GetActivity()))
+		local Velocity = self:GetGroundSpeedVelocity()
+		self:SetVelocity(Velocity * (self.AnimationSpeed - 1))
+		self:SetPlaybackRate(self.AnimationSpeed)
 	end
 end
 

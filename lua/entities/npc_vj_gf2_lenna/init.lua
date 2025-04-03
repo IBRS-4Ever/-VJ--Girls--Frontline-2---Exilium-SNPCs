@@ -13,3 +13,5 @@ ENT.SoundTbl_FollowPlayer = {"vo/jp/lenna/follow1.wav","vo/jp/lenna/follow2.wav"
 ENT.SoundTbl_UnFollowPlayer = {"vo/jp/lenna/unfollow1.wav","vo/jp/lenna/unfollow2.wav"}
 ENT.SoundTbl_Death = {"vo/jp/lenna/die1.wav","vo/jp/lenna/hit6.wav","vo/jp/lenna/hit7.wav"}
 ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/lenna/get_heal1.wav","vo/jp/lenna/get_heal2.wav","vo/jp/lenna/get_heal3.wav","vo/jp/lenna/get_heal4.wav"}
+
+ENT.AnimationSpeed = 1.5
