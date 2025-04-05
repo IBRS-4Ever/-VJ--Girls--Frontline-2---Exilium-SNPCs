@@ -40,6 +40,9 @@ ENT.ShieldCoolDown = false
 
 ENT.AnimationSpeed = 1
 
+function ENT:GF2_CustomOnThink() end
+function ENT:GF2_CustomOnThink_AiEnabled() end
+
 function ENT:GiveShield()
 	if !GetConVar("vj_gf2_npc_shield"):GetBool() then return end
 	if !self.ShieldRadius then return end
@@ -97,6 +100,7 @@ function ENT:CustomOnThink_AIEnabled()
 		self:SetVelocity(Velocity * (self.AnimationSpeed - 1))
 		self:SetPlaybackRate(self.AnimationSpeed)
 	end
+	self:GF2_CustomOnThink_AiEnabled()
 end
 
 function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 

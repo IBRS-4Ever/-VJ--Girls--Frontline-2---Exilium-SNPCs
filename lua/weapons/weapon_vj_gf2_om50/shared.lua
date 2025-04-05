@@ -15,8 +15,8 @@ SWEP.Primary.Damage = GetConVarNumber("vj_gf2_om50_d")
 SWEP.Primary.Force = 5
 SWEP.Primary.ClipSize = 5
 SWEP.Primary.Ammo = "SniperRound"
-SWEP.Primary.Sound = {"weapons/rf/om50/fire1.wav","weapons/rf/om50/fire2.wav","weapons/rf/om50/fire3.wav","weapons/rf/om50/fire4.wav"}
-SWEP.Primary.DistantSound = {"weapons/rf/om50/fire_dist1.wav","weapons/rf/om50/fire_dist2.wav","weapons/rf/om50/fire_dist3.wav","weapons/rf/om50/fire_dist4.wav"}
+SWEP.Primary.Sound = "GF2_SNPC.Weapon_OM50.Shot"
+SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_OM50.Shot_Dist"
 SWEP.NPC_CustomSpread = 0
 SWEP.NPC_FiringDistanceScale = 1.5
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
@@ -26,3 +26,21 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 SWEP.MagazingModel = "models/prop/gfl2_nemesis_om50_nemesis_magazine.mdl"
 
 SWEP.Element = "poison"
+
+sound.Add({
+	name = "GF2_SNPC.Weapon_OM50.Shot",
+	channel = CHAN_WEAPON,
+	volume = 1.0,
+	level = 80,
+	pitch = {90, 110},
+	sound = {"weapons/rf/om50/fire1.wav","weapons/rf/om50/fire2.wav","weapons/rf/om50/fire3.wav","weapons/rf/om50/fire4.wav"}
+})
+
+sound.Add({
+	name = "GF2_SNPC.Weapon_OM50.Shot_Dist",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 140,
+	pitch = {90, 110},
+	sound = {"weapons/rf/om50/fire_dist1.wav","weapons/rf/om50/fire_dist2.wav","weapons/rf/om50/fire_dist3.wav","weapons/rf/om50/fire_dist4.wav"}
+})

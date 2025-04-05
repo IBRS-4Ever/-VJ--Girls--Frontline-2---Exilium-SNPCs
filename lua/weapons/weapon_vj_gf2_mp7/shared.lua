@@ -17,8 +17,8 @@ SWEP.Primary.ClipSize = 20
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.6
 SWEP.NPC_FiringDistanceScale = 0.85
-SWEP.Primary.Sound = {"weapons/smg/mp7/fire1.wav","weapons/smg/mp7/fire2.wav","weapons/smg/mp7/fire3.wav","weapons/smg/mp7/fire4.wav"}
-SWEP.Primary.DistantSound = {"weapons/smg/mp7/fire_dist1.wav","weapons/smg/mp7/fire_dist2.wav","weapons/smg/mp7/fire_dist3.wav","weapons/smg/mp7/fire_dist4.wav"}
+SWEP.Primary.Sound = "GF2_SNPC.Weapon_MP7.Shot"
+SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_MP7.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
@@ -27,3 +27,21 @@ SWEP.MagazingModel = "models/prop/gfl2_mp7_magazine.mdl"
 
 SWEP.Element = "fire"
 SWEP.Element_FireIgniteTime = 3
+
+sound.Add({
+	name = "GF2_SNPC.Weapon_MP7.Shot",
+	channel = CHAN_WEAPON,
+	volume = 1.0,
+	level = 80,
+	pitch = {90, 110},
+	sound = {"weapons/smg/mp7/fire1.wav","weapons/smg/mp7/fire2.wav","weapons/smg/mp7/fire3.wav","weapons/smg/mp7/fire4.wav"}
+})
+
+sound.Add({
+	name = "GF2_SNPC.Weapon_MP7.Shot_Dist",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 140,
+	pitch = {90, 110},
+	sound = {"weapons/smg/mp7/fire_dist1.wav","weapons/smg/mp7/fire_dist2.wav","weapons/smg/mp7/fire_dist3.wav","weapons/smg/mp7/fire_dist4.wav"}
+})

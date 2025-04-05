@@ -18,8 +18,8 @@ SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 45
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.3
-SWEP.Primary.Sound = {"weapons/ar/g11/fire1.wav","weapons/ar/g11/fire2.wav","weapons/ar/g11/fire3.wav","weapons/ar/g11/fire4.wav","weapons/ar/g11/fire5.wav","weapons/ar/g11/fire6.wav"}
-SWEP.Primary.DistantSound = {"weapons/ar/g11/fire_dist1.wav","weapons/ar/g11/fire_dist2.wav","weapons/ar/g11/fire_dist3.wav","weapons/ar/g11/fire_dist4.wav","weapons/ar/g11/fire_dist5.wav","weapons/ar/g11/fire_dist6.wav"}
+SWEP.Primary.Sound = "GF2_SNPC.Weapon_G11.Shot"
+SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_G11.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 
 SWEP.MagazingModel = "models/prop/gfl2_mechty_g11_magazine.mdl"
@@ -27,3 +27,21 @@ SWEP.MagazingModel = "models/prop/gfl2_mechty_g11_magazine.mdl"
 SWEP.PrimaryEffects_SpawnShells = false
 
 SWEP.Element = "poison"
+
+sound.Add({
+	name = "GF2_SNPC.Weapon_G11.Shot",
+	channel = CHAN_WEAPON,
+	volume = 1.0,
+	level = 80,
+	pitch = {90, 110},
+	sound = {"weapons/ar/g11/fire1.wav","weapons/ar/g11/fire2.wav","weapons/ar/g11/fire3.wav","weapons/ar/g11/fire4.wav","weapons/ar/g11/fire5.wav","weapons/ar/g11/fire6.wav"}
+})
+
+sound.Add({
+	name = "GF2_SNPC.Weapon_G11.Shot_Dist",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 140,
+	pitch = {90, 110},
+	sound = {"weapons/ar/g11/fire_dist1.wav","weapons/ar/g11/fire_dist2.wav","weapons/ar/g11/fire_dist3.wav","weapons/ar/g11/fire_dist4.wav","weapons/ar/g11/fire_dist5.wav","weapons/ar/g11/fire_dist6.wav"}
+})

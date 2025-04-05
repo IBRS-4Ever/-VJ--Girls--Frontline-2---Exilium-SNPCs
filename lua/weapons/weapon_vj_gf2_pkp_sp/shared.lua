@@ -17,8 +17,8 @@ SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 100
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.5
-SWEP.Primary.Sound = {"weapons/mg/pkp_sp/fire1.wav","weapons/mg/pkp_sp/fire2.wav","weapons/mg/pkp_sp/fire3.wav","weapons/mg/pkp_sp/fire4.wav","weapons/mg/pkp_sp/fire5.wav","weapons/mg/pkp_sp/fire6.wav","weapons/mg/pkp_sp/fire7.wav","weapons/mg/pkp_sp/fire8.wav"}
-SWEP.Primary.DistantSound = {"weapons/mg/pkp_sp/fire_dist1.wav","weapons/mg/pkp_sp/fire_dist2.wav","weapons/mg/pkp_sp/fire_dist3.wav","weapons/mg/pkp_sp/fire_dist4.wav"}
+SWEP.Primary.Sound = "GF2_SNPC.Weapon_PKP_SP.Shot"
+SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_PKP_SP.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
@@ -26,3 +26,21 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 SWEP.MagazingModel = "models/prop/gfl2_peritya_pkp_sp_magazine.mdl"
 
 SWEP.Element = "poison"
+
+sound.Add({
+	name = "GF2_SNPC.Weapon_PKP_SP.Shot",
+	channel = CHAN_WEAPON,
+	volume = 1.0,
+	level = 80,
+	pitch = {90, 110},
+	sound = {"weapons/mg/pkp_sp/fire1.wav","weapons/mg/pkp_sp/fire2.wav","weapons/mg/pkp_sp/fire3.wav","weapons/mg/pkp_sp/fire4.wav","weapons/mg/pkp_sp/fire5.wav","weapons/mg/pkp_sp/fire6.wav","weapons/mg/pkp_sp/fire7.wav","weapons/mg/pkp_sp/fire8.wav"}
+})
+
+sound.Add({
+	name = "GF2_SNPC.Weapon_PKP_SP.Shot_Dist",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 140,
+	pitch = {90, 110},
+	sound = {"weapons/mg/pkp_sp/fire_dist1.wav","weapons/mg/pkp_sp/fire_dist2.wav","weapons/mg/pkp_sp/fire_dist3.wav","weapons/mg/pkp_sp/fire_dist4.wav"}
+})

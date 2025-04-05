@@ -26,3 +26,5 @@ ENT.SoundTbl_FollowPlayer = {"vo/jp/colphne/follow1.wav","vo/jp/colphne/follow2.
 ENT.SoundTbl_UnFollowPlayer = {"vo/jp/colphne/unfollow1.wav","vo/jp/colphne/unfollow2.wav"}
 ENT.SoundTbl_Death = {"vo/jp/colphne/die1.wav","vo/jp/colphne/die2.wav","vo/jp/colphne/die3.wav"}
 ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/colphne/get_heal1.wav","vo/jp/colphne/get_heal2.wav","vo/jp/colphne/get_heal3.wav","vo/jp/colphne/get_heal4.wav","vo/jp/colphne/get_heal5.wav"}
+
+ENT.AnimationSpeed = 1.25

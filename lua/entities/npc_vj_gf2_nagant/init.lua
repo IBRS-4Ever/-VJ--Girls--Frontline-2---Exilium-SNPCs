@@ -14,3 +14,5 @@ ENT.SoundTbl_FollowPlayer = {"vo/jp/nagant/follow1.wav","vo/jp/nagant/follow2.wa
 ENT.SoundTbl_UnFollowPlayer = {"vo/jp/nagant/unfollow1.wav","vo/jp/nagant/unfollow2.wav"}
 ENT.SoundTbl_Death = {"vo/jp/nagant/die1.wav","vo/jp/nagant/hit7.wav","vo/jp/nagant/hit8.wav"}
 ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/nagant/get_heal1.wav","vo/jp/nagant/get_heal2.wav","vo/jp/nagant/get_heal3.wav","vo/jp/nagant/get_heal4.wav","vo/jp/nagant/get_heal5.wav","vo/jp/nagant/get_heal6.wav","vo/jp/nagant/get_heal7.wav","vo/jp/nagant/get_heal8.wav"}
+
+ENT.AnimationSpeed = 1.25

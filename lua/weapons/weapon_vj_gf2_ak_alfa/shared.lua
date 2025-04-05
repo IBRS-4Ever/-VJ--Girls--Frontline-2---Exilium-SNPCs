@@ -27,3 +27,21 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 SWEP.MagazingModel = "models/prop/gfl2_ak_alfa_magazine.mdl"
 
 SWEP.Element = "water"
+
+sound.Add({
+	name = "GF2_SNPC.Weapon_AK_Alfa.Shot",
+	channel = CHAN_WEAPON,
+	volume = 1.0,
+	level = 80,
+	pitch = {90, 110},
+	sound = {"weapons/ar/ak_alfa/fire1.wav","weapons/ar/ak_alfa/fire2.wav","weapons/ar/ak_alfa/fire3.wav","weapons/ar/ak_alfa/fire4.wav","weapons/ar/ak_alfa/fire5.wav","weapons/ar/ak_alfa/fire6.wav"}
+})
+
+sound.Add({
+	name = "GF2_SNPC.Weapon_AK_Alfa.Shot_Dist",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 140,
+	pitch = {90, 110},
+	sound = {"weapons/ar/ak_alfa/fire_dist1.wav","weapons/ar/ak_alfa/fire_dist2.wav","weapons/ar/ak_alfa/fire_dist3.wav","weapons/ar/ak_alfa/fire_dist4.wav","weapons/ar/ak_alfa/fire_dist5.wav","weapons/ar/ak_alfa/fire_dist6.wav","weapons/ar/ak_alfa/fire_dist7.wav","weapons/ar/ak_alfa/fire_dist8.wav"}
+})

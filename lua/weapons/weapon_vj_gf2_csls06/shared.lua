@@ -17,8 +17,8 @@ SWEP.Primary.ClipSize = 50
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.6
 SWEP.NPC_FiringDistanceScale = 0.85
-SWEP.Primary.Sound = {"weapons/smg/csls06/fire1.wav","weapons/smg/csls06/fire2.wav","weapons/smg/csls06/fire3.wav","weapons/smg/csls06/fire4.wav"}
-SWEP.Primary.DistantSound = {"weapons/smg/csls06/fire_dist1.wav","weapons/smg/csls06/fire_dist2.wav","weapons/smg/csls06/fire_dist3.wav","weapons/smg/csls06/fire_dist4.wav"}
+SWEP.Primary.Sound = "GF2_SNPC.Weapon_CSLS06.Shot"
+SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_CSLS06.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
@@ -26,3 +26,21 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 SWEP.MagazingModel = "models/prop/gfl2_zhaohui_csls06_magazine.mdl"
 
 SWEP.Element = "water"
+
+sound.Add({
+	name = "GF2_SNPC.Weapon_CSLS06.Shot",
+	channel = CHAN_WEAPON,
+	volume = 1.0,
+	level = 80,
+	pitch = {90, 110},
+	sound = {"weapons/smg/csls06/fire1.wav","weapons/smg/csls06/fire2.wav","weapons/smg/csls06/fire3.wav","weapons/smg/csls06/fire4.wav"}
+})
+
+sound.Add({
+	name = "GF2_SNPC.Weapon_CSLS06.Shot_Dist",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 140,
+	pitch = {90, 110},
+	sound = {"weapons/smg/csls06/fire_dist1.wav","weapons/smg/csls06/fire_dist2.wav","weapons/smg/csls06/fire_dist3.wav","weapons/smg/csls06/fire_dist4.wav"}
+})

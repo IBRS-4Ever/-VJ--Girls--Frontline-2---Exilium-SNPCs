@@ -40,8 +40,12 @@ function SWEP:CustomOnReload()
 			self:SetBodygroup(self:FindBodygroupByName( "bullets" ),1) -- PKP-SP
 		end
 		Magazing:Spawn()
-		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),1)
-		
+		if self:GetClass() == "weapon_vj_gf2_taurus_curve" then
+			self:SetBodygroup(self:FindBodygroupByName( "magazine" ),2)
+		else
+			self:SetBodygroup(self:FindBodygroupByName( "magazine" ),1)
+		end
+
 		timer.Simple( MagazineRemoveTimer, function() 
 			if IsValid(Magazing) then Magazing:Remove() end
 		end)
@@ -89,8 +93,10 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 					ent:TakeDamageInfo( DmgInfo )
 
 					if self.Owner.BodyModel == "DUAL DSI-8" then -- Leva
+						if ent:IsPlayer() then return end
 						local chance = math.random(1,100)
 						if chance <= 5 then
+							ent.HackedByLeva = true
 							if ent:IsNPC() then ent:AddEntityRelationship( self.Owner, D_LI, 99 ) end
 							for id, EntTarget in ents.Iterator() do
 								if EntTarget == self.Owner or EntTarget == ent or EntTarget:GetClass() == "obj_vj_bullseye" then continue end
