@@ -53,6 +53,8 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_SpeedStar","npc_vj_gf2_klukai_speed_star",{"weapon_vj_gf2_hk416"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Zhaohui","npc_vj_gf2_zhaohui",{"weapon_vj_gf2_csls06"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Zhaohui_RapidGrid","npc_vj_gf2_zhaohui_rapid_grid",{"weapon_vj_gf2_csls06"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Daiyan","npc_vj_gf2_daiyan",{"weapon_vj_gf2_qbz95"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Daiyan_ExquisiteJade","npc_vj_gf2_daiyan_exquisite_jade",{"weapon_vj_gf2_qbz95"},vCat)
 	
 	-- Weapons
 	VJ.AddNPCWeapon("OM50", "weapon_vj_gf2_om50", vCat)
@@ -72,6 +74,7 @@ if VJExists == true then
 	VJ.AddNPCWeapon("QBZ-97", "weapon_vj_gf2_qbz97", vCat)
 	VJ.AddNPCWeapon("HK416", "weapon_vj_gf2_hk416", vCat)
 	VJ.AddNPCWeapon("CS/LS06", "weapon_vj_gf2_csls06", vCat)
+	VJ.AddNPCWeapon("QBZ-95", "weapon_vj_gf2_qbz95", vCat)
 
 	VJ.AddNPCWeapon("Klukai's Axe", "weapon_vj_gf2_klukai_axe", vCat)
 
@@ -125,6 +128,8 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/jiangyu_combat.mdl")
 	util.PrecacheModel("models/gf2/zhaohui_combat.mdl")
 	util.PrecacheModel("models/gf2/zhaohui_rapid_grid.mdl")
+	util.PrecacheModel("models/gf2/daiyan_combat.mdl")
+	util.PrecacheModel("models/gf2/daiyan_exquisite_jade.mdl")
 	
 	-- Weapon Models
 	util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -144,6 +149,7 @@ if VJExists == true then
 	util.PrecacheModel("models/weapons/w_suomi_kp31.mdl")
 	util.PrecacheModel("models/weapons/w_jiangyu_qbz_97.mdl")
 	util.PrecacheModel("models/weapons/w_zhaohui_csls06.mdl")
+	util.PrecacheModel("models/weapons/w_daiyan_qbz_95.mdl")
 
 	-- Grenade Models
 	util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -196,6 +202,8 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_klukai_d",60)
 	VJ.AddConVar("vj_gf2_zhaohui_h",350)
 	VJ.AddConVar("vj_gf2_zhaohui_d",40)
+	VJ.AddConVar("vj_gf2_daiyan_h",300)
+	VJ.AddConVar("vj_gf2_daiyan_d",80)
 	
 	VJ.AddConVar("vj_gf2_om50_d",150)
 	VJ.AddConVar("vj_gf2_ak_alfa_d",40)
@@ -215,6 +223,7 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_qbz97_d",40)
 	VJ.AddConVar("vj_gf2_hk416_d",45)
 	VJ.AddConVar("vj_gf2_csls06_d",30)
+	VJ.AddConVar("vj_gf2_qbz95_d",55)
 
 	hook.Add("OnNPCKilled", "VJ_GF2_NPC_Killed", function(NPC, Attacker, Inflictor )
 		if NPC.Poisoned then
@@ -236,6 +245,7 @@ if VJExists == true then
 	AddConvars["vj_gf2_npc_element_freezing_radius_multipler"] = 1 -- Freezing radius multipler.
 	AddConvars["vj_gf2_infinite_ammo"] = 0 -- Infinite Ammo.
 	AddConvars["vj_gf2_speed_modifier"] = 1 -- Speed Modifier.
+	AddConvars["vj_gf2_animation_speed_modifier"] = 1 -- Animation Modifier.
 	for k, v in pairs(AddConvars) do
 		if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 	end
@@ -266,6 +276,7 @@ if VJExists == true then
 				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricRadiusMultipler", Command = "vj_gf2_npc_element_electric_radius_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.FreezingRadiusMultipler", Command = "vj_gf2_npc_element_freezing_radius_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_SpeedModifier", Command = "vj_gf2_speed_modifier"})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_AnimationSpeedModifier", Command = "vj_gf2_animation_speed_modifier"})
 			else
 				Panel:AddControl("Label", {Text = "#vjbase.menu.general.admin.not"})
 				Panel:ControlHelp("#vjbase.menu.general.admin.only")

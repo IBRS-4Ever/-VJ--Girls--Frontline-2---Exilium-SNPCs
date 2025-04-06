@@ -18,10 +18,10 @@ ENT.FootStepTimeWalk = 0.5
 ENT.HasItemDropsOnDeath = false
 
 ENT.Weapon_FindCoverOnReload = false
---ENT.Weapon_MaxDistance = 6000 -- 3000
+ENT.Weapon_MaxDistance = 6000 -- 3000
 
---ENT.SightDistance = 25000 -- 6500
---ENT.TurningSpeed = 40 -- 20
+ENT.SightDistance = 25000 -- 6500
+ENT.TurningSpeed = 40 -- 20
 
 ENT.HasOnPlayerSight = true
 ENT.OnPlayerSightDistance = 2000
@@ -39,6 +39,7 @@ ENT.ShieldRadius = false
 ENT.ShieldCoolDown = false
 
 ENT.AnimationSpeed = 1
+ENT.ReloadSpeed = false
 
 function ENT:GF2_CustomOnThink() end
 function ENT:GF2_CustomOnThink_AiEnabled() end
@@ -95,10 +96,19 @@ function ENT:CustomOnThink_AIEnabled()
 	if GetConVar("vj_gf2_speed_modifier"):GetBool() then
 		if !self:IsOnGround() then return end
 		if self:GetActivity() == ACT_IDLE or self:GetActivity() == ACT_IDLE_ANGRY then return end
+		if self:IsMoving() and self:GetGoalPos():Distance(self:GetPos()) <= 64 then return end
+		if self:GetActivity() == ACT_RELOAD then
+			if self.ReloadSpeed then
+				self:SetPlaybackRate(self.ReloadSpeed)
+			else
+				self:SetPlaybackRate(self.AnimationSpeed)
+			end
+		else
+			local Velocity = self:GetGroundSpeedVelocity()
+			self:SetVelocity(Velocity * (self.AnimationSpeed - 1))
+			if GetConVar("vj_gf2_animation_speed_modifier"):GetBool() then self:SetPlaybackRate(self.AnimationSpeed) end
+		end
 		--print(util.GetActivityNameByID(self:GetActivity()))
-		local Velocity = self:GetGroundSpeedVelocity()
-		self:SetVelocity(Velocity * (self.AnimationSpeed - 1))
-		self:SetPlaybackRate(self.AnimationSpeed)
 	end
 	self:GF2_CustomOnThink_AiEnabled()
 end
