@@ -8,6 +8,8 @@ ENT.Spawnable = false
 ENT.AdminSpawnable = false
 ENT.AutomaticFrameAdvance = false
 
+function ENT:GF2_CustomOnDraw() end
+
 function ENT:CustomOnDraw()
 	if self:GetNWInt( "Shield" ) > 0 then
 		if GetConVar("vj_gf2_draw_shield"):GetBool() then
@@ -31,4 +33,5 @@ function ENT:CustomOnDraw()
 			draw.SimpleText( string.format(language.GetPhrase("vj_gf2_snpcs.shield_count"), self:GetNWInt( "Shield" )), "DermaLarge", -tW / 2, 0, color_white )
 		cam.End3D2D()
 	end
+	self:GF2_CustomOnDraw()
 end

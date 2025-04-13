@@ -164,56 +164,6 @@ local GF2Subtitle = { -- add new tables inside here
 	},
 
 	{
-		snd = "vo/jp/nemesis/hit1.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "……呃……！", 
-			["english"] = "...Er...!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/nemesis/hit2.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "……呃啊……！", 
-			["english"] = "...Erra...!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/nemesis/hit3.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "……呃嗯……！", 
-			["english"] = "...Hmh...!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/nemesis/hit4.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "……啊……！", 
-			["english"] = "...Ah...!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/nemesis/hit5.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "……啊！", 
-			["english"] = "...Ah!", 
-		},
-		subjectcol = CharacterColor,
-	},
-	
-	{
 		snd = "vo/jp/nemesis/hit6.wav",
 		subject = CharacterName,
 		text = { -- ID: 78555

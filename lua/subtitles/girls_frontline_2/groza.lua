@@ -187,7 +187,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/groza/get_heal4.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "这种感觉...", 
+			["schinese"] = "这种感觉……", 
 			["english"] = "This feeling...", 
 			
 		},
@@ -225,60 +225,10 @@ local GF2Subtitle = { -- add new tables inside here
 	},
 
 	{
-		snd = "vo/jp/groza/hit1.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呃！", 
-			["english"] = "Er!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/groza/hit2.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呵！", 
-			["english"] = "Ke!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/groza/hit3.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "啊...", 
-			["english"] = "Ah...", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/groza/hit4.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呃啊...！", 
-			["english"] = "Erah...!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/groza/hit5.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "啊！", 
-			["english"] = "Ahh!", 
-		},
-		subjectcol = CharacterColor,
-	},
-	
-	{
 		snd = "vo/jp/groza/hit6.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "没事...！", 
+			["schinese"] = "没事……！", 
 			["english"] = "I'm OK...!", 
 		},
 		subjectcol = CharacterColor,
@@ -288,7 +238,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/groza/hit7.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "没事...呃！", 
+			["schinese"] = "没事……呃！", 
 			["english"] = "I'm fine... ah!", 
 		},
 		subjectcol = CharacterColor,
@@ -318,7 +268,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/groza/idle3.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "呃，是...克罗丽科...和纳美西丝？唉，至少在夜晚，希望她们可以保持安静。", 
+			["schinese"] = "呃，是……克罗丽科……和纳美西丝？唉，至少在夜晚，希望她们可以保持安静。", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -327,7 +277,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/groza/idle4.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "指挥官，本次作战计划，请过... 嗯，就算是简单的任务，也不能偷懒哦。", 
+			["schinese"] = "指挥官，本次作战计划，请过…… 嗯，就算是简单的任务，也不能偷懒哦。", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -367,7 +317,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/groza/idle8.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "呃...啊，是...指挥官吗，我...我刚刚...不，确认一切机能正常，不必担心。", 
+			["schinese"] = "呃……啊，是……指挥官吗，我……我刚刚……不，确认一切机能正常，不必担心。", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -463,7 +413,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/groza/player_sight3.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "新的作战报告...已经整理完毕，指挥官现在是否需要查看？嗯，目前一切正常，核对之后，指挥官可以好好休息。", 
+			["schinese"] = "新的作战报告……已经整理完毕，指挥官现在是否需要查看？嗯，目前一切正常，核对之后，指挥官可以好好休息。", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -543,7 +493,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/groza/player_sight11.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "可靠...吗？非常感谢，指挥官！对我来说，这是...最高的评价！", 
+			["schinese"] = "可靠……吗？非常感谢，指挥官！对我来说，这是……最高的评价！", 
 		},
 		subjectcol = CharacterColor,
 	},

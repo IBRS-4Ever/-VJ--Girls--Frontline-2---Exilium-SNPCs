@@ -7,12 +7,10 @@ ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_cheeta_d")
 ENT.HasGrenadeAttack = true
 ENT.GrenadeAttackEntity = "obj_gf2_cheeta_grenade"
 
-ENT.IsMedicSNPC = true
-ENT.HasHealthRegeneration = true
-ENT.HealthRegenerationAmount = 25
-ENT.Medic_HealDistance = 600
-ENT.Medic_HealthAmount = 100
-ENT.Medic_SpawnPropOnHealModel = "models/prop/gfl2_cheeta_lollipop_"..math.random(1,3)..".mdl"
+ENT.HealAllies = true 
+ENT.HealDistance = 500
+ENT.HealAmount = 10
+ENT.HealDelay = 1
 
 ENT.SoundTbl_Idle = {"vo/jp/cheeta/idle1.wav","vo/jp/cheeta/idle2.wav","vo/jp/cheeta/idle3.wav","vo/jp/cheeta/idle4.wav","vo/jp/cheeta/idle5.wav","vo/jp/cheeta/idle6.wav","vo/jp/cheeta/idle7.wav","vo/jp/cheeta/idle8.wav","vo/jp/cheeta/idle9.wav","vo/jp/cheeta/idle10.wav"}
 ENT.SoundTbl_OnPlayerSight = {"vo/jp/cheeta/player_sight1.wav","vo/jp/cheeta/player_sight2.wav","vo/jp/cheeta/player_sight3.wav","vo/jp/cheeta/player_sight4.wav","vo/jp/cheeta/player_sight5.wav","vo/jp/cheeta/player_sight6.wav","vo/jp/cheeta/player_sight7.wav","vo/jp/cheeta/player_sight8.wav","vo/jp/cheeta/player_sight9.wav","vo/jp/cheeta/player_sight10.wav","vo/jp/cheeta/player_sight11.wav","vo/jp/cheeta/player_sight12.wav","vo/jp/cheeta/player_sight13.wav","vo/jp/cheeta/player_sight14.wav"}

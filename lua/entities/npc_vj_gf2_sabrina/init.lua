@@ -15,5 +15,4 @@ ENT.SoundTbl_Death = {"vo/jp/sabrina/die1.wav","vo/jp/sabrina/hit7.wav","vo/jp/s
 --ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/sabrina/get_heal1.wav","vo/jp/sabrina/get_heal2.wav","vo/jp/sabrina/get_heal3.wav","vo/jp/sabrina/get_heal4.wav"}
 
 ENT.Shield = 100
-ENT.ShieldRadius = -1
 ENT.ShieldCoolDown = 60

@@ -215,80 +215,10 @@ local GF2Subtitle = { -- add new tables inside here
 	},
 
 	{
-		snd = "vo/jp/peritya/hit3.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "嗯！", 
-			["english"] = "Hmm!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/hit4.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呃！！", 
-			["english"] = "Erra!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/hit5.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呀！", 
-			["english"] = "Yaa!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/hit6.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呃...！", 
-			["english"] = "Er...!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/hit7.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "嚯！", 
-			["english"] = "Ho!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/hit8.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呀！", 
-			["english"] = "Ya!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/peritya/hit9.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呃！！", 
-			["english"] = "Errr!!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
 		snd = "vo/jp/peritya/hit10.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "...还不能！", 
+			["schinese"] = "……还不能！", 
 			["english"] = "...Not yet!", 
 		},
 		subjectcol = CharacterColor,

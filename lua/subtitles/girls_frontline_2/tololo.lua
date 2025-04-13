@@ -148,56 +148,6 @@ local GF2Subtitle = { -- add new tables inside here
 	},
 
 	{
-		snd = "vo/jp/tololo/hit1.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呃！", 
-			["english"] = "Eh!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/tololo/hit2.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "唉！", 
-			["english"] = "Ah!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/tololo/hit3.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "啊！", 
-			["english"] = "Ahh!!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/tololo/hit4.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呃！", 
-			["english"] = "Ehh!!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/tololo/hit5.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "啊！", 
-			["english"] = "Ahh!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
 		snd = "vo/jp/tololo/hit6.wav",
 		subject = CharacterName,
 		text = { -- ID: 78280

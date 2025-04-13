@@ -17,8 +17,7 @@ ENT.FootStepTimeWalk = 0.5
 
 ENT.HasItemDropsOnDeath = false
 
-ENT.Weapon_FindCoverOnReload = false
-ENT.Weapon_MaxDistance = 6000 -- 3000
+--ENT.Weapon_MaxDistance = 6000 -- 3000
 
 ENT.SightDistance = 25000 -- 6500
 ENT.TurningSpeed = 40 -- 20
@@ -41,25 +40,72 @@ ENT.ShieldCoolDown = false
 ENT.AnimationSpeed = 1
 ENT.ReloadSpeed = false
 
+ENT.HealAllies = false 
+ENT.HealDistance = false
+ENT.HealAmount = 5
+ENT.HealDelay = 1
+
+ENT.LastHitTimer = CurTime()
+
 function ENT:GF2_CustomOnThink() end
 function ENT:GF2_CustomOnThink_AiEnabled() end
 
+function ENT:HealAlly()
+	if self.HealDistance then
+		for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.HealDistance ) ) do
+			if !ent.IsGF2SNPC then continue end
+			if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
+			if ent:Health() >= ent:GetMaxHealth() then continue end
+			if ent.LastHitTimer > CurTime() then continue end
+			if ent:Health() + self.HealAmount < ent:GetMaxHealth() then
+				ent:SetHealth(ent:Health() + self.HealAmount)
+			else
+				ent:SetHealth(ent:GetMaxHealth())
+			end
+		end
+	else
+		for id, ent in ents.Iterator() do
+			if !ent.IsGF2SNPC then continue end
+			if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
+			if ent:Health() >= ent:GetMaxHealth() then continue end
+			if ent.LastHitTimer > CurTime() then continue end
+			if ent:Health() + self.HealAmount < ent:GetMaxHealth() then
+				ent:SetHealth(ent:Health() + self.HealAmount)
+			else
+				ent:SetHealth(ent:GetMaxHealth())
+			end
+		end
+	end
+end
+
 function ENT:GiveShield()
 	if !GetConVar("vj_gf2_npc_shield"):GetBool() then return end
-	if !self.ShieldRadius then return end
-	if self.ShieldRadius != -1 then
-		for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.ShieldRadius * GetConVar("vj_gf2_npc_shield_radius_multipler"):GetInt() ) ) do
+	if self.ShieldRadius then
+		for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.ShieldRadius * GetConVar("vj_gf2_npc_shield_radius_multipler"):GetFloat() ) ) do
 			if ent.IsGF2SNPC then
-				ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetInt() )
-				ent:EmitSound("items/battery_pickup.wav")
+				if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
+				if (ent:GetNWInt( "Shield" ) >= ent.StartHealth and !GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool()) then continue end
+				if (ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat()) < ent.StartHealth or GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool() then
+					ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat() )
+					ent:EmitSound("items/battery_pickup.wav")
+				else
+					ent:SetNWInt( "Shield", ent.StartHealth )
+					ent:EmitSound("items/battery_pickup.wav")
+				end
 			end
 		end
 	else
 		for id, ent in ents.Iterator() do
 			if ent.IsGF2SNPC then
 				if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
-				ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetInt() )
-				ent:EmitSound("items/battery_pickup.wav")
+				if (ent:GetNWInt( "Shield" ) >= ent.StartHealth and !GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool()) then continue end
+				if (ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat()) < ent.StartHealth or GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool() then
+					ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat() )
+					ent:EmitSound("items/battery_pickup.wav")
+				else
+					ent:SetNWInt( "Shield", ent.StartHealth )
+					ent:EmitSound("items/battery_pickup.wav")
+				end
 			end
 		end
 	end
@@ -80,16 +126,22 @@ function ENT:CustomOnInitialize()
 end
 
 function ENT:CustomInitialize()
+	self.Weapon_FindCoverOnReload = GetConVar("vj_gf2_npc_find_cover_on_reload"):GetBool()
 	if self.ShieldCoolDown then self:SetNWFloat( "ShieldCoolDown", self.ShieldCoolDown + CurTime() ) end
 	if self.Shield then self:GiveShield() end
+	if self.HealAllies then 
+		timer.Create( "GF2_HealTimer_"..self:EntIndex(), self.HealDelay, 0, function() 
+			self:HealAlly()
+		end)
+	end
 end
 
 function ENT:CustomOnThink()
-	if !self.ShieldCoolDown then return end
-	if self:GetNWFloat( "ShieldCoolDown" ) <= CurTime() then
+	if self.ShieldCoolDown and self:GetNWFloat( "ShieldCoolDown" ) <= CurTime() then
 		self:GiveShield()
 		self:SetNWFloat( "ShieldCoolDown", self.ShieldCoolDown + CurTime() )
 	end
+	self:GF2_CustomOnThink()
 end
 
 function ENT:CustomOnThink_AIEnabled()
@@ -108,10 +160,11 @@ function ENT:CustomOnThink_AIEnabled()
 			self:SetVelocity(Velocity * (self.AnimationSpeed - 1))
 			if GetConVar("vj_gf2_animation_speed_modifier"):GetBool() then self:SetPlaybackRate(self.AnimationSpeed) end
 		end
-		--print(util.GetActivityNameByID(self:GetActivity()))
 	end
 	self:GF2_CustomOnThink_AiEnabled()
 end
+
+function ENT:CustomOnWeaponReload() end
 
 function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
 	if dmginfo:IsDamageType(DMG_DROWN + DMG_NERVEGAS + DMG_POISON + DMG_RADIATION) then dmginfo:ScaleDamage(0) return end
@@ -149,6 +202,10 @@ function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup)
 	elseif dmginfo:IsDamageType(DMG_BURN + DMG_CLUB + DMG_SLASH + DMG_SNIPER) then
 		dmginfo:ScaleDamage(0.75)
 	end
+end
+
+function ENT:CustomOnTakeDamage_AfterDamage() 
+	self.LastHitTimer = CurTime() + 5
 end
 
 function ENT:CustomOnDeath_AfterCorpseSpawned(dmginfo,hitgroup,GetCorpse)
@@ -207,4 +264,8 @@ function ENT:CustomOnDeath_AfterCorpseSpawned(dmginfo,hitgroup,GetCorpse)
 			end
 		end
 	end
+end
+
+function ENT:OnRemove()
+	timer.Remove("GF2_HealTimer_"..self:EntIndex())
 end

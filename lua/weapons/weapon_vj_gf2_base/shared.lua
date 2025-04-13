@@ -80,12 +80,12 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 			HitSpark:SetNormal(-Normal)
 		util.Effect("MetalSpark", HitSpark, true, true )
 		
-		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_ElectricRadius * GetConVar("vj_gf2_npc_element_electric_radius_multipler"):GetInt() ) ) do
+		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_ElectricRadius * GetConVar("vj_gf2_npc_element_electric_radius_multipler"):GetFloat() ) ) do
 			if ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
 			if ent:IsNPC() or ent:IsPlayer() and ent:Alive() then
 				if self.Owner:CheckRelationship(ent) == D_HT then
 					local DmgInfo = DamageInfo()
-					DmgInfo:SetDamage( self.Element_ElectricDamage * GetConVar("vj_gf2_npc_element_electric_damage_multipler"):GetInt()  )
+					DmgInfo:SetDamage( self.Element_ElectricDamage * GetConVar("vj_gf2_npc_element_electric_damage_multipler"):GetFloat()  )
 					DmgInfo:SetAttacker( self.Owner )
 					DmgInfo:SetInflictor( self )
 					DmgInfo:SetDamageType( DMG_PLASMA ) 
@@ -147,7 +147,7 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 			FreezeEffect:SetMagnitude( 1 )
 		util.Effect( "GlassImpact", FreezeEffect, true, true )
 
-		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_FreezingRadius * GetConVar("vj_gf2_npc_element_freezing_radius_multipler"):GetInt()  ) ) do
+		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_FreezingRadius * GetConVar("vj_gf2_npc_element_freezing_radius_multipler"):GetFloat()  ) ) do
 			if ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
 			if ent:Alive() then
 				if self.Owner:CheckRelationship(ent) == D_HT then

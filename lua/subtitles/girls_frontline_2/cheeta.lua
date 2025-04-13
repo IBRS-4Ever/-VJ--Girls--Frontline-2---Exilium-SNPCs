@@ -264,26 +264,6 @@ local GF2Subtitle = { -- add new tables inside here
 	},
 
 	{
-		snd = "vo/jp/cheeta/hit1.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "啊！", 
-			["english"] = "Ah!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/cheeta/hit2.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "切！", 
-			["english"] = "Tch!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
 		snd = "vo/jp/cheeta/hit3.wav",
 		subject = CharacterName,
 		text = { -- ID: 78117
@@ -458,7 +438,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/killed_enemy4.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "哼！蜜罐做得到吗？", 
+			["schinese"] = "哼！蜜獾做得到吗？", 
 			["english"] = "Humph! Can the Honey Badger do that?", 
 		},
 		subjectcol = CharacterColor,

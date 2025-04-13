@@ -5,13 +5,10 @@ ENT.StartHealth = GetConVarNumber("vj_gf2_colphne_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_colphne_d")
 ENT.AnimTbl_MeleeAttack = "meleeattack01"
 
-ENT.IsMedicSNPC = true
-ENT.HasHealthRegeneration = true
-ENT.HealthRegenerationAmount = 60
-ENT.Medic_HealDistance = 1200
-ENT.Medic_HealthAmount = 250
-ENT.Medic_SpawnPropOnHealModel = "models/prop/gfl2_colphne_bandage.mdl"
-ENT.AnimTbl_Medic_GiveHealth = "heal"
+ENT.HealAllies = true 
+ENT.HealDistance = 750
+ENT.HealAmount = 25
+ENT.HealDelay = 1
 
 ENT.HasItemDropsOnDeath = true
 ENT.ItemDropsOnDeathChance = 1

@@ -55,6 +55,9 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Zhaohui_RapidGrid","npc_vj_gf2_zhaohui_rapid_grid",{"weapon_vj_gf2_csls06"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Daiyan","npc_vj_gf2_daiyan",{"weapon_vj_gf2_qbz95"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Daiyan_ExquisiteJade","npc_vj_gf2_daiyan_exquisite_jade",{"weapon_vj_gf2_qbz95"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Ksenia","npc_vj_gf2_ksenia",{"weapon_vj_gf2_aps"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Faye","npc_vj_gf2_faye",{"weapon_vj_gf2_cz75"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Faye_FlurryCrimson","npc_vj_gf2_faye_flurry_crimson",{"weapon_vj_gf2_cz75"},vCat)
 	
 	-- Weapons
 	VJ.AddNPCWeapon("OM50", "weapon_vj_gf2_om50", vCat)
@@ -75,6 +78,8 @@ if VJExists == true then
 	VJ.AddNPCWeapon("HK416", "weapon_vj_gf2_hk416", vCat)
 	VJ.AddNPCWeapon("CS/LS06", "weapon_vj_gf2_csls06", vCat)
 	VJ.AddNPCWeapon("QBZ-95", "weapon_vj_gf2_qbz95", vCat)
+	VJ.AddNPCWeapon("APS", "weapon_vj_gf2_aps", vCat)
+	VJ.AddNPCWeapon("CZ 75", "weapon_vj_gf2_cz75", vCat)
 
 	VJ.AddNPCWeapon("Klukai's Axe", "weapon_vj_gf2_klukai_axe", vCat)
 
@@ -130,6 +135,9 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/zhaohui_rapid_grid.mdl")
 	util.PrecacheModel("models/gf2/daiyan_combat.mdl")
 	util.PrecacheModel("models/gf2/daiyan_exquisite_jade.mdl")
+	util.PrecacheModel("models/gf2/ksenia_combat.mdl")
+	util.PrecacheModel("models/gf2/faye_combat.mdl")
+	util.PrecacheModel("models/gf2/faye_flurry_crimson.mdl")
 	
 	-- Weapon Models
 	util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -204,6 +212,10 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_zhaohui_d",40)
 	VJ.AddConVar("vj_gf2_daiyan_h",300)
 	VJ.AddConVar("vj_gf2_daiyan_d",80)
+	VJ.AddConVar("vj_gf2_ksenia_h",250)
+	VJ.AddConVar("vj_gf2_ksenia_d",25)
+	VJ.AddConVar("vj_gf2_faye_h",275)
+	VJ.AddConVar("vj_gf2_faye_d",30)
 	
 	VJ.AddConVar("vj_gf2_om50_d",150)
 	VJ.AddConVar("vj_gf2_ak_alfa_d",40)
@@ -224,6 +236,8 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_hk416_d",45)
 	VJ.AddConVar("vj_gf2_csls06_d",30)
 	VJ.AddConVar("vj_gf2_qbz95_d",55)
+	VJ.AddConVar("vj_gf2_aps_d",15)
+	VJ.AddConVar("vj_gf2_cz75_d",20)
 
 	hook.Add("OnNPCKilled", "VJ_GF2_NPC_Killed", function(NPC, Attacker, Inflictor )
 		if NPC.Poisoned then
@@ -239,13 +253,15 @@ if VJExists == true then
 	AddConvars["vj_gf2_npc_random_bodygroups"] = 0 -- Random Bodygroup for SNPCs?
 	AddConvars["vj_gf2_npc_shield_multipler"] = 1 -- Shield multipler.
 	AddConvars["vj_gf2_npc_shield_radius_multipler"] = 1 -- Shield radius multipler.
-	AddConvars["vj_gf2_npc_shield"] = 1 -- Shield rate multipler.
+	AddConvars["vj_gf2_npc_shield"] = 1 -- Enable Shield.
+	AddConvars["vj_gf2_npc_shield_exceed_maxhealth"] = 0 -- Shield can exceed max health.
 	AddConvars["vj_gf2_npc_element_electric_damage_multipler"] = 1 -- Electric damage multipler.
 	AddConvars["vj_gf2_npc_element_electric_radius_multipler"] = 1 -- Electric radius multipler.
 	AddConvars["vj_gf2_npc_element_freezing_radius_multipler"] = 1 -- Freezing radius multipler.
 	AddConvars["vj_gf2_infinite_ammo"] = 0 -- Infinite Ammo.
 	AddConvars["vj_gf2_speed_modifier"] = 1 -- Speed Modifier.
 	AddConvars["vj_gf2_animation_speed_modifier"] = 1 -- Animation Modifier.
+	AddConvars["vj_gf2_npc_find_cover_on_reload"] = 1 -- Find Cover On Reload.
 	for k, v in pairs(AddConvars) do
 		if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 	end
@@ -267,14 +283,16 @@ if VJExists == true then
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DeathFingerPose", Command = "vj_gf2_death_fingerpose"})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_RandomBodygroups", Command = "vj_gf2_npc_random_bodygroups"})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.InfiniteAmmo", Command = "vj_gf2_infinite_ammo"})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.FindCoverOnReload", Command = "vj_gf2_npc_find_cover_on_reload"})
 				Panel:AddControl("Label", {Text = "#vj_gf2_snpcs.settings.NPC_Shield.Title"})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_Shield", Command = "vj_gf2_npc_shield"})
-				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_ShieldMultipler", Command = "vj_gf2_npc_shield_multipler", Min = 0, Max = 5})
-				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_ShieldRadiusMultipler", Command = "vj_gf2_npc_shield_radius_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_Shield_ExceedMaxHealth", Command = "vj_gf2_npc_shield_exceed_maxhealth"})
+				Panel:AddControl("Slider", {Type = "float", Label = "#vj_gf2_snpcs.settings.NPC_ShieldMultipler", Command = "vj_gf2_npc_shield_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Slider", {Type = "float", Label = "#vj_gf2_snpcs.settings.NPC_ShieldRadiusMultipler", Command = "vj_gf2_npc_shield_radius_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Label", {Text = "#vj_gf2_snpcs.settings.NPC_Element.Title"})
-				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricDamageMultipler", Command = "vj_gf2_npc_element_electric_damage_multipler", Min = 0, Max = 5})
-				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricRadiusMultipler", Command = "vj_gf2_npc_element_electric_radius_multipler", Min = 0, Max = 5})
-				Panel:AddControl("Slider", {Label = "#vj_gf2_snpcs.settings.NPC_Element.FreezingRadiusMultipler", Command = "vj_gf2_npc_element_freezing_radius_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Slider", {Type = "float", Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricDamageMultipler", Command = "vj_gf2_npc_element_electric_damage_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Slider", {Type = "float", Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricRadiusMultipler", Command = "vj_gf2_npc_element_electric_radius_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Slider", {Type = "float", Label = "#vj_gf2_snpcs.settings.NPC_Element.FreezingRadiusMultipler", Command = "vj_gf2_npc_element_freezing_radius_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_SpeedModifier", Command = "vj_gf2_speed_modifier"})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_AnimationSpeedModifier", Command = "vj_gf2_animation_speed_modifier"})
 			else

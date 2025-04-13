@@ -26,7 +26,7 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 SWEP.MagazingModel = "models/prop/gfl2_suomi_kp31_magazine.mdl"
 
 SWEP.Element = "freezing"
-SWEP.Element_FreezingRadius = 125
+SWEP.Element_FreezingRadius = 75
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_KP31.Shot",

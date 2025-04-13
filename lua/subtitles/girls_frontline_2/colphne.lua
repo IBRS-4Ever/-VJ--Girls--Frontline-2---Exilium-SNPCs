@@ -149,71 +149,11 @@ local GF2Subtitle = { -- add new tables inside here
 	},
 
 	{
-		snd = "vo/jp/colphne/hit1.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "啊！", 
-			["english"] = "Ah!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/colphne/hit2.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呃！", 
-			["english"] = "Err!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/colphne/hit3.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "啊！", 
-			["english"] = "Ahhh!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/colphne/hit4.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呃！！", 
-			["english"] = "Errrr!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/colphne/hit5.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呀！", 
-			["english"] = "Ya!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
 		snd = "vo/jp/colphne/hit6.wav",
 		subject = CharacterName,
 		text = {
 			["schinese"] = "呃……还不能……！", 
 			["english"] = "Err... Not yet...!", 
-		},
-		subjectcol = CharacterColor,
-	},
-
-	{
-		snd = "vo/jp/colphne/hit7.wav",
-		subject = CharacterName,
-		text = {
-			["schinese"] = "呃啊！！", 
-			["english"] = "Errrrrrrrr!", 
 		},
 		subjectcol = CharacterColor,
 	},
