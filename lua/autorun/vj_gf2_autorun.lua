@@ -158,6 +158,8 @@ if VJExists == true then
 	util.PrecacheModel("models/weapons/w_jiangyu_qbz_97.mdl")
 	util.PrecacheModel("models/weapons/w_zhaohui_csls06.mdl")
 	util.PrecacheModel("models/weapons/w_daiyan_qbz_95.mdl")
+	util.PrecacheModel("models/weapons/w_faye_cz75.mdl")
+	util.PrecacheModel("models/weapons/w_ksenia_aps.mdl")
 
 	-- Grenade Models
 	util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -238,10 +240,10 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_qbz95_d",55)
 	VJ.AddConVar("vj_gf2_aps_d",15)
 	VJ.AddConVar("vj_gf2_cz75_d",20)
+	VJ.AddConVar("vj_gf2_wa2000_d",125)
 
 	hook.Add("OnNPCKilled", "VJ_GF2_NPC_Killed", function(NPC, Attacker, Inflictor )
-		if NPC.Poisoned then
-		end
+		if NPC.Poisoned then end
 	end)
 
 	-- Menu --
@@ -269,6 +271,7 @@ if VJExists == true then
 	VJ.AddClientConVar("vj_gf2_subtitles", 0, "Display Subtitles.")
 	VJ.AddClientConVar("vj_gf2_subtitles_language", "schinese", "Subtitles' language.")
 	VJ.AddClientConVar("vj_gf2_draw_shield", 1, "Draw Shield.")
+	VJ.AddClientConVar("vj_gf2_attachment_draw_laser", 1, "Draw Laser.")
 	
 	if CLIENT then
 		local function VJ_GF2MENU_MAIN(Panel)
@@ -315,6 +318,7 @@ if VJExists == true then
 			Panel:AddPanel(gf2_subtitle_language_combo_box)
 			Panel:ControlHelp("#vj_gf2_snpcs.settings.Subtitles_Language.Desc")
 			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.DrawShield", Command = "vj_gf2_draw_shield"})
+			Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.Attachment_DrawLaser", Command = "vj_gf2_attachment_draw_laser"})
 		end
 		function VJ_ADDTOMENU_GF2()
 			spawnmenu.AddToolMenuOption( "DrVrej", "SNPC Configures", "Girls' Frontline 2: Exilium", "#vj_gf2_snpcs.settings.Title", "", "", VJ_GF2MENU_MAIN, {} )

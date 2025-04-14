@@ -15,10 +15,17 @@ SWEP.Element_ElectricDamage = 0
 SWEP.Element_FireIgniteTime = 0
 SWEP.Element_FreezingRadius = 0
 
+SWEP.Attachment_Laser = false 
+SWEP.Attachment_LaserColor = Color(255,255,255)
+SWEP.Attachment_Flashlight = false 
+
+function SWEP:GF2_CustomOnInitialize() end
+
 function SWEP:CustomOnInitialize() 
 	DropMagazine = GetConVar("vj_gf2_drop_magazings"):GetBool()
 	MagazineRemoveTimer = GetConVar("vj_gf2_magazingremovetime"):GetInt()
 	if self.MagazingModel then util.PrecacheModel( self.MagazingModel ) end
+	self:GF2_CustomOnInitialize()
 end
 
 function SWEP:CustomOnPrimaryAttack_AfterShoot()
@@ -165,3 +172,31 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 		end
 	end
 end
+
+hook.Add("PostDrawTranslucentRenderables", "GF2SNPC_DrawGunLaser", function()
+	if GetConVar("vj_gf2_attachment_draw_laser"):GetBool() then
+		for _, weapon in ipairs(ents.FindByClass("weapon_vj_gf2_*")) do
+			if weapon.Attachment_Laser then
+				local Attachment = weapon:GetAttachment(weapon:LookupAttachment("laser"))
+				local startPos = Attachment.Pos
+				local endPos = startPos + (Attachment.Ang:Forward() * 99999)
+				
+				local tr = util.TraceLine({
+					start = startPos,
+					endpos = endPos,
+					filter = {weapon}
+				})
+	
+				render.SetMaterial(Material("effects/blueflare1"))
+				render.DrawSprite(startPos, 8, 8, weapon.Attachment_LaserColor)
+				render.SetMaterial(Material("effects/laser1"))
+				render.DrawBeam(startPos, tr.HitPos, 1, 0, 1, weapon.Attachment_LaserColor)
+	
+				if tr.Hit then
+					render.SetMaterial(Material("effects/blueflare1"))
+					render.DrawSprite(tr.HitPos, 8, 8, weapon.Attachment_LaserColor)
+				end
+			end
+		end
+	end
+end)

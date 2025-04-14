@@ -4,7 +4,7 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "CZ 75"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_faye_cz75.mdl"
+SWEP.WorldModel = "models/weapons/w_faye_cz75.mdl"
 SWEP.HoldType = "pistol"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.1
@@ -22,6 +22,19 @@ SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_faye_cz75_magazine.mdl"
+
+SWEP.Attachment_LaserColor = Color(175,50,50)
+
+function SWEP:GF2_CustomOnInitialize()
+	timer.Simple(0.1, function()
+		if !IsValid(self) then return end
+		local Laser = math.random(0,1)
+		if Laser == 1 then
+			self:SetBodygroup(self:FindBodygroupByName( "flashlight" ),1)
+			self.Attachment_Laser = true
+		end
+	end)
+end
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_CZ75.Shot",

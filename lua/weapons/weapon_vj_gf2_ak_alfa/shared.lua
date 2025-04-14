@@ -28,6 +28,19 @@ SWEP.MagazingModel = "models/prop/gfl2_ak_alfa_magazine.mdl"
 
 SWEP.Element = "water"
 
+SWEP.Attachment_LaserColor = Color(10,160,130)
+
+function SWEP:GF2_CustomOnInitialize()
+	timer.Simple(0.1, function()
+		if !IsValid(self) then return end
+		local Laser = math.random(0,1)
+		if Laser == 1 then
+			self:SetBodygroup(self:FindBodygroupByName( "flashlight_laser" ),1)
+			self.Attachment_Laser = true
+		end
+	end)
+end
+
 sound.Add({
 	name = "GF2_SNPC.Weapon_AK_Alfa.Shot",
 	channel = CHAN_WEAPON,
