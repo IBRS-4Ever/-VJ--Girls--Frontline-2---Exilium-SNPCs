@@ -26,8 +26,6 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_ak_alfa_magazine.mdl"
 
-SWEP.Element = "water"
-
 SWEP.Attachment_LaserColor = Color(10,160,130)
 
 function SWEP:GF2_CustomOnInitialize()

@@ -9,12 +9,6 @@ SWEP.MadeForNPCsOnly = true -- Is this weapon meant to be for NPCs only?
 SWEP.MagazingModel = false
 SWEP.MagazineAngle = Angle(0,90,0)
 
-SWEP.Element = "default"
-SWEP.Element_ElectricRadius = 0
-SWEP.Element_ElectricDamage = 0
-SWEP.Element_FireIgniteTime = 0
-SWEP.Element_FreezingRadius = 0
-
 SWEP.Attachment_Laser = false 
 SWEP.Attachment_LaserColor = Color(255,255,255)
 SWEP.Attachment_Flashlight = false 
@@ -68,12 +62,12 @@ function SWEP:CustomOnReload_Finish()
 end
 
 function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
-	if self.Element == "default" then return end
+	if self.Owner.Element == "default" then return end
 	local Target = tr.Entity
 	local HitPos = tr.HitPos
 	local Normal = tr.Normal
 
-	if self.Element == "water" then
+	if self.Owner.Element == "water" and GetConVar("vj_gf2_npc_element_water_enabled"):GetBool() then
 		local Water = EffectData()
 			Water:SetOrigin(HitPos)
 			Water:SetFlags(2)
@@ -81,18 +75,18 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 		util.Effect("watersplash", Water)
 	end
 
-	if self.Element == "electric" then
+	if self.Owner.Element == "electric" and GetConVar("vj_gf2_npc_element_electric_enabled"):GetBool() then
 		local HitSpark = EffectData()
 			HitSpark:SetOrigin(HitPos)
 			HitSpark:SetNormal(-Normal)
 		util.Effect("MetalSpark", HitSpark, true, true )
 		
-		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_ElectricRadius * GetConVar("vj_gf2_npc_element_electric_radius_multipler"):GetFloat() ) ) do
+		for id, ent in pairs( ents.FindInSphere( HitPos, self.Owner.Element_ElectricRadius * GetConVar("vj_gf2_npc_element_electric_radius_multipler"):GetFloat() ) ) do
 			if ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
 			if ent:IsNPC() or ent:IsPlayer() and ent:Alive() then
 				if self.Owner:CheckRelationship(ent) == D_HT then
 					local DmgInfo = DamageInfo()
-					DmgInfo:SetDamage( self.Element_ElectricDamage * GetConVar("vj_gf2_npc_element_electric_damage_multipler"):GetFloat()  )
+					DmgInfo:SetDamage( self.Owner.Element_ElectricDamage * GetConVar("vj_gf2_npc_element_electric_damage_multipler"):GetFloat()  )
 					DmgInfo:SetAttacker( self.Owner )
 					DmgInfo:SetInflictor( self )
 					DmgInfo:SetDamageType( DMG_PLASMA ) 
@@ -126,7 +120,7 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 		end
 	end
 
-	if self.Element == "fire" then
+	if self.Owner.Element == "fire" and GetConVar("vj_gf2_npc_element_fire_enabled"):GetBool() then
 		local Spark = EffectData()
 			Spark:SetOrigin(HitPos)
 			Spark:SetNormal(-Normal)
@@ -134,12 +128,12 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 		
 		if Target:IsNPC() or Target:IsPlayer() and Target:Alive() then
 			if self.Owner:CheckRelationship(Target) == D_HT then 
-				Target:Ignite( self.Element_FireIgniteTime )
+				Target:Ignite( self.Owner.Element_FireIgniteTime )
 			end
 		end
 	end
 
-	if self.Element == "poison" then
+	if self.Owner.Element == "poison" and GetConVar("vj_gf2_npc_element_poison_enabled"):GetBool() then
 		if Target:IsNPC() or Target:IsPlayer() and Target:Alive() then
 			if self.Owner:CheckRelationship(Target) == D_HT then 
 				Target.Poisoned = true
@@ -147,14 +141,14 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 		end
 	end
 
-	if self.Element == "freezing" then
+	if self.Owner.Element == "freezing" and GetConVar("vj_gf2_npc_element_freezing_enabled"):GetBool() then
 		local FreezeEffect = EffectData()
 			FreezeEffect:SetOrigin( HitPos )
 			FreezeEffect:SetScale( 1 )
 			FreezeEffect:SetMagnitude( 1 )
 		util.Effect( "GlassImpact", FreezeEffect, true, true )
 
-		for id, ent in pairs( ents.FindInSphere( HitPos, self.Element_FreezingRadius * GetConVar("vj_gf2_npc_element_freezing_radius_multipler"):GetFloat()  ) ) do
+		for id, ent in pairs( ents.FindInSphere( HitPos, self.Owner.Element_FreezingRadius * GetConVar("vj_gf2_npc_element_freezing_radius_multipler"):GetFloat()  ) ) do
 			if ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
 			if ent:Alive() then
 				if self.Owner:CheckRelationship(ent) == D_HT then

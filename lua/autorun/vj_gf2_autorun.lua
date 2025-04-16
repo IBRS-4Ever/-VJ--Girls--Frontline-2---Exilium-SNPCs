@@ -58,6 +58,8 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Ksenia","npc_vj_gf2_ksenia",{"weapon_vj_gf2_aps"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Faye","npc_vj_gf2_faye",{"weapon_vj_gf2_cz75"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Faye_FlurryCrimson","npc_vj_gf2_faye_flurry_crimson",{"weapon_vj_gf2_cz75"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry","npc_vj_gf2_sharkry",{"weapon_vj_gf2_xcr"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry_SwimsuitIdol","npc_vj_gf2_sharkry_swimsuit_idol",{"weapon_vj_gf2_xcr"},vCat)
 	
 	-- Weapons
 	VJ.AddNPCWeapon("OM50", "weapon_vj_gf2_om50", vCat)
@@ -80,7 +82,22 @@ if VJExists == true then
 	VJ.AddNPCWeapon("QBZ-95", "weapon_vj_gf2_qbz95", vCat)
 	VJ.AddNPCWeapon("APS", "weapon_vj_gf2_aps", vCat)
 	VJ.AddNPCWeapon("CZ 75", "weapon_vj_gf2_cz75", vCat)
-
+	VJ.AddNPCWeapon("WA2000", "weapon_vj_gf2_wa2000", vCat)
+	VJ.AddNPCWeapon("XCR", "weapon_vj_gf2_xcr", vCat)
+	VJ.AddNPCWeapon("K2", "weapon_vj_gf2_k2", vCat)
+	VJ.AddNPCWeapon("VSK-94", "weapon_vj_gf2_vsk94", vCat)
+	VJ.AddNPCWeapon("RO635", "weapon_vj_gf2_ro635", vCat)
+	VJ.AddNPCWeapon("PPSH-41", "weapon_vj_gf2_ppsh41", vCat)
+	VJ.AddNPCWeapon("MP5", "weapon_vj_gf2_mp5", vCat)
+	VJ.AddNPCWeapon("M1903", "weapon_vj_gf2_m1903", vCat)
+	VJ.AddNPCWeapon("M1891", "weapon_vj_gf2_m1891", vCat)
+	VJ.AddNPCWeapon("M1 Super 90", "weapon_vj_gf2_m1_super90", vCat)
+	VJ.AddNPCWeapon("KSVK", "weapon_vj_gf2_ksvk", vCat)
+	VJ.AddNPCWeapon("Hawk Type 97", "weapon_vj_gf2_hawk_type97", vCat)
+	VJ.AddNPCWeapon("Galil ARM", "weapon_vj_gf2_galil_arm", vCat)
+	VJ.AddNPCWeapon("G36K", "weapon_vj_gf2_g36k", vCat)
+	VJ.AddNPCWeapon("G36", "weapon_vj_gf2_g36", vCat)
+	
 	VJ.AddNPCWeapon("Klukai's Axe", "weapon_vj_gf2_klukai_axe", vCat)
 
 	-- Items
@@ -218,6 +235,8 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_ksenia_d",25)
 	VJ.AddConVar("vj_gf2_faye_h",275)
 	VJ.AddConVar("vj_gf2_faye_d",30)
+	VJ.AddConVar("vj_gf2_sharkry_h",225)
+	VJ.AddConVar("vj_gf2_sharkry_d",25)
 	
 	VJ.AddConVar("vj_gf2_om50_d",150)
 	VJ.AddConVar("vj_gf2_ak_alfa_d",40)
@@ -241,6 +260,7 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_aps_d",15)
 	VJ.AddConVar("vj_gf2_cz75_d",20)
 	VJ.AddConVar("vj_gf2_wa2000_d",125)
+	VJ.AddConVar("vj_gf2_xcr_d",40)
 
 	hook.Add("OnNPCKilled", "VJ_GF2_NPC_Killed", function(NPC, Attacker, Inflictor )
 		if NPC.Poisoned then end
@@ -257,9 +277,14 @@ if VJExists == true then
 	AddConvars["vj_gf2_npc_shield_radius_multipler"] = 1 -- Shield radius multipler.
 	AddConvars["vj_gf2_npc_shield"] = 1 -- Enable Shield.
 	AddConvars["vj_gf2_npc_shield_exceed_maxhealth"] = 0 -- Shield can exceed max health.
+	AddConvars["vj_gf2_npc_element_electric_enabled"] = 1 -- Enable Electric Effects.
 	AddConvars["vj_gf2_npc_element_electric_damage_multipler"] = 1 -- Electric damage multipler.
 	AddConvars["vj_gf2_npc_element_electric_radius_multipler"] = 1 -- Electric radius multipler.
+	AddConvars["vj_gf2_npc_element_freezing_enabled"] = 1 -- Enable Freezing Effects.
 	AddConvars["vj_gf2_npc_element_freezing_radius_multipler"] = 1 -- Freezing radius multipler.
+	AddConvars["vj_gf2_npc_element_fire_enabled"] = 1 -- Enable Fire Effects.
+	AddConvars["vj_gf2_npc_element_poison_enabled"] = 1 -- Enable Poison Effects.
+	AddConvars["vj_gf2_npc_element_water_enabled"] = 1 -- Enable Water Effects.
 	AddConvars["vj_gf2_infinite_ammo"] = 0 -- Infinite Ammo.
 	AddConvars["vj_gf2_speed_modifier"] = 1 -- Speed Modifier.
 	AddConvars["vj_gf2_animation_speed_modifier"] = 1 -- Animation Modifier.
@@ -293,9 +318,14 @@ if VJExists == true then
 				Panel:AddControl("Slider", {Type = "float", Label = "#vj_gf2_snpcs.settings.NPC_ShieldMultipler", Command = "vj_gf2_npc_shield_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Slider", {Type = "float", Label = "#vj_gf2_snpcs.settings.NPC_ShieldRadiusMultipler", Command = "vj_gf2_npc_shield_radius_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Label", {Text = "#vj_gf2_snpcs.settings.NPC_Element.Title"})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricEnabled", Command = "vj_gf2_npc_element_electric_enabled"})
 				Panel:AddControl("Slider", {Type = "float", Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricDamageMultipler", Command = "vj_gf2_npc_element_electric_damage_multipler", Min = 0, Max = 5})
 				Panel:AddControl("Slider", {Type = "float", Label = "#vj_gf2_snpcs.settings.NPC_Element.ElectricRadiusMultipler", Command = "vj_gf2_npc_element_electric_radius_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_Element.FreezingEnabled", Command = "vj_gf2_npc_element_freezing_enabled"})
 				Panel:AddControl("Slider", {Type = "float", Label = "#vj_gf2_snpcs.settings.NPC_Element.FreezingRadiusMultipler", Command = "vj_gf2_npc_element_freezing_radius_multipler", Min = 0, Max = 5})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_Element.FireEnabled", Command = "vj_gf2_npc_element_fire_enabled"})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_Element.PoisonEnabled", Command = "vj_gf2_npc_element_poison_enabled"})
+				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_Element.WaterEnabled", Command = "vj_gf2_npc_element_water_enabled"})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_SpeedModifier", Command = "vj_gf2_speed_modifier"})
 				Panel:AddControl("Checkbox", {Label = "#vj_gf2_snpcs.settings.NPC_AnimationSpeedModifier", Command = "vj_gf2_animation_speed_modifier"})
 			else

@@ -19,7 +19,7 @@ ENT.HasItemDropsOnDeath = false
 
 --ENT.Weapon_MaxDistance = 6000 -- 3000
 
-ENT.SightDistance = 25000 -- 6500
+--ENT.SightDistance = 25000 -- 6500
 ENT.TurningSpeed = 40 -- 20
 
 ENT.HasOnPlayerSight = true
@@ -44,6 +44,12 @@ ENT.HealAllies = false
 ENT.HealDistance = false
 ENT.HealAmount = 5
 ENT.HealDelay = 1
+
+ENT.Element = "default"
+ENT.Element_ElectricRadius = 0
+ENT.Element_ElectricDamage = 0
+ENT.Element_FireIgniteTime = 0
+ENT.Element_FreezingRadius = 0
 
 ENT.LastHitTimer = CurTime()
 

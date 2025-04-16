@@ -26,8 +26,6 @@ SWEP.MagazingModel = "models/prop/gfl2_mechty_g11_magazine.mdl"
 
 SWEP.PrimaryEffects_SpawnShells = false
 
-SWEP.Element = "poison"
-
 sound.Add({
 	name = "GF2_SNPC.Weapon_G11.Shot",
 	channel = CHAN_WEAPON,

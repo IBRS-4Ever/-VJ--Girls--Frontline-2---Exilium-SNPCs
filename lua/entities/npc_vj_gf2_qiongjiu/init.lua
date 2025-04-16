@@ -4,6 +4,9 @@ ENT.Model = {"models/gf2/qiongjiu_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_qiongjiu_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_qiongjiu_d")
 
+ENT.Element = "fire"
+ENT.Element_FireIgniteTime = 5
+
 ENT.SoundTbl_Idle = {"vo/jp/qiongjiu/idle1.wav","vo/jp/qiongjiu/idle2.wav","vo/jp/qiongjiu/idle3.wav","vo/jp/qiongjiu/idle4.wav","vo/jp/qiongjiu/idle5.wav","vo/jp/qiongjiu/idle6.wav","vo/jp/qiongjiu/idle7.wav","vo/jp/qiongjiu/idle8.wav","vo/jp/qiongjiu/idle9.wav","vo/jp/qiongjiu/idle10.wav"}
 ENT.SoundTbl_OnPlayerSight = {"vo/jp/qiongjiu/player_sight1.wav","vo/jp/qiongjiu/player_sight2.wav","vo/jp/qiongjiu/player_sight3.wav","vo/jp/qiongjiu/player_sight4.wav","vo/jp/qiongjiu/player_sight5.wav","vo/jp/qiongjiu/player_sight6.wav","vo/jp/qiongjiu/player_sight7.wav","vo/jp/qiongjiu/player_sight8.wav","vo/jp/qiongjiu/player_sight9.wav","vo/jp/qiongjiu/player_sight10.wav","vo/jp/qiongjiu/player_sight11.wav","vo/jp/qiongjiu/player_sight12.wav","vo/jp/qiongjiu/player_sight13.wav"}
 ENT.SoundTbl_Alert = {"vo/jp/qiongjiu/alert1.wav","vo/jp/qiongjiu/alert2.wav","vo/jp/qiongjiu/alert3.wav"}

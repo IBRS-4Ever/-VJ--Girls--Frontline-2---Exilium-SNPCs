@@ -25,9 +25,6 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_mp7_magazine.mdl"
 
-SWEP.Element = "fire"
-SWEP.Element_FireIgniteTime = 3
-
 sound.Add({
 	name = "GF2_SNPC.Weapon_MP7.Shot",
 	channel = CHAN_WEAPON,

@@ -4,6 +4,8 @@ ENT.Model = {"models/gf2/peritya_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_peritya_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_peritya_d")
 
+ENT.Element = "poison"
+
 ENT.HasGrenadeAttack = true
 ENT.GrenadeAttackEntity = "obj_gf2_peritya_grenade"
 

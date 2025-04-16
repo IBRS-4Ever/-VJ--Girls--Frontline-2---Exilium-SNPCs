@@ -23,8 +23,6 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_klukai_hk416_magazine.mdl"
 
-SWEP.Element = "poison"
-
 sound.Add({
 	name = "GF2_SNPC.Weapon_HK416.Shot",
 	channel = CHAN_WEAPON,

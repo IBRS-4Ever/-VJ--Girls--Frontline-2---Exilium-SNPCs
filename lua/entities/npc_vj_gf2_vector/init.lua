@@ -4,6 +4,9 @@ ENT.Model = {"models/gf2/vector_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_vector_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_vector_d")
 
+ENT.Element = "fire"
+ENT.Element_FireIgniteTime = 3
+
 ENT.HasGrenadeAttack = true
 ENT.GrenadeAttackEntity = "obj_gf2_vector_incendiary_grenade"
 

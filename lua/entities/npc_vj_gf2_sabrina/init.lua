@@ -4,6 +4,8 @@ ENT.Model = {"models/gf2/sabrina_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_sabrina_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_sabrina_d")
 
+ENT.Element = "water"
+
 ENT.SoundTbl_Idle = {"vo/jp/sabrina/idle1.wav","vo/jp/sabrina/idle2.wav","vo/jp/sabrina/idle3.wav","vo/jp/sabrina/idle4.wav","vo/jp/sabrina/idle5.wav","vo/jp/sabrina/idle6.wav","vo/jp/sabrina/idle7.wav","vo/jp/sabrina/idle8.wav","vo/jp/sabrina/idle9.wav","vo/jp/sabrina/idle10.wav"}
 ENT.SoundTbl_OnPlayerSight = {"vo/jp/sabrina/player_sight1.wav","vo/jp/sabrina/player_sight2.wav","vo/jp/sabrina/player_sight3.wav","vo/jp/sabrina/player_sight4.wav","vo/jp/sabrina/player_sight5.wav","vo/jp/sabrina/player_sight6.wav","vo/jp/sabrina/player_sight7.wav","vo/jp/sabrina/player_sight8.wav","vo/jp/sabrina/player_sight9.wav","vo/jp/sabrina/player_sight10.wav","vo/jp/sabrina/player_sight11.wav","vo/jp/sabrina/player_sight12.wav","vo/jp/sabrina/player_sight13.wav"}
 ENT.SoundTbl_Alert = {"vo/jp/sabrina/alert1.wav","vo/jp/sabrina/alert2.wav"}

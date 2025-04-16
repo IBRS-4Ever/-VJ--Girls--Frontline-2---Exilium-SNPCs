@@ -23,8 +23,6 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_colphne_taurus_curve_magazine.mdl"
 
-SWEP.Element = "water"
-
 sound.Add({
 	name = "GF2_SNPC.Weapon_TaurusCurve.Shot",
 	channel = CHAN_WEAPON,

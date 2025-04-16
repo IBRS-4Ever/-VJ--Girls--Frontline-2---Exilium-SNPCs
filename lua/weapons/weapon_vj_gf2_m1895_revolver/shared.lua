@@ -22,8 +22,6 @@ SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 
 SWEP.PrimaryEffects_SpawnShells = false
 
-SWEP.Element = "poison"
-
 sound.Add({
 	name = "GF2_SNPC.Weapon_M1895.Shot",
 	channel = CHAN_WEAPON,

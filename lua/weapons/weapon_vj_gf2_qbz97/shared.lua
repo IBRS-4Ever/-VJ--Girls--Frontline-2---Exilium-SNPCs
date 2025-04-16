@@ -24,10 +24,6 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_jiangyu_qbz_97_magazine.mdl"
 
-SWEP.Element = "electric"
-SWEP.Element_ElectricRadius = 150
-SWEP.Element_ElectricDamage = 10
-
 sound.Add({
 	name = "GF2_SNPC.Weapon_QBZ97.Shot",
 	channel = CHAN_WEAPON,

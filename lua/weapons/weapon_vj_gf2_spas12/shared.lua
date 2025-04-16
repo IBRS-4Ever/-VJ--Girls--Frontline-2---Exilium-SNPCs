@@ -26,8 +26,6 @@ SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_ShotgunShell1"
 
-SWEP.Element = "water"
-
 sound.Add({
 	name = "GF2_SNPC.Weapon_SPAS12.Shot",
 	channel = CHAN_WEAPON,

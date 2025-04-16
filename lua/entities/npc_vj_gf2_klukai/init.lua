@@ -4,6 +4,8 @@ ENT.Model = {"models/gf2/klukai_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_klukai_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_klukai_d")
 
+ENT.Element = "poison"
+
 ENT.WeaponInventory_MeleeList = {"weapon_vj_gf2_klukai_axe"}
 
 ENT.HasGrenadeAttack = true

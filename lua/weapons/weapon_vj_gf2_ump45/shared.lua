@@ -25,10 +25,6 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_leva_ump45_magazine.mdl"
 
-SWEP.Element = "electric"
-SWEP.Element_ElectricRadius = 125
-SWEP.Element_ElectricDamage = 7
-
 SWEP.Attachment_LaserColor = Color(230,190,70)
 
 function SWEP:GF2_CustomOnInitialize()

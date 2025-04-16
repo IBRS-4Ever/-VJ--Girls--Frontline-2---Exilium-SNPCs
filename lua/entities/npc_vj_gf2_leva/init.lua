@@ -4,6 +4,10 @@ ENT.Model = {"models/gf2/leva_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_leva_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_leva_d")
 
+ENT.Element = "electric"
+ENT.Element_ElectricRadius = 125
+ENT.Element_ElectricDamage = 7
+
 ENT.SoundTbl_Idle = {"vo/jp/leva/idle1.wav","vo/jp/leva/idle2.wav","vo/jp/leva/idle3.wav","vo/jp/leva/idle4.wav","vo/jp/leva/idle5.wav"}
 ENT.SoundTbl_OnPlayerSight = {"vo/jp/leva/player_sight1.wav","vo/jp/leva/player_sight2.wav","vo/jp/leva/player_sight3.wav","vo/jp/leva/player_sight4.wav","vo/jp/leva/player_sight5.wav","vo/jp/leva/player_sight6.wav","vo/jp/leva/player_sight7.wav","vo/jp/leva/player_sight8.wav","vo/jp/leva/player_sight9.wav"}
 ENT.SoundTbl_Alert = {"vo/jp/leva/alert1.wav","vo/jp/leva/alert2.wav","vo/jp/leva/alert3.wav","vo/jp/leva/alert4.wav","vo/jp/leva/alert5.wav","vo/jp/leva/alert6.wav"}

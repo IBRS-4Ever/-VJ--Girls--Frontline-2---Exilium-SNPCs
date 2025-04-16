@@ -10,6 +10,8 @@ ENT.HealDistance = 750
 ENT.HealAmount = 25
 ENT.HealDelay = 1
 
+ENT.Element = "water"
+
 ENT.HasItemDropsOnDeath = true
 ENT.ItemDropsOnDeathChance = 1
 ENT.ItemDropsOnDeath_EntityList = {"sent_gf2_colphne_healthkit","sent_gf2_colphne_bandage","sent_gf2_colphne_syringe"}

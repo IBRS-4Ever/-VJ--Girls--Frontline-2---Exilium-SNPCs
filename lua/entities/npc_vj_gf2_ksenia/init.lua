@@ -5,6 +5,9 @@ ENT.StartHealth = GetConVarNumber("vj_gf2_ksenia_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_ksenia_d")
 ENT.AnimTbl_MeleeAttack = "meleeattack01"
 
+ENT.Element = "fire"
+ENT.Element_FireIgniteTime = 1
+
 ENT.SoundTbl_Idle = {"vo/jp/ksenia/idle1.wav","vo/jp/ksenia/idle2.wav","vo/jp/ksenia/idle3.wav","vo/jp/ksenia/idle4.wav","vo/jp/ksenia/idle5.wav","vo/jp/ksenia/idle6.wav","vo/jp/ksenia/idle7.wav","vo/jp/ksenia/idle8.wav","vo/jp/ksenia/idle9.wav","vo/jp/ksenia/idle10.wav"}
 ENT.SoundTbl_OnPlayerSight = {"vo/jp/ksenia/player_sight1.wav","vo/jp/ksenia/player_sight2.wav","vo/jp/ksenia/player_sight3.wav","vo/jp/ksenia/player_sight4.wav","vo/jp/ksenia/player_sight5.wav","vo/jp/ksenia/player_sight6.wav","vo/jp/ksenia/player_sight7.wav","vo/jp/ksenia/player_sight8.wav","vo/jp/ksenia/player_sight9.wav","vo/jp/ksenia/player_sight10.wav","vo/jp/ksenia/player_sight11.wav","vo/jp/ksenia/player_sight12.wav","vo/jp/ksenia/player_sight13.wav"}
 ENT.SoundTbl_Alert = {"vo/jp/ksenia/alert1.wav","vo/jp/ksenia/alert2.wav"}

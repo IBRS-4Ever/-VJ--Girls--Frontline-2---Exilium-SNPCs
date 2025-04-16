@@ -4,10 +4,12 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "WA2000"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/weapons/w_nemesis_om50.mdl"
+SWEP.WorldModel = "models/prop/gfl2_macqiato_wa2000.mdl"
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 1
+SWEP.NPC_TimeUntilFire = 0.3
+SWEP.NPC_TimeUntilFireExtraTimers = {0.3}
 SWEP.NPC_ReloadSound = {"weapons/rf/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------

@@ -24,9 +24,6 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_qiongjiu_qbz_191_magazine.mdl"
 
-SWEP.Element = "fire"
-SWEP.Element_FireIgniteTime = 5
-
 sound.Add({
 	name = "GF2_SNPC.Weapon_QBZ191.Shot",
 	channel = CHAN_WEAPON,

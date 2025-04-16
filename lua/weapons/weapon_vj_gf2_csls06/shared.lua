@@ -25,8 +25,6 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_zhaohui_csls06_magazine.mdl"
 
-SWEP.Element = "water"
-
 sound.Add({
 	name = "GF2_SNPC.Weapon_CSLS06.Shot",
 	channel = CHAN_WEAPON,

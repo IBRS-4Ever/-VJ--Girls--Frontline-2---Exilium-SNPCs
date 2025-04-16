@@ -14,7 +14,7 @@ SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_pkp_sp_d")
 SWEP.Primary.Force = 1
-SWEP.Primary.ClipSize = 100
+SWEP.Primary.ClipSize = 200
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.5
 SWEP.Primary.Sound = "GF2_SNPC.Weapon_PKP_SP.Shot"
@@ -24,8 +24,6 @@ SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
 SWEP.MagazingModel = "models/prop/gfl2_peritya_pkp_sp_magazine.mdl"
-
-SWEP.Element = "poison"
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_PKP_SP.Shot",

@@ -5,6 +5,8 @@ ENT.StartHealth = GetConVarNumber("vj_gf2_nagant_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_nagant_d")
 ENT.AnimTbl_MeleeAttack = "meleeattack01"
 
+ENT.Element = "poison"
+
 ENT.SoundTbl_Idle = {"vo/jp/nagant/idle1.wav","vo/jp/nagant/idle2.wav","vo/jp/nagant/idle3.wav","vo/jp/nagant/idle4.wav","vo/jp/nagant/idle5.wav","vo/jp/nagant/idle6.wav","vo/jp/nagant/idle7.wav","vo/jp/nagant/idle8.wav","vo/jp/nagant/idle9.wav","vo/jp/nagant/idle10.wav"}
 ENT.SoundTbl_OnPlayerSight = {"vo/jp/nagant/player_sight1.wav","vo/jp/nagant/player_sight2.wav","vo/jp/nagant/player_sight3.wav","vo/jp/nagant/player_sight4.wav","vo/jp/nagant/player_sight5.wav","vo/jp/nagant/player_sight6.wav","vo/jp/nagant/player_sight7.wav","vo/jp/nagant/player_sight8.wav","vo/jp/nagant/player_sight9.wav","vo/jp/nagant/player_sight10.wav","vo/jp/nagant/player_sight11.wav","vo/jp/nagant/player_sight12.wav","vo/jp/nagant/player_sight13.wav"}
 ENT.SoundTbl_Alert = {"vo/jp/nagant/alert1.wav","vo/jp/nagant/alert2.wav"}

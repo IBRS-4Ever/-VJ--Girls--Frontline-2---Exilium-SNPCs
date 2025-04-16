@@ -4,6 +4,10 @@ ENT.Model = {"models/gf2/jiangyu_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_jiangyu_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_jiangyu_d")
 
+ENT.Element = "electric"
+ENT.Element_ElectricRadius = 150
+ENT.Element_ElectricDamage = 10
+
 ENT.SoundTbl_Idle = {"vo/jp/jiangyu/idle1.wav","vo/jp/jiangyu/idle2.wav","vo/jp/jiangyu/idle3.wav","vo/jp/jiangyu/idle4.wav","vo/jp/jiangyu/idle5.wav","vo/jp/jiangyu/idle6.wav","vo/jp/jiangyu/idle7.wav","vo/jp/jiangyu/idle8.wav","vo/jp/jiangyu/idle9.wav","vo/jp/jiangyu/idle10.wav"}
 ENT.SoundTbl_OnPlayerSight = {"vo/jp/jiangyu/player_sight1.wav","vo/jp/jiangyu/player_sight2.wav","vo/jp/jiangyu/player_sight3.wav","vo/jp/jiangyu/player_sight4.wav","vo/jp/jiangyu/player_sight5.wav","vo/jp/jiangyu/player_sight6.wav","vo/jp/jiangyu/player_sight7.wav","vo/jp/jiangyu/player_sight8.wav","vo/jp/jiangyu/player_sight9.wav","vo/jp/jiangyu/player_sight10.wav","vo/jp/jiangyu/player_sight11.wav","vo/jp/jiangyu/player_sight12.wav","vo/jp/jiangyu/player_sight13.wav"}
 ENT.SoundTbl_Alert = {"vo/jp/jiangyu/alert1.wav","vo/jp/jiangyu/alert2.wav","vo/jp/jiangyu/alert3.wav","vo/jp/jiangyu/alert4.wav"}
