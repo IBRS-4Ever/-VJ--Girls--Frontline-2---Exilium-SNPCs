@@ -57,11 +57,10 @@ function ENT:GF2_CustomOnThink() end
 function ENT:GF2_CustomOnThink_AiEnabled() end
 
 function ENT:Controller_Initialize(ply, controlEnt) 
-	local DollName = "Name: "..self.PrintName
-	local DollSquad = "Affiliation: "..self.SquadName
-	local DollModel = "Body Model: "..self.BodyModel
-	local DollWeapon = "Imprint ID: "..self:GetActiveWeapon().PrintName
-	ply:ChatPrint(DollName.."\n"..DollSquad.."\n"..DollModel.."\n"..DollWeapon)
+	util.AddNetworkString( "GF2_DollInfo" )
+	net.Start( "GF2_DollInfo" )
+		net.WriteEntity( self )
+	net.Send(ply)
 end
 
 function ENT:HealAlly()
