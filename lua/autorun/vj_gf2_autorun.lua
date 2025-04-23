@@ -41,6 +41,7 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Colphne_Tactical","npc_vj_gf2_colphne_tactical",{"weapon_vj_gf2_taurus_curve"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Colphne_SilentVoice","npc_vj_gf2_colphne_silent_voice",{"weapon_vj_gf2_taurus_curve"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vector","npc_vj_gf2_vector",{"weapon_vj_gf2_kriss_vector"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vector_ViviSometimesHidesHerMolotov","npc_vj_gf2_vector_vivi_sometimes_hides_her_molotov",{"weapon_vj_gf2_kriss_vector"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Vector_MolotovBunny","npc_vj_gf2_vector_molotov_bunny",{"weapon_vj_gf2_kriss_vector"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lenna","npc_vj_gf2_lenna",{"weapon_vj_gf2_ump9"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lenna_EnergeticMagic","npc_vj_gf2_lenna_energetic_magic",{"weapon_vj_gf2_ump9"},vCat)
@@ -60,9 +61,10 @@ if VJExists == true then
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Faye_FlurryCrimson","npc_vj_gf2_faye_flurry_crimson",{"weapon_vj_gf2_cz75"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry","npc_vj_gf2_sharkry",{"weapon_vj_gf2_xcr"},vCat)
 	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry_SwimsuitIdol","npc_vj_gf2_sharkry_swimsuit_idol",{"weapon_vj_gf2_xcr"},vCat)
+	VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Centaureissi","npc_vj_gf2_centaureissi",{"weapon_vj_gf2_g36"},vCat)
 	
 	-- Weapons
-	VJ.AddNPCWeapon("OM50", "weapon_vj_gf2_om50", vCat)
+	VJ.AddNPCWeapon("OM 50", "weapon_vj_gf2_om50", vCat)
 	VJ.AddNPCWeapon("AK Alfa", "weapon_vj_gf2_ak_alfa", vCat)
 	VJ.AddNPCWeapon("MP7", "weapon_vj_gf2_mp7", vCat)
 	VJ.AddNPCWeapon("OTs-14", "weapon_vj_gf2_ots14", vCat)
@@ -70,6 +72,7 @@ if VJExists == true then
 	VJ.AddNPCWeapon("PKP-SP", "weapon_vj_gf2_pkp_sp", vCat)
 	VJ.AddNPCWeapon("QBZ-191", "weapon_vj_gf2_qbz191", vCat)
 	VJ.AddNPCWeapon("SPAS-12", "weapon_vj_gf2_spas12", vCat)
+	VJ.AddNPCWeapon("VEPR-12", "weapon_vj_gf2_vepr_12", vCat)
 	VJ.AddNPCWeapon("G11", "weapon_vj_gf2_g11", vCat)
 	VJ.AddNPCWeapon("Taurus Curve", "weapon_vj_gf2_taurus_curve", vCat)
 	VJ.AddNPCWeapon("KRISS Vector", "weapon_vj_gf2_kriss_vector", vCat)
@@ -155,6 +158,9 @@ if VJExists == true then
 	util.PrecacheModel("models/gf2/ksenia_combat.mdl")
 	util.PrecacheModel("models/gf2/faye_combat.mdl")
 	util.PrecacheModel("models/gf2/faye_flurry_crimson.mdl")
+	util.PrecacheModel("models/gf2/sharkry_combat.mdl")
+	util.PrecacheModel("models/gf2/sharkry_swimsuit_idol.mdl")
+	util.PrecacheModel("models/gf2/centaureissi_combat.mdl")
 	
 	-- Weapon Models
 	util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -177,6 +183,7 @@ if VJExists == true then
 	util.PrecacheModel("models/weapons/w_daiyan_qbz_95.mdl")
 	util.PrecacheModel("models/weapons/w_faye_cz75.mdl")
 	util.PrecacheModel("models/weapons/w_ksenia_aps.mdl")
+	util.PrecacheModel("models/weapons/w_sharkry_xcr.mdl")
 
 	-- Grenade Models
 	util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -237,6 +244,8 @@ if VJExists == true then
 	VJ.AddConVar("vj_gf2_faye_d",30)
 	VJ.AddConVar("vj_gf2_sharkry_h",225)
 	VJ.AddConVar("vj_gf2_sharkry_d",25)
+	VJ.AddConVar("vj_gf2_centaureissi_h",300)
+	VJ.AddConVar("vj_gf2_centaureissi_d",30)
 	
 	VJ.AddConVar("vj_gf2_om50_d",150)
 	VJ.AddConVar("vj_gf2_ak_alfa_d",40)

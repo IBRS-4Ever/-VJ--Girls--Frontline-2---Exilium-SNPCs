@@ -4,6 +4,9 @@ ENT.PrintName 		= "GF2 BASE"
 ENT.Category		= "Girls' Frontline 2"
 ENT.Author			= "IBRS"
 
+ENT.SquadName		= "N/A"
+ENT.BodyModel		= "N/A"
+
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
 ENT.AutomaticFrameAdvance = false

@@ -56,6 +56,14 @@ ENT.LastHitTimer = CurTime()
 function ENT:GF2_CustomOnThink() end
 function ENT:GF2_CustomOnThink_AiEnabled() end
 
+function ENT:Controller_Initialize(ply, controlEnt) 
+	local DollName = "Name: "..self.PrintName
+	local DollSquad = "Affiliation: "..self.SquadName
+	local DollModel = "Body Model: "..self.BodyModel
+	local DollWeapon = "Imprint ID: "..self:GetActiveWeapon().PrintName
+	ply:ChatPrint(DollName.."\n"..DollSquad.."\n"..DollModel.."\n"..DollWeapon)
+end
+
 function ENT:HealAlly()
 	if self.HealDistance then
 		for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.HealDistance ) ) do
