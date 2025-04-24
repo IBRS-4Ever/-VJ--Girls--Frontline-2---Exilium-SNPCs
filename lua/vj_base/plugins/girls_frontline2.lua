@@ -261,10 +261,6 @@ VJ.AddConVar("vj_gf2_cz75_d",20)
 VJ.AddConVar("vj_gf2_wa2000_d",125)
 VJ.AddConVar("vj_gf2_xcr_d",40)
 
-hook.Add("OnNPCKilled", "VJ_GF2_NPC_Killed", function(NPC, Attacker, Inflictor )
-	if NPC.Poisoned then end
-end)
-
 -- Menu --
 local AddConvars = {}
 AddConvars["vj_gf2_drop_magazings"] = 1 -- Drop Magazines?

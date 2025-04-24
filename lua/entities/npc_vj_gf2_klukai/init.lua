@@ -5,6 +5,8 @@ ENT.StartHealth = GetConVarNumber("vj_gf2_klukai_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_klukai_d")
 
 ENT.Element = "poison"
+ENT.Element_PoisonDamage = 7
+ENT.Element_PoisonTime = 7
 
 ENT.WeaponInventory_MeleeList = {"weapon_vj_gf2_klukai_axe"}
 

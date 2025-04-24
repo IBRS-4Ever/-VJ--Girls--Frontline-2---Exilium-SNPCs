@@ -15,7 +15,7 @@ SWEP.NPC_ReloadSound = {"weapons/sg/reload.wav"}
 SWEP.NPC_FiringDistanceScale = 0.5
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_spas12_d")
-SWEP.Primary.Force = 5
+SWEP.Primary.Force = 1
 SWEP.Primary.NumberOfShots = 12
 SWEP.Primary.ClipSize = 8
 SWEP.Primary.Ammo = "Buckshot"
