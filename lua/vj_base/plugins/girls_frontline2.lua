@@ -55,6 +55,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Faye_FlurryCrimson","npc_vj_gf2_faye_flurry_crims
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry","npc_vj_gf2_sharkry",{"weapon_vj_gf2_xcr"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry_SwimsuitIdol","npc_vj_gf2_sharkry_swimsuit_idol",{"weapon_vj_gf2_xcr"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Centaureissi","npc_vj_gf2_centaureissi",{"weapon_vj_gf2_g36"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapon_vj_gf2_ots14"},vCat)
 	
 	-- Weapons
 VJ.AddNPCWeapon("OM 50", "weapon_vj_gf2_om50", vCat)
@@ -236,6 +237,8 @@ VJ.AddConVar("vj_gf2_sharkry_h",225)
 VJ.AddConVar("vj_gf2_sharkry_d",25)
 VJ.AddConVar("vj_gf2_centaureissi_h",300)
 VJ.AddConVar("vj_gf2_centaureissi_d",30)
+VJ.AddConVar("vj_gf2_unknown_groza_h",1000)
+VJ.AddConVar("vj_gf2_unknown_groza_d",200)
 	
 VJ.AddConVar("vj_gf2_om50_d",150)
 VJ.AddConVar("vj_gf2_ak_alfa_d",40)

@@ -55,8 +55,10 @@ ENT.Element_PoisonTime = 0
 
 ENT.LastHitTimer = CurTime()
 
+function ENT:GF2_CustomInitialize() end
 function ENT:GF2_CustomOnThink() end
 function ENT:GF2_CustomOnThink_AiEnabled() end
+function ENT:OnHalfHealth() end
 
 function ENT:Controller_Initialize(ply, controlEnt) 
 	util.AddNetworkString( "GF2_DollInfo" )
@@ -138,6 +140,7 @@ function ENT:CustomOnInitialize()
 			end
 		end
 	end
+	self:GF2_CustomInitialize()
 end
 
 function ENT:CustomInitialize()
@@ -221,6 +224,9 @@ end
 
 function ENT:CustomOnTakeDamage_AfterDamage() 
 	self.LastHitTimer = CurTime() + 5
+	if self:Health() <= (self:GetMaxHealth() / 2) then
+		self:OnHalfHealth()
+	end
 end
 
 function ENT:CustomOnDeath_AfterCorpseSpawned(dmginfo,hitgroup,GetCorpse)

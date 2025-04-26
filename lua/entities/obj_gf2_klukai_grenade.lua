@@ -29,6 +29,7 @@ ENT.RadiusDamageType = DMG_POISON -- Damage type
 ENT.RadiusDamageForce = 90 -- Put the force amount it should apply | false = Don't apply any force
 ENT.DecalTbl_DeathDecals = {"Scorch"}
 ENT.SoundTbl_OnCollide = {"sfx/cheeta_grenade_explode.wav"}
+ENT.IgnoreEntity = {}
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomPhysicsObjectOnInitialize(phys)
 	phys:Wake()
@@ -83,7 +84,10 @@ end
 function ENT:CustomOnDoDamage(data, phys, hitEnts)
 	if hitEnts then
 		for id, ent in ipairs(hitEnts) do
-			if ent:IsNPC() and !ent.KlukaiTarget then
+			if table.HasValue(self.IgnoreEntity,ent) then continue end
+			if ent:IsNPC() or ent:IsPlayer() then
+				table.insert(self.IgnoreEntity,ent)
+				local Table = self.IgnoreEntity
 				local GrenadeOwner = self.Owner
 				local Pos = ent:GetPos()
 				local Angles = ent:GetAngles()
@@ -94,11 +98,7 @@ function ENT:CustomOnDoDamage(data, phys, hitEnts)
 					Grenade:SetOwner(GrenadeOwner)
 					Grenade:Spawn()
 					Grenade:Activate()
-				end)
-				ent.KlukaiTarget = true
-				timer.Simple( 5, function() 
-					if !IsValid(ent) then return end
-					ent.KlukaiTarget = false
+					Grenade.IgnoreEntity = Table
 				end)
 			end
 		end

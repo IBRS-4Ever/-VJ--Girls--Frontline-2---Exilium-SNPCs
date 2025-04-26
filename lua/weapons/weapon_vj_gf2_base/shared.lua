@@ -21,20 +21,28 @@ function SWEP:CustomOnInitialize()
 	DropMagazine = GetConVar("vj_gf2_drop_magazings"):GetBool()
 	MagazineRemoveTimer = GetConVar("vj_gf2_magazingremovetime"):GetInt()
 	if self.MagazingModel then util.PrecacheModel( self.MagazingModel ) end
-	timer.Create("VJ_GF2_SWEP_Poison_Timer"..self:EntIndex(), 1, 0, function()
-		for k, ent in pairs(self.PoisonedEntity) do
-			if !IsValid(ent) then self.PoisonedEntity[ent] = nil continue end
-			if ent.PoisonTime < CurTime() then continue end
-			local DmgInfo = DamageInfo()
-			DmgInfo:SetDamage( self.Owner.Element_PoisonDamage )
-			DmgInfo:SetAttacker( self.Owner )
-			DmgInfo:SetInflictor( self )
-			DmgInfo:SetDamageType( DMG_POISON )
+	if self.Owner.Element == "poison" and GetConVar("vj_gf2_npc_element_poison_enabled"):GetBool() then
+		local Owner = self.Owner
+		local PoisonDamage = Owner.Element_PoisonDamage
+		timer.Create("VJ_GF2_SWEP_Poison_Timer"..self:EntIndex(), 1, 0, function()
+			for k, entity in pairs(self.PoisonedEntity) do
+				if !IsValid(entity.ent) or entity.time < CurTime() then table.remove(self.PoisonedEntity,k) continue end
+				if entity.time < CurTime() then continue end
+				local DmgInfo = DamageInfo()
+				DmgInfo:SetDamage( PoisonDamage )
+				if !IsValid(Owner) then
+					DmgInfo:SetAttacker( entity.ent )
+				else
+					DmgInfo:SetAttacker( Owner )
+				end
+				
+				DmgInfo:SetInflictor( self )
+				DmgInfo:SetDamageType( DMG_POISON )
 
-			ent:TakeDamageInfo( DmgInfo )
-			print(ent,math.Round(ent.PoisonTime-CurTime()))
-		end
-	end)
+				entity.ent:TakeDamageInfo( DmgInfo )
+			end
+		end)
+	end
 	self:GF2_CustomOnInitialize()
 end
 
@@ -156,16 +164,11 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 	if self.Owner.Element == "poison" and GetConVar("vj_gf2_npc_element_poison_enabled"):GetBool() then
 		if Target:IsNPC() or Target:IsPlayer() and Target:Alive() then
 			if self.Owner:CheckRelationship(Target) == D_HT then
-				if table.HasValue(self.PoisonedEntity,Target) then 
-					if Target.PoisonTime < CurTime() then
-						Target.PoisonTime = CurTime() + self.Owner.Element_PoisonTime
-					else
-						Target.PoisonTime = Target.PoisonTime + self.Owner.Element_PoisonTime
-					end
-				else
-					Target.PoisonTime = CurTime() + self.Owner.Element_PoisonTime
-					table.insert(self.PoisonedEntity,Target)
-				end
+				local PoisonedNPC = {
+					ent = Target,
+					time = CurTime() + self.Owner.Element_PoisonTime
+				}
+				table.insert(self.PoisonedEntity,PoisonedNPC)
 			end
 		end
 	end
