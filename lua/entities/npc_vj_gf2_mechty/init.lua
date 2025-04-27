@@ -26,7 +26,7 @@ function ENT:OnHalfHealth()
 	self.AnimationSpeed = 2
 	self:EmitSound("items/battery_pickup.wav")
 	
-	util.SpriteTrail( self, self:LookupAttachment("eyes"), Color( 65, 205, 255), false, 32, 0, 5, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
+	util.SpriteTrail( self, self:LookupAttachment("eyes"), Color( 65, 205, 255), false, 32, 0, 1, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
 	
 	local Drink = ents.Create("prop_physics")
 	Drink:SetModel("models/prop/gfl2_mechty_energy_drink.mdl")

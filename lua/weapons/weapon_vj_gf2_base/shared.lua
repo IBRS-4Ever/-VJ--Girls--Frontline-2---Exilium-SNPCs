@@ -123,15 +123,17 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 
 					if self.Owner.BodyModel == "DUAL DSI-8" then -- Leva
 						if ent:IsPlayer() then return end
-						local chance = math.random(1,100)
-						if chance <= 5 then
-							ent.HackedByLeva = true
-							if ent:IsNPC() then ent:AddEntityRelationship( self.Owner, D_LI, 99 ) end
+						if ent.IsGF2SNPC and ent.GF2CannotBeHecked then return end
+						if math.random(1,100) <= 5 then
+							if ent:IsNPC() then self.Owner:SetRelationshipMemory(ent, VJ.MEM_OVERRIDE_DISPOSITION, D_LI) end
 							for id, EntTarget in ents.Iterator() do
 								if EntTarget == self.Owner or EntTarget == ent or EntTarget:GetClass() == "obj_vj_bullseye" then continue end
-								if self.Owner:CheckRelationship(EntTarget) == D_HT then
+								if self.Owner:CheckRelationship(EntTarget) == D_LI then
+									ent:AddEntityRelationship( EntTarget, D_LI, 99 )
+									if EntTarget:IsNPC() then EntTarget:AddEntityRelationship( ent, D_LI, 99 ) end
+								elseif self.Owner:CheckRelationship(EntTarget) == D_HT then
 									ent:AddEntityRelationship( EntTarget, D_HT, 99 )
-									EntTarget:AddEntityRelationship( ent, D_HT, 99 )
+									if EntTarget:IsNPC() then EntTarget:AddEntityRelationship( ent, D_HT, 99 ) end
 								end
 							end
 						end

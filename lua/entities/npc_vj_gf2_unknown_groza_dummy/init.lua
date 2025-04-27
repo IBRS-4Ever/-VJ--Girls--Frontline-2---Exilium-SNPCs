@@ -1,0 +1,49 @@
+AddCSLuaFile("shared.lua")
+include('shared.lua')
+ENT.CanAlly = false
+ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA"}
+ENT.StartHealth = GetConVarNumber("vj_gf2_unknown_groza_dummy_h")
+ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_unknown_groza_dummy_d")
+
+ENT.SoundTbl_OnPlayerSight = {"vo/jp/unknown_groza/alert1.wav","vo/jp/unknown_groza/alert2.wav","vo/jp/unknown_groza/alert3.wav","vo/jp/unknown_groza/alert4.wav"}
+ENT.SoundTbl_Alert = {"vo/jp/unknown_groza/alert1.wav","vo/jp/unknown_groza/alert2.wav","vo/jp/unknown_groza/alert3.wav","vo/jp/unknown_groza/alert4.wav"}
+ENT.SoundTbl_Pain = {"vo/jp/unknown_groza/hit1.wav","vo/jp/unknown_groza/hit2.wav","vo/jp/unknown_groza/hit3.wav"}
+ENT.SoundTbl_OnKilledEnemy = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_groza/skill2.wav","vo/jp/unknown_groza/skill3.wav","vo/jp/unknown_groza/skill4.wav"}
+ENT.SoundTbl_Death = {"vo/jp/unknown_groza/die1.wav"}
+ENT.SoundTbl_GrenadeAttack = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_groza/skill2.wav","vo/jp/unknown_groza/skill3.wav","vo/jp/unknown_groza/skill4.wav"}
+
+ENT.GF2CannotBeHecked = true
+ENT.Rappelling = false 
+ENT.RappellingAnim = "rappelloop"
+
+ENT.AnimationSpeed = 1.25
+
+function ENT:GF2_CustomInitialize()
+	util.SpriteTrail( self, self:LookupAttachment("eyes"), Color( 255, 0, 0), false, 32, 0, 1, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
+
+	if self.Rappelling then
+		self:SetGroundEntity(NULL)
+		self:SetState(VJ_STATE_ONLY_ANIMATION)
+		self.Weapon_CanReload = false
+		timer.Simple(0.1, function() if IsValid(self) then self:PlayAnim(self.RappellingAnim, true, false, false) end end)
+	end
+end
+
+function ENT:StopRappelling()
+	self.Rappelling = false
+	self.Weapon_CanReload = true
+	self:SetVelocity(Vector(0,0,0))
+	self:SetState()
+	self:DoChangeMovementType(VJ_MOVETYPE_GROUND)
+end
+
+function ENT:GF2_CustomOnThink()
+	if self.Rappelling && !self.Dead then
+		if self:IsOnGround() then
+			self:StopRappelling()
+			self:PlayAnim("jump_holding_land", true, false, false)
+		else
+			return
+		end
+	end
+end

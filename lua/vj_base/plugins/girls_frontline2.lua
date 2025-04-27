@@ -239,6 +239,8 @@ VJ.AddConVar("vj_gf2_centaureissi_h",300)
 VJ.AddConVar("vj_gf2_centaureissi_d",30)
 VJ.AddConVar("vj_gf2_unknown_groza_h",1000)
 VJ.AddConVar("vj_gf2_unknown_groza_d",200)
+VJ.AddConVar("vj_gf2_unknown_groza_dummy_h",250)
+VJ.AddConVar("vj_gf2_unknown_groza_dummy_d",50)
 	
 VJ.AddConVar("vj_gf2_om50_d",150)
 VJ.AddConVar("vj_gf2_ak_alfa_d",40)
