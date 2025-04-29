@@ -1,7 +1,6 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.CanAlly = false
-ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA"}
+ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA","CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA"}
 --ENT.Model = {"models/gf2/groza_combat.mdl","models/gf2/robella_combat.mdl","models/gf2/tololo_combat.mdl"}
 ENT.Model = {"models/gf2/groza_combat.mdl","models/gf2/groza_dawn_of_battle.mdl","models/gf2/groza_violet_rain.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_unknown_groza_h")
@@ -17,7 +16,7 @@ ENT.SoundTbl_GrenadeAttack = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_gr
 
 ENT.HasGrenadeAttack = true
 ENT.GrenadeAttackChance = 1
-ENT.GrenadeAttackEntity = {"obj_gf2_klukai_grenade","obj_gf2_vector_incendiary_grenade","obj_gf2_cheeta_grenade","obj_gf2_peritya_grenade"}
+ENT.GrenadeAttackEntity = {"obj_gf2_vepley_grenade","obj_gf2_unknown_groza_hack_grenade"}
 
 ENT.Element = "poison"
 ENT.Element_PoisonDamage = 7
@@ -120,50 +119,26 @@ function ENT:OnHalfHealth()
 	self.GF2Dummy[3] = Dummy3
 end
 
-function ENT:GF2_CustomOnThink()
+function ENT:GF2_CustomOnThink_AiEnabled()
 	local Enemy = self:GetEnemy()
 	if !IsValid(Enemy) then return end
 	local Dist = Enemy:GetPos():Distance(self:GetPos())
-	if Dist <= 1024 then
+	if Dist <= 1024 and self:GetActiveWeapon() != "weapon_vj_gf2_vepr_12" then
 		self:Give("weapon_vj_gf2_vepr_12")
 		self:SelectWeapon("weapon_vj_gf2_vepr_12")
-		if Enemy.IsGF2SNPC then
-			if math.random(1,100) <= 15 then
-				Enemy.VJ_NPC_Class = self.VJ_NPC_Class
-				Enemy.CanAlly = false
-				Enemy:SetRelationshipMemory(self, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
-				self:SetRelationshipMemory(Enemy, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
-			end
-		end
-	elseif Dist > 1024 and Dist <= 2048 then
+	elseif Dist > 1024 and Dist <= 2048 and self:GetActiveWeapon() != "weapon_vj_gf2_ots14" then
 		self:Give("weapon_vj_gf2_ots14")
 		self:SelectWeapon("weapon_vj_gf2_ots14")
-		if Enemy.IsGF2SNPC then
-			if math.random(1,100) <= 10 then
-				Enemy.VJ_NPC_Class = self.VJ_NPC_Class
-				Enemy.CanAlly = false
-				Enemy:SetRelationshipMemory(self, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
-				self:SetRelationshipMemory(Enemy, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
-			end
-		end
-	elseif Dist > 2048 then
+	elseif Dist > 2048 and self:GetActiveWeapon() != "weapon_vj_gf2_om50" then
 		self:Give("weapon_vj_gf2_om50")
 		self:SelectWeapon("weapon_vj_gf2_om50")
-		if Enemy.IsGF2SNPC then
-			if math.random(1,100) == 5 then
-				Enemy.VJ_NPC_Class = self.VJ_NPC_Class
-				Enemy.CanAlly = false
-				Enemy:SetRelationshipMemory(self, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
-				self:SetRelationshipMemory(Enemy, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
-			end
-		end
 	end
+	self.NextWeaponAttackT_Base = CurTime()
 end
 
-function ENT:CustomOnRemove()
+function ENT:OnRemove()
 	if !self.Dead then
 		for _, v in ipairs(self.GF2Dummy) do
-			print(v)
 			if IsValid(v) then
 				v:Remove()
 			end

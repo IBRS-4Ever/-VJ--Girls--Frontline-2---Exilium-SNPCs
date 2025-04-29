@@ -360,4 +360,9 @@ if CLIENT then
 		local DollWeapon = string.format(language.GetPhrase("vj_gf2_snpcs.ImprintID"),Entity:GetActiveWeapon().PrintName)
 		chat.AddText(DollName.."\n"..DollSquad.."\n"..DollModel.."\n"..DollWeapon)
 	end )
+
+	net.Receive( "GF2_DollHacked", function( len, ply )
+		local Entity = net.ReadEntity()
+		chat.AddText(string.format(language.GetPhrase("vj_gf2_snpcs.FireWallBreached"),Entity.PrintName))
+	end )
 end

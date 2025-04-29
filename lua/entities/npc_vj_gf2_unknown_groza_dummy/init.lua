@@ -1,7 +1,6 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.CanAlly = false
-ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA"}
+ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA","CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_unknown_groza_dummy_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_unknown_groza_dummy_d")
 
@@ -35,6 +34,7 @@ function ENT:StopRappelling()
 	self:SetVelocity(Vector(0,0,0))
 	self:SetState()
 	self:DoChangeMovementType(VJ_MOVETYPE_GROUND)
+	timer.Simple(0.1, function() self:Follow(self:GetOwner()) end)
 end
 
 function ENT:GF2_CustomOnThink()

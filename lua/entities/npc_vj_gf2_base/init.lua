@@ -130,9 +130,9 @@ end
 
 function ENT:CustomOnInitialize()
 	if GetConVar( "vj_gf2_npc_random_bodygroups" ):GetBool() then
-	local num_bodygroups = self:GetNumBodyGroups()
-	for i = 0, num_bodygroups - 1 do
-		local bodygroup_name = self:GetBodygroupName(i)
+		local num_bodygroups = self:GetNumBodyGroups()
+		for i = 0, num_bodygroups - 1 do
+			local bodygroup_name = self:GetBodygroupName(i)
 			local num_choices = self:GetBodygroupCount(i)
 			if num_choices > 1 then
 				local choice = math.random(0, num_choices - 1)
