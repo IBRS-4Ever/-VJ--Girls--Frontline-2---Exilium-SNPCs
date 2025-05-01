@@ -170,11 +170,13 @@ util.PrecacheModel("models/weapons/w_lenna_hk_ump9.mdl")
 util.PrecacheModel("models/weapons/w_leva_hk_ump45.mdl")
 util.PrecacheModel("models/weapons/w_suomi_kp31.mdl")
 util.PrecacheModel("models/weapons/w_jiangyu_qbz_97.mdl")
+util.PrecacheModel("models/weapons/w_klukai_hk416.mdl")
 util.PrecacheModel("models/weapons/w_zhaohui_csls06.mdl")
 util.PrecacheModel("models/weapons/w_daiyan_qbz_95.mdl")
 util.PrecacheModel("models/weapons/w_faye_cz75.mdl")
 util.PrecacheModel("models/weapons/w_ksenia_aps.mdl")
 util.PrecacheModel("models/weapons/w_sharkry_xcr.mdl")
+util.PrecacheModel("models/weapons/w_centaureissi_g36.mdl")
 
 -- Grenade Models
 util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -265,6 +267,7 @@ VJ.AddConVar("vj_gf2_aps_d",15)
 VJ.AddConVar("vj_gf2_cz75_d",20)
 VJ.AddConVar("vj_gf2_wa2000_d",125)
 VJ.AddConVar("vj_gf2_xcr_d",40)
+VJ.AddConVar("vj_gf2_g36_d",30)
 
 -- Menu --
 local AddConvars = {}
