@@ -6,14 +6,14 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "KSVK"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_dusevnyj_ksvk.mdl"
+SWEP.WorldModel = "models/weapons/w_dusevnyj_ksvk.mdl"
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 1
 SWEP.NPC_ReloadSound = {"weapons/rf/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.Primary.Damage = GetConVarNumber("vj_gf2_om50_d")
+SWEP.Primary.Damage = GetConVarNumber("vj_gf2_ksvk_d")
 SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 5
 SWEP.Primary.Ammo = "SniperRound"

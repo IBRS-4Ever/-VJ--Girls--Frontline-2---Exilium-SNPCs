@@ -22,4 +22,4 @@ ENT.SoundTbl_Death = {"vo/jp/peritya/die1.wav","vo/jp/peritya/hit9.wav","vo/jp/p
 ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/peritya/get_heal1.wav","vo/jp/peritya/get_heal2.wav","vo/jp/peritya/get_heal3.wav","vo/jp/peritya/get_heal4.wav","vo/jp/peritya/get_heal5.wav","vo/jp/peritya/get_heal6.wav","vo/jp/peritya/get_heal7.wav","vo/jp/peritya/get_heal8.wav"}
 ENT.SoundTbl_GrenadeAttack = {"vo/jp/peritya/grenade_attack1.wav","vo/jp/peritya/grenade_attack2.wav"}
 
---ENT.AnimationSpeed = 0.5
+--ENT.AnimationSpeed = 0.75

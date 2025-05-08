@@ -177,6 +177,7 @@ util.PrecacheModel("models/weapons/w_faye_cz75.mdl")
 util.PrecacheModel("models/weapons/w_ksenia_aps.mdl")
 util.PrecacheModel("models/weapons/w_sharkry_xcr.mdl")
 util.PrecacheModel("models/weapons/w_centaureissi_g36.mdl")
+util.PrecacheModel("models/weapons/w_dusevnyj_ksvk.mdl")
 
 -- Grenade Models
 util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -268,6 +269,7 @@ VJ.AddConVar("vj_gf2_cz75_d",20)
 VJ.AddConVar("vj_gf2_wa2000_d",125)
 VJ.AddConVar("vj_gf2_xcr_d",40)
 VJ.AddConVar("vj_gf2_g36_d",30)
+VJ.AddConVar("vj_gf2_ksvk_d",200)
 
 -- Menu --
 local AddConvars = {}

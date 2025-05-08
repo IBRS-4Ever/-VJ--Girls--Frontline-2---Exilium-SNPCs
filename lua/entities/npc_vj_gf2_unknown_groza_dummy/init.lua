@@ -10,7 +10,11 @@ ENT.SoundTbl_Pain = {"vo/jp/unknown_groza/hit1.wav","vo/jp/unknown_groza/hit2.wa
 ENT.SoundTbl_OnKilledEnemy = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_groza/skill2.wav","vo/jp/unknown_groza/skill3.wav","vo/jp/unknown_groza/skill4.wav"}
 ENT.SoundTbl_Death = {"vo/jp/unknown_groza/die1.wav"}
 ENT.SoundTbl_GrenadeAttack = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_groza/skill2.wav","vo/jp/unknown_groza/skill3.wav","vo/jp/unknown_groza/skill4.wav"}
-
+--[[ 
+ENT.HasItemDropsOnDeath = true
+ENT.ItemDropsOnDeathChance = 1
+ENT.ItemDropsOnDeath_EntityList = {"obj_gf2_klukai_grenade"}
+ ]]
 ENT.GF2CannotBeHecked = true
 ENT.Rappelling = false 
 ENT.RappellingAnim = "rappelloop"
@@ -34,7 +38,7 @@ function ENT:StopRappelling()
 	self:SetVelocity(Vector(0,0,0))
 	self:SetState()
 	self:DoChangeMovementType(VJ_MOVETYPE_GROUND)
-	timer.Simple(0.1, function() self:Follow(self:GetOwner()) end)
+	timer.Simple(0.1, function() if self:GetOwner() then self:Follow(self:GetOwner()) end end)
 end
 
 function ENT:GF2_CustomOnThink()

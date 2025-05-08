@@ -90,6 +90,7 @@ function ENT:CustomOnDoDamage(data, phys, hitEnts)
 					ent.CanAlly = false
 					ent:SetRelationshipMemory(self.Owner, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
 					self.Owner:SetRelationshipMemory(ent, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
+					ent:Follow(self.Owner,false)
 					util.AddNetworkString( "GF2_DollHacked" )
 					net.Start( "GF2_DollHacked" )
 						net.WriteEntity( ent )

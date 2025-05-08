@@ -17,6 +17,8 @@ SWEP.Attachment_Flashlight = false
 
 SWEP.PoisonedEntity = {}
 
+SWEP.BulletDamageMultiper = 0.5
+
 function SWEP:GF2_CustomOnInitialize() end
 
 function SWEP:CustomOnInitialize() 
@@ -91,11 +93,24 @@ function SWEP:CustomOnReload_Finish()
 	end
 end
 
+function SWEP:BulletPenetrate(attacker, trace, dmginfo) end
+
 function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 	if self.Owner.Element == "default" then return end
 	local Target = tr.Entity
 	local HitPos = tr.HitPos
 	local Normal = tr.Normal
+	--[[ if IsValid(Target) then
+	--if dmginfo:GetDamage() > 0 then
+		self.Owner:FireBullets({
+			Src = HitPos,
+			Dir = Normal,
+			Damage = dmginfo:GetDamage() * self.BulletDamageMultiper,
+			AmmoType = self.Primary.Ammo,
+			IgnoreEntity = Target,
+			Callback = function(a,b,c) self:CustomOnPrimaryAttack_BulletCallback(a,b,c) end,
+		})
+	end ]]
 
 	if self.Owner.Element == "water" and GetConVar("vj_gf2_npc_element_water_enabled"):GetBool() then
 		local Water = EffectData()

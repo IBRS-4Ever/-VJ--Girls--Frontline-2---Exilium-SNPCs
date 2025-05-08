@@ -17,7 +17,11 @@ ENT.SoundTbl_GrenadeAttack = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_gr
 ENT.HasGrenadeAttack = true
 ENT.GrenadeAttackChance = 1
 ENT.GrenadeAttackEntity = {"obj_gf2_vepley_grenade","obj_gf2_unknown_groza_hack_grenade"}
-
+--[[ 
+ENT.HasItemDropsOnDeath = true
+ENT.ItemDropsOnDeathChance = 1
+ENT.ItemDropsOnDeath_EntityList = {"obj_gf2_klukai_grenade"}
+ ]]
 ENT.Element = "poison"
 ENT.Element_PoisonDamage = 7
 ENT.Element_PoisonTime = 7
@@ -74,8 +78,6 @@ function ENT:OnHalfHealth()
 	Dummy1.GrenadeAttackEntity = "obj_gf2_vepley_grenade"
 	Dummy1:Spawn()
 	Dummy1:Give("weapon_vj_gf2_vepr_12")
-	Dummy1:SetRelationshipMemory(self, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
-	self:SetRelationshipMemory(Dummy1, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
 
 	local Dummy2 = ents.Create("npc_vj_gf2_unknown_groza_dummy")
 	Dummy2.Model = {"models/gf2/nemesis_combat.mdl","models/gf2/nemesis_serene_dark_river.mdl","models/gf2/nemesis_wandering_star_trial.mdl"}
@@ -89,8 +91,6 @@ function ENT:OnHalfHealth()
 	Dummy2.Element_PoisonTime = 10
 	Dummy2:Spawn()
 	Dummy2:Give("weapon_vj_gf2_om50")
-	Dummy2:SetRelationshipMemory(self, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
-	self:SetRelationshipMemory(Dummy2, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
 	
 	local Dummy3 = ents.Create("npc_vj_gf2_unknown_groza_dummy")
 	Dummy3.Model = {"models/gf2/colphne_combat.mdl","models/gf2/colphne_silent_voice.mdl"}
@@ -111,8 +111,6 @@ function ENT:OnHalfHealth()
 	Dummy3.ItemDropsOnDeath_EntityList = {"sent_gf2_colphne_healthkit","sent_gf2_colphne_bandage","sent_gf2_colphne_syringe"}
 	Dummy3:Spawn()
 	Dummy3:Give("weapon_vj_gf2_taurus_curve")
-	Dummy3:SetRelationshipMemory(self, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
-	self:SetRelationshipMemory(Dummy3, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
 
 	self.GF2Dummy[1] = Dummy1
 	self.GF2Dummy[2] = Dummy2
