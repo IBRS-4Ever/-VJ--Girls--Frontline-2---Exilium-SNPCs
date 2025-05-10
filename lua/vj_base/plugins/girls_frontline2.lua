@@ -18,6 +18,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Groza_VioletRain","npc_vj_gf2_groza_violet_rain",
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Groza_Tactical","npc_vj_gf2_groza_tactical",{"weapon_vj_gf2_ots14"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Peritya","npc_vj_gf2_peritya",{"weapon_vj_gf2_pkp_sp"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Peritya_BornHuntress","npc_vj_gf2_peritya_born_huntress",{"weapon_vj_gf2_pkp_sp"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Peritya_OperationPechenyan","npc_vj_gf2_peritya_operation_pechenyan",{"weapon_vj_gf2_pkp_sp"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Qiongjiu","npc_vj_gf2_qiongjiu",{"weapon_vj_gf2_qbz191"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Qiongjiu_BoundlessValor","npc_vj_gf2_qiongjiu_boundless_valor",{"weapon_vj_gf2_qbz191"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nagant","npc_vj_gf2_nagant",{"weapon_vj_gf2_m1895_revolver"},vCat)
@@ -55,6 +56,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Faye_FlurryCrimson","npc_vj_gf2_faye_flurry_crims
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry","npc_vj_gf2_sharkry",{"weapon_vj_gf2_xcr"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry_SwimsuitIdol","npc_vj_gf2_sharkry_swimsuit_idol",{"weapon_vj_gf2_xcr"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Centaureissi","npc_vj_gf2_centaureissi",{"weapon_vj_gf2_g36"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Dushevnaya","npc_vj_gf2_dushevnaya",{"weapon_vj_gf2_ksvk"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapon_vj_gf2_ots14"},vCat)
 	
 	-- Weapons
@@ -120,6 +122,7 @@ util.PrecacheModel("models/gf2/groza_violet_rain.mdl")
 util.PrecacheModel("models/gf2/groza_tactical.mdl")
 util.PrecacheModel("models/gf2/peritya_combat.mdl")
 util.PrecacheModel("models/gf2/peritya_born_huntress.mdl")
+util.PrecacheModel("models/gf2/peritya_operation_pechenyan.mdl")
 util.PrecacheModel("models/gf2/qiongjiu_combat.mdl")
 util.PrecacheModel("models/gf2/qiongjiu_boundless_valor.mdl")
 util.PrecacheModel("models/gf2/sabrina_combat.mdl")
@@ -152,6 +155,7 @@ util.PrecacheModel("models/gf2/faye_flurry_crimson.mdl")
 util.PrecacheModel("models/gf2/sharkry_combat.mdl")
 util.PrecacheModel("models/gf2/sharkry_swimsuit_idol.mdl")
 util.PrecacheModel("models/gf2/centaureissi_combat.mdl")
+util.PrecacheModel("models/gf2/dushevnaya_combat.mdl")
 	
 	-- Weapon Models
 util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -244,6 +248,8 @@ VJ.AddConVar("vj_gf2_unknown_groza_h",1000)
 VJ.AddConVar("vj_gf2_unknown_groza_d",200)
 VJ.AddConVar("vj_gf2_unknown_groza_dummy_h",250)
 VJ.AddConVar("vj_gf2_unknown_groza_dummy_d",50)
+VJ.AddConVar("vj_gf2_dushevnaya_h",225)
+VJ.AddConVar("vj_gf2_dushevnaya_d",45)
 	
 VJ.AddConVar("vj_gf2_om50_d",150)
 VJ.AddConVar("vj_gf2_ak_alfa_d",40)
@@ -269,7 +275,7 @@ VJ.AddConVar("vj_gf2_cz75_d",20)
 VJ.AddConVar("vj_gf2_wa2000_d",125)
 VJ.AddConVar("vj_gf2_xcr_d",40)
 VJ.AddConVar("vj_gf2_g36_d",30)
-VJ.AddConVar("vj_gf2_ksvk_d",200)
+VJ.AddConVar("vj_gf2_ksvk_d",250)
 
 -- Menu --
 local AddConvars = {}

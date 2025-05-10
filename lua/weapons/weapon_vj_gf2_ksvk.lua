@@ -9,7 +9,7 @@ SWEP.Category = "GF2"
 SWEP.WorldModel = "models/weapons/w_dusevnyj_ksvk.mdl"
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.NPC_NextPrimaryFire = 1
+SWEP.NPC_NextPrimaryFire = 1.5
 SWEP.NPC_ReloadSound = {"weapons/rf/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ sound.Add({
 	volume = 1.0,
 	level = 80,
 	pitch = {90, 110},
-	sound = {"weapons/rf/om50/fire1.wav","weapons/rf/om50/fire2.wav","weapons/rf/om50/fire3.wav","weapons/rf/om50/fire4.wav"}
+	sound = {"weapons/rf/ksvk/fire1.wav","weapons/rf/ksvk/fire2.wav","weapons/rf/ksvk/fire3.wav","weapons/rf/ksvk/fire4.wav","weapons/rf/ksvk/fire5.wav","weapons/rf/ksvk/fire6.wav"}
 })
 
 sound.Add({
@@ -42,5 +42,5 @@ sound.Add({
 	volume = 1.0,
 	level = 140,
 	pitch = {90, 110},
-	sound = {"weapons/rf/om50/fire_dist1.wav","weapons/rf/om50/fire_dist2.wav","weapons/rf/om50/fire_dist3.wav","weapons/rf/om50/fire_dist4.wav"}
+	sound = {"weapons/rf/ksvk/fire_dist1.wav","weapons/rf/ksvk/fire_dist2.wav","weapons/rf/ksvk/fire_dist3.wav","weapons/rf/ksvk/fire_dist4.wav","weapons/rf/ksvk/fire_dist5.wav","weapons/rf/ksvk/fire_dist6.wav"}
 })

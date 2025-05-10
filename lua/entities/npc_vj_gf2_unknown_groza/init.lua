@@ -39,6 +39,7 @@ ENT.Phase2 = false
 function ENT:GF2_CustomInitialize()
 	util.SpriteTrail( self, self:LookupAttachment("eyes"), Color( 255, 0, 0), false, 32, 0, 1, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
 	self.GF2Dummy = {}
+	self:SetMaterial("models/props_combine/stasisshield_sheet")
 end
 
 function ENT:OnHalfHealth() 
@@ -69,7 +70,7 @@ function ENT:OnHalfHealth()
 	local Pos = self:GetPos()
 	local Dummy1 = ents.Create("npc_vj_gf2_unknown_groza_dummy")
 	Dummy1.Model = {"models/gf2/vepley_combat.mdl","models/gf2/vepley_sparkling_wish.mdl","models/gf2/vepley_summer_echo.mdl"}
-	Dummy1:SetPos(Pos+Vector(50,50,200))
+	Dummy1:SetPos(Pos+Vector(50,50,50))
 	Dummy1:SetAngles(self:GetAngles())
 	Dummy1:SetOwner(self)
 	Dummy1.Rappelling = true
@@ -81,7 +82,7 @@ function ENT:OnHalfHealth()
 
 	local Dummy2 = ents.Create("npc_vj_gf2_unknown_groza_dummy")
 	Dummy2.Model = {"models/gf2/nemesis_combat.mdl","models/gf2/nemesis_serene_dark_river.mdl","models/gf2/nemesis_wandering_star_trial.mdl"}
-	Dummy2:SetPos(Pos+Vector(-50,-50,200))
+	Dummy2:SetPos(Pos+Vector(-50,-50,50))
 	Dummy2:SetAngles(self:GetAngles())
 	Dummy2:SetOwner(self)
 	Dummy2.Rappelling = true
@@ -94,7 +95,7 @@ function ENT:OnHalfHealth()
 	
 	local Dummy3 = ents.Create("npc_vj_gf2_unknown_groza_dummy")
 	Dummy3.Model = {"models/gf2/colphne_combat.mdl","models/gf2/colphne_silent_voice.mdl"}
-	Dummy3:SetPos(Pos+Vector(-50,50,200))
+	Dummy3:SetPos(Pos+Vector(-50,50,50))
 	Dummy3:SetAngles(self:GetAngles())
 	Dummy3:SetOwner(self)
 	Dummy3.Rappelling = true

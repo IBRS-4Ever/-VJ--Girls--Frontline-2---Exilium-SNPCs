@@ -23,6 +23,7 @@ ENT.AnimationSpeed = 1.25
 
 function ENT:GF2_CustomInitialize()
 	util.SpriteTrail( self, self:LookupAttachment("eyes"), Color( 255, 0, 0), false, 32, 0, 1, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
+	self:SetMaterial("models/props_combine/stasisshield_sheet")
 
 	if self.Rappelling then
 		self:SetGroundEntity(NULL)
@@ -49,5 +50,7 @@ function ENT:GF2_CustomOnThink()
 		else
 			return
 		end
+	else
+		if self:GetOwner() then self:Follow(self:GetOwner()) end
 	end
 end
