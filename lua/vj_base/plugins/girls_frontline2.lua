@@ -57,6 +57,11 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry","npc_vj_gf2_sharkry",{"weapon_vj_gf2_xcr
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry_SwimsuitIdol","npc_vj_gf2_sharkry_swimsuit_idol",{"weapon_vj_gf2_xcr"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Centaureissi","npc_vj_gf2_centaureissi",{"weapon_vj_gf2_g36"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Dushevnaya","npc_vj_gf2_dushevnaya",{"weapon_vj_gf2_ksvk"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella","npc_vj_gf2_robella",{"weapon_vj_gf2_ro635"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella_FutureNavigator","npc_vj_gf2_robella_future_navigator",{"weapon_vj_gf2_ro635"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic","npc_vj_gf2_charolic",{"weapon_vj_gf2_blade"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_LeapingRabbit","npc_vj_gf2_charolic_leaping_rabbit",{"weapon_vj_gf2_blade"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_Tactical","npc_vj_gf2_charolic_tactical",{"weapon_vj_gf2_blade"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapon_vj_gf2_ots14"},vCat)
 	
 	-- Weapons
@@ -98,6 +103,7 @@ VJ.AddNPCWeapon("G36K", "weapon_vj_gf2_g36k", vCat)
 VJ.AddNPCWeapon("G36", "weapon_vj_gf2_g36", vCat)
 	
 VJ.AddNPCWeapon("Klukai's Axe", "weapon_vj_gf2_klukai_axe", vCat)
+VJ.AddNPCWeapon("Blade", "weapon_vj_gf2_blade", vCat)
 
 VJ.AddEntity("#vj_gf2_items.Colphne_Healthkit", "sent_gf2_colphne_healthkit", "IBRS", false, 0, true, vCat)
 VJ.AddEntity("#vj_gf2_items.Colphne_Syringe", "sent_gf2_colphne_syringe", "IBRS", false, 0, true, vCat)
@@ -156,8 +162,13 @@ util.PrecacheModel("models/gf2/sharkry_combat.mdl")
 util.PrecacheModel("models/gf2/sharkry_swimsuit_idol.mdl")
 util.PrecacheModel("models/gf2/centaureissi_combat.mdl")
 util.PrecacheModel("models/gf2/dushevnaya_combat.mdl")
+util.PrecacheModel("models/gf2/robella_combat.mdl")
+util.PrecacheModel("models/gf2/robella_future_navigator.mdl")
+util.PrecacheModel("models/gf2/charolic_combat.mdl")
+util.PrecacheModel("models/gf2/charolic_leaping_rabbit.mdl")
+util.PrecacheModel("models/gf2/charolic_tactical.mdl")
 	
-	-- Weapon Models
+-- Weapon Models
 util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
 util.PrecacheModel("models/weapons/w_tololo_ak_alfa.mdl")
 util.PrecacheModel("models/weapons/w_cheeta_mp7.mdl")
@@ -250,6 +261,10 @@ VJ.AddConVar("vj_gf2_unknown_groza_dummy_h",250)
 VJ.AddConVar("vj_gf2_unknown_groza_dummy_d",50)
 VJ.AddConVar("vj_gf2_dushevnaya_h",225)
 VJ.AddConVar("vj_gf2_dushevnaya_d",45)
+VJ.AddConVar("vj_gf2_robella_h",275)
+VJ.AddConVar("vj_gf2_robella_d",25)
+VJ.AddConVar("vj_gf2_charolic_h",350)
+VJ.AddConVar("vj_gf2_charolic_d",75)
 	
 VJ.AddConVar("vj_gf2_om50_d",150)
 VJ.AddConVar("vj_gf2_ak_alfa_d",40)
@@ -300,6 +315,7 @@ AddConvars["vj_gf2_infinite_ammo"] = 0 -- Infinite Ammo.
 AddConvars["vj_gf2_speed_modifier"] = 1 -- Speed Modifier.
 AddConvars["vj_gf2_animation_speed_modifier"] = 1 -- Animation Modifier.
 AddConvars["vj_gf2_npc_find_cover_on_reload"] = 1 -- Find Cover On Reload.
+AddConvars["vj_gf2_npc_charolic_ignite_target"] = 1 -- Find Cover On Reload.
 for k, v in pairs(AddConvars) do
 	if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 end
@@ -339,6 +355,7 @@ if CLIENT then
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Element.WaterEnabled", "vj_gf2_npc_element_water_enabled")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_SpeedModifier", "vj_gf2_speed_modifier")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_AnimationSpeedModifier", "vj_gf2_animation_speed_modifier")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Charolic_Ignite_Target", "vj_gf2_npc_charolic_ignite_target")
 			else
 				Panel:Help("#vjbase.menu.general.admin.not")
 				Panel:ControlHelp("#vjbase.menu.general.admin.only")

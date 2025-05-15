@@ -1,7 +1,7 @@
 ENT.Base 			= "npc_vj_gf2_base"
 ENT.Type 			= "ai"
-ENT.PrintName 		= "Sabrina"
+ENT.PrintName 		= "Charolic"
 ENT.Category		= "Girls' Frontline 2"
 
-ENT.SquadName		= "ELMO"
+ENT.SquadName		= "Groza Squad"
 ENT.BodyModel		= "SSD-62D"
