@@ -31,7 +31,7 @@ sound.Add({
 	volume = 1.0,
 	level = 80,
 	pitch = {90, 110},
-	sound = {"weapons/hg/taurus_curve/fire1.wav","weapons/hg/taurus_curve/fire2.wav","weapons/hg/taurus_curve/fire3.wav","weapons/hg/taurus_curve/fire4.wav","weapons/hg/taurus_curve/fire5.wav"}
+	sound = {"weapons/hg/aps/fire1.wav","weapons/hg/aps/fire2.wav","weapons/hg/aps/fire3.wav","weapons/hg/aps/fire4.wav","weapons/hg/aps/fire5.wav","weapons/hg/aps/fire6.wav","weapons/hg/aps/fire7.wav","weapons/hg/aps/fire8.wav","weapons/hg/aps/fire9.wav","weapons/hg/aps/fire10.wav"}
 })
 
 sound.Add({
@@ -40,5 +40,5 @@ sound.Add({
 	volume = 1.0,
 	level = 140,
 	pitch = {90, 110},
-	sound = {"weapons/hg/taurus_curve/fire_dist1.wav","weapons/hg/taurus_curve/fire_dist2.wav","weapons/hg/taurus_curve/fire_dist3.wav","weapons/hg/taurus_curve/fire_dist4.wav","weapons/hg/taurus_curve/fire_dist5.wav"}
+	sound = {"weapons/hg/aps/fire_dist1.wav","weapons/hg/aps/fire_dist2.wav","weapons/hg/aps/fire_dist3.wav","weapons/hg/aps/fire_dist4.wav","weapons/hg/aps/fire_dist5.wav","weapons/hg/aps/fire_dist6.wav","weapons/hg/aps/fire_dist7.wav","weapons/hg/aps/fire_dist8.wav","weapons/hg/aps/fire_dist9.wav","weapons/hg/aps/fire_dist10.wav"}
 })

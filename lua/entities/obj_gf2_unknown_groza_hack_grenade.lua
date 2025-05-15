@@ -87,7 +87,6 @@ function ENT:CustomOnDoDamage(data, phys, hitEnts)
 				if ent:CheckRelationship(self.Owner) == D_LI then continue end
 				if math.random(1,2) == 1 then
 					ent.VJ_NPC_Class = self.Owner.VJ_NPC_Class
-					ent.CanAlly = false
 					ent:SetRelationshipMemory(self.Owner, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
 					self.Owner:SetRelationshipMemory(ent, VJ.MEM_OVERRIDE_DISPOSITION, D_LI)
 					ent:Follow(self.Owner,false)

@@ -142,7 +142,7 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 						if ent:IsPlayer() then return end
 						if ent.IsGF2SNPC and ent.GF2CannotBeHecked then return end
 						if math.random(1,100) <= 5 then
-							if ent:IsNPC() then self.Owner:SetRelationshipMemory(ent, VJ.MEM_OVERRIDE_DISPOSITION, D_LI) end
+							if ent:IsNPC() then ent.VJ_NPC_Class = self.Owner.VJ_NPC_Class end
 							for id, EntTarget in ents.Iterator() do
 								if EntTarget == self.Owner or EntTarget == ent or EntTarget:GetClass() == "obj_vj_bullseye" then continue end
 								if self.Owner:CheckRelationship(EntTarget) == D_LI then
