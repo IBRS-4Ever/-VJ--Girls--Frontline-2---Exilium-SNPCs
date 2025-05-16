@@ -4,9 +4,9 @@ ENT.Model = {"models/gf2/nemesis_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_nemesis_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_nemesis_d")
 
-ENT.Element = "poison"
-ENT.Element_PoisonDamage = 10
-ENT.Element_PoisonTime = 10
+ENT.Element = "acid"
+ENT.Element_AcidDamage = 10
+ENT.Element_AcidTime = 10
 
 ENT.SoundTbl_Idle = {"vo/jp/nemesis/idle1.wav","vo/jp/nemesis/idle2.wav","vo/jp/nemesis/idle3.wav","vo/jp/nemesis/idle4.wav","vo/jp/nemesis/idle5.wav","vo/jp/nemesis/idle6.wav","vo/jp/nemesis/idle7.wav","vo/jp/nemesis/idle8.wav","vo/jp/nemesis/idle9.wav"}
 ENT.SoundTbl_OnPlayerSight = {"vo/jp/nemesis/player_sight1.wav","vo/jp/nemesis/player_sight2.wav","vo/jp/nemesis/player_sight3.wav","vo/jp/nemesis/player_sight4.wav","vo/jp/nemesis/player_sight5.wav","vo/jp/nemesis/player_sight6.wav","vo/jp/nemesis/player_sight7.wav","vo/jp/nemesis/player_sight8.wav","vo/jp/nemesis/player_sight9.wav","vo/jp/nemesis/player_sight10.wav","vo/jp/nemesis/player_sight11.wav","vo/jp/nemesis/player_sight12.wav","vo/jp/nemesis/player_sight13.wav"}

@@ -16,19 +16,18 @@ ENT.SoundTbl_GrenadeAttack = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_gr
 
 ENT.HasGrenadeAttack = true
 ENT.GrenadeAttackChance = 1
-ENT.GrenadeAttackEntity = {"obj_gf2_vepley_grenade","obj_gf2_unknown_groza_hack_grenade"}
 --[[ 
 ENT.HasItemDropsOnDeath = true
 ENT.ItemDropsOnDeathChance = 1
 ENT.ItemDropsOnDeath_EntityList = {"obj_gf2_klukai_grenade"}
  ]]
-ENT.Element = "poison"
-ENT.Element_PoisonDamage = 7
-ENT.Element_PoisonTime = 7
+ENT.Element = "acid"
+ENT.Element_AcidDamage = 7
+ENT.Element_AcidTime = 7
 
 ENT.Shield = 1000
 ENT.ShieldRadius = 100
-ENT.ShieldCoolDown = 9999999
+ENT.ShieldCoolDown = 60
 
 ENT.GF2CannotBeHecked = true
 
@@ -39,7 +38,7 @@ ENT.Phase2 = false
 function ENT:GF2_CustomInitialize()
 	util.SpriteTrail( self, self:LookupAttachment("eyes"), Color( 255, 0, 0), false, 32, 0, 1, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
 	self.GF2Dummy = {}
-	self:SetMaterial("models/props_combine/stasisshield_sheet")
+	if GetConVar("vj_gf2_npc_unknown_groza_camo"):GetBool() then self:SetMaterial("models/props_combine/stasisshield_sheet") end
 end
 
 function ENT:OnHalfHealth() 
@@ -63,64 +62,113 @@ function ENT:OnHalfHealth()
 	}
 
 	self.Shield = 250
-	self.ShieldCoolDown = 60
+	self.ShieldCoolDown = 45
 
 	self.Phase2 = true
 
 	local Pos = self:GetPos()
-	local Dummy1 = ents.Create("npc_vj_gf2_unknown_groza_dummy")
-	Dummy1.Model = {"models/gf2/vepley_combat.mdl","models/gf2/vepley_sparkling_wish.mdl","models/gf2/vepley_summer_echo.mdl"}
-	Dummy1:SetPos(Pos+Vector(50,50,50))
-	Dummy1:SetAngles(self:GetAngles())
-	Dummy1:SetOwner(self)
-	Dummy1.Rappelling = true
-	Dummy1.VJ_NPC_Class = self.VJ_NPC_Class
-	Dummy1.HasGrenadeAttack = true
-	Dummy1.GrenadeAttackEntity = "obj_gf2_vepley_grenade"
-	Dummy1:Spawn()
-	Dummy1:Give("weapon_vj_gf2_vepr_12")
+	local Vepley = ents.Create("npc_vj_gf2_unknown_groza_dummy")
+	Vepley.Model = {"models/gf2/vepley_combat.mdl","models/gf2/vepley_sparkling_wish.mdl","models/gf2/vepley_summer_echo.mdl"}
+	Vepley:SetPos(Pos+Vector(50,50,50))
+	Vepley:SetAngles(self:GetAngles())
+	Vepley:SetOwner(self)
+	Vepley.AnimationSpeed = 2
+	Vepley.Rappelling = true
+	Vepley.VJ_NPC_Class = self.VJ_NPC_Class
+	Vepley.HasGrenadeAttack = true
+	Vepley.GrenadeAttackEntity = "obj_gf2_vepley_grenade"
+	Vepley:Spawn()
+	Vepley:Give("weapon_vj_gf2_vepr_12")
 
-	local Dummy2 = ents.Create("npc_vj_gf2_unknown_groza_dummy")
-	Dummy2.Model = {"models/gf2/nemesis_combat.mdl","models/gf2/nemesis_serene_dark_river.mdl","models/gf2/nemesis_wandering_star_trial.mdl"}
-	Dummy2:SetPos(Pos+Vector(-50,-50,50))
-	Dummy2:SetAngles(self:GetAngles())
-	Dummy2:SetOwner(self)
-	Dummy2.Rappelling = true
-	Dummy2.VJ_NPC_Class = self.VJ_NPC_Class
-	Dummy2.Element = "poison"
-	Dummy2.Element_PoisonDamage = 10
-	Dummy2.Element_PoisonTime = 10
-	Dummy2:Spawn()
-	Dummy2:Give("weapon_vj_gf2_om50")
+	local Nemesis = ents.Create("npc_vj_gf2_unknown_groza_dummy")
+	Nemesis.Model = {"models/gf2/nemesis_combat.mdl","models/gf2/nemesis_serene_dark_river.mdl","models/gf2/nemesis_wandering_star_trial.mdl"}
+	Nemesis:SetPos(Pos+Vector(-50,-50,50))
+	Nemesis:SetAngles(self:GetAngles())
+	Nemesis:SetOwner(self)
+	Nemesis.AnimationSpeed = 1.5
+	Nemesis.Rappelling = true
+	Nemesis.VJ_NPC_Class = self.VJ_NPC_Class
+	Nemesis.Element = "poison"
+	Nemesis.Element_PoisonDamage = 10
+	Nemesis.Element_PoisonTime = 10
+	Nemesis:Spawn()
+	Nemesis:Give("weapon_vj_gf2_om50")
 	
-	local Dummy3 = ents.Create("npc_vj_gf2_unknown_groza_dummy")
-	Dummy3.Model = {"models/gf2/colphne_combat.mdl","models/gf2/colphne_silent_voice.mdl"}
-	Dummy3:SetPos(Pos+Vector(-50,50,50))
-	Dummy3:SetAngles(self:GetAngles())
-	Dummy3:SetOwner(self)
-	Dummy3.Rappelling = true
-	Dummy3.VJ_NPC_Class = self.VJ_NPC_Class
-	Dummy3.AnimTbl_MeleeAttack = "meleeattack01"
-	Dummy3.HealAllies = true 
-	Dummy3.HealDistance = 750
-	Dummy3.HealAmount = 25
-	Dummy3.HealDelay = 1
-	Dummy3.Element = "water"
-	Dummy3.RappellingAnim = "jump_holding_glide"
-	Dummy3.HasItemDropsOnDeath = true
-	Dummy3.ItemDropsOnDeathChance = 1
-	Dummy3.ItemDropsOnDeath_EntityList = {"sent_gf2_colphne_healthkit","sent_gf2_colphne_bandage","sent_gf2_colphne_syringe"}
-	Dummy3:Spawn()
-	Dummy3:Give("weapon_vj_gf2_taurus_curve")
+	local Colphne = ents.Create("npc_vj_gf2_unknown_groza_dummy")
+	Colphne.Model = {"models/gf2/colphne_combat.mdl","models/gf2/colphne_silent_voice.mdl"}
+	Colphne:SetPos(Pos+Vector(-50,50,50))
+	Colphne:SetAngles(self:GetAngles())
+	Colphne:SetOwner(self)
+	Colphne.AnimationSpeed = 2.5
+	Colphne.Rappelling = true
+	Colphne.VJ_NPC_Class = self.VJ_NPC_Class
+	Colphne.AnimTbl_MeleeAttack = "meleeattack01"
+	Colphne.HealAllies = true 
+	Colphne.HealDistance = 750
+	Colphne.HealAmount = 25
+	Colphne.HealDelay = 1
+	Colphne.Element = "water"
+	Colphne.RappellingAnim = "jump_holding_glide"
+	Colphne:Spawn()
+	Colphne:Give("weapon_vj_gf2_taurus_curve")
 
-	self.GF2Dummy[1] = Dummy1
-	self.GF2Dummy[2] = Dummy2
-	self.GF2Dummy[3] = Dummy3
+	local Charolic = ents.Create("npc_vj_gf2_unknown_groza_dummy")
+	Charolic.Model = {"models/gf2/charolic_combat.mdl","models/gf2/charolic_leaping_rabbit.mdl"}
+	Charolic:SetPos(Pos+Vector(50,-50,50))
+	Charolic:SetAngles(self:GetAngles())
+	Charolic:SetOwner(self)
+	Charolic.AnimationSpeed = 5
+	Charolic.Rappelling = true
+	Charolic.VJ_NPC_Class = self.VJ_NPC_Class
+	Charolic.Element = "fire"
+	Charolic.TimeUntilMeleeAttackDamage = 0.1
+	Charolic.NextMeleeAttackTime = 0.1
+	Charolic.NextAnyAttackTime_Melee = 0.1
+	Charolic.ShouldFollow = false
+	Charolic:Spawn()
+	function Charolic:SetAnimationTranslations()
+		Charolic.AnimationTranslations[ACT_RANGE_ATTACK1] 				= ACT_MELEE_ATTACK1
+		Charolic.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 		= false -- Don't play anything for melee!
+		Charolic.AnimationTranslations[ACT_IDLE] 						= VJ.SequenceToActivity(Charolic, "idle_unarmed")
+		Charolic.AnimationTranslations[ACT_IDLE_ANGRY] 					= VJ.SequenceToActivity(Charolic, "idle_unarmed")
+		Charolic.AnimationTranslations[ACT_WALK_AIM] 					= ACT_WALK_AIM_RIFLE
+		Charolic.AnimationTranslations[ACT_RUN_AIM] 					= ACT_RUN_AIM_RIFLE
+		Charolic.AnimationTranslations[ACT_RUN] 						= VJ.SequenceToActivity(Charolic, "run_protected_all")
+		Charolic.AnimationTranslations[ACT_WALK] 						= VJ.SequenceToActivity(Charolic, "walk_p_all_stimulated")
+	end
+
+	function Charolic:GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
+		dmginfo:ScaleDamage(0.25)
+	end
+
+	function Charolic:GF2_CustomOnThink_AiEnabled()
+		if !GetConVar("vj_gf2_npc_charolic_ignite_target"):GetBool() then return end
+		for id, ent in pairs( ents.FindInSphere( Charolic:GetPos(), 100 ) ) do
+			if ent:IsPlayer() or (ent:IsNPC() and ent:GetClass() != "obj_vj_bullseye") then
+				if Charolic:CheckRelationship(ent) == D_HT then
+					ent:Ignite(1)
+				end
+			end
+		end
+	end
+	Charolic:Give("weapon_vj_gf2_blade")
+
+	self.GF2Dummy[1] = Vepley
+	self.GF2Dummy[2] = Nemesis
+	self.GF2Dummy[3] = Colphne
+	self.GF2Dummy[4] = Charolic
 end
 
 function ENT:GF2_CustomOnThink_AiEnabled()
 	local Enemy = self:GetEnemy()
 	if !IsValid(Enemy) then return end
+
+	if Enemy.IsGF2SNPC then
+		self.GrenadeAttackEntity = {"obj_gf2_unknown_groza_hack_grenade"}
+	else
+		self.GrenadeAttackEntity = {"obj_gf2_vepley_grenade","obj_gf2_klukai_grenade"}
+	end
+
 	local Dist = Enemy:GetPos():Distance(self:GetPos())
 	if Dist <= 1024 and self:GetActiveWeapon() != "weapon_vj_gf2_vepr_12" then
 		self:Give("weapon_vj_gf2_vepr_12")

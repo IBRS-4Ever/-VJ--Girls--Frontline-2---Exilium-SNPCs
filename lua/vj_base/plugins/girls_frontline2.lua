@@ -309,13 +309,14 @@ AddConvars["vj_gf2_npc_element_electric_radius_multipler"] = 1 -- Electric radiu
 AddConvars["vj_gf2_npc_element_freezing_enabled"] = 1 -- Enable Freezing Effects.
 AddConvars["vj_gf2_npc_element_freezing_radius_multipler"] = 1 -- Freezing radius multipler.
 AddConvars["vj_gf2_npc_element_fire_enabled"] = 1 -- Enable Fire Effects.
-AddConvars["vj_gf2_npc_element_poison_enabled"] = 1 -- Enable Poison Effects.
+AddConvars["vj_gf2_npc_element_acid_enabled"] = 1 -- Enable Acid Effects.
 AddConvars["vj_gf2_npc_element_water_enabled"] = 1 -- Enable Water Effects.
 AddConvars["vj_gf2_infinite_ammo"] = 0 -- Infinite Ammo.
 AddConvars["vj_gf2_speed_modifier"] = 1 -- Speed Modifier.
 AddConvars["vj_gf2_animation_speed_modifier"] = 1 -- Animation Modifier.
 AddConvars["vj_gf2_npc_find_cover_on_reload"] = 1 -- Find Cover On Reload.
 AddConvars["vj_gf2_npc_charolic_ignite_target"] = 1 -- Find Cover On Reload.
+AddConvars["vj_gf2_npc_unknown_groza_camo"] = 1 -- Find Cover On Reload.
 for k, v in pairs(AddConvars) do
 	if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 end
@@ -351,11 +352,12 @@ if CLIENT then
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Element.FreezingEnabled", "vj_gf2_npc_element_freezing_enabled")
 				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Element.FreezingRadiusMultipler", "vj_gf2_npc_element_freezing_radius_multipler", 0, 5, 2)
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Element.FireEnabled", "vj_gf2_npc_element_fire_enabled")
-				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Element.PoisonEnabled", "vj_gf2_npc_element_poison_enabled")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Element.AcidEnabled", "vj_gf2_npc_element_acid_enabled")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Element.WaterEnabled", "vj_gf2_npc_element_water_enabled")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_SpeedModifier", "vj_gf2_speed_modifier")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_AnimationSpeedModifier", "vj_gf2_animation_speed_modifier")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Charolic_Ignite_Target", "vj_gf2_npc_charolic_ignite_target")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Camo", "vj_gf2_npc_unknown_groza_camo")
 			else
 				Panel:Help("#vjbase.menu.general.admin.not")
 				Panel:ControlHelp("#vjbase.menu.general.admin.only")

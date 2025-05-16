@@ -25,7 +25,7 @@ ENT.DoesRadiusDamage = true -- Should it do a blast damage when it hits somethin
 ENT.RadiusDamageRadius = 250 -- How far the damage go? The farther away it's from its enemy, the less damage it will do | Counted in world units
 ENT.RadiusDamage = 40 -- How much damage should it deal? Remember this is a radius damage, therefore it will do less damage the farther away the entity is from its enemy
 ENT.RadiusDamageUseRealisticRadius = true -- Should the damage decrease the farther away the enemy is from the position that the projectile hit?
-ENT.RadiusDamageType = DMG_POISON -- Damage type
+ENT.RadiusDamageType = DMG_ACID -- Damage type
 ENT.RadiusDamageForce = 90 -- Put the force amount it should apply | false = Don't apply any force
 ENT.DecalTbl_DeathDecals = {"Scorch"}
 ENT.SoundTbl_OnCollide = {"sfx/cheeta_grenade_explode.wav"}

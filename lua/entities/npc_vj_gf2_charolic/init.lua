@@ -36,7 +36,7 @@ function ENT:SetAnimationTranslations(wepHoldType)
 	self.AnimationTranslations[ACT_WALK] 						= VJ.SequenceToActivity(self, "walk_p_all_stimulated")
 end
 
-function GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
+function ENT:GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
 	dmginfo:ScaleDamage(0.25)
 end
 

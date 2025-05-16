@@ -18,12 +18,11 @@ ENT.ItemDropsOnDeath_EntityList = {"obj_gf2_klukai_grenade"}
 ENT.GF2CannotBeHecked = true
 ENT.Rappelling = false 
 ENT.RappellingAnim = "rappelloop"
-
-ENT.AnimationSpeed = 1.25
+ENT.ShouldFollow = true
 
 function ENT:GF2_CustomInitialize()
 	util.SpriteTrail( self, self:LookupAttachment("eyes"), Color( 255, 0, 0), false, 32, 0, 1, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
-	self:SetMaterial("models/props_combine/stasisshield_sheet")
+	if GetConVar("vj_gf2_npc_unknown_groza_camo"):GetBool() then self:SetMaterial("models/props_combine/stasisshield_sheet") end
 
 	if self.Rappelling then
 		self:SetGroundEntity(NULL)
@@ -39,7 +38,12 @@ function ENT:StopRappelling()
 	self:SetVelocity(Vector(0,0,0))
 	self:SetState()
 	self:DoChangeMovementType(VJ_MOVETYPE_GROUND)
-	timer.Simple(0.1, function() if self:GetOwner() then self:Follow(self:GetOwner()) end end)
+	timer.Simple(0.1, function() if self.ShouldFollow then if self:GetOwner() then self:Follow(self:GetOwner()) end end end)
+	local Weapon = self:GetActiveWeapon()
+	if Weapon.IsMeleeWeapon then return end
+	Weapon.Primary.Damage = Weapon.Primary.Damage * 2
+	Weapon.NPC_TimeUntilFire = Weapon.NPC_TimeUntilFire / 2
+	Weapon.NPC_NextPrimaryFire = Weapon.NPC_NextPrimaryFire / 2
 end
 
 function ENT:GF2_CustomOnThink()
@@ -51,6 +55,6 @@ function ENT:GF2_CustomOnThink()
 			return
 		end
 	else
-		if self:GetOwner() then self:Follow(self:GetOwner()) end
+		if self.ShouldFollow then if self:GetOwner() then self:Follow(self:GetOwner()) end end
 	end
 end

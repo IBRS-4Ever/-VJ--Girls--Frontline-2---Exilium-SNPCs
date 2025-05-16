@@ -15,7 +15,7 @@ SWEP.Attachment_Laser = false
 SWEP.Attachment_LaserColor = Color(255,255,255)
 SWEP.Attachment_Flashlight = false 
 
-SWEP.PoisonedEntity = {}
+SWEP.AcidedEntity = {}
 
 SWEP.BulletDamageMultiper = 0.5
 
@@ -25,15 +25,15 @@ function SWEP:CustomOnInitialize()
 	DropMagazine = GetConVar("vj_gf2_drop_magazings"):GetBool()
 	MagazineRemoveTimer = GetConVar("vj_gf2_magazingremovetime"):GetInt()
 	if self.MagazingModel then util.PrecacheModel( self.MagazingModel ) end
-	if self.Owner.Element == "poison" and GetConVar("vj_gf2_npc_element_poison_enabled"):GetBool() then
+	if self.Owner.Element == "acid" and GetConVar("vj_gf2_npc_element_acid_enabled"):GetBool() then
 		local Owner = self.Owner
-		local PoisonDamage = Owner.Element_PoisonDamage
-		timer.Create("VJ_GF2_SWEP_Poison_Timer"..self:EntIndex(), 1, 0, function()
-			for k, entity in pairs(self.PoisonedEntity) do
-				if !IsValid(entity.ent) or entity.time < CurTime() then table.remove(self.PoisonedEntity,k) continue end
+		local AcidDamage = Owner.Element_AcidDamage
+		timer.Create("VJ_GF2_SWEP_Acid_Timer"..self:EntIndex(), 1, 0, function()
+			for k, entity in pairs(self.AcidedEntity) do
+				if !IsValid(entity.ent) or entity.time < CurTime() then table.remove(self.AcidedEntity,k) continue end
 				if entity.time < CurTime() then continue end
 				local DmgInfo = DamageInfo()
-				DmgInfo:SetDamage( PoisonDamage )
+				DmgInfo:SetDamage( AcidDamage )
 				if !IsValid(Owner) then
 					DmgInfo:SetAttacker( entity.ent )
 				else
@@ -41,7 +41,7 @@ function SWEP:CustomOnInitialize()
 				end
 				
 				DmgInfo:SetInflictor( self )
-				DmgInfo:SetDamageType( DMG_POISON )
+				DmgInfo:SetDamageType( DMG_ACID )
 
 				entity.ent:TakeDamageInfo( DmgInfo )
 			end
@@ -51,7 +51,7 @@ function SWEP:CustomOnInitialize()
 end
 
 function SWEP:CustomOnRemove()
-	timer.Remove("VJ_GF2_SWEP_Poison_Timer"..self:EntIndex())
+	timer.Remove("VJ_GF2_SWEP_Acid_Timer"..self:EntIndex())
 end
 
 function SWEP:CustomOnPrimaryAttack_AfterShoot()
@@ -180,14 +180,14 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 		end
 	end
 
-	if self.Owner.Element == "poison" and GetConVar("vj_gf2_npc_element_poison_enabled"):GetBool() then
+	if self.Owner.Element == "acid" and GetConVar("vj_gf2_npc_element_acid_enabled"):GetBool() then
 		if Target:IsNPC() or Target:IsPlayer() and Target:Alive() then
 			if self.Owner:CheckRelationship(Target) == D_HT then
-				local PoisonedNPC = {
+				local AcidedNPC = {
 					ent = Target,
-					time = CurTime() + self.Owner.Element_PoisonTime
+					time = CurTime() + self.Owner.Element_AcidTime
 				}
-				table.insert(self.PoisonedEntity,PoisonedNPC)
+				table.insert(self.AcidedEntity,AcidedNPC)
 			end
 		end
 	end

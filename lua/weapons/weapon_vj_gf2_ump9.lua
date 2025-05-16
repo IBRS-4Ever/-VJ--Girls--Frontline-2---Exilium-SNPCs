@@ -30,6 +30,7 @@ SWEP.Attachment_LaserColor = Color(200,120,60)
 
 function SWEP:GF2_CustomOnInitialize()
 	timer.Simple(0.1, function()
+		if SERVER then return end
 		if !IsValid(self) then return end
 		local Laser = math.random(0,1)
 		if Laser == 1 then

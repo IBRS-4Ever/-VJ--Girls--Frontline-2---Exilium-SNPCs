@@ -4,9 +4,9 @@ ENT.Model = {"models/gf2/klukai_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_klukai_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_klukai_d")
 
-ENT.Element = "poison"
-ENT.Element_PoisonDamage = 7
-ENT.Element_PoisonTime = 7
+ENT.Element = "acid"
+ENT.Element_AcidDamage = 7
+ENT.Element_AcidTime = 7
 
 ENT.WeaponInventory_MeleeList = {"weapon_vj_gf2_klukai_axe"}
 
