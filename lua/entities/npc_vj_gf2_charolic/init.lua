@@ -9,11 +9,11 @@ ENT.Element = "fire"
 
 ENT.SoundTbl_Idle = {"vo/jp/charolic/idle1.wav","vo/jp/charolic/idle2.wav","vo/jp/charolic/idle3.wav","vo/jp/charolic/idle4.wav","vo/jp/charolic/idle5.wav","vo/jp/charolic/idle6.wav","vo/jp/charolic/idle7.wav","vo/jp/charolic/idle8.wav","vo/jp/charolic/idle9.wav","vo/jp/charolic/idle10.wav"}
 ENT.SoundTbl_OnPlayerSight = {"vo/jp/charolic/player_sight1.wav","vo/jp/charolic/player_sight2.wav","vo/jp/charolic/player_sight3.wav","vo/jp/charolic/player_sight4.wav","vo/jp/charolic/player_sight5.wav","vo/jp/charolic/player_sight6.wav","vo/jp/charolic/player_sight7.wav","vo/jp/charolic/player_sight8.wav","vo/jp/charolic/player_sight9.wav","vo/jp/charolic/player_sight10.wav","vo/jp/charolic/player_sight11.wav","vo/jp/charolic/player_sight12.wav","vo/jp/charolic/player_sight13.wav"}
-ENT.SoundTbl_Alert = {"vo/jp/charolic/alert1.wav","vo/jp/charolic/alert2.wav","vo/jp/charolic/alert3.wav","vo/jp/charolic/alert4.wav"}
+ENT.SoundTbl_Alert = {"vo/jp/charolic/alert1.wav","vo/jp/charolic/alert2.wav","vo/jp/charolic/alert3.wav","vo/jp/charolic/alert4.wav","vo/jp/charolic/alert5.wav"}
 ENT.SoundTbl_Pain = {"vo/jp/charolic/hit1.wav","vo/jp/charolic/hit2.wav","vo/jp/charolic/hit3.wav","vo/jp/charolic/hit4.wav","vo/jp/charolic/hit5.wav","vo/jp/charolic/hit6.wav","vo/jp/charolic/hit7.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"vo/jp/charolic/killed_enemy1.wav"}
---ENT.SoundTbl_FollowPlayer = {"vo/jp/charolic/follow1.wav","vo/jp/charolic/follow2.wav","vo/jp/charolic/follow3.wav"}
---ENT.SoundTbl_UnFollowPlayer = {"vo/jp/charolic/unfollow1.wav","vo/jp/charolic/unfollow2.wav"}
+ENT.SoundTbl_OnKilledEnemy = {"vo/jp/charolic/killed_enemy1.wav","vo/jp/charolic/killed_enemy2.wav","vo/jp/charolic/killed_enemy3.wav","vo/jp/charolic/killed_enemy4.wav","vo/jp/charolic/killed_enemy5.wav"}
+ENT.SoundTbl_FollowPlayer = {"vo/jp/charolic/follow1.wav","vo/jp/charolic/follow2.wav","vo/jp/charolic/follow3.wav"}
+ENT.SoundTbl_UnFollowPlayer = {"vo/jp/charolic/unfollow1.wav","vo/jp/charolic/unfollow2.wav","vo/jp/charolic/unfollow3.wav"}
 ENT.SoundTbl_Death = {"vo/jp/charolic/die1.wav","vo/jp/charolic/hit6.wav","vo/jp/charolic/hit7.wav"}
 --ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/charolic/get_heal1.wav","vo/jp/charolic/get_heal2.wav","vo/jp/charolic/get_heal3.wav","vo/jp/charolic/get_heal4.wav","vo/jp/charolic/get_heal5.wav"}
 

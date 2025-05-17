@@ -3,5 +3,5 @@ ENT.Type 			= "ai"
 ENT.PrintName 		= "Mechty"
 ENT.Category		= "Girls' Frontline 2"
 
-ENT.SquadName		= "H.I.D.E. 404"
+ENT.SquadName		= "H.I.D.E. 404 Team A"
 ENT.BodyModel		= "SSD-62D"
