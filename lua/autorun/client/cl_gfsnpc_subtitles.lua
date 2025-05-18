@@ -1,4 +1,7 @@
 
+CreateClientConVar("vj_gf2_subtitles", 0, "Display Subtitles.")
+CreateClientConVar("vj_gf2_subtitles_language", "english", "Subtitles' language.")
+
 GF2_Subtitles_Table = GF2_Subtitles_Table or {}
 local GF2_SoundToSubtitle = {}
 
@@ -60,5 +63,6 @@ local function GF2_LoadSubtitles()
 		end
 	end
 end
-concommand.Add("gf2_subtitles_reload", GF2_LoadSubtitles)
+cvars.AddChangeCallback( "vj_gf2_subtitles_language", GF2_LoadSubtitles )
+
 hook.Add("InitPostEntity", "GF2_SUBTITLE_INIT", GF2_LoadSubtitles)

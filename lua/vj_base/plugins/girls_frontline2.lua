@@ -321,8 +321,6 @@ for k, v in pairs(AddConvars) do
 	if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 end
 
-VJ.AddClientConVar("vj_gf2_subtitles", 0, "Display Subtitles.")
-VJ.AddClientConVar("vj_gf2_subtitles_language", "schinese", "Subtitles' language.")
 VJ.AddClientConVar("vj_gf2_draw_shield", 1, "Draw Shield.")
 VJ.AddClientConVar("vj_gf2_attachment_draw_laser", 1, "Draw Laser.")
 
@@ -365,18 +363,11 @@ if CLIENT then
 			Panel:Help("")
 			Panel:Help("#vjbase.menu.settings.client.label")
 			Panel:CheckBox("#vj_gf2_snpcs.settings.EnableSubtitles", "vj_gf2_subtitles")
-			local gf2_subtitle_language_combo_box = vgui.Create("DComboBox")
-			gf2_subtitle_language_combo_box:SetSize(100, 30)
-			gf2_subtitle_language_combo_box:SetValue("#vjbase.menu.settings.client.lang.label")
-			gf2_subtitle_language_combo_box:AddChoice("English *", "english", false, "flags16/us.png")
+			local gf2_subtitle_language_combo_box = Panel:ComboBox("#vj_gf2_snpcs.settings.SubtitleLanguage", "vj_gf2_subtitles_language")
+			gf2_subtitle_language_combo_box:AddChoice("English", "english", false, "flags16/us.png")
 			gf2_subtitle_language_combo_box:AddChoice("简体中文", "schinese", false, "flags16/cn.png")
-			gf2_subtitle_language_combo_box:AddChoice("日本語 *", "japanese", false, "flags16/jp.png")
-			gf2_subtitle_language_combo_box.OnSelect = function(data, index, text)
-				RunConsoleCommand("vj_gf2_subtitles_language", gf2_subtitle_language_combo_box:GetOptionData(index))
-				RunConsoleCommand("gf2_subtitles_reload")
-			end
-			Panel:AddPanel(gf2_subtitle_language_combo_box)
-			Panel:ControlHelp("#vj_gf2_snpcs.settings.Subtitles_Language.Desc")
+			gf2_subtitle_language_combo_box:AddChoice("日本語", "japanese", false, "flags16/jp.png")
+
 			Panel:CheckBox("#vj_gf2_snpcs.settings.DrawShield", "vj_gf2_draw_shield")
 			Panel:CheckBox("#vj_gf2_snpcs.settings.Attachment_DrawLaser", "vj_gf2_attachment_draw_laser")
 		end)
