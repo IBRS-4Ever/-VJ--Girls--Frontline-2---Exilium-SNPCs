@@ -62,7 +62,9 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella_FutureNavigator","npc_vj_gf2_robella_futu
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic","npc_vj_gf2_charolic",{"weapon_vj_gf2_blade"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_LeapingRabbit","npc_vj_gf2_charolic_leaping_rabbit",{"weapon_vj_gf2_blade"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_Tactical","npc_vj_gf2_charolic_tactical",{"weapon_vj_gf2_blade"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Papasha","npc_vj_gf2_papasha",{"weapon_vj_gf2_ppsh41"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapon_vj_gf2_ots14"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager","npc_vj_gf2_varjager",{"weapon_vj_ak47","weapon_vj_spas12","weapon_vj_rpg","weapon_vj_mp40"},vCat)
 	
 	-- Weapons
 VJ.AddNPCWeapon("OM 50", "weapon_vj_gf2_om50", vCat)
@@ -167,6 +169,7 @@ util.PrecacheModel("models/gf2/robella_future_navigator.mdl")
 util.PrecacheModel("models/gf2/charolic_combat.mdl")
 util.PrecacheModel("models/gf2/charolic_leaping_rabbit.mdl")
 util.PrecacheModel("models/gf2/charolic_tactical.mdl")
+util.PrecacheModel("models/bandits/varyag.mdl")
 	
 -- Weapon Models
 util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -207,8 +210,12 @@ util.PrecacheModel("models/prop/gfl2_colphne_bandage.mdl")
 util.PrecacheModel("models/prop/gfl2_colphne_medkit.mdl")
 util.PrecacheModel("models/prop/gfl2_colphne_syringe.mdl")
 util.PrecacheModel("models/prop/gfl2_mechty_energy_drink.mdl")
+util.PrecacheModel("models/bandits/varyag_shield.mdl")
 
 -- ConVars --
+VJ.AddConVar("vj_gf2_varjager_h",250)
+VJ.AddConVar("vj_gf2_varjager_d",25)
+
 VJ.AddConVar("vj_gf2_nemesis_h",200)
 VJ.AddConVar("vj_gf2_nemesis_d",40)
 VJ.AddConVar("vj_gf2_tololo_h",300)
