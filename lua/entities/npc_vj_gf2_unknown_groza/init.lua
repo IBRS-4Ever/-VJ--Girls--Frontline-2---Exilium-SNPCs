@@ -46,11 +46,6 @@ function ENT:OnHalfHealth()
 	self.AnimationSpeed = 2.5
 	self.MeleeAttackDamage = self.MeleeAttackDamage * 2
 
-	if GetConVar("vj_gf2_npc_shield"):GetBool() then
-		self:SetNWInt( "Shield", 500 )
-		self:EmitSound("items/battery_pickup.wav")
-	end
-
 	self.Element_PoisonDamage = 15
 	self.Element_PoisonTime = 15
 
@@ -157,6 +152,17 @@ function ENT:OnHalfHealth()
 	self.GF2Dummy[2] = Nemesis
 	self.GF2Dummy[3] = Colphne
 	self.GF2Dummy[4] = Charolic
+
+	
+	if GetConVar("vj_gf2_npc_shield"):GetBool() then
+		self:SetNWInt( "Shield", 500 )
+		Vepley:SetNWInt( "Shield", 500 )
+		Nemesis:SetNWInt( "Shield", 500 )
+		Colphne:SetNWInt( "Shield", 500 )
+		Charolic:SetNWInt( "Shield", 500 )
+		self:EmitSound("items/battery_pickup.wav")
+	end
+
 end
 
 function ENT:GF2_CustomOnThink_AiEnabled()

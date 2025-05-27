@@ -1,7 +1,7 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
 
-ENT.IsGF2SNPC = true
+--ENT.IsGF2SNPC = true
 ENT.Bleeds = true
 ENT.BloodColor = "red"
 ENT.HasBloodParticle = true

@@ -15,8 +15,6 @@ SWEP.Attachment_Laser = false
 SWEP.Attachment_LaserColor = Color(255,255,255)
 SWEP.Attachment_Flashlight = false 
 
-SWEP.AcidedEntity = {}
-
 SWEP.BulletDamageMultiper = 0.5
 
 function SWEP:GF2_CustomOnInitialize() end
@@ -25,33 +23,7 @@ function SWEP:CustomOnInitialize()
 	DropMagazine = GetConVar("vj_gf2_drop_magazings"):GetBool()
 	MagazineRemoveTimer = GetConVar("vj_gf2_magazingremovetime"):GetInt()
 	if self.MagazingModel then util.PrecacheModel( self.MagazingModel ) end
-	if self.Owner.Element == "acid" and GetConVar("vj_gf2_npc_element_acid_enabled"):GetBool() then
-		local Owner = self.Owner
-		local AcidDamage = Owner.Element_AcidDamage
-		timer.Create("VJ_GF2_SWEP_Acid_Timer"..self:EntIndex(), 1, 0, function()
-			for k, entity in pairs(self.AcidedEntity) do
-				if !IsValid(entity.ent) or entity.time < CurTime() then table.remove(self.AcidedEntity,k) continue end
-				if entity.time < CurTime() then continue end
-				local DmgInfo = DamageInfo()
-				DmgInfo:SetDamage( AcidDamage )
-				if !IsValid(Owner) then
-					DmgInfo:SetAttacker( entity.ent )
-				else
-					DmgInfo:SetAttacker( Owner )
-				end
-				
-				DmgInfo:SetInflictor( self )
-				DmgInfo:SetDamageType( DMG_ACID )
-
-				entity.ent:TakeDamageInfo( DmgInfo )
-			end
-		end)
-	end
 	self:GF2_CustomOnInitialize()
-end
-
-function SWEP:CustomOnRemove()
-	timer.Remove("VJ_GF2_SWEP_Acid_Timer"..self:EntIndex())
 end
 
 function SWEP:CustomOnPrimaryAttack_AfterShoot()
@@ -187,7 +159,7 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 					ent = Target,
 					time = CurTime() + self.Owner.Element_AcidTime
 				}
-				table.insert(self.AcidedEntity,AcidedNPC)
+				table.insert(self.Owner.AcidedEntity,AcidedNPC)
 			end
 		end
 	end

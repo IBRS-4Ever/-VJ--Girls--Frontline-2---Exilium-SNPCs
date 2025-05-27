@@ -387,6 +387,11 @@ if CLIENT then
 		local DollModel = string.format(language.GetPhrase("vj_gf2_snpcs.BodyModel"),Entity.BodyModel)
 		local DollWeapon = string.format(language.GetPhrase("vj_gf2_snpcs.ImprintID"),Entity:GetActiveWeapon().PrintName)
 		chat.AddText(DollName.."\n"..DollSquad.."\n"..DollModel.."\n"..DollWeapon)
+
+		--[[ hook.Add( "HUDPaint", "HUDPaint_DrawABox", function()
+			if Entity.VJ_TheController == NULL then return end
+			draw.DrawText(DollName.."\n"..DollSquad.."\n"..DollModel)
+		end ) ]]
 	end )
 
 	net.Receive( "GF2_DollHacked", function( len, ply )

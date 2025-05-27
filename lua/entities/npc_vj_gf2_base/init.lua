@@ -53,6 +53,8 @@ ENT.Element_FreezingRadius = 0
 ENT.Element_PoisonDamage = 0
 ENT.Element_PoisonTime = 0
 
+ENT.AcidedEntity = {}
+
 ENT.LastHitTimer = CurTime()
 
 function ENT:GF2_CustomInitialize() end
@@ -140,6 +142,29 @@ function ENT:CustomOnInitialize()
 			end
 		end
 	end
+
+	if GetConVar("vj_gf2_npc_element_acid_enabled"):GetBool() then
+		local AcidDamage = self.Element_AcidDamage
+		timer.Create("VJ_GF2_SWEP_Acid_Timer"..self:EntIndex(), 1, 0, function()
+			for k, entity in pairs(self.AcidedEntity) do
+				if !IsValid(entity.ent) or entity.time < CurTime() then table.remove(self.AcidedEntity,k) continue end
+				if entity.time < CurTime() then continue end
+				local DmgInfo = DamageInfo()
+				DmgInfo:SetDamage( AcidDamage )
+				if !IsValid(self) then
+					DmgInfo:SetAttacker( entity.ent )
+				else
+					DmgInfo:SetAttacker( self )
+				end
+				
+				DmgInfo:SetInflictor( self )
+				DmgInfo:SetDamageType( DMG_ACID )
+
+				entity.ent:TakeDamageInfo( DmgInfo )
+			end
+		end)
+	end
+
 	self:GF2_CustomInitialize()
 end
 
@@ -291,4 +316,5 @@ end
 
 function ENT:OnRemove()
 	timer.Remove("GF2_HealTimer_"..self:EntIndex())
+	timer.Remove("VJ_GF2_SWEP_Acid_Timer"..self:EntIndex())
 end
