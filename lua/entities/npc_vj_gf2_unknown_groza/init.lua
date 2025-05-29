@@ -189,7 +189,7 @@ function ENT:GF2_CustomOnThink_AiEnabled()
 	self.NextWeaponAttackT_Base = CurTime()
 end
 
-function ENT:OnRemove()
+function ENT:GF2_CustomOnRemove()
 	if !self.Dead then
 		for _, v in ipairs(self.GF2Dummy) do
 			if IsValid(v) then

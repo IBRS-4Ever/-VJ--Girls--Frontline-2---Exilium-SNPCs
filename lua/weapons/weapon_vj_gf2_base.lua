@@ -155,11 +155,19 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 	if self.Owner.Element == "acid" and GetConVar("vj_gf2_npc_element_acid_enabled"):GetBool() then
 		if Target:IsNPC() or Target:IsPlayer() and Target:Alive() then
 			if self.Owner:CheckRelationship(Target) == D_HT then
-				local AcidedNPC = {
-					ent = Target,
-					time = CurTime() + self.Owner.Element_AcidTime
-				}
-				table.insert(self.Owner.AcidedEntity,AcidedNPC)
+				local Damage = self.Owner.Element_AcidDamage
+				local Owner = self.Owner
+				local Weapon = self
+				local Timer = "VJ_GF2_NPC_ACID_TIMER"..Target:EntIndex()..CurTime()..self.Owner:EntIndex()
+				timer.Create( Timer, 1, self.Owner.Element_AcidTime, function() 
+					if !(IsValid(Target) and Target:Alive()) then timer.Remove(Timer) return end
+					local DmgInfo = DamageInfo()
+					DmgInfo:SetDamage( Damage )
+					if IsValid(Owner) then DmgInfo:SetAttacker( Owner ) else DmgInfo:SetAttacker( Target ) end
+					if IsValid(Weapon) then DmgInfo:SetInflictor( Weapon ) else DmgInfo:SetInflictor( Target ) end 
+					DmgInfo:SetDamageType( DMG_ACID )
+					Target:TakeDamageInfo( DmgInfo )
+				end)
 			end
 		end
 	end
