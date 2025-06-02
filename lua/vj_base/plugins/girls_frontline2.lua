@@ -2,6 +2,7 @@
 VJ.AddPlugin("Girls' Frontline 2: Exilium", "NPC","BETA")
 
 local vCat = "#vj_gf2_snpcs.spawnmenu.Title"
+local vCatUnf = "#vj_gf2_snpcs.spawnmenu.Title_Unf"
 VJ.AddCategoryInfo(vCat, {Icon = "icons/gf2.png"})
 
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis","npc_vj_gf2_nemesis",{"weapon_vj_gf2_om50"},vCat)
@@ -56,13 +57,15 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Faye_FlurryCrimson","npc_vj_gf2_faye_flurry_crims
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry","npc_vj_gf2_sharkry",{"weapon_vj_gf2_xcr"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry_SwimsuitIdol","npc_vj_gf2_sharkry_swimsuit_idol",{"weapon_vj_gf2_xcr"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Centaureissi","npc_vj_gf2_centaureissi",{"weapon_vj_gf2_g36"},vCat)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Dushevnaya","npc_vj_gf2_dushevnaya",{"weapon_vj_gf2_ksvk"},vCat)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella","npc_vj_gf2_robella",{"weapon_vj_gf2_ro635"},vCat)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella_FutureNavigator","npc_vj_gf2_robella_future_navigator",{"weapon_vj_gf2_ro635"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Dushevnaya","npc_vj_gf2_dushevnaya",{"weapon_vj_gf2_ksvk"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella","npc_vj_gf2_robella",{"weapon_vj_gf2_ro635"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella_FutureNavigator","npc_vj_gf2_robella_future_navigator",{"weapon_vj_gf2_ro635"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic","npc_vj_gf2_charolic",{"weapon_vj_gf2_blade"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_LeapingRabbit","npc_vj_gf2_charolic_leaping_rabbit",{"weapon_vj_gf2_blade"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_Tactical","npc_vj_gf2_charolic_tactical",{"weapon_vj_gf2_blade"},vCat)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Papasha","npc_vj_gf2_papasha",{"weapon_vj_gf2_ppsh41"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Papasha","npc_vj_gf2_papasha",{"weapon_vj_gf2_ppsh41"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Florence","npc_vj_gf2_florence",{"weapon_vj_gf2_pa15"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Florence_MarvelousYamPastry","npc_vj_gf2_florence_marvelous_yam_pastry",{"weapon_vj_gf2_pa15"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapon_vj_gf2_ots14"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager","npc_vj_gf2_varjager",{"weapon_vj_ak47","weapon_vj_spas12","weapon_vj_rpg","weapon_vj_mp40"},vCat)
 	
@@ -103,7 +106,8 @@ VJ.AddNPCWeapon("Hawk Type 97", "weapon_vj_gf2_hawk_type97", vCat)
 VJ.AddNPCWeapon("Galil ARM", "weapon_vj_gf2_galil_arm", vCat)
 VJ.AddNPCWeapon("G36K", "weapon_vj_gf2_g36k", vCat)
 VJ.AddNPCWeapon("G36", "weapon_vj_gf2_g36", vCat)
-	
+VJ.AddNPCWeapon("PA-15", "weapon_vj_gf2_pa15", vCat)
+
 VJ.AddNPCWeapon("Klukai's Axe", "weapon_vj_gf2_klukai_axe", vCat)
 VJ.AddNPCWeapon("Blade", "weapon_vj_gf2_blade", vCat)
 
@@ -169,6 +173,8 @@ util.PrecacheModel("models/gf2/robella_future_navigator.mdl")
 util.PrecacheModel("models/gf2/charolic_combat.mdl")
 util.PrecacheModel("models/gf2/charolic_leaping_rabbit.mdl")
 util.PrecacheModel("models/gf2/charolic_tactical.mdl")
+util.PrecacheModel("models/gf2/florence_combat.mdl")
+util.PrecacheModel("models/gf2/florence_marvelous_yam_pastry.mdl")
 util.PrecacheModel("models/bandits/varyag.mdl")
 	
 -- Weapon Models
@@ -196,6 +202,7 @@ util.PrecacheModel("models/weapons/w_ksenia_aps.mdl")
 util.PrecacheModel("models/weapons/w_sharkry_xcr.mdl")
 util.PrecacheModel("models/weapons/w_centaureissi_g36.mdl")
 util.PrecacheModel("models/weapons/w_dusevnyj_ksvk.mdl")
+util.PrecacheModel("models/weapons/w_florence_pa-15.mdl")
 
 -- Grenade Models
 util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -272,7 +279,9 @@ VJ.AddConVar("vj_gf2_robella_h",275)
 VJ.AddConVar("vj_gf2_robella_d",25)
 VJ.AddConVar("vj_gf2_charolic_h",350)
 VJ.AddConVar("vj_gf2_charolic_d",75)
-	
+VJ.AddConVar("vj_gf2_florence_h",225)
+VJ.AddConVar("vj_gf2_florence_d",15)
+
 VJ.AddConVar("vj_gf2_om50_d",150)
 VJ.AddConVar("vj_gf2_ak_alfa_d",40)
 VJ.AddConVar("vj_gf2_mp7_d",25)
@@ -298,6 +307,7 @@ VJ.AddConVar("vj_gf2_wa2000_d",125)
 VJ.AddConVar("vj_gf2_xcr_d",40)
 VJ.AddConVar("vj_gf2_g36_d",30)
 VJ.AddConVar("vj_gf2_ksvk_d",250)
+VJ.AddConVar("vj_gf2_pa15_d",15)
 
 -- Menu --
 local AddConvars = {}
