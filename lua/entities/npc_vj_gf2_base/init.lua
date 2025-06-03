@@ -100,12 +100,11 @@ function ENT:GiveShield()
 		for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.ShieldRadius * GetConVar("vj_gf2_npc_shield_radius_multipler"):GetFloat() ) ) do
 			if ent.IsGF2SNPC then
 				if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
-				if (ent:GetNWInt( "Shield" ) >= ent.StartHealth and !GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool()) then continue end
-				if (ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat()) < ent.StartHealth or GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool() then
+				if GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool() then
 					ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat() )
 					ent:EmitSound("items/battery_pickup.wav")
 				else
-					ent:SetNWInt( "Shield", ent.StartHealth )
+					ent:SetNWInt( "Shield", math.Clamp(ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat(), 0, ent.StartHealth) )
 					ent:EmitSound("items/battery_pickup.wav")
 				end
 			end
@@ -114,12 +113,11 @@ function ENT:GiveShield()
 		for id, ent in ents.Iterator() do
 			if ent.IsGF2SNPC then
 				if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
-				if (ent:GetNWInt( "Shield" ) >= ent.StartHealth and !GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool()) then continue end
-				if (ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat()) < ent.StartHealth or GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool() then
+				if GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool() then
 					ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat() )
 					ent:EmitSound("items/battery_pickup.wav")
 				else
-					ent:SetNWInt( "Shield", ent.StartHealth )
+					ent:SetNWInt( "Shield", math.Clamp(ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat(), 0, ent.StartHealth) )
 					ent:EmitSound("items/battery_pickup.wav")
 				end
 			end
