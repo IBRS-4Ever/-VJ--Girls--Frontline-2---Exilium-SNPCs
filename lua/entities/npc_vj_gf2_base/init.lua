@@ -50,8 +50,7 @@ ENT.Element_ElectricRadius = 0
 ENT.Element_ElectricDamage = 0
 ENT.Element_FireIgniteTime = 0
 ENT.Element_FreezingRadius = 0
-ENT.Element_PoisonDamage = 0
-ENT.Element_PoisonTime = 0
+ENT.Element_AcidTime = 0
 
 ENT.LastHitTimer = CurTime()
 

@@ -23,6 +23,19 @@ function SWEP:CustomOnInitialize()
 	DropMagazine = GetConVar("vj_gf2_drop_magazings"):GetBool()
 	MagazineRemoveTimer = GetConVar("vj_gf2_magazingremovetime"):GetInt()
 	if self.MagazingModel then util.PrecacheModel( self.MagazingModel ) end
+	if GetConVar("vj_gf2_draw_bullets"):GetBool() then
+		if self.Owner.Element == "water" then
+			self.Primary.TracerType = "vj_gf2_effect_bullet_trace_water"
+		elseif self.Owner.Element == "fire" then
+			self.Primary.TracerType = "vj_gf2_effect_bullet_trace_fire"
+		elseif self.Owner.Element == "acid" then
+			self.Primary.TracerType = "vj_gf2_effect_bullet_trace_acid"
+		elseif self.Owner.Element == "freezing" then
+			self.Primary.TracerType = "vj_gf2_effect_bullet_trace_freezing"
+		elseif self.Owner.Element == "electric" then
+			self.Primary.TracerType = "vj_gf2_effect_bullet_trace_electric"
+		end
+	end
 	self:GF2_CustomOnInitialize()
 end
 
@@ -90,6 +103,17 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 			Water:SetFlags(2)
 			Water:SetScale(5)
 		util.Effect("watersplash", Water)
+		if Target:IsNPC() or Target:IsPlayer() and Target:Alive() then
+			if self.Owner:CheckRelationship(Target) == D_HT then 
+				if Target:Health() >= Target:GetMaxHealth() then return end
+				local HP_Reduce = dmginfo:GetDamage() * GetConVar("vj_gf2_npc_element_water_hp_reduce_rate"):GetFloat()
+				if Target:GetMaxHealth() - HP_Reduce <= Target:Health() then
+					Target:SetMaxHealth( Target:Health() )
+				else
+					Target:SetMaxHealth( Target:Health() - HP_Reduce )
+				end
+			end
+		end
 	end
 
 	if self.Owner.Element == "electric" and GetConVar("vj_gf2_npc_element_electric_enabled"):GetBool() then
@@ -155,11 +179,12 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 	if self.Owner.Element == "acid" and GetConVar("vj_gf2_npc_element_acid_enabled"):GetBool() then
 		if Target:IsNPC() or Target:IsPlayer() and Target:Alive() then
 			if self.Owner:CheckRelationship(Target) == D_HT then
-				local Damage = self.Owner.Element_AcidDamage
+				--local Damage = self.Owner.Element_AcidDamage
+				local Damage = dmginfo:GetDamage() * GetConVar("vj_gf2_npc_element_acid_damage_multipler"):GetFloat()
 				local Owner = self.Owner
 				local Weapon = self
 				local Timer = "VJ_GF2_NPC_ACID_TIMER"..Target:EntIndex()..CurTime()..self.Owner:EntIndex()
-				timer.Create( Timer, 1, self.Owner.Element_AcidTime, function() 
+				timer.Create( Timer, 1, self.Owner.Element_AcidTime * GetConVar("vj_gf2_npc_element_acid_time_multipler"):GetInt(), function() 
 					if !(IsValid(Target) and Target:Alive()) then timer.Remove(Timer) return end
 					local DmgInfo = DamageInfo()
 					DmgInfo:SetDamage( Damage )

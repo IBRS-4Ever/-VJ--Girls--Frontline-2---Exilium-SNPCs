@@ -327,7 +327,10 @@ AddConvars["vj_gf2_npc_element_freezing_enabled"] = 1 -- Enable Freezing Effects
 AddConvars["vj_gf2_npc_element_freezing_radius_multipler"] = 1 -- Freezing radius multipler.
 AddConvars["vj_gf2_npc_element_fire_enabled"] = 1 -- Enable Fire Effects.
 AddConvars["vj_gf2_npc_element_acid_enabled"] = 1 -- Enable Acid Effects.
+AddConvars["vj_gf2_npc_element_acid_time_multipler"] = 1 -- Acid time multipler.
+AddConvars["vj_gf2_npc_element_acid_damage_multipler"] = 0.1 -- Acid damage multipler.
 AddConvars["vj_gf2_npc_element_water_enabled"] = 1 -- Enable Water Effects.
+AddConvars["vj_gf2_npc_element_water_hp_reduce_rate"] = 0.01 -- Enable Water Effects.
 AddConvars["vj_gf2_infinite_ammo"] = 0 -- Infinite Ammo.
 AddConvars["vj_gf2_speed_modifier"] = 1 -- Speed Modifier.
 AddConvars["vj_gf2_animation_speed_modifier"] = 1 -- Animation Modifier.
@@ -340,6 +343,7 @@ end
 
 VJ.AddClientConVar("vj_gf2_draw_shield", 1, "Draw Shield.")
 VJ.AddClientConVar("vj_gf2_attachment_draw_laser", 1, "Draw Laser.")
+VJ.AddClientConVar("vj_gf2_draw_bullets", 1, "Draw Bullets.")
 
 if CLIENT then
 	hook.Add( "PopulateToolMenu", "VJ_ADDTOMENU_GF2", function()
@@ -368,7 +372,10 @@ if CLIENT then
 				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Element.FreezingRadiusMultipler", "vj_gf2_npc_element_freezing_radius_multipler", 0, 5, 2)
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Element.FireEnabled", "vj_gf2_npc_element_fire_enabled")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Element.AcidEnabled", "vj_gf2_npc_element_acid_enabled")
+				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Element.AcidDamageMultipler", "vj_gf2_npc_element_acid_damage_multipler", 0, 1, 2)
+				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Element.AcidTimeMultipler", "vj_gf2_npc_element_acid_time_multipler", 0, 5, 0)
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Element.WaterEnabled", "vj_gf2_npc_element_water_enabled")
+				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Element.WaterHP_ReduceRate", "vj_gf2_npc_element_water_hp_reduce_rate", 0, 1, 2)
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_SpeedModifier", "vj_gf2_speed_modifier")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_AnimationSpeedModifier", "vj_gf2_animation_speed_modifier")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Charolic_Ignite_Target", "vj_gf2_npc_charolic_ignite_target")
@@ -387,6 +394,7 @@ if CLIENT then
 
 			Panel:CheckBox("#vj_gf2_snpcs.settings.DrawShield", "vj_gf2_draw_shield")
 			Panel:CheckBox("#vj_gf2_snpcs.settings.Attachment_DrawLaser", "vj_gf2_attachment_draw_laser")
+			Panel:CheckBox("#vj_gf2_snpcs.settings.DrawBullets", "vj_gf2_draw_bullets")
 		end)
 	end)
 

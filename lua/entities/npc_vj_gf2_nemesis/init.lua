@@ -5,7 +5,6 @@ ENT.StartHealth = GetConVarNumber("vj_gf2_nemesis_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_nemesis_d")
 
 ENT.Element = "acid"
-ENT.Element_AcidDamage = 10
 ENT.Element_AcidTime = 10
 
 ENT.SoundTbl_Idle = {"vo/jp/nemesis/idle1.wav","vo/jp/nemesis/idle2.wav","vo/jp/nemesis/idle3.wav","vo/jp/nemesis/idle4.wav","vo/jp/nemesis/idle5.wav","vo/jp/nemesis/idle6.wav","vo/jp/nemesis/idle7.wav","vo/jp/nemesis/idle8.wav","vo/jp/nemesis/idle9.wav"}

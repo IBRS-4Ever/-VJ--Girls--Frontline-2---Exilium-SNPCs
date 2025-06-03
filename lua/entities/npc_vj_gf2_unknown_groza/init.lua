@@ -22,7 +22,6 @@ ENT.ItemDropsOnDeathChance = 1
 ENT.ItemDropsOnDeath_EntityList = {"obj_gf2_klukai_grenade"}
  ]]
 ENT.Element = "acid"
-ENT.Element_AcidDamage = 7
 ENT.Element_AcidTime = 7
 
 ENT.Shield = 1000

@@ -5,7 +5,6 @@ ENT.StartHealth = GetConVarNumber("vj_gf2_mechty_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_mechty_d")
 
 ENT.Element = "acid"
-ENT.Element_AcidDamage = 7
 ENT.Element_AcidTime = 7
 
 ENT.SoundTbl_Idle = {"vo/jp/mechty/idle1.wav","vo/jp/mechty/idle2.wav","vo/jp/mechty/idle3.wav","vo/jp/mechty/idle4.wav","vo/jp/mechty/idle5.wav","vo/jp/mechty/idle6.wav","vo/jp/mechty/idle7.wav","vo/jp/mechty/idle8.wav","vo/jp/mechty/idle9.wav","vo/jp/mechty/idle10.wav"}

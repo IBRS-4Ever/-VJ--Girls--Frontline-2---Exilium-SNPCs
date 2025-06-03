@@ -12,7 +12,7 @@ SWEP.HoldType = "pistol"
 SWEP.NPC_NextPrimaryFire = 0.2
 SWEP.NPC_ReloadSound = {"Weapon_SMG1.NPC_Reload"}
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.Primary.Damage = GetConVarNumber("vj_gf2_taurus_curve_d")
+SWEP.Primary.Damage = GetConVarNumber("vj_gf2_pa15_d")
 SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 15
 SWEP.Primary.Ammo = "pistol"

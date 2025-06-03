@@ -5,7 +5,6 @@ ENT.StartHealth = GetConVarNumber("vj_gf2_peritya_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_peritya_d")
 
 ENT.Element = "acid"
-ENT.Element_AcidDamage = 7
 ENT.Element_AcidTime = 7
 
 ENT.HasGrenadeAttack = true
