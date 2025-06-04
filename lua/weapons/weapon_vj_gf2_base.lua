@@ -105,13 +105,8 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 		util.Effect("watersplash", Water)
 		if Target:IsNPC() or Target:IsPlayer() and Target:Alive() then
 			if self.Owner:CheckRelationship(Target) == D_HT then 
-				if Target:Health() >= Target:GetMaxHealth() then return end
 				local HP_Reduce = dmginfo:GetDamage() * GetConVar("vj_gf2_npc_element_water_hp_reduce_rate"):GetFloat()
-				if Target:GetMaxHealth() - HP_Reduce <= Target:Health() then
-					Target:SetMaxHealth( Target:Health() )
-				else
-					Target:SetMaxHealth( Target:Health() - HP_Reduce )
-				end
+				Target:SetMaxHealth( math.Clamp(Target:Health() - HP_Reduce, Target:Health(), Target:GetMaxHealth()) )
 			end
 		end
 	end
@@ -134,7 +129,7 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 		
 					ent:TakeDamageInfo( DmgInfo )
 
-					if self.Owner.BodyModel == "DUAL DSI-8" then -- Leva
+					if self.Owner.BodyModel == "DUAL DSI-8" and GetConVar("vj_gf2_npc_leva_hacking"):GetBool() then -- Leva
 						if ent:IsPlayer() then return end
 						if ent.IsGF2SNPC and ent.GF2CannotBeHecked then return end
 						if math.random(1,100) <= 5 then

@@ -67,9 +67,13 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Papasha","npc_vj_gf2_papasha",{"weapon_vj_gf2_pps
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Florence","npc_vj_gf2_florence",{"weapon_vj_gf2_pa15"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Florence_MarvelousYamPastry","npc_vj_gf2_florence_marvelous_yam_pastry",{"weapon_vj_gf2_pa15"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapon_vj_gf2_ots14"},vCat)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager","npc_vj_gf2_varjager",{"weapon_vj_ak47","weapon_vj_spas12","weapon_vj_rpg","weapon_vj_mp40"},vCat)
-	
-	-- Weapons
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Soldier","npc_vj_gf2_varjager_soldier",{"weapon_vj_gf2_varjager_ak101","weapon_vj_gf2_varjager_ak74"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Medic","npc_vj_gf2_varjager_medic",{"weapon_vj_glock17"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Warrior","npc_vj_gf2_varjager_warrior",{"weapon_vj_gf2_varjager_axe","weapon_vj_gf2_varjager_mpl40","weapon_vj_gf2_varjager_taiga"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Sniper","npc_vj_gf2_varjager_sniper",{"weapon_vj_gf2_varjager_mosin"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Heavy","npc_vj_gf2_varjager_heavy",{"weapon_vj_rpg","weapon_vj_spas12"},vCat)
+
+-- Weapons
 VJ.AddNPCWeapon("OM 50", "weapon_vj_gf2_om50", vCat)
 VJ.AddNPCWeapon("AK Alfa", "weapon_vj_gf2_ak_alfa", vCat)
 VJ.AddNPCWeapon("MP7", "weapon_vj_gf2_mp7", vCat)
@@ -107,6 +111,13 @@ VJ.AddNPCWeapon("Galil ARM", "weapon_vj_gf2_galil_arm", vCat)
 VJ.AddNPCWeapon("G36K", "weapon_vj_gf2_g36k", vCat)
 VJ.AddNPCWeapon("G36", "weapon_vj_gf2_g36", vCat)
 VJ.AddNPCWeapon("PA-15", "weapon_vj_gf2_pa15", vCat)
+
+VJ.AddNPCWeapon("AK-101", "weapon_vj_gf2_varjager_ak101", vCat)
+VJ.AddNPCWeapon("AK-74", "weapon_vj_gf2_varjager_ak74", vCat)
+VJ.AddNPCWeapon("Mosin", "weapon_vj_gf2_varjager_mosin", vCat)
+VJ.AddNPCWeapon("Axe", "weapon_vj_gf2_varjager_axe", vCat)
+VJ.AddNPCWeapon("MPL40", "weapon_vj_gf2_varjager_mpl40", vCat)
+VJ.AddNPCWeapon("Taiga", "weapon_vj_gf2_varjager_taiga", vCat)
 
 VJ.AddNPCWeapon("Klukai's Axe", "weapon_vj_gf2_klukai_axe", vCat)
 VJ.AddNPCWeapon("Blade", "weapon_vj_gf2_blade", vCat)
@@ -335,8 +346,10 @@ AddConvars["vj_gf2_infinite_ammo"] = 0 -- Infinite Ammo.
 AddConvars["vj_gf2_speed_modifier"] = 1 -- Speed Modifier.
 AddConvars["vj_gf2_animation_speed_modifier"] = 1 -- Animation Modifier.
 AddConvars["vj_gf2_npc_find_cover_on_reload"] = 1 -- Find Cover On Reload.
-AddConvars["vj_gf2_npc_charolic_ignite_target"] = 1 -- Find Cover On Reload.
-AddConvars["vj_gf2_npc_unknown_groza_camo"] = 1 -- Find Cover On Reload.
+AddConvars["vj_gf2_npc_charolic_ignite_target"] = 1 -- Charolic Ignite Targets.
+AddConvars["vj_gf2_npc_leva_hacking"] = 1 -- Leva Hacking.
+AddConvars["vj_gf2_npc_unknown_groza_camo"] = 1 -- Unknown Doll have camo.
+AddConvars["vj_gf2_npc_unknown_groza_hack_dolls"] = 1 -- Unknown Doll hack dolls.
 for k, v in pairs(AddConvars) do
 	if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 end
@@ -378,8 +391,10 @@ if CLIENT then
 				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Element.WaterHP_ReduceRate", "vj_gf2_npc_element_water_hp_reduce_rate", 0, 1, 2)
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_SpeedModifier", "vj_gf2_speed_modifier")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_AnimationSpeedModifier", "vj_gf2_animation_speed_modifier")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Leva_Hacking", "vj_gf2_npc_leva_hacking")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Charolic_Ignite_Target", "vj_gf2_npc_charolic_ignite_target")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Camo", "vj_gf2_npc_unknown_groza_camo")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Hacking", "vj_gf2_npc_unknown_groza_hack_dolls")
 			else
 				Panel:Help("#vjbase.menu.general.admin.not")
 				Panel:ControlHelp("#vjbase.menu.general.admin.only")
@@ -401,7 +416,7 @@ if CLIENT then
 	net.Receive( "GF2_DollInfo", function( len, ply )
 		local Entity = net.ReadEntity()
 		local DollName = string.format(language.GetPhrase("vj_gf2_snpcs.Name"),Entity.PrintName)
-		local DollSquad = string.format(language.GetPhrase("vj_gf2_snpcs.Affiliation"),Entity.SquadName)
+		local DollSquad = string.format(language.GetPhrase("vj_gf2_snpcs.Affiliation"),language.GetPhrase(Entity.SquadName))
 		local DollModel = string.format(language.GetPhrase("vj_gf2_snpcs.BodyModel"),Entity.BodyModel)
 		local DollWeapon = string.format(language.GetPhrase("vj_gf2_snpcs.ImprintID"),Entity:GetActiveWeapon().PrintName)
 		chat.AddText(DollName.."\n"..DollSquad.."\n"..DollModel.."\n"..DollWeapon)

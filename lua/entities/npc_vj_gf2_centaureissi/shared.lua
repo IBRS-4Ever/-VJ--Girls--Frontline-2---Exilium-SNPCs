@@ -3,5 +3,5 @@ ENT.Type 			= "ai"
 ENT.PrintName 		= "Centaureissi"
 ENT.Category		= "Girls' Frontline 2"
 
-ENT.SquadName		= "Zucchero Café"
+ENT.SquadName		= "#GF2_SquadName_ZuccheroCafé"
 ENT.BodyModel		= "SSD-62D"

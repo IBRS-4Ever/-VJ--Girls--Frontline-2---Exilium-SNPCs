@@ -71,25 +71,15 @@ function ENT:HealAlly()
 		for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.HealDistance ) ) do
 			if !ent.IsGF2SNPC then continue end
 			if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
-			if ent:Health() >= ent:GetMaxHealth() then continue end
 			if ent.LastHitTimer > CurTime() then continue end
-			if ent:Health() + self.HealAmount < ent:GetMaxHealth() then
-				ent:SetHealth(ent:Health() + self.HealAmount)
-			else
-				ent:SetHealth(ent:GetMaxHealth())
-			end
+			ent:SetHealth( math.Clamp(ent:Health() + self.HealAmount, 0, ent:GetMaxHealth()) )
 		end
 	else
 		for id, ent in ents.Iterator() do
 			if !ent.IsGF2SNPC then continue end
 			if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
-			if ent:Health() >= ent:GetMaxHealth() then continue end
 			if ent.LastHitTimer > CurTime() then continue end
-			if ent:Health() + self.HealAmount < ent:GetMaxHealth() then
-				ent:SetHealth(ent:Health() + self.HealAmount)
-			else
-				ent:SetHealth(ent:GetMaxHealth())
-			end
+			ent:SetHealth( math.Clamp(ent:Health() + self.HealAmount, 0, ent:GetMaxHealth()) )
 		end
 	end
 end

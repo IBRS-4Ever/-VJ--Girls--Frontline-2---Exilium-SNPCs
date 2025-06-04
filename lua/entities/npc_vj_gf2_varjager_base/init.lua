@@ -13,27 +13,6 @@ function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup)
 	if self.HasShield then dmginfo:ScaleDamage(0.5) else dmginfo:ScaleDamage(0.75) end
 end
 
-function ENT:GF2_CustomInitialize()
-	if math.random(1,4) == 1 then
-		local ShieldBone = self:LookupBone("ValveBiped.Bip01_L_Forearm")
-		local ShieldBonePos, ShieldBoneAng = self:GetBonePosition(ShieldBone)
-		local Shield = ents.Create("prop_physics")
-		Shield:SetModel("models/bandits/varyag_shield.mdl")
-		Shield:PhysicsInit(SOLID_VPHYSICS)
-		Shield:SetMoveType(MOVETYPE_VPHYSICS)
-		Shield:SetSolid(SOLID_VPHYSICS)
-		Shield:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
-		Shield:SetPos(ShieldBonePos + self:GetForward() * -4 + self:GetUp() * -18 + self:GetRight() * 16)
-		Shield:SetAngles(self:GetAngles() + Angle(90,-60,0))
-		Shield:Spawn()
-		Shield:Activate()
-		Shield:SetOwner(self)
-		Shield:AddEffects( EF_FOLLOWBONE )
-		Shield:SetParent(self,ShieldBone)
-		self.HasShield = true
-	end
-end
-
 function ENT:CustomOnDeath_BeforeCorpseSpawned()
 	if self.HasShield then
 		local ShieldBone = self:LookupBone("ValveBiped.Bip01_L_Forearm")

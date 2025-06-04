@@ -3,5 +3,5 @@ ENT.Type 			= "ai"
 ENT.PrintName 		= "Sabrina"
 ENT.Category		= "Girls' Frontline 2"
 
-ENT.SquadName		= "Elmo - General Echelon"
+ENT.SquadName		= "#GF2_SquadName_ELMO"
 ENT.BodyModel		= "SSD-62D"
