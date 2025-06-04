@@ -12,18 +12,13 @@ ENT.HealDelay = 1
 
 ENT.Element = "water"
 
-ENT.HasItemDropsOnDeath = true
-ENT.ItemDropsOnDeathChance = 1
-ENT.ItemDropsOnDeath_EntityList = {"sent_gf2_colphne_healthkit","sent_gf2_colphne_bandage","sent_gf2_colphne_syringe"}
-
-ENT.SoundTbl_Idle = {"vo/jp/colphne/idle1.wav","vo/jp/colphne/idle2.wav","vo/jp/colphne/idle3.wav","vo/jp/colphne/idle4.wav","vo/jp/colphne/idle5.wav","vo/jp/colphne/idle6.wav","vo/jp/colphne/idle7.wav","vo/jp/colphne/idle8.wav","vo/jp/colphne/idle9.wav","vo/jp/colphne/idle10.wav"}
-ENT.SoundTbl_OnPlayerSight = {"vo/jp/colphne/player_sight1.wav","vo/jp/colphne/player_sight2.wav","vo/jp/colphne/player_sight3.wav","vo/jp/colphne/player_sight4.wav","vo/jp/colphne/player_sight5.wav","vo/jp/colphne/player_sight6.wav","vo/jp/colphne/player_sight7.wav","vo/jp/colphne/player_sight8.wav","vo/jp/colphne/player_sight9.wav","vo/jp/colphne/player_sight10.wav","vo/jp/colphne/player_sight11.wav","vo/jp/colphne/player_sight12.wav","vo/jp/colphne/player_sight13.wav","vo/jp/colphne/player_sight14.wav"}
-ENT.SoundTbl_Alert = {"vo/jp/colphne/alert1.wav","vo/jp/colphne/alert2.wav"}
-ENT.SoundTbl_Pain = {"vo/jp/colphne/hit1.wav","vo/jp/colphne/hit2.wav","vo/jp/colphne/hit3.wav","vo/jp/colphne/hit4.wav","vo/jp/colphne/hit5.wav","vo/jp/colphne/hit6.wav","vo/jp/colphne/hit7.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"vo/jp/colphne/killed_enemy1.wav","vo/jp/colphne/killed_enemy2.wav","vo/jp/colphne/killed_enemy3.wav","vo/jp/colphne/killed_enemy4.wav"}
-ENT.SoundTbl_FollowPlayer = {"vo/jp/colphne/follow1.wav","vo/jp/colphne/follow2.wav","vo/jp/colphne/follow3.wav"}
-ENT.SoundTbl_UnFollowPlayer = {"vo/jp/colphne/unfollow1.wav","vo/jp/colphne/unfollow2.wav"}
-ENT.SoundTbl_Death = {"vo/jp/colphne/die1.wav","vo/jp/colphne/die2.wav","vo/jp/colphne/die3.wav"}
-ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/colphne/get_heal1.wav","vo/jp/colphne/get_heal2.wav","vo/jp/colphne/get_heal3.wav","vo/jp/colphne/get_heal4.wav","vo/jp/colphne/get_heal5.wav"}
+ENT.SoundTbl_Idle = {"vo/jp/florence/idle1.wav","vo/jp/florence/idle2.wav","vo/jp/florence/idle3.wav","vo/jp/florence/idle4.wav","vo/jp/florence/idle5.wav"}
+ENT.SoundTbl_OnPlayerSight = {"vo/jp/florence/player_sight1.wav","vo/jp/florence/player_sight2.wav","vo/jp/florence/player_sight3.wav","vo/jp/florence/player_sight4.wav","vo/jp/florence/player_sight5.wav","vo/jp/florence/player_sight6.wav","vo/jp/florence/player_sight7.wav","vo/jp/florence/player_sight8.wav"}
+ENT.SoundTbl_Alert = {"vo/jp/florence/alert1.wav","vo/jp/florence/alert2.wav","vo/jp/florence/alert3.wav","vo/jp/florence/alert4.wav"}
+ENT.SoundTbl_Pain = {"vo/jp/florence/hit1.wav","vo/jp/florence/hit2.wav","vo/jp/florence/hit3.wav","vo/jp/florence/hit4.wav","vo/jp/florence/hit5.wav","vo/jp/florence/hit6.wav"}
+ENT.SoundTbl_OnKilledEnemy = {"vo/jp/florence/killed_enemy1.wav","vo/jp/florence/killed_enemy2.wav","vo/jp/florence/killed_enemy3.wav"}
+ENT.SoundTbl_FollowPlayer = {"vo/jp/florence/follow1.wav","vo/jp/florence/follow2.wav","vo/jp/florence/follow3.wav","vo/jp/florence/follow4.wav","vo/jp/florence/follow5.wav"}
+ENT.SoundTbl_UnFollowPlayer = {"vo/jp/florence/unfollow1.wav","vo/jp/florence/unfollow2.wav","vo/jp/florence/unfollow3.wav"}
+ENT.SoundTbl_Death = {"vo/jp/florence/die1.wav","vo/jp/florence/die2.wav","vo/jp/florence/die3.wav","vo/jp/florence/hit6.wav"}
 
 ENT.AnimationSpeed = 1.25

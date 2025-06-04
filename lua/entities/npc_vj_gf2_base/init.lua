@@ -64,6 +64,15 @@ function ENT:Controller_Initialize(ply, controlEnt)
 	net.Start( "GF2_DollInfo" )
 		net.WriteEntity( self )
 	net.Send(ply)
+
+	controlEnt.VJC_Player_DrawHUD = false
+
+	function controlEnt:OnStopControlling()
+		util.AddNetworkString( "GF2_DollInfo_End" )
+		net.Start( "GF2_DollInfo_End" )
+			net.WriteEntity( self )
+		net.Send(ply)
+	end
 end
 
 function ENT:HealAlly()

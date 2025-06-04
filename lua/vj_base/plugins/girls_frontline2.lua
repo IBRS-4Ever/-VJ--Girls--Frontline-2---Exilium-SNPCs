@@ -64,8 +64,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic","npc_vj_gf2_charolic",{"weapon_vj_gf2_b
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_LeapingRabbit","npc_vj_gf2_charolic_leaping_rabbit",{"weapon_vj_gf2_blade"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_Tactical","npc_vj_gf2_charolic_tactical",{"weapon_vj_gf2_blade"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Papasha","npc_vj_gf2_papasha",{"weapon_vj_gf2_ppsh41"},vCatUnf)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Florence","npc_vj_gf2_florence",{"weapon_vj_gf2_pa15"},vCatUnf)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Florence_MarvelousYamPastry","npc_vj_gf2_florence_marvelous_yam_pastry",{"weapon_vj_gf2_pa15"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Florence","npc_vj_gf2_florence",{"weapon_vj_gf2_pa15"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Florence_MarvelousYamPastry","npc_vj_gf2_florence_marvelous_yam_pastry",{"weapon_vj_gf2_pa15"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapon_vj_gf2_ots14"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Soldier","npc_vj_gf2_varjager_soldier",{"weapon_vj_gf2_varjager_ak101","weapon_vj_gf2_varjager_ak74"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Medic","npc_vj_gf2_varjager_medic",{"weapon_vj_glock17"},vCat)
@@ -326,7 +326,7 @@ AddConvars["vj_gf2_drop_magazings"] = 1 -- Drop Magazines?
 AddConvars["vj_gf2_magazingremovetime"] = 15 -- Magazine Remove time.
 AddConvars["vj_gf2_death_expressions"] = 1 -- Death Expressions?
 AddConvars["vj_gf2_death_fingerpose"] = 1 -- Death Finger Pose?
-AddConvars["vj_gf2_npc_random_bodygroups"] = 0 -- Random Bodygroup for SNPCs?
+AddConvars["vj_gf2_npc_random_bodygroups"] = 1 -- Random Bodygroup for SNPCs?
 AddConvars["vj_gf2_npc_shield_multipler"] = 1 -- Shield multipler.
 AddConvars["vj_gf2_npc_shield_radius_multipler"] = 1 -- Shield radius multipler.
 AddConvars["vj_gf2_npc_shield"] = 1 -- Enable Shield.
@@ -419,13 +419,21 @@ if CLIENT then
 		local DollSquad = string.format(language.GetPhrase("vj_gf2_snpcs.Affiliation"),language.GetPhrase(Entity.SquadName))
 		local DollModel = string.format(language.GetPhrase("vj_gf2_snpcs.BodyModel"),Entity.BodyModel)
 		local DollWeapon = string.format(language.GetPhrase("vj_gf2_snpcs.ImprintID"),Entity:GetActiveWeapon().PrintName)
-		chat.AddText(DollName.."\n"..DollSquad.."\n"..DollModel.."\n"..DollWeapon)
 
-		--[[ hook.Add( "HUDPaint", "HUDPaint_DrawABox", function()
-			if Entity.VJ_TheController == NULL then return end
-			draw.DrawText(DollName.."\n"..DollSquad.."\n"..DollModel)
-		end ) ]]
+		hook.Add( "HUDPaint", "VJ_GF2_Controller_HUD", function()
+			surface.SetFont("DermaLarge")
+			local tW, tH = surface.GetTextSize( DollName.."\n"..DollSquad.."\n"..DollModel.."\n"..DollWeapon )
+			local padX = 20
+			local padY = 5
+			surface.SetDrawColor( 0, 0, 0, 100 )
+			surface.DrawRect( 16, 32, tW + padX * 2, tH + padY * 2 )
+			draw.DrawText(DollName.."\n"..DollSquad.."\n"..DollModel.."\n"..DollWeapon, "DermaLarge", 32, 32)
+		end )
 	end )
+
+	net.Receive( "GF2_DollInfo_End", function( len, ply )
+		hook.Remove("HUDPaint", "VJ_GF2_Controller_HUD")
+	end)
 
 	net.Receive( "GF2_DollHacked", function( len, ply )
 		local Entity = net.ReadEntity()
