@@ -32,7 +32,7 @@ sound.Add({
 	volume = 1.0,
 	level = 80,
 	pitch = {90, 110},
-	sound = {"weapons/ar/qbz191/fire1.wav","weapons/ar/qbz191/fire2.wav","weapons/ar/qbz191/fire3.wav","weapons/ar/qbz191/fire4.wav","weapons/ar/qbz191/fire5.wav","weapons/ar/qbz191/fire6.wav"}
+	sound = {"weapons/ar/xcr/fire1.wav","weapons/ar/xcr/fire2.wav","weapons/ar/xcr/fire3.wav","weapons/ar/xcr/fire4.wav","weapons/ar/xcr/fire5.wav","weapons/ar/xcr/fire6.wav"}
 })
 
 sound.Add({
@@ -41,5 +41,5 @@ sound.Add({
 	volume = 1.0,
 	level = 140,
 	pitch = {90, 110},
-	sound = {"weapons/ar/qbz191/fire_dist1.wav","weapons/ar/qbz191/fire_dist2.wav","weapons/ar/qbz191/fire_dist3.wav","weapons/ar/qbz191/fire_dist4.wav","weapons/ar/qbz191/fire_dist5.wav","weapons/ar/qbz191/fire_dist6.wav"}
+	sound = {"weapons/ar/xcr/fire_dist1.wav","weapons/ar/xcr/fire_dist2.wav","weapons/ar/xcr/fire_dist3.wav","weapons/ar/xcr/fire_dist4.wav","weapons/ar/xcr/fire_dist5.wav","weapons/ar/xcr/fire_dist6.wav"}
 })

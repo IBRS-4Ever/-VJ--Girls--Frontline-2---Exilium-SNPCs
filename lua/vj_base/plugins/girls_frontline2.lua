@@ -350,6 +350,9 @@ AddConvars["vj_gf2_npc_charolic_ignite_target"] = 1 -- Charolic Ignite Targets.
 AddConvars["vj_gf2_npc_leva_hacking"] = 1 -- Leva Hacking.
 AddConvars["vj_gf2_npc_unknown_groza_camo"] = 1 -- Unknown Doll have camo.
 AddConvars["vj_gf2_npc_unknown_groza_hack_dolls"] = 1 -- Unknown Doll hack dolls.
+AddConvars["vj_gf2_npc_unknown_groza_switch_weapons"] = 1 -- Unknown Doll switch weapons.
+AddConvars["vj_gf2_npc_unknown_groza_summon_dummy"] = 1 -- Unknown Doll summon dummies.
+
 for k, v in pairs(AddConvars) do
 	if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
 end
@@ -395,6 +398,8 @@ if CLIENT then
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Charolic_Ignite_Target", "vj_gf2_npc_charolic_ignite_target")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Camo", "vj_gf2_npc_unknown_groza_camo")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Hacking", "vj_gf2_npc_unknown_groza_hack_dolls")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Switching_Weapons", "vj_gf2_npc_unknown_groza_switch_weapons")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Summon_Dummy", "vj_gf2_npc_unknown_groza_summon_dummy")
 			else
 				Panel:Help("#vjbase.menu.general.admin.not")
 				Panel:ControlHelp("#vjbase.menu.general.admin.only")

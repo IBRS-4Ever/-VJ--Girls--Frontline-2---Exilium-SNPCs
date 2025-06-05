@@ -1,7 +1,6 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
 ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA","CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA"}
---ENT.Model = {"models/gf2/groza_combat.mdl","models/gf2/robella_combat.mdl","models/gf2/tololo_combat.mdl"}
 ENT.Model = {"models/gf2/groza_combat.mdl","models/gf2/groza_dawn_of_battle.mdl","models/gf2/groza_violet_rain.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_unknown_groza_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_unknown_groza_d")
@@ -16,11 +15,8 @@ ENT.SoundTbl_GrenadeAttack = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_gr
 
 ENT.HasGrenadeAttack = true
 ENT.GrenadeAttackChance = 1
---[[ 
-ENT.HasItemDropsOnDeath = true
-ENT.ItemDropsOnDeathChance = 1
-ENT.ItemDropsOnDeath_EntityList = {"obj_gf2_klukai_grenade"}
- ]]
+ENT.GrenadeAttackEntity = {"obj_gf2_unknown_groza_hack_grenade","obj_gf2_vepley_grenade","obj_gf2_klukai_grenade"}
+
 ENT.Element = "acid"
 ENT.Element_AcidTime = 7
 
@@ -45,8 +41,7 @@ function ENT:OnHalfHealth()
 	self.AnimationSpeed = 2.5
 	self.MeleeAttackDamage = self.MeleeAttackDamage * 2
 
-	self.Element_PoisonDamage = 15
-	self.Element_PoisonTime = 15
+	self.Element_AcidTime = 15
 
 	self.HealthRegenParams = {
 		Enabled = true,
@@ -60,6 +55,7 @@ function ENT:OnHalfHealth()
 
 	self.Phase2 = true
 
+	if !GetConVar("vj_gf2_npc_unknown_groza_summon_dummy"):GetBool() then return end
 	local Pos = self:GetPos()
 	local Vepley = ents.Create("npc_vj_gf2_unknown_groza_dummy")
 	Vepley.Model = {"models/gf2/vepley_combat.mdl","models/gf2/vepley_sparkling_wish.mdl","models/gf2/vepley_summer_echo.mdl"}
@@ -82,9 +78,8 @@ function ENT:OnHalfHealth()
 	Nemesis.AnimationSpeed = 1.5
 	Nemesis.Rappelling = true
 	Nemesis.VJ_NPC_Class = self.VJ_NPC_Class
-	Nemesis.Element = "poison"
-	Nemesis.Element_PoisonDamage = 10
-	Nemesis.Element_PoisonTime = 10
+	Nemesis.Element = "acid"
+	Nemesis.Element_AcidTime = 10
 	Nemesis:Spawn()
 	Nemesis:Give("weapon_vj_gf2_om50")
 	
@@ -165,14 +160,9 @@ function ENT:OnHalfHealth()
 end
 
 function ENT:GF2_CustomOnThink_AiEnabled()
+	if !GetConVar("vj_gf2_npc_unknown_groza_switch_weapons"):GetBool() then return end
 	local Enemy = self:GetEnemy()
 	if !IsValid(Enemy) then return end
-
-	if Enemy.IsGF2SNPC then
-		self.GrenadeAttackEntity = {"obj_gf2_unknown_groza_hack_grenade"}
-	else
-		self.GrenadeAttackEntity = {"obj_gf2_vepley_grenade","obj_gf2_klukai_grenade"}
-	end
 
 	local Dist = Enemy:GetPos():Distance(self:GetPos())
 	if Dist <= 1024 and self:GetActiveWeapon() != "weapon_vj_gf2_vepr_12" then
@@ -185,7 +175,6 @@ function ENT:GF2_CustomOnThink_AiEnabled()
 		self:Give("weapon_vj_gf2_om50")
 		self:SelectWeapon("weapon_vj_gf2_om50")
 	end
-	self.NextWeaponAttackT_Base = CurTime()
 end
 
 function ENT:GF2_CustomOnRemove()

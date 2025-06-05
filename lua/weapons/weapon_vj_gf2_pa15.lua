@@ -18,7 +18,6 @@ SWEP.Primary.ClipSize = 15
 SWEP.Primary.Ammo = "pistol"
 SWEP.NPC_CustomSpread = 0.2
 SWEP.Primary.Sound = "GF2_SNPC.Weapon_PA15.Shot"
-SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_PA15.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
@@ -31,14 +30,5 @@ sound.Add({
 	volume = 1.0,
 	level = 80,
 	pitch = {90, 110},
-	sound = {"weapons/hg/taurus_curve/fire1.wav","weapons/hg/taurus_curve/fire2.wav","weapons/hg/taurus_curve/fire3.wav","weapons/hg/taurus_curve/fire4.wav","weapons/hg/taurus_curve/fire5.wav"}
-})
-
-sound.Add({
-	name = "GF2_SNPC.Weapon_PA15.Shot_Dist",
-	channel = CHAN_AUTO,
-	volume = 1.0,
-	level = 140,
-	pitch = {90, 110},
-	sound = {"weapons/hg/taurus_curve/fire_dist1.wav","weapons/hg/taurus_curve/fire_dist2.wav","weapons/hg/taurus_curve/fire_dist3.wav","weapons/hg/taurus_curve/fire_dist4.wav","weapons/hg/taurus_curve/fire_dist5.wav"}
+	sound = {"weapons/hg/pa15/fire1.wav","weapons/hg/pa15/fire2.wav","weapons/hg/pa15/fire3.wav","weapons/hg/pa15/fire4.wav","weapons/hg/pa15/fire5.wav","weapons/hg/pa15/fire6.wav"}
 })
