@@ -72,7 +72,10 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Medic","npc_vj_gf2_varjager_medic",{"wea
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Warrior","npc_vj_gf2_varjager_warrior",{"weapon_vj_gf2_varjager_axe","weapon_vj_gf2_varjager_mpl40","weapon_vj_gf2_varjager_taiga"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Sniper","npc_vj_gf2_varjager_sniper",{"weapon_vj_gf2_varjager_mosin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Heavy","npc_vj_gf2_varjager_heavy",{"weapon_vj_rpg","weapon_vj_spas12"},vCat)
+VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCat)
+VJ.AddNPC("#vj_gf2_snpcs.Golyat_Red","npc_vj_gf2_golyat_red",vCat)
+VJ.AddNPC("#vj_gf2_snpcs.Golyat_Football","npc_vj_gf2_golyat_football",vCat)
 
 -- Weapons
 VJ.AddNPCWeapon("OM 50", "weapon_vj_gf2_om50", vCat)
@@ -230,7 +233,7 @@ util.PrecacheModel("models/prop/gfl2_colphne_medkit.mdl")
 util.PrecacheModel("models/prop/gfl2_colphne_syringe.mdl")
 util.PrecacheModel("models/prop/gfl2_mechty_energy_drink.mdl")
 util.PrecacheModel("models/bandits/varyag_shield.mdl")
-util.PrecacheModel("models/gf2/golyat_red.mdl")
+util.PrecacheModel("models/gf2/golyat.mdl")
 
 -- ConVars --
 VJ.AddConVar("vj_gf2_varjager_h",250)
