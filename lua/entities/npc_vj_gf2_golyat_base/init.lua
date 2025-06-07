@@ -18,6 +18,11 @@ ENT.MeleeAttackAngleRadius = 180 -- What is the attack angle radius? | 100 = In 
 ENT.MeleeAttackDamageDistance = 250 -- How far does the damage go? | false = Auto calculate on initialize based on its collision bounds
 ENT.MeleeAttackDamageAngleRadius = 180
 
+ENT.FootstepSoundTimerWalk = 0.45
+ENT.FootstepSoundTimerRun = 0.3
+
+ENT.SoundTbl_FootStep = {"sfx/golyat/footstep1.wav", "sfx/golyat/footstep2.wav", "sfx/golyat/footstep3.wav", "sfx/golyat/footstep4.wav", "sfx/golyat/footstep5.wav"}
+
 ENT.GolyatSkin = 0
 
 function ENT:CustomInitialize()
