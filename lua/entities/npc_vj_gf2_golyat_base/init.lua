@@ -21,7 +21,10 @@ ENT.MeleeAttackDamageAngleRadius = 180
 ENT.FootstepSoundTimerWalk = 0.45
 ENT.FootstepSoundTimerRun = 0.3
 
+ENT.PropInteraction = false
+
 ENT.SoundTbl_FootStep = {"sfx/golyat/footstep1.wav", "sfx/golyat/footstep2.wav", "sfx/golyat/footstep3.wav", "sfx/golyat/footstep4.wav", "sfx/golyat/footstep5.wav"}
+ENT.SoundTbl_Death = {"sfx/golyat/explode1.wav","sfx/golyat/explode2.wav","sfx/golyat/explode3.wav"}
 
 ENT.GolyatSkin = 0
 
@@ -38,23 +41,6 @@ function ENT:CustomOnKilled()
 	effectData:SetOrigin(self:GetPos())
 	util.Effect("Explosion", effectData)
 
-	for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.MeleeAttackDamageDistance) ) do
-		if ent == self or ent:GetClass() == "obj_vj_bullseye" then continue end
-		if ent:IsNPC() or ent:IsPlayer() and ent:Alive() then
-			local DMG = DamageInfo()
-			DMG:SetDamage( self.MeleeAttackDamage )
-			DMG:SetAttacker( self )
-			DMG:SetInflictor( self )
-			DMG:SetDamageType( self.MeleeAttackDamageType )
-			DMG:SetDamageForce(((ent:GetPos() + ent:OBBCenter()) - self:GetPos()) * 250)
-			ent:TakeDamageInfo( DMG )
-		end
-		if ent:GetClass() == "prop_ragdoll" or ent:GetClass() == "prop_physics" then
-			local phys = ent:GetPhysicsObject()
-			if IsValid(phys) then
-				phys:ApplyForceCenter(((ent:GetPos() + ent:OBBCenter()) - self:GetPos()) * 250)
-			end
-		end
-	end
+	VJ.ApplyRadiusDamage(self, self, self:GetPos(), self.MeleeAttackDamageDistance, self.MeleeAttackDamage, self.MeleeAttackDamageType, !GetConVar("vj_gf2_npc_golyat_damage_friendly"):GetBool(), true, {Force = 250})
 	self:Remove()
 end

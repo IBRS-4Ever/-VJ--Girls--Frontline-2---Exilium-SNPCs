@@ -357,6 +357,7 @@ AddConvars["vj_gf2_npc_unknown_groza_camo"] = 1 -- Unknown Doll have camo.
 AddConvars["vj_gf2_npc_unknown_groza_hack_dolls"] = 1 -- Unknown Doll hack dolls.
 AddConvars["vj_gf2_npc_unknown_groza_switch_weapons"] = 1 -- Unknown Doll switch weapons.
 AddConvars["vj_gf2_npc_unknown_groza_summon_dummy"] = 1 -- Unknown Doll summon dummies.
+AddConvars["vj_gf2_npc_golyat_damage_friendly"] = 1 -- Golyat deals damage to all NPCs.
 
 for k, v in pairs(AddConvars) do
 	if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
@@ -405,6 +406,7 @@ if CLIENT then
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Hacking", "vj_gf2_npc_unknown_groza_hack_dolls")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Switching_Weapons", "vj_gf2_npc_unknown_groza_switch_weapons")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Summon_Dummy", "vj_gf2_npc_unknown_groza_summon_dummy")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Golyat_Damage_Friendly", "vj_gf2_npc_golyat_damage_friendly")
 			else
 				Panel:Help("#vjbase.menu.general.admin.not")
 				Panel:ControlHelp("#vjbase.menu.general.admin.only")
