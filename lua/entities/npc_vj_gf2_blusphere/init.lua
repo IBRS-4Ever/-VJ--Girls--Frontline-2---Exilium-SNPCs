@@ -1,7 +1,7 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
 ENT.Model = {"models/gf2/blusphere.mdl"}
-ENT.StartHealth = 500
+ENT.StartHealth = 1000
 ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_E"}
 ENT.Bleeds = false 
 
@@ -17,8 +17,8 @@ ENT.AnimTbl_RangeAttack = false
 ENT.RangeAttackMaxDistance = 2500
 ENT.RangeAttackMinDistance = 1
 ENT.TimeUntilRangeAttackProjectileRelease = 0.1
-ENT.RangeAttackReps = 3
-ENT.NextRangeAttackTime = 0.5
+ENT.RangeAttackReps = 5
+ENT.NextRangeAttackTime = 0
 ENT.NextAnyAttackTime_Range = 0.5
 
 ENT.SoundTbl_Idle = {"vo/jp/unknown_groza/alert1.wav","vo/jp/unknown_groza/alert2.wav","vo/jp/unknown_groza/alert3.wav","vo/jp/unknown_groza/alert4.wav"}
@@ -47,13 +47,14 @@ function ENT:OnRangeAttackExecute(status, enemy, projectile)
 			Dir = (enemy:GetPos() + enemy:OBBCenter()) - spawnPos,
 			Spread = 0.001,
 			Tracer = 1,
-			TracerName = "Tracer",
-			Force = 5,
-			Damage = 3,
-			AmmoType = "SMG1"
+			TracerName = "AR2Tracer",
+			Force = 1,
+			Damage = 25,
+			AmmoType = "AR2"
 		})
 		
-		--VJ.EmitSound(self, "blusphere/single.wav", 90, math.random(100, 110))
+		VJ.EmitSound(self, "NPC_Sniper.FireBullet", 90, math.random(100, 110))
+		ParticleEffectAttach("vj_rifle_full", PATTACH_POINT_FOLLOW, self, 2)
 		timer.Simple(0.2, function() if IsValid(self) then self:StopParticles() end end)
 		
 		local dynLight = ents.Create("light_dynamic")
