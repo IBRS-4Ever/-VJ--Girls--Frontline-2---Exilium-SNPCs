@@ -73,9 +73,13 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Warrior","npc_vj_gf2_varjager_warrior",{
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Sniper","npc_vj_gf2_varjager_sniper",{"weapon_vj_gf2_varjager_mosin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Heavy","npc_vj_gf2_varjager_heavy",{"weapon_vj_rpg","weapon_vj_spas12"},vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)
-VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCat)
+VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Red","npc_vj_gf2_golyat_red",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Football","npc_vj_gf2_golyat_football",vCat)
+VJ.AddNPC("#vj_gf2_snpcs.Golyat_Fire","npc_vj_gf2_golyat_fire",vCatUnf)
+VJ.AddNPC("#vj_gf2_snpcs.Golyat_Ice","npc_vj_gf2_golyat_ice",vCatUnf)
+VJ.AddNPC("#vj_gf2_snpcs.Golyat_Tank","npc_vj_gf2_golyat_tank",vCatUnf)
+VJ.AddNPC("#vj_gf2_snpcs.Blusphere", "npc_vj_gf2_blusphere",vCatUnf)
 
 -- Weapons
 VJ.AddNPCWeapon("OM 50", "weapon_vj_gf2_om50", vCat)

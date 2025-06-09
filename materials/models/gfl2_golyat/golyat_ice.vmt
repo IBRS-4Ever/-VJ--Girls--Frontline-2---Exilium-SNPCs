@@ -1,0 +1,31 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/gfl2_golyat/golyat_ice_d"
+	"$bumpmap" "models/gfl2_golyat/golyat_n"
+	"$nocull" "1"
+   	"$halflambert" "1"
+	"$nodecal" "1"
+
+	"$selfillum" "1"
+	"$selfillummask" "models/gfl2_golyat/golyat_glow"
+	"$selfillumtint" "[1 1 1]"
+	
+	"$phong" "1"
+	"$phongboost" "1.2"
+	//"$phongexponent" "60"
+	"$phongfresnelranges"	"[2 4 6]"
+	"$phongexponenttexture" "models/gfl2_golyat/golyat_e"
+	
+	"$envmap" 					 "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[0.02 0.02 0.02]"		
+	//"$phongtint" 			"[0.5 0.5 0.5]"			
+	"$PhongAlbedoTint" "1"		
+	
+	"$ambientocclusion" "1"
+
+	"$rimlight"               "1"
+	"$rimlightexponent"       "250"
+	"$rimlightboost"          "1"	
+	"$rimmask" "1"
+}

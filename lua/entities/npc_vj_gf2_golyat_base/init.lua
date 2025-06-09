@@ -18,8 +18,8 @@ ENT.MeleeAttackAngleRadius = 180 -- What is the attack angle radius? | 100 = In 
 ENT.MeleeAttackDamageDistance = 250 -- How far does the damage go? | false = Auto calculate on initialize based on its collision bounds
 ENT.MeleeAttackDamageAngleRadius = 180
 
-ENT.FootstepSoundTimerWalk = 0.45
-ENT.FootstepSoundTimerRun = 0.3
+ENT.FootstepSoundTimerWalk = 0.4
+ENT.FootstepSoundTimerRun = 0.2
 
 ENT.PropInteraction = false
 
