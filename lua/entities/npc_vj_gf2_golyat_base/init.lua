@@ -7,7 +7,7 @@ ENT.Bleeds = false
 
 ENT.HasDeathCorpse = false
 
-ENT.HullType = HULL_TINY
+ENT.HullType = HULL_MEDIUM
 ENT.AnimTbl_MeleeAttack = ACT_MELEE_ATTACK1
 
 ENT.MeleeAttackDamage = 500

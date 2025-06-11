@@ -2,6 +2,7 @@ AddCSLuaFile("shared.lua")
 include('shared.lua')
 
 --ENT.IsGF2SNPC = true
+ENT.DropWeaponOnDeath = false
 ENT.Bleeds = true
 ENT.BloodColor = "red"
 ENT.HasBloodParticle = true

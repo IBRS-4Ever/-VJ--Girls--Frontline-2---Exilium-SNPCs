@@ -1,5 +1,6 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
+ENT.DropWeaponOnDeath = false
 ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA","CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_unknown_groza_dummy_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_unknown_groza_dummy_d")
