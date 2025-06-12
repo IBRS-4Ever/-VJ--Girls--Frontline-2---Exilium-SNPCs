@@ -72,6 +72,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Medic","npc_vj_gf2_varjager_medic",{"wea
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Warrior","npc_vj_gf2_varjager_warrior",{"weapon_vj_gf2_varjager_axe","weapon_vj_gf2_varjager_mpl40","weapon_vj_gf2_varjager_taiga"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Sniper","npc_vj_gf2_varjager_sniper",{"weapon_vj_gf2_varjager_mosin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Heavy","npc_vj_gf2_varjager_heavy",{"weapon_vj_rpg","weapon_vj_spas12"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans","npc_vj_gf2_sextans",{"weapon_vj_gf2_lose_sextans_cannon"},vCatUnf)
+
 VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Red","npc_vj_gf2_golyat_red",vCat)
@@ -119,6 +121,8 @@ VJ.AddNPCWeapon("Galil ARM", "weapon_vj_gf2_galil_arm", vCat)
 VJ.AddNPCWeapon("G36K", "weapon_vj_gf2_g36k", vCat)
 VJ.AddNPCWeapon("G36", "weapon_vj_gf2_g36", vCat)
 VJ.AddNPCWeapon("PA-15", "weapon_vj_gf2_pa15", vCat)
+VJ.AddNPCWeapon("AA-12", "weapon_vj_gf2_aa12", vCat)
+VJ.AddNPCWeapon("Plasma Cannon", "weapon_vj_gf2_lose_sextans_cannon", vCat)
 
 VJ.AddNPCWeapon("AK-101", "weapon_vj_gf2_varjager_ak101", vCat)
 VJ.AddNPCWeapon("AK-74", "weapon_vj_gf2_varjager_ak74", vCat)
@@ -195,7 +199,10 @@ util.PrecacheModel("models/gf2/charolic_tactical.mdl")
 util.PrecacheModel("models/gf2/florence_combat.mdl")
 util.PrecacheModel("models/gf2/florence_marvelous_yam_pastry.mdl")
 util.PrecacheModel("models/bandits/varyag.mdl")
-	
+util.PrecacheModel("models/gf2/golyat.mdl")
+util.PrecacheModel("models/gf2/blusphere.mdl")
+util.PrecacheModel("models/gf2/sextans_combat.mdl")
+
 -- Weapon Models
 util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
 util.PrecacheModel("models/weapons/w_tololo_ak_alfa.mdl")
@@ -222,6 +229,7 @@ util.PrecacheModel("models/weapons/w_sharkry_xcr.mdl")
 util.PrecacheModel("models/weapons/w_centaureissi_g36.mdl")
 util.PrecacheModel("models/weapons/w_dusevnyj_ksvk.mdl")
 util.PrecacheModel("models/weapons/w_florence_pa-15.mdl")
+util.PrecacheModel("models/weapons/w_lose_sextans_cannon.mdl")
 
 -- Grenade Models
 util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -237,7 +245,6 @@ util.PrecacheModel("models/prop/gfl2_colphne_medkit.mdl")
 util.PrecacheModel("models/prop/gfl2_colphne_syringe.mdl")
 util.PrecacheModel("models/prop/gfl2_mechty_energy_drink.mdl")
 util.PrecacheModel("models/bandits/varyag_shield.mdl")
-util.PrecacheModel("models/gf2/golyat.mdl")
 
 -- ConVars --
 VJ.AddConVar("vj_gf2_varjager_h",250)
@@ -301,6 +308,10 @@ VJ.AddConVar("vj_gf2_charolic_h",350)
 VJ.AddConVar("vj_gf2_charolic_d",75)
 VJ.AddConVar("vj_gf2_florence_h",225)
 VJ.AddConVar("vj_gf2_florence_d",15)
+VJ.AddConVar("vj_gf2_sextans_h",1500)
+VJ.AddConVar("vj_gf2_sextans_d",100)
+VJ.AddConVar("vj_gf2_lose_sextans_h",3000)
+VJ.AddConVar("vj_gf2_lose_sextans_d",200)
 
 VJ.AddConVar("vj_gf2_om50_d",150)
 VJ.AddConVar("vj_gf2_ak_alfa_d",40)
@@ -328,6 +339,7 @@ VJ.AddConVar("vj_gf2_xcr_d",40)
 VJ.AddConVar("vj_gf2_g36_d",30)
 VJ.AddConVar("vj_gf2_ksvk_d",250)
 VJ.AddConVar("vj_gf2_pa15_d",15)
+VJ.AddConVar("vj_gf2_lose_sextans_cannon_d",250)
 
 -- Menu --
 local AddConvars = {}
