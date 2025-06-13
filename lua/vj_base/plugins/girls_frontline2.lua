@@ -73,6 +73,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Warrior","npc_vj_gf2_varjager_warrior",{
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Sniper","npc_vj_gf2_varjager_sniper",{"weapon_vj_gf2_varjager_mosin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Heavy","npc_vj_gf2_varjager_heavy",{"weapon_vj_rpg","weapon_vj_spas12"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans","npc_vj_gf2_sextans",{"weapon_vj_gf2_lose_sextans_cannon"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lose_Sextans","npc_vj_gf2_lose_sextans",{"weapon_vj_gf2_lose_sextans_cannon"},vCatUnf)
 
 VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCatUnf)
@@ -202,6 +203,7 @@ util.PrecacheModel("models/bandits/varyag.mdl")
 util.PrecacheModel("models/gf2/golyat.mdl")
 util.PrecacheModel("models/gf2/blusphere.mdl")
 util.PrecacheModel("models/gf2/sextans_combat.mdl")
+util.PrecacheModel("models/gf2/lose_sextans_combat.mdl")
 
 -- Weapon Models
 util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")

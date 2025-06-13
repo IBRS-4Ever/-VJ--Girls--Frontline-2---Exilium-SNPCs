@@ -36,5 +36,5 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 	ball:SetOwner(self.Owner)
 	ball:Fire("explode","", 0)
 	
-	VJ.ApplyRadiusDamage(self.Owner, self, HitPos, 250, self.Primary.Damage, DMG_DISSOLVE, false, true, {Force = 250})
+	VJ.ApplyRadiusDamage(self.Owner, self, HitPos, 500, self.Primary.Damage, DMG_DISSOLVE, false, true, {Force = 250})
 end

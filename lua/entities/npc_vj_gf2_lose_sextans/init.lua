@@ -1,7 +1,7 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
 ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_E","CLASS_GIRLS_FRONTLINE_E"}
-ENT.Model = {"models/gf2/sextans_combat.mdl"}
+ENT.Model = {"models/gf2/lose_sextans_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_lose_sextans_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_lose_sextans_d")
 
