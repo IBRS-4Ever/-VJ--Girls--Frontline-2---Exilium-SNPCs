@@ -10,7 +10,7 @@ SWEP.WorldModel = "models/weapons/w_lose_sextans_cannon.mdl"
 SWEP.HoldType = "rpg"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 3
-SWEP.NPC_TimeUntilFire = 1.5
+SWEP.NPC_TimeUntilFire = 1
 SWEP.NPC_ReloadSound = {"weapons/rf/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
