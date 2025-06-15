@@ -22,6 +22,7 @@ function SWEP:GF2_CustomOnInitialize() end
 function SWEP:CustomOnInitialize() 
 	DropMagazine = GetConVar("vj_gf2_drop_magazings"):GetBool()
 	MagazineRemoveTimer = GetConVar("vj_gf2_magazingremovetime"):GetInt()
+	self:SetSkin( math.random( 0, self:SkinCount() - 1 ) )
 	if self.MagazingModel then util.PrecacheModel( self.MagazingModel ) end
 	if GetConVar("vj_gf2_draw_bullets"):GetBool() then
 		if self.Owner.Element == "water" then

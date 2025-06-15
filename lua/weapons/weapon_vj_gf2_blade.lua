@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 if (!file.Exists("autorun/vj_base_autorun.lua","LUA")) then return end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.Base = "weapon_vj_base"
+SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "Blade"
 SWEP.MadeForNPCsOnly = true
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
