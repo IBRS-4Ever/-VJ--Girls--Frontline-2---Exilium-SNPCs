@@ -72,7 +72,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Medic","npc_vj_gf2_varjager_medic",{"wea
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Warrior","npc_vj_gf2_varjager_warrior",{"weapon_vj_gf2_varjager_axe","weapon_vj_gf2_varjager_mpl40","weapon_vj_gf2_varjager_taiga"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Sniper","npc_vj_gf2_varjager_sniper",{"weapon_vj_gf2_varjager_mosin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Heavy","npc_vj_gf2_varjager_heavy",{"weapon_vj_rpg","weapon_vj_spas12"},vCat)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans","npc_vj_gf2_sextans",{"weapon_vj_gf2_lose_sextans_cannon"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans","npc_vj_gf2_sextans",{"weapon_vj_gf2_sextans_revolver","weapon_vj_gf2_sextans_flintlock"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lose_Sextans","npc_vj_gf2_lose_sextans",{"weapon_vj_gf2_lose_sextans_cannon"},vCatUnf)
 
 VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)

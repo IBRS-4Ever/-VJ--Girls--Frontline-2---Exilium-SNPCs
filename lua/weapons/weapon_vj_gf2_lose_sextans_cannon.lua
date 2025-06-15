@@ -7,7 +7,7 @@ SWEP.PrintName = "Plasma Cannon"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_lose_sextans_cannon.mdl"
-SWEP.HoldType = "ar2"
+SWEP.HoldType = "rpg"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 3
 SWEP.NPC_TimeUntilFire = 1.5
