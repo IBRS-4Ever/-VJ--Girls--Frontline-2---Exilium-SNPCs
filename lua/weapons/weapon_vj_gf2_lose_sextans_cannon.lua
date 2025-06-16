@@ -18,9 +18,10 @@ SWEP.Primary.Damage = GetConVarNumber("vj_gf2_lose_sextans_cannon_d")
 SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 10
 SWEP.Primary.Ammo = "ar2"
+SWEP.NPC_StandingOnly = true
 SWEP.NPC_CustomSpread = 0
-SWEP.NPC_BeforeFireSound = {"Weapon_CombineGuard.Special1"}
-SWEP.Primary.Sound = "VJ.Weapon_AR2.Secondary"
+SWEP.NPC_BeforeFireSound = {"NPC_Strider.Charge"}
+SWEP.Primary.Sound = "NPC_Strider.Shoot"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 
 SWEP.PrimaryEffects_SpawnShells = false
