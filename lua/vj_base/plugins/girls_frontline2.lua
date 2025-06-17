@@ -83,6 +83,7 @@ VJ.AddNPC("#vj_gf2_snpcs.Golyat_Fire","npc_vj_gf2_golyat_fire",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Ice","npc_vj_gf2_golyat_ice",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Tank","npc_vj_gf2_golyat_tank",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Blusphere", "npc_vj_gf2_blusphere",vCatUnf)
+VJ.AddNPC("#vj_gf2_snpcs.Andoris_Turret", "npc_vj_gf2_andoris_turret",vCatUnf)
 
 -- Weapons
 VJ.AddNPCWeapon("OM 50", "weapon_vj_gf2_om50", vCat)
