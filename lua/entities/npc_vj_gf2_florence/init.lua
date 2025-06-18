@@ -1,8 +1,10 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.Model = {"models/gf2/florence_combat.mdl"}
-ENT.StartHealth = GetConVarNumber("vj_gf2_florence_h")
-ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_florence_d")
+local Name = "florence"
+local SndPrefix = "vo/jp/"..Name.."/"
+ENT.Model = {"models/gf2/"..Name.."_combat.mdl"}
+ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
+ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 ENT.AnimTbl_MeleeAttack = "meleeattack01"
 
 ENT.HealAllies = true 
@@ -12,13 +14,13 @@ ENT.HealDelay = 1
 
 ENT.Element = "water"
 
-ENT.SoundTbl_Idle = {"vo/jp/florence/idle1.wav","vo/jp/florence/idle2.wav","vo/jp/florence/idle3.wav","vo/jp/florence/idle4.wav","vo/jp/florence/idle5.wav"}
-ENT.SoundTbl_OnPlayerSight = {"vo/jp/florence/player_sight1.wav","vo/jp/florence/player_sight2.wav","vo/jp/florence/player_sight3.wav","vo/jp/florence/player_sight4.wav","vo/jp/florence/player_sight5.wav","vo/jp/florence/player_sight6.wav","vo/jp/florence/player_sight7.wav","vo/jp/florence/player_sight8.wav"}
-ENT.SoundTbl_Alert = {"vo/jp/florence/alert1.wav","vo/jp/florence/alert2.wav","vo/jp/florence/alert3.wav","vo/jp/florence/alert4.wav"}
-ENT.SoundTbl_Pain = {"vo/jp/florence/hit1.wav","vo/jp/florence/hit2.wav","vo/jp/florence/hit3.wav","vo/jp/florence/hit4.wav","vo/jp/florence/hit5.wav","vo/jp/florence/hit6.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"vo/jp/florence/killed_enemy1.wav","vo/jp/florence/killed_enemy2.wav","vo/jp/florence/killed_enemy3.wav"}
-ENT.SoundTbl_FollowPlayer = {"vo/jp/florence/follow1.wav","vo/jp/florence/follow2.wav","vo/jp/florence/follow3.wav","vo/jp/florence/follow4.wav","vo/jp/florence/follow5.wav"}
-ENT.SoundTbl_UnFollowPlayer = {"vo/jp/florence/unfollow1.wav","vo/jp/florence/unfollow2.wav","vo/jp/florence/unfollow3.wav"}
-ENT.SoundTbl_Death = {"vo/jp/florence/die1.wav","vo/jp/florence/die2.wav","vo/jp/florence/die3.wav","vo/jp/florence/hit6.wav"}
+ENT.SoundTbl_Idle = {SndPrefix.."idle1.wav",SndPrefix.."idle2.wav",SndPrefix.."idle3.wav",SndPrefix.."idle4.wav",SndPrefix.."idle5.wav"}
+ENT.SoundTbl_OnPlayerSight = {SndPrefix.."player_sight1.wav",SndPrefix.."player_sight2.wav",SndPrefix.."player_sight3.wav",SndPrefix.."player_sight4.wav",SndPrefix.."player_sight5.wav",SndPrefix.."player_sight6.wav",SndPrefix.."player_sight7.wav",SndPrefix.."player_sight8.wav"}
+ENT.SoundTbl_Alert = {SndPrefix.."alert1.wav",SndPrefix.."alert2.wav",SndPrefix.."alert3.wav",SndPrefix.."alert4.wav"}
+ENT.SoundTbl_Pain = {SndPrefix.."hit1.wav",SndPrefix.."hit2.wav",SndPrefix.."hit3.wav",SndPrefix.."hit4.wav",SndPrefix.."hit5.wav",SndPrefix.."hit6.wav"}
+ENT.SoundTbl_OnKilledEnemy = {SndPrefix.."killed_enemy1.wav",SndPrefix.."killed_enemy2.wav",SndPrefix.."killed_enemy3.wav"}
+ENT.SoundTbl_FollowPlayer = {SndPrefix.."follow1.wav",SndPrefix.."follow2.wav",SndPrefix.."follow3.wav",SndPrefix.."follow4.wav",SndPrefix.."follow5.wav"}
+ENT.SoundTbl_UnFollowPlayer = {SndPrefix.."unfollow1.wav",SndPrefix.."unfollow2.wav",SndPrefix.."unfollow3.wav"}
+ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."die2.wav",SndPrefix.."die3.wav",SndPrefix.."hit6.wav"}
 
 ENT.AnimationSpeed = 1.25

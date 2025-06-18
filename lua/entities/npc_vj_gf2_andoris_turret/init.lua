@@ -49,7 +49,7 @@ function ENT:OnRangeAttackExecute(status, enemy, projectile)
 						if self:CheckRelationship(ent) == D_HT then
 							local DmgInfo = DamageInfo()
 							DmgInfo:SetDamage( 5 * GetConVar("vj_gf2_npc_element_electric_damage_multipler"):GetFloat()  )
-							DmgInfo:SetAttacker( self )
+							if self.Owner then DmgInfo:SetAttacker( self.Owner ) else DmgInfo:SetAttacker( self ) end
 							DmgInfo:SetInflictor( self )
 							DmgInfo:SetDamageType( DMG_PLASMA ) 
 				

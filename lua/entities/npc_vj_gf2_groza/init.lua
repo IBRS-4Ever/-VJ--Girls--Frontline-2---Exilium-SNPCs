@@ -1,19 +1,21 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.Model = {"models/gf2/groza_combat.mdl"}
-ENT.StartHealth = GetConVarNumber("vj_gf2_groza_h")
-ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_groza_d")
+local Name = "groza"
+local SndPrefix = "vo/jp/"..Name.."/"
+ENT.Model = {"models/gf2/"..Name.."_combat.mdl"}
+ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
+ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
-ENT.SoundTbl_Idle = {"vo/jp/groza/idle1.wav","vo/jp/groza/idle2.wav","vo/jp/groza/idle3.wav","vo/jp/groza/idle4.wav","vo/jp/groza/idle5.wav","vo/jp/groza/idle6.wav","vo/jp/groza/idle7.wav","vo/jp/groza/idle8.wav","vo/jp/groza/idle9.wav","vo/jp/groza/idle10.wav"}
-ENT.SoundTbl_OnPlayerSight = {"vo/jp/groza/player_sight1.wav","vo/jp/groza/player_sight2.wav","vo/jp/groza/player_sight3.wav","vo/jp/groza/player_sight4.wav","vo/jp/groza/player_sight5.wav","vo/jp/groza/player_sight6.wav","vo/jp/groza/player_sight7.wav","vo/jp/groza/player_sight8.wav","vo/jp/groza/player_sight9.wav","vo/jp/groza/player_sight10.wav","vo/jp/groza/player_sight11.wav","vo/jp/groza/player_sight12.wav","vo/jp/groza/player_sight13.wav"}
-ENT.SoundTbl_Alert = {"vo/jp/groza/alert1.wav","vo/jp/groza/alert2.wav","vo/jp/groza/alert3.wav","vo/jp/groza/alert4.wav","vo/jp/groza/alert5.wav","vo/jp/groza/alert6.wav","vo/jp/groza/alert7.wav"}
-ENT.SoundTbl_Pain = {"vo/jp/groza/hit1.wav","vo/jp/groza/hit2.wav","vo/jp/groza/hit3.wav","vo/jp/groza/hit4.wav","vo/jp/groza/hit5.wav","vo/jp/groza/hit6.wav","vo/jp/groza/hit7.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"vo/jp/groza/killed_enemy1.wav","vo/jp/groza/killed_enemy2.wav","vo/jp/groza/killed_enemy3.wav"}
-ENT.SoundTbl_FollowPlayer = {"vo/jp/groza/follow1.wav","vo/jp/groza/follow2.wav","vo/jp/groza/follow3.wav","vo/jp/groza/follow4.wav"}
-ENT.SoundTbl_UnFollowPlayer = {"vo/jp/groza/unfollow1.wav"}
-ENT.SoundTbl_Death = {"vo/jp/groza/die1.wav","vo/jp/groza/die2.wav"}
-ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/groza/get_heal1.wav","vo/jp/groza/get_heal2.wav","vo/jp/groza/get_heal3.wav","vo/jp/groza/get_heal4.wav","vo/jp/groza/get_heal5.wav"}
-ENT.SoundTbl_GrenadeAttack = {"vo/jp/groza/grenade_attack1.wav","vo/jp/groza/grenade_attack2.wav"}
+ENT.SoundTbl_Idle = {SndPrefix.."idle1.wav",SndPrefix.."idle2.wav",SndPrefix.."idle3.wav",SndPrefix.."idle4.wav",SndPrefix.."idle5.wav",SndPrefix.."idle6.wav",SndPrefix.."idle7.wav",SndPrefix.."idle8.wav",SndPrefix.."idle9.wav",SndPrefix.."idle10.wav"}
+ENT.SoundTbl_OnPlayerSight = {SndPrefix.."player_sight1.wav",SndPrefix.."player_sight2.wav",SndPrefix.."player_sight3.wav",SndPrefix.."player_sight4.wav",SndPrefix.."player_sight5.wav",SndPrefix.."player_sight6.wav",SndPrefix.."player_sight7.wav",SndPrefix.."player_sight8.wav",SndPrefix.."player_sight9.wav",SndPrefix.."player_sight10.wav",SndPrefix.."player_sight11.wav",SndPrefix.."player_sight12.wav",SndPrefix.."player_sight13.wav"}
+ENT.SoundTbl_Alert = {SndPrefix.."alert1.wav",SndPrefix.."alert2.wav",SndPrefix.."alert3.wav",SndPrefix.."alert4.wav",SndPrefix.."alert5.wav",SndPrefix.."alert6.wav",SndPrefix.."alert7.wav"}
+ENT.SoundTbl_Pain = {SndPrefix.."hit1.wav",SndPrefix.."hit2.wav",SndPrefix.."hit3.wav",SndPrefix.."hit4.wav",SndPrefix.."hit5.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav"}
+ENT.SoundTbl_OnKilledEnemy = {SndPrefix.."killed_enemy1.wav",SndPrefix.."killed_enemy2.wav",SndPrefix.."killed_enemy3.wav"}
+ENT.SoundTbl_FollowPlayer = {SndPrefix.."follow1.wav",SndPrefix.."follow2.wav",SndPrefix.."follow3.wav",SndPrefix.."follow4.wav"}
+ENT.SoundTbl_UnFollowPlayer = {SndPrefix.."unfollow1.wav"}
+ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."die2.wav"}
+ENT.SoundTbl_MedicReceiveHeal = {SndPrefix.."get_heal1.wav",SndPrefix.."get_heal2.wav",SndPrefix.."get_heal3.wav",SndPrefix.."get_heal4.wav",SndPrefix.."get_heal5.wav"}
+ENT.SoundTbl_GrenadeAttack = {SndPrefix.."grenade_attack1.wav",SndPrefix.."grenade_attack2.wav"}
 
 ENT.Shield = 50
 ENT.ShieldRadius = 100

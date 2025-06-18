@@ -1,8 +1,10 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.Model = {"models/gf2/centaureissi_combat.mdl"}
-ENT.StartHealth = GetConVarNumber("vj_gf2_centaureissi_h")
-ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_centaureissi_d")
+local Name = "centaureissi"
+local SndPrefix = "vo/jp/"..Name.."/"
+ENT.Model = {"models/gf2/"..Name.."_combat.mdl"}
+ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
+ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
 ENT.HealAllies = true 
 ENT.HealAmount = 50
@@ -11,12 +13,12 @@ ENT.HealDelay = 1
 ENT.Element = "fire"
 ENT.Element_FireIgniteTime = 5
 
-ENT.SoundTbl_Idle = {"vo/jp/centaureissi/idle1.wav","vo/jp/centaureissi/idle2.wav","vo/jp/centaureissi/idle3.wav","vo/jp/centaureissi/idle4.wav","vo/jp/centaureissi/idle5.wav","vo/jp/centaureissi/idle6.wav","vo/jp/centaureissi/idle7.wav","vo/jp/centaureissi/idle8.wav","vo/jp/centaureissi/idle9.wav","vo/jp/centaureissi/idle10.wav"}
-ENT.SoundTbl_OnPlayerSight = {"vo/jp/centaureissi/player_sight1.wav","vo/jp/centaureissi/player_sight2.wav","vo/jp/centaureissi/player_sight3.wav","vo/jp/centaureissi/player_sight4.wav","vo/jp/centaureissi/player_sight5.wav","vo/jp/centaureissi/player_sight6.wav","vo/jp/centaureissi/player_sight7.wav","vo/jp/centaureissi/player_sight8.wav","vo/jp/centaureissi/player_sight9.wav","vo/jp/centaureissi/player_sight10.wav","vo/jp/centaureissi/player_sight11.wav","vo/jp/centaureissi/player_sight12.wav","vo/jp/centaureissi/player_sight13.wav","vo/jp/centaureissi/player_sight14.wav"}
-ENT.SoundTbl_Alert = {"vo/jp/centaureissi/alert1.wav","vo/jp/centaureissi/alert2.wav"}
-ENT.SoundTbl_Pain = {"vo/jp/centaureissi/hit1.wav","vo/jp/centaureissi/hit2.wav","vo/jp/centaureissi/hit3.wav","vo/jp/centaureissi/hit4.wav","vo/jp/centaureissi/hit5.wav","vo/jp/centaureissi/hit6.wav","vo/jp/centaureissi/hit7.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"vo/jp/centaureissi/killed_enemy1.wav","vo/jp/centaureissi/killed_enemy2.wav","vo/jp/centaureissi/killed_enemy3.wav"}
-ENT.SoundTbl_FollowPlayer = {"vo/jp/centaureissi/follow1.wav","vo/jp/centaureissi/follow2.wav","vo/jp/centaureissi/follow3.wav"}
-ENT.SoundTbl_UnFollowPlayer = {"vo/jp/centaureissi/unfollow1.wav","vo/jp/centaureissi/unfollow2.wav"}
-ENT.SoundTbl_Death = {"vo/jp/centaureissi/die1.wav","vo/jp/centaureissi/hit6.wav","vo/jp/centaureissi/hit7.wav"}
---ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/centaureissi/get_heal1.wav","vo/jp/centaureissi/get_heal2.wav","vo/jp/centaureissi/get_heal3.wav","vo/jp/centaureissi/get_heal4.wav","vo/jp/centaureissi/get_heal5.wav"}
+ENT.SoundTbl_Idle = {SndPrefix.."idle1.wav",SndPrefix.."idle2.wav",SndPrefix.."idle3.wav",SndPrefix.."idle4.wav",SndPrefix.."idle5.wav",SndPrefix.."idle6.wav",SndPrefix.."idle7.wav",SndPrefix.."idle8.wav",SndPrefix.."idle9.wav",SndPrefix.."idle10.wav"}
+ENT.SoundTbl_OnPlayerSight = {SndPrefix.."player_sight1.wav",SndPrefix.."player_sight2.wav",SndPrefix.."player_sight3.wav",SndPrefix.."player_sight4.wav",SndPrefix.."player_sight5.wav",SndPrefix.."player_sight6.wav",SndPrefix.."player_sight7.wav",SndPrefix.."player_sight8.wav",SndPrefix.."player_sight9.wav",SndPrefix.."player_sight10.wav",SndPrefix.."player_sight11.wav",SndPrefix.."player_sight12.wav",SndPrefix.."player_sight13.wav",SndPrefix.."player_sight14.wav"}
+ENT.SoundTbl_Alert = {SndPrefix.."alert1.wav",SndPrefix.."alert2.wav"}
+ENT.SoundTbl_Pain = {SndPrefix.."hit1.wav",SndPrefix.."hit2.wav",SndPrefix.."hit3.wav",SndPrefix.."hit4.wav",SndPrefix.."hit5.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav"}
+ENT.SoundTbl_OnKilledEnemy = {SndPrefix.."killed_enemy1.wav",SndPrefix.."killed_enemy2.wav",SndPrefix.."killed_enemy3.wav"}
+ENT.SoundTbl_FollowPlayer = {SndPrefix.."follow1.wav",SndPrefix.."follow2.wav",SndPrefix.."follow3.wav"}
+ENT.SoundTbl_UnFollowPlayer = {SndPrefix.."unfollow1.wav",SndPrefix.."unfollow2.wav"}
+ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav"}
+--ENT.SoundTbl_MedicReceiveHeal = {SndPrefix.."get_heal1.wav",SndPrefix.."get_heal2.wav",SndPrefix.."get_heal3.wav",SndPrefix.."get_heal4.wav",SndPrefix.."get_heal5.wav"}

@@ -1,19 +1,21 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.Model = {"models/gf2/zhaohui_combat.mdl"}
-ENT.StartHealth = GetConVarNumber("vj_gf2_zhaohui_h")
-ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_zhaohui_d")
+local Name = "zhaohui"
+local SndPrefix = "vo/jp/"..Name.."/"
+ENT.Model = {"models/gf2/"..Name.."_combat.mdl"}
+ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
+ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
 ENT.Element = "water"
 
-ENT.SoundTbl_Idle = {"vo/jp/zhaohui/idle1.wav","vo/jp/zhaohui/idle2.wav","vo/jp/zhaohui/idle3.wav","vo/jp/zhaohui/idle4.wav","vo/jp/zhaohui/idle5.wav","vo/jp/zhaohui/idle6.wav","vo/jp/zhaohui/idle7.wav","vo/jp/zhaohui/idle8.wav","vo/jp/zhaohui/idle9.wav","vo/jp/zhaohui/idle10.wav"}
-ENT.SoundTbl_OnPlayerSight = {"vo/jp/zhaohui/player_sight1.wav","vo/jp/zhaohui/player_sight2.wav","vo/jp/zhaohui/player_sight3.wav","vo/jp/zhaohui/player_sight4.wav","vo/jp/zhaohui/player_sight5.wav","vo/jp/zhaohui/player_sight6.wav","vo/jp/zhaohui/player_sight7.wav","vo/jp/zhaohui/player_sight8.wav","vo/jp/zhaohui/player_sight9.wav","vo/jp/zhaohui/player_sight10.wav","vo/jp/zhaohui/player_sight11.wav","vo/jp/zhaohui/player_sight12.wav","vo/jp/zhaohui/player_sight13.wav","vo/jp/zhaohui/player_sight14.wav"}
-ENT.SoundTbl_Alert = {"vo/jp/zhaohui/alert1.wav","vo/jp/zhaohui/alert2.wav","vo/jp/zhaohui/alert3.wav","vo/jp/zhaohui/alert4.wav"}
-ENT.SoundTbl_Pain = {"vo/jp/zhaohui/hit1.wav","vo/jp/zhaohui/hit2.wav","vo/jp/zhaohui/hit3.wav","vo/jp/zhaohui/hit4.wav","vo/jp/zhaohui/hit5.wav","vo/jp/zhaohui/hit6.wav","vo/jp/zhaohui/hit7.wav","vo/jp/zhaohui/hit8.wav","vo/jp/zhaohui/hit9.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"vo/jp/zhaohui/killed_enemy1.wav","vo/jp/zhaohui/killed_enemy2.wav","vo/jp/zhaohui/killed_enemy3.wav","vo/jp/zhaohui/killed_enemy4.wav","vo/jp/zhaohui/killed_enemy5.wav","vo/jp/zhaohui/killed_enemy6.wav","vo/jp/zhaohui/killed_enemy7.wav"}
-ENT.SoundTbl_FollowPlayer = {"vo/jp/zhaohui/follow1.wav","vo/jp/zhaohui/follow2.wav","vo/jp/zhaohui/follow3.wav"}
-ENT.SoundTbl_UnFollowPlayer = {"vo/jp/zhaohui/unfollow1.wav","vo/jp/zhaohui/unfollow2.wav"}
-ENT.SoundTbl_Death = {"vo/jp/zhaohui/die1.wav","vo/jp/zhaohui/hit6.wav","vo/jp/zhaohui/hit7.wav"}
-ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/zhaohui/get_heal1.wav","vo/jp/zhaohui/get_heal2.wav","vo/jp/zhaohui/get_heal3.wav","vo/jp/zhaohui/get_heal4.wav","vo/jp/zhaohui/get_heal5.wav","vo/jp/zhaohui/get_heal6.wav","vo/jp/zhaohui/get_heal7.wav","vo/jp/zhaohui/get_heal8.wav"}
+ENT.SoundTbl_Idle = {SndPrefix.."idle1.wav",SndPrefix.."idle2.wav",SndPrefix.."idle3.wav",SndPrefix.."idle4.wav",SndPrefix.."idle5.wav",SndPrefix.."idle6.wav",SndPrefix.."idle7.wav",SndPrefix.."idle8.wav",SndPrefix.."idle9.wav",SndPrefix.."idle10.wav"}
+ENT.SoundTbl_OnPlayerSight = {SndPrefix.."player_sight1.wav",SndPrefix.."player_sight2.wav",SndPrefix.."player_sight3.wav",SndPrefix.."player_sight4.wav",SndPrefix.."player_sight5.wav",SndPrefix.."player_sight6.wav",SndPrefix.."player_sight7.wav",SndPrefix.."player_sight8.wav",SndPrefix.."player_sight9.wav",SndPrefix.."player_sight10.wav",SndPrefix.."player_sight11.wav",SndPrefix.."player_sight12.wav",SndPrefix.."player_sight13.wav",SndPrefix.."player_sight14.wav"}
+ENT.SoundTbl_Alert = {SndPrefix.."alert1.wav",SndPrefix.."alert2.wav",SndPrefix.."alert3.wav",SndPrefix.."alert4.wav"}
+ENT.SoundTbl_Pain = {SndPrefix.."hit1.wav",SndPrefix.."hit2.wav",SndPrefix.."hit3.wav",SndPrefix.."hit4.wav",SndPrefix.."hit5.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav",SndPrefix.."hit8.wav",SndPrefix.."hit9.wav"}
+ENT.SoundTbl_OnKilledEnemy = {SndPrefix.."killed_enemy1.wav",SndPrefix.."killed_enemy2.wav",SndPrefix.."killed_enemy3.wav",SndPrefix.."killed_enemy4.wav",SndPrefix.."killed_enemy5.wav",SndPrefix.."killed_enemy6.wav",SndPrefix.."killed_enemy7.wav"}
+ENT.SoundTbl_FollowPlayer = {SndPrefix.."follow1.wav",SndPrefix.."follow2.wav",SndPrefix.."follow3.wav"}
+ENT.SoundTbl_UnFollowPlayer = {SndPrefix.."unfollow1.wav",SndPrefix.."unfollow2.wav"}
+ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav"}
+ENT.SoundTbl_MedicReceiveHeal = {SndPrefix.."get_heal1.wav",SndPrefix.."get_heal2.wav",SndPrefix.."get_heal3.wav",SndPrefix.."get_heal4.wav",SndPrefix.."get_heal5.wav",SndPrefix.."get_heal6.wav",SndPrefix.."get_heal7.wav",SndPrefix.."get_heal8.wav"}
 
 ENT.AnimationSpeed = 1.5

@@ -1,19 +1,21 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.Model = {"models/gf2/robella_combat.mdl"}
-ENT.StartHealth = GetConVarNumber("vj_gf2_robella_h")
-ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_robella_d")
+local Name = "robella"
+local SndPrefix = "vo/jp/"..Name.."/"
+ENT.Model = {"models/gf2/"..Name.."_combat.mdl"}
+ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
+ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
 ENT.Element = "freezing"
 
-ENT.SoundTbl_Idle = {"vo/jp/robella/idle1.wav","vo/jp/robella/idle2.wav","vo/jp/robella/idle3.wav","vo/jp/robella/idle4.wav","vo/jp/robella/idle5.wav"}
-ENT.SoundTbl_OnPlayerSight = {"vo/jp/robella/player_sight1.wav","vo/jp/robella/player_sight2.wav","vo/jp/robella/player_sight3.wav","vo/jp/robella/player_sight4.wav","vo/jp/robella/player_sight5.wav","vo/jp/robella/player_sight6.wav","vo/jp/robella/player_sight7.wav","vo/jp/robella/player_sight8.wav"}
-ENT.SoundTbl_Alert = {"vo/jp/robella/alert1.wav","vo/jp/robella/alert2.wav","vo/jp/robella/alert3.wav"}
-ENT.SoundTbl_Pain = {"vo/jp/robella/hit1.wav","vo/jp/robella/hit2.wav","vo/jp/robella/hit3.wav","vo/jp/robella/hit4.wav","vo/jp/robella/hit5.wav","vo/jp/robella/hit6.wav","vo/jp/robella/hit7.wav","vo/jp/robella/hit8.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"vo/jp/robella/killed_enemy1.wav","vo/jp/robella/killed_enemy2.wav","vo/jp/robella/killed_enemy3.wav"}
---ENT.SoundTbl_FollowPlayer = {"vo/jp/robella/follow1.wav","vo/jp/robella/follow2.wav","vo/jp/robella/follow3.wav"}
---ENT.SoundTbl_UnFollowPlayer = {"vo/jp/robella/unfollow1.wav","vo/jp/robella/unfollow2.wav"}
-ENT.SoundTbl_Death = {"vo/jp/robella/die1.wav","vo/jp/robella/hit6.wav","vo/jp/robella/hit7.wav","vo/jp/robella/hit8.wav"}
---ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/robella/get_heal1.wav","vo/jp/robella/get_heal2.wav","vo/jp/robella/get_heal3.wav","vo/jp/robella/get_heal4.wav","vo/jp/robella/get_heal5.wav"}
+ENT.SoundTbl_Idle = {SndPrefix.."idle1.wav",SndPrefix.."idle2.wav",SndPrefix.."idle3.wav",SndPrefix.."idle4.wav",SndPrefix.."idle5.wav"}
+ENT.SoundTbl_OnPlayerSight = {SndPrefix.."player_sight1.wav",SndPrefix.."player_sight2.wav",SndPrefix.."player_sight3.wav",SndPrefix.."player_sight4.wav",SndPrefix.."player_sight5.wav",SndPrefix.."player_sight6.wav",SndPrefix.."player_sight7.wav",SndPrefix.."player_sight8.wav"}
+ENT.SoundTbl_Alert = {SndPrefix.."alert1.wav",SndPrefix.."alert2.wav",SndPrefix.."alert3.wav"}
+ENT.SoundTbl_Pain = {SndPrefix.."hit1.wav",SndPrefix.."hit2.wav",SndPrefix.."hit3.wav",SndPrefix.."hit4.wav",SndPrefix.."hit5.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav",SndPrefix.."hit8.wav"}
+ENT.SoundTbl_OnKilledEnemy = {SndPrefix.."killed_enemy1.wav",SndPrefix.."killed_enemy2.wav",SndPrefix.."killed_enemy3.wav"}
+--ENT.SoundTbl_FollowPlayer = {SndPrefix.."follow1.wav",SndPrefix.."follow2.wav",SndPrefix.."follow3.wav"}
+--ENT.SoundTbl_UnFollowPlayer = {SndPrefix.."unfollow1.wav",SndPrefix.."unfollow2.wav"}
+ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav",SndPrefix.."hit8.wav"}
+--ENT.SoundTbl_MedicReceiveHeal = {SndPrefix.."get_heal1.wav",SndPrefix.."get_heal2.wav",SndPrefix.."get_heal3.wav",SndPrefix.."get_heal4.wav",SndPrefix.."get_heal5.wav"}
 
 ENT.AnimationSpeed = 1.5

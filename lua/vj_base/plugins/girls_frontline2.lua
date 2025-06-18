@@ -74,6 +74,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Sniper","npc_vj_gf2_varjager_sniper",{"w
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Heavy","npc_vj_gf2_varjager_heavy",{"weapon_vj_rpg","weapon_vj_spas12"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans","npc_vj_gf2_sextans",{"weapon_vj_gf2_sextans_revolver","weapon_vj_gf2_sextans_flintlock"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lose_Sextans","npc_vj_gf2_lose_sextans",{"weapon_vj_gf2_lose_sextans_cannon"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Andoris","npc_vj_gf2_andoris",{"weapon_vj_gf2_g36k"},vCatUnf)
 
 VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCatUnf)
@@ -315,6 +316,8 @@ VJ.AddConVar("vj_gf2_sextans_h",1500)
 VJ.AddConVar("vj_gf2_sextans_d",100)
 VJ.AddConVar("vj_gf2_lose_sextans_h",3000)
 VJ.AddConVar("vj_gf2_lose_sextans_d",200)
+VJ.AddConVar("vj_gf2_andoris_h",250)
+VJ.AddConVar("vj_gf2_andoris_d",25)
 
 VJ.AddConVar("vj_gf2_om50_d",150)
 VJ.AddConVar("vj_gf2_ak_alfa_d",40)

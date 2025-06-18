@@ -1,17 +1,19 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
 ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA","CLASS_GIRLS_FRONTLINE_UNKNOWN_GROZA"}
+local Name = "unknown_groza"
+local SndPrefix = "vo/jp/"..Name.."/"
 ENT.Model = {"models/gf2/groza_combat.mdl","models/gf2/groza_dawn_of_battle.mdl","models/gf2/groza_violet_rain.mdl"}
-ENT.StartHealth = GetConVarNumber("vj_gf2_unknown_groza_h")
-ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_unknown_groza_d")
+ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
+ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
---ENT.SoundTbl_Idle = {"vo/jp/unknown_groza/idle1.wav","vo/jp/unknown_groza/idle2.wav","vo/jp/unknown_groza/idle3.wav","vo/jp/unknown_groza/idle4.wav","vo/jp/unknown_groza/idle5.wav","vo/jp/unknown_groza/idle6.wav","vo/jp/unknown_groza/idle7.wav","vo/jp/unknown_groza/idle8.wav","vo/jp/unknown_groza/idle9.wav","vo/jp/unknown_groza/idle10.wav"}
-ENT.SoundTbl_OnPlayerSight = {"vo/jp/unknown_groza/alert1.wav","vo/jp/unknown_groza/alert2.wav","vo/jp/unknown_groza/alert3.wav","vo/jp/unknown_groza/alert4.wav"}
-ENT.SoundTbl_Alert = {"vo/jp/unknown_groza/alert1.wav","vo/jp/unknown_groza/alert2.wav","vo/jp/unknown_groza/alert3.wav","vo/jp/unknown_groza/alert4.wav"}
-ENT.SoundTbl_Pain = {"vo/jp/unknown_groza/hit1.wav","vo/jp/unknown_groza/hit2.wav","vo/jp/unknown_groza/hit3.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_groza/skill2.wav","vo/jp/unknown_groza/skill3.wav","vo/jp/unknown_groza/skill4.wav"}
-ENT.SoundTbl_Death = {"vo/jp/unknown_groza/die1.wav"}
-ENT.SoundTbl_GrenadeAttack = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_groza/skill2.wav","vo/jp/unknown_groza/skill3.wav","vo/jp/unknown_groza/skill4.wav"}
+--ENT.SoundTbl_Idle = {SndPrefix.."idle1.wav",SndPrefix.."idle2.wav",SndPrefix.."idle3.wav",SndPrefix.."idle4.wav",SndPrefix.."idle5.wav",SndPrefix.."idle6.wav",SndPrefix.."idle7.wav",SndPrefix.."idle8.wav",SndPrefix.."idle9.wav",SndPrefix.."idle10.wav"}
+ENT.SoundTbl_OnPlayerSight = {SndPrefix.."alert1.wav",SndPrefix.."alert2.wav",SndPrefix.."alert3.wav",SndPrefix.."alert4.wav"}
+ENT.SoundTbl_Alert = {SndPrefix.."alert1.wav",SndPrefix.."alert2.wav",SndPrefix.."alert3.wav",SndPrefix.."alert4.wav"}
+ENT.SoundTbl_Pain = {SndPrefix.."hit1.wav",SndPrefix.."hit2.wav",SndPrefix.."hit3.wav"}
+ENT.SoundTbl_OnKilledEnemy = {SndPrefix.."skill1.wav",SndPrefix.."skill2.wav",SndPrefix.."skill3.wav",SndPrefix.."skill4.wav"}
+ENT.SoundTbl_Death = {SndPrefix.."die1.wav"}
+ENT.SoundTbl_GrenadeAttack = {SndPrefix.."skill1.wav",SndPrefix.."skill2.wav",SndPrefix.."skill3.wav",SndPrefix.."skill4.wav"}
 
 ENT.HasGrenadeAttack = true
 ENT.GrenadeAttackChance = 1
