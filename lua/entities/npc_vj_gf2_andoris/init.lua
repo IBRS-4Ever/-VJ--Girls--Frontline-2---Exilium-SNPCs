@@ -30,6 +30,9 @@ function ENT:CustomOnAlert(ent)
 	Turret:SetAngles(self:GetAngles())
 	Turret:SetOwner(self)
 	Turret:Spawn()
+	function Turret:CustomOnRemove()
+		table.RemoveByValue(self:GetOwner().Turrets, Turret)
+	end
 	table.insert(self.Turrets,Turret)
 end
 
