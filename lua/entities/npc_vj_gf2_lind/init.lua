@@ -14,6 +14,8 @@ ENT.HasBloodDecal = true
 
 ENT.Weapon_FindCoverOnReload = true
 
+ENT.GF2CannotBeHecked = true
+
 ENT.CanFlinch = true
 
 ENT.Element = "acid"
