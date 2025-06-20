@@ -29,7 +29,7 @@ ENT.OnPlayerSightDispositionLevel = 1
 ENT.CanFlinch = 2
 ENT.FlinchDamageTypes = {DMG_BLAST,DMG_DISSOLVE}
 ENT.FlinchChance = 1
-ENT.AnimTbl_Flinch = {ACT_FLINCH_PHYSICS}
+ENT.AnimTbl_Flinch = ACT_FLINCH_PHYSICS
 ENT.HitGroupFlinching_Values = {{HitGroup = {HITGROUP_HEAD}, Animation = {ACT_FLINCH_HEAD}}, {HitGroup = {HITGROUP_LEFTARM}, Animation = {ACT_FLINCH_LEFTARM}}, {HitGroup = {HITGROUP_RIGHTARM}, Animation = {ACT_FLINCH_RIGHTARM}}, {HitGroup = {HITGROUP_LEFTLEG}, Animation = {ACT_FLINCH_LEFTLEG}}, {HitGroup = {HITGROUP_RIGHTLEG}, Animation = {ACT_FLINCH_RIGHTLEG}}}
 
 ENT.OnPlayerSightSoundChance = 2
@@ -141,7 +141,7 @@ function ENT:CustomOnInitialize()
 end
 
 function ENT:CustomInitialize()
-	self.Weapon_FindCoverOnReload = GetConVar("vj_gf2_npc_find_cover_on_reload"):GetBool()
+	if !self.Weapon_FindCoverOnReload then self.Weapon_FindCoverOnReload = GetConVar("vj_gf2_npc_find_cover_on_reload"):GetBool() end
 	if self.ShieldCoolDown then self:SetNWFloat( "ShieldCoolDown", self.ShieldCoolDown + CurTime() ) end
 	if self.Shield then self:GiveShield() end
 	if self.HealAllies then 

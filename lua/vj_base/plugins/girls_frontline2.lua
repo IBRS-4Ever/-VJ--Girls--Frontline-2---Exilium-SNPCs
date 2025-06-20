@@ -75,6 +75,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Heavy","npc_vj_gf2_varjager_heavy",{"wea
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans","npc_vj_gf2_sextans",{"weapon_vj_gf2_sextans_revolver","weapon_vj_gf2_sextans_flintlock"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lose_Sextans","npc_vj_gf2_lose_sextans",{"weapon_vj_gf2_lose_sextans_cannon"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Andoris","npc_vj_gf2_andoris",{"weapon_vj_gf2_g36k"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lind","npc_vj_gf2_lind",{"weapon_vj_gf2_aa12"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lind_TheSunNeverRises","npc_vj_gf2_lind_the_sun_never_rises",{"weapon_vj_gf2_aa12"},vCatUnf)
 
 VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCatUnf)
@@ -206,6 +208,8 @@ util.PrecacheModel("models/gf2/golyat.mdl")
 util.PrecacheModel("models/gf2/blusphere.mdl")
 util.PrecacheModel("models/gf2/sextans_combat.mdl")
 util.PrecacheModel("models/gf2/lose_sextans_combat.mdl")
+util.PrecacheModel("models/gf2/lind_combat.mdl")
+util.PrecacheModel("models/gf2/lind_the_sun_never_rises.mdl")
 
 -- Weapon Models
 util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -234,6 +238,7 @@ util.PrecacheModel("models/weapons/w_centaureissi_g36.mdl")
 util.PrecacheModel("models/weapons/w_dusevnyj_ksvk.mdl")
 util.PrecacheModel("models/weapons/w_florence_pa-15.mdl")
 util.PrecacheModel("models/weapons/w_lose_sextans_cannon.mdl")
+util.PrecacheModel("models/weapons/w_lind_aa12.mdl")
 
 -- Grenade Models
 util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -318,6 +323,8 @@ VJ.AddConVar("vj_gf2_lose_sextans_h",3000)
 VJ.AddConVar("vj_gf2_lose_sextans_d",200)
 VJ.AddConVar("vj_gf2_andoris_h",250)
 VJ.AddConVar("vj_gf2_andoris_d",25)
+VJ.AddConVar("vj_gf2_lind_h",200)
+VJ.AddConVar("vj_gf2_lind_d",25)
 
 VJ.AddConVar("vj_gf2_om50_d",150)
 VJ.AddConVar("vj_gf2_ak_alfa_d",40)
@@ -346,6 +353,7 @@ VJ.AddConVar("vj_gf2_g36_d",30)
 VJ.AddConVar("vj_gf2_ksvk_d",250)
 VJ.AddConVar("vj_gf2_pa15_d",15)
 VJ.AddConVar("vj_gf2_lose_sextans_cannon_d",250)
+VJ.AddConVar("vj_gf2_aa12_d",35)
 
 -- Menu --
 local AddConvars = {}
