@@ -29,6 +29,7 @@ function ENT:CustomOnAlert(ent)
 	Turret:SetPos(Pos+self:GetForward() * 50)
 	Turret:SetAngles(self:GetAngles())
 	Turret:SetOwner(self)
+	Turret.Owner = self
 	Turret:Spawn()
 	function Turret:CustomOnRemove()
 		table.RemoveByValue(self:GetOwner().Turrets, Turret)

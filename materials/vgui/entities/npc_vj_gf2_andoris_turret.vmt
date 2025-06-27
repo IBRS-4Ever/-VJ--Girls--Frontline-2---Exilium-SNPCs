@@ -1,7 +1,0 @@
-"UnlitGeneric"
-{
-	"$basetexture" "vgui/entities/npc_vj_gf2_andoris_turret"
-	"$nolod" 1
-	"$vertexalpha" 1
-	"$vertexcolor" 1
-}

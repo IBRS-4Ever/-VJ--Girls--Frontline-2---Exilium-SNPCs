@@ -1,0 +1,5 @@
+ENT.Base 			= "npc_vj_creature_base"
+ENT.Type 			= "ai"
+ENT.PrintName 		= "UAV"
+ENT.Category		= "Girls' Frontline 2"
+ENT.Author			= "IBRS"

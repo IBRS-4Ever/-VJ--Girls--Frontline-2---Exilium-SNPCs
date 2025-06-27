@@ -17,3 +17,25 @@ ENT.SoundTbl_FollowPlayer = {SndPrefix.."follow1.wav",SndPrefix.."follow2.wav",S
 ENT.SoundTbl_UnFollowPlayer = {SndPrefix.."unfollow1.wav"}
 ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav"}
 ENT.SoundTbl_MedicReceiveHeal = {SndPrefix.."get_heal1.wav",SndPrefix.."get_heal2.wav",SndPrefix.."get_heal3.wav",SndPrefix.."get_heal4.wav"}
+
+ENT.Drone = nil 
+
+function ENT:GF2_CustomInitialize() 
+	local Drone = ents.Create("npc_vj_gf2_tololo_uav")
+	Drone:SetPos(self:GetPos() + self:GetUp() * 75)
+	Drone:SetAngles(self:GetAngles())
+	Drone:SetOwner(self)
+	Drone.Owner = self
+	Drone:Spawn()
+	self.Drone = Drone
+end
+
+function ENT:GF2_CustomOnRemove()
+	if IsValid(self.Drone) then
+		if !self.Dead then
+			self.Drone:Remove()
+		else
+			self.Drone:TakeDamage(99999)
+		end
+	end
+end

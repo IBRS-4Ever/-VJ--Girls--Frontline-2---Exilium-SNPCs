@@ -23,9 +23,12 @@ ENT.NextRangeAttackTime = 0
 ENT.NextAnyAttackTime_Range = 0.5
 
 function ENT:OnRangeAttackExecute(status, enemy, projectile)
+	local Owner = self.Owner or self
 	if status == "Init" then
 		local spawnPos = self:GetAttachment(self:LookupAttachment("muzzle")).Pos
 		self:FireBullets({
+			Attacker = Owner,
+			Inflictor = self,
 			Num = 1,
 			Src = spawnPos,
 			Dir = (enemy:GetPos() + enemy:OBBCenter()) - spawnPos,

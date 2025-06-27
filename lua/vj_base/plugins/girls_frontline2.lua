@@ -75,8 +75,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Heavy","npc_vj_gf2_varjager_heavy",{"wea
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans","npc_vj_gf2_sextans",{"weapon_vj_gf2_sextans_revolver","weapon_vj_gf2_sextans_flintlock"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lose_Sextans","npc_vj_gf2_lose_sextans",{"weapon_vj_gf2_lose_sextans_cannon"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Andoris","npc_vj_gf2_andoris",{"weapon_vj_gf2_g36k"},vCatUnf)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lind","npc_vj_gf2_lind",{"weapon_vj_gf2_aa12"},vCatUnf)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lind_TheSunNeverRises","npc_vj_gf2_lind_the_sun_never_rises",{"weapon_vj_gf2_aa12"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lind","npc_vj_gf2_lind",{"weapon_vj_gf2_aa12"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lind_TheSunNeverRises","npc_vj_gf2_lind_the_sun_never_rises",{"weapon_vj_gf2_aa12"},vCat)
 
 VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCatUnf)
@@ -86,7 +86,6 @@ VJ.AddNPC("#vj_gf2_snpcs.Golyat_Fire","npc_vj_gf2_golyat_fire",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Ice","npc_vj_gf2_golyat_ice",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Tank","npc_vj_gf2_golyat_tank",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Blusphere", "npc_vj_gf2_blusphere",vCatUnf)
-VJ.AddNPC("#vj_gf2_snpcs.Andoris_Turret", "npc_vj_gf2_andoris_turret",vCatUnf)
 
 -- Weapons
 VJ.AddNPCWeapon("OM 50", "weapon_vj_gf2_om50", vCat)
@@ -254,6 +253,8 @@ util.PrecacheModel("models/prop/gfl2_colphne_medkit.mdl")
 util.PrecacheModel("models/prop/gfl2_colphne_syringe.mdl")
 util.PrecacheModel("models/prop/gfl2_mechty_energy_drink.mdl")
 util.PrecacheModel("models/bandits/varyag_shield.mdl")
+util.PrecacheModel("models/prop/gfl2_andoris_turret.mdl")
+util.PrecacheModel("models/prop/gfl2_tololo_uav.mdl")
 
 -- ConVars --
 VJ.AddConVar("vj_gf2_varjager_h",250)
