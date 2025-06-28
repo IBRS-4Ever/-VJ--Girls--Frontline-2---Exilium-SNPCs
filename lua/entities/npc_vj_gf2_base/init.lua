@@ -13,8 +13,6 @@ ENT.HullType = HULL_HUMAN
 ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_F", "CLASS_PLAYER_ALLY"}
 ENT.HasMeleeAttack = true
 ENT.HasGrenadeAttack = false
-ENT.FootStepTimeRun = 0.4
-ENT.FootStepTimeWalk = 0.5
 
 ENT.HasItemDropsOnDeath = false
 
@@ -143,7 +141,7 @@ end
 function ENT:CustomInitialize()
 	if !self.Weapon_FindCoverOnReload then self.Weapon_FindCoverOnReload = GetConVar("vj_gf2_npc_find_cover_on_reload"):GetBool() end
 	if self.ShieldCoolDown then self:SetNWFloat( "ShieldCoolDown", self.ShieldCoolDown + CurTime() ) end
-	if self.Shield then self:GiveShield() end
+	if self.Shield then timer.Simple( 1, function() if IsValid(self) then self:GiveShield() end end ) end
 	if self.HealAllies then 
 		timer.Create( "GF2_HealTimer_"..self:EntIndex(), self.HealDelay, 0, function() 
 			self:HealAlly()
@@ -196,6 +194,48 @@ function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup)
 			elec:SetNormal(-Normal)
 			util.Effect("MetalSpark", elec)
 
+			if GetConVar("vj_gf2_npc_shield_ricochet"):GetBool() then
+				local BulletDamage = dmginfo:GetDamage()
+				local Attacker = dmginfo:GetAttacker()
+				local Inflictor = dmginfo:GetInflictor()
+				if dmginfo:IsBulletDamage() then
+					if Attacker != Inflictor then
+						if math.random(1,100) <= GetConVar("vj_gf2_npc_shield_ricochet_chance"):GetInt() then
+							if Attacker:GetNWInt( "Shield" ) > 0 then
+								Attacker:TakeDamage(BulletDamage * GetConVar("vj_gf2_npc_shield_ricochet_damage_scale"):GetFloat(), self, self)
+							else
+								self:FireBullets({
+									Attacker = self,
+									Inflictor = self,
+									Num = 1,
+									Src = Pos,
+									Dir = (Attacker:GetPos() + Attacker:OBBCenter()) - Pos,
+									Spread = 0,
+									Tracer = 1,
+									Force = 1,
+									Damage = BulletDamage * GetConVar("vj_gf2_npc_shield_ricochet_damage_scale"):GetFloat(),
+									AmmoType = "AR2",
+									NoRicochet = true
+								})
+							end
+						else
+							self:FireBullets({
+								Attacker = self,
+								Inflictor = self,
+								Num = 1,
+								Src = Pos,
+								Dir = VectorRand(-1,1),
+								Spread = 0,
+								Tracer = 1,
+								Force = 1,
+								Damage = BulletDamage * GetConVar("vj_gf2_npc_shield_ricochet_damage_scale"):GetFloat(),
+								AmmoType = "AR2",
+								NoRicochet = true
+							})
+						end
+					end
+				end
+			end
 			self:EmitSound("FX_RicochetSound.Ricochet")
 		else
 			self:SetNWInt( "Shield", 0 )

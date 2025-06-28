@@ -1,5 +1,7 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
+local Name = "blusphere"
+local SndPrefix = "vo/jp/"..Name.."/"
 ENT.Model = {"models/gf2/blusphere.mdl"}
 ENT.StartHealth = 1000
 ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_E"}
@@ -21,13 +23,13 @@ ENT.RangeAttackReps = 5
 ENT.NextRangeAttackTime = 0
 ENT.NextAnyAttackTime_Range = 0.5
 
-ENT.SoundTbl_Idle = {"vo/jp/unknown_groza/alert1.wav","vo/jp/unknown_groza/alert2.wav","vo/jp/unknown_groza/alert3.wav","vo/jp/unknown_groza/alert4.wav"}
-ENT.SoundTbl_OnPlayerSight = {"vo/jp/unknown_groza/alert1.wav","vo/jp/unknown_groza/alert2.wav","vo/jp/unknown_groza/alert3.wav","vo/jp/unknown_groza/alert4.wav"}
-ENT.SoundTbl_Alert = {"vo/jp/unknown_groza/alert1.wav","vo/jp/unknown_groza/alert2.wav","vo/jp/unknown_groza/alert3.wav","vo/jp/unknown_groza/alert4.wav"}
-ENT.SoundTbl_Pain = {"vo/jp/unknown_groza/hit1.wav","vo/jp/unknown_groza/hit2.wav","vo/jp/unknown_groza/hit3.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_groza/skill2.wav","vo/jp/unknown_groza/skill3.wav","vo/jp/unknown_groza/skill4.wav"}
-ENT.SoundTbl_Death = {"vo/jp/unknown_groza/die1.wav"}
-ENT.SoundTbl_GrenadeAttack = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_groza/skill2.wav","vo/jp/unknown_groza/skill3.wav","vo/jp/unknown_groza/skill4.wav"}
+ENT.SoundTbl_Idle = {SndPrefix.."alert1.wav",SndPrefix.."alert2.wav",SndPrefix.."alert3.wav",SndPrefix.."alert4.wav"}
+ENT.SoundTbl_OnPlayerSight = {SndPrefix.."alert1.wav",SndPrefix.."alert2.wav",SndPrefix.."alert3.wav",SndPrefix.."alert4.wav"}
+ENT.SoundTbl_Alert = {SndPrefix.."alert1.wav",SndPrefix.."alert2.wav",SndPrefix.."alert3.wav",SndPrefix.."alert4.wav"}
+ENT.SoundTbl_Pain = {SndPrefix.."hit1.wav",SndPrefix.."hit2.wav",SndPrefix.."hit3.wav"}
+ENT.SoundTbl_OnKilledEnemy = {SndPrefix.."skill1.wav",SndPrefix.."skill2.wav",SndPrefix.."skill3.wav",SndPrefix.."skill4.wav"}
+ENT.SoundTbl_Death = {SndPrefix.."die1.wav"}
+ENT.SoundTbl_GrenadeAttack = {SndPrefix.."skill1.wav",SndPrefix.."skill2.wav",SndPrefix.."skill3.wav",SndPrefix.."skill4.wav"}
 
 function ENT:OnRangeAttack(status, enemy)
 	if status == "PreInit" then

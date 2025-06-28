@@ -23,7 +23,9 @@ ENT.NextAnyAttackTime_Range = 0.3
 function ENT:Init()
 	if self.Owner then
 		timer.Simple( 1, function()
-			self:Follow(self.Owner)
+			if IsValid(self) and IsValid(self.Owner) then
+				self:Follow(self.Owner)
+			end
 		end)
 	end
 end

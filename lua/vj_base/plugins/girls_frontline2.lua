@@ -366,6 +366,9 @@ AddConvars["vj_gf2_npc_random_bodygroups"] = 1 -- Random Bodygroup for SNPCs?
 AddConvars["vj_gf2_npc_shield_multipler"] = 1 -- Shield multipler.
 AddConvars["vj_gf2_npc_shield_radius_multipler"] = 1 -- Shield radius multipler.
 AddConvars["vj_gf2_npc_shield"] = 1 -- Enable Shield.
+AddConvars["vj_gf2_npc_shield_ricochet"] = 1 -- Shield can ricochet bullets.
+AddConvars["vj_gf2_npc_shield_ricochet_chance"] = 10
+AddConvars["vj_gf2_npc_shield_ricochet_damage_scale"] = 0.25 -- Shield ricochet bullets damage scale.
 AddConvars["vj_gf2_npc_shield_exceed_maxhealth"] = 0 -- Shield can exceed max health.
 AddConvars["vj_gf2_npc_element_electric_enabled"] = 1 -- Enable Electric Effects.
 AddConvars["vj_gf2_npc_element_electric_damage_multipler"] = 1 -- Electric damage multipler.
@@ -417,6 +420,9 @@ if CLIENT then
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Shield_ExceedMaxHealth", "vj_gf2_npc_shield_exceed_maxhealth")
 				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_ShieldMultipler", "vj_gf2_npc_shield_multipler", 0, 5, 2)
 				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_ShieldRadiusMultipler", "vj_gf2_npc_shield_radius_multipler", 0, 5, 2)
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Shield_RicochetBullets", "vj_gf2_npc_shield_ricochet")
+				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Shield_RicochetBullets_Chance", "vj_gf2_npc_shield_ricochet_chance", 0, 100, 0)
+				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Shield_RicochetBullets_DamageScale", "vj_gf2_npc_shield_ricochet_damage_scale", 0, 5, 2)
 				Panel:Help("#vj_gf2_snpcs.settings.NPC_Element.Title")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Element.ElectricEnabled", "vj_gf2_npc_element_electric_enabled")
 				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Element.ElectricDamageMultipler", "vj_gf2_npc_element_electric_damage_multipler", 0, 5, 2)
