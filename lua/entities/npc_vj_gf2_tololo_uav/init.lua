@@ -8,7 +8,7 @@ ENT.Bleeds = false
 ENT.MovementType = VJ_MOVETYPE_AERIAL
 ENT.HasMeleeAttack = false
 
-ENT.HullType = HULL_MEDIUM
+ENT.HullType = HULL_SMALL_CENTERED
 
 ENT.HasRangeAttack = true
 ENT.AnimTbl_RangeAttack = false
