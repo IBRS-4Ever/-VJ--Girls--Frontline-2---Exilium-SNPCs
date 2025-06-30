@@ -137,7 +137,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/get_heal1.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "嗯...一般般吧。", 
+			["schinese"] = "嗯……一般般吧。", 
 			["english"] = "Hmm...Just so so.", 
 		},
 		subjectcol = CharacterColor,
@@ -478,7 +478,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/player_sight1.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "喂，饲养员的眼神...您在想“哇，好矮啊！”对吧？我都看出来了！", 
+			["schinese"] = "喂，饲养员的眼神……您在想“呜哇好矮啊”对吧！我都看出来了！", 
 			["english"] = "Hey, Caretaker, that look in your eyes... You're thinking, 'Wow, so short!' right? I can totally see it!", 
 		},
 		subjectcol = CharacterColor,
@@ -488,7 +488,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/player_sight2.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "唉，战术什么的无所谓吧，反正我这种天才是不会输的啦。嗯？好好好，我会去看作战资料的，真的。", 
+			["schinese"] = "嗯……战术什么的，无所谓吧？反正我这种天才是不会输啦……啊好好好，我会去看作战资料的！真的！", 
 			["english"] = "Sigh, tactics don't really matter, right? After all, a genius like me won't lose. Hmm? Fine, fine, I'll look at the battle data, really.", 
 		},
 		subjectcol = CharacterColor,
@@ -508,7 +508,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/player_sight4.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "饲养员别睡了，快起来陪我玩游戏，快起来啦。唉，真是的，人类的身体几乎每天都要休眠，真麻烦，唉，不如让我来做个小道具吧。", 
+			["schinese"] = "饲养员别睡了快起来陪我玩游戏！快起来啦——！真是的，人类的身体几乎每天都要休眠真麻烦啊，不如让我来做个小道具吧？", 
 			["english"] = "Caretaker, don't sleep. Get up and play games with me, get up. Sigh, humans' bodies need to rest almost every day, so troublesome. Sigh, let me make a little gadget instead.", 
 		},
 		subjectcol = CharacterColor,
@@ -528,7 +528,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/player_sight6.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "那个，饲养员，我们关系很好对吧？我们是朋友对吧？嗯，那我刚刚把仓库炸掉了，饲养员应该也不会生气的对吧？", 
+			["schinese"] = "那个，饲养员，我们关系很好对吧？我们是朋友对吧？嗯……那我刚刚把仓库炸掉了，饲养员应该也不会生气，对吧？", 
 			["english"] = "Well, Caretaker, we have a good relationship, right? We are friends, right? Well, I just blew up the warehouse, so the Caretaker shouldn't be angry, right?", 
 		},
 		subjectcol = CharacterColor,
@@ -558,7 +558,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/player_sight9.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "我说，之前那个素体还有现在这个素体，饲养员更喜欢哪个啊？啊，别在意，我只是随便问问，反正我都是要换回去的。", 
+			["schinese"] = "我说，之前那个素体还有现在这个素体，饲养员更喜欢哪个啊？唔……别在意，我只是随便问问……反正我都是要换回去的！", 
 			["english"] = "So, which body does the Caretaker prefer: the previous body or this current one? Ah, never mind, I'm just asking out of curiosity. Anyway, I'll be switching back soon.", 
 		},
 		subjectcol = CharacterColor,
@@ -568,7 +568,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/player_sight10.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "饲养员，我的新发明，“睁眼拟态器”快完成啦。这样饲养员就算困到闭着眼睛工作，只要戴上它，在别人眼里也是睁着眼睛的，很厉害吧。", 
+			["schinese"] = "饲养员，我的新发明——睁眼拟态器快完成了！这样饲养员就算困到闭着眼睛工作，只要戴上它，在别人眼里也是睁着眼睛的，很厉害吧？", 
 			["english"] = "Caretaker, my new invention, the 'Open-Eye Mimic Device,' is almost done. This way, even if you're so sleepy that you close your eyes while working, as long as you wear it, it'll look to others like your eyes are open. Isn't that impressive?", 
 		},
 		subjectcol = CharacterColor,
@@ -578,7 +578,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/player_sight11.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "饲养员，工作还要做多久啊，先陪我打一局《特工精英》吧，大不了我等一下陪你工作嘛。", 
+			["schinese"] = "饲养员……工作还要做多久啊？先陪我打一局特攻精英吧……大不了我等下陪您工作嘛！", 
 			["english"] = "Caretaker, how much longer do you have to work? Play a round of 'Agent Elite' with me first. I'll help you with your work afterward.", 
 		},
 		subjectcol = CharacterColor,
@@ -598,7 +598,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/cheeta/player_sight13.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "您看最新的作战报告了吗？一下子炸掉整个作战区域的我，是不是超厉害？啊？差点也炸到基地车，哎呀，那种小事就别在意了。", 
+			["schinese"] = "您看最新的作战报告了吗！一下子炸掉整个作战区域的我是不是超厉害？呃，差点也炸到基地车……？哎呀，那种小事就别在意啦。", 
 			["english"] = "Have you seen the latest combat report? Isn't it super cool to blow up the entire combat area at once? Ah? I almost bombed the base car too? Well, don't mind such trivial matters.", 
 		},
 		subjectcol = CharacterColor,

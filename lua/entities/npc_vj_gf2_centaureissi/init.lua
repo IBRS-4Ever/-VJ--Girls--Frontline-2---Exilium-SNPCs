@@ -7,8 +7,7 @@ ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
 ENT.HealAllies = true 
-ENT.HealAmount = 50
-ENT.HealDelay = 1
+ENT.HealAmount = 5
 
 ENT.Element = "fire"
 ENT.Element_FireIgniteTime = 5

@@ -71,7 +71,7 @@ function ENT:OnRangeAttackExecute(status, enemy, projectile)
 			AmmoType = "AR2"
 		})
 		
-		VJ.EmitSound(self, "GF2_SNPC.Weapon_OM50.Shot", 90, math.random(100, 110))
+		VJ.EmitSound(self, "GF2_SNPC.Weapon_G36K.Shot", 90, math.random(100, 110))
 		ParticleEffectAttach("vj_rifle_full", PATTACH_POINT_FOLLOW, self, 1)
 		ParticleEffectAttach("vj_bms_turret_muzzle_smoke", PATTACH_POINT_FOLLOW, self, 1)
 		timer.Simple(0.2, function() if IsValid(self) then self:StopParticles() end end)

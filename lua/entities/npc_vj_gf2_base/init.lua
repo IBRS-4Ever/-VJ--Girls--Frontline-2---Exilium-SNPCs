@@ -41,7 +41,7 @@ ENT.ReloadSpeed = false
 
 ENT.HealAllies = false 
 ENT.HealDistance = false
-ENT.HealAmount = 5
+ENT.HealAmount = 1
 ENT.HealDelay = 1
 
 ENT.Element = "default"
@@ -77,16 +77,12 @@ end
 function ENT:HealAlly()
 	if self.HealDistance then
 		for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.HealDistance ) ) do
-			if !ent.IsGF2SNPC then continue end
-			if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
-			if ent.LastHitTimer > CurTime() then continue end
+			if (ent != self and self:CheckRelationship(ent) == D_HT or !ent:Alive()) then continue end
 			ent:SetHealth( math.Clamp(ent:Health() + self.HealAmount, 0, ent:GetMaxHealth()) )
 		end
 	else
 		for id, ent in ents.Iterator() do
-			if !ent.IsGF2SNPC then continue end
-			if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
-			if ent.LastHitTimer > CurTime() then continue end
+			if (ent != self and self:CheckRelationship(ent) == D_HT or !ent:Alive()) then continue end
 			ent:SetHealth( math.Clamp(ent:Health() + self.HealAmount, 0, ent:GetMaxHealth()) )
 		end
 	end
@@ -97,7 +93,7 @@ function ENT:GiveShield()
 	if self.ShieldRadius then
 		for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.ShieldRadius * GetConVar("vj_gf2_npc_shield_radius_multipler"):GetFloat() ) ) do
 			if ent.IsGF2SNPC then
-				if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
+				if (ent != self and self:CheckRelationship(ent) == D_HT) then continue end
 				if GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool() then
 					ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat() )
 					ent:EmitSound("items/battery_pickup.wav")
@@ -105,12 +101,15 @@ function ENT:GiveShield()
 					ent:SetNWInt( "Shield", math.Clamp(ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat(), 0, ent.StartHealth) )
 					ent:EmitSound("items/battery_pickup.wav")
 				end
+			elseif ent:IsPlayer() then
+				ent:SetArmor( math.Clamp(ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat(), 0, ent:GetMaxArmor()) )
+				ent:EmitSound("items/battery_pickup.wav")
 			end
 		end
 	else
 		for id, ent in ents.Iterator() do
 			if ent.IsGF2SNPC then
-				if (ent != self and ent:CheckRelationship(self) == D_HT) then continue end
+				if (ent != self and self:CheckRelationship(ent) == D_HT) then continue end
 				if GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool() then
 					ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat() )
 					ent:EmitSound("items/battery_pickup.wav")
@@ -118,6 +117,9 @@ function ENT:GiveShield()
 					ent:SetNWInt( "Shield", math.Clamp(ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat(), 0, ent.StartHealth) )
 					ent:EmitSound("items/battery_pickup.wav")
 				end
+			elseif ent:IsPlayer() then
+				ent:SetArmor( math.Clamp(ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat(), 0, ent:GetMaxArmor()) )
+				ent:EmitSound("items/battery_pickup.wav")
 			end
 		end
 	end
@@ -182,6 +184,7 @@ function ENT:GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) end
 
 function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
 	if dmginfo:IsDamageType(DMG_DROWN + DMG_NERVEGAS + DMG_POISON + DMG_RADIATION) then dmginfo:ScaleDamage(0) return end
+	if self:Health() <= 0 then self:SetNWInt( "Shield", 0 ) end
 	if self:GetNWInt( "Shield" ) > 0 then
 		if dmginfo:GetDamage() < self:GetNWInt( "Shield" ) then
 			self:SetNWInt( "Shield", self:GetNWInt( "Shield" ) - dmginfo:GetDamage() )
@@ -198,41 +201,38 @@ function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup)
 				local BulletDamage = dmginfo:GetDamage()
 				local Attacker = dmginfo:GetAttacker()
 				local Inflictor = dmginfo:GetInflictor()
+				local BulletCount = BulletDamage / 10
 				if dmginfo:IsBulletDamage() then
-					if Attacker != Inflictor then
-						if math.random(1,100) <= GetConVar("vj_gf2_npc_shield_ricochet_chance"):GetInt() then
-							if Attacker:GetNWInt( "Shield" ) > 0 then
-								Attacker:TakeDamage(BulletDamage * GetConVar("vj_gf2_npc_shield_ricochet_damage_scale"):GetFloat(), self, self)
-							else
-								self:FireBullets({
-									Attacker = self,
-									Inflictor = self,
-									Num = 1,
-									Src = Pos,
-									Dir = (Attacker:GetPos() + Attacker:OBBCenter()) - Pos,
-									Spread = 0,
-									Tracer = 1,
-									Force = 1,
-									Damage = BulletDamage * GetConVar("vj_gf2_npc_shield_ricochet_damage_scale"):GetFloat(),
-									AmmoType = "AR2",
-									NoRicochet = true
-								})
-							end
+					if math.random(1,100) <= GetConVar("vj_gf2_npc_shield_ricochet_chance"):GetInt() then
+						if Attacker:GetNWInt( "Shield" ) > 0 then
+							Attacker:TakeDamage(BulletDamage * GetConVar("vj_gf2_npc_shield_ricochet_damage_scale"):GetFloat(), self, self)
 						else
 							self:FireBullets({
 								Attacker = self,
 								Inflictor = self,
-								Num = 1,
+								Num = BulletCount,
 								Src = Pos,
-								Dir = VectorRand(-1,1),
-								Spread = 0,
+								Dir = (Attacker:GetPos() + Attacker:OBBCenter()) - Pos,
+								Spread = Vector(0.01,0.01,0),
 								Tracer = 1,
 								Force = 1,
-								Damage = BulletDamage * GetConVar("vj_gf2_npc_shield_ricochet_damage_scale"):GetFloat(),
-								AmmoType = "AR2",
-								NoRicochet = true
+								Damage = (BulletDamage / BulletCount) * GetConVar("vj_gf2_npc_shield_ricochet_damage_scale"):GetFloat(),
+								AmmoType = "AR2"
 							})
 						end
+					else
+						self:FireBullets({
+							Attacker = self,
+							Inflictor = self,
+							Num = BulletCount,
+							Src = Pos,
+							Dir = VectorRand(-1,1),
+							Spread = Vector(0.1,0.1,0),
+							Tracer = 1,
+							Force = 1,
+							Damage = (BulletDamage / BulletCount) * GetConVar("vj_gf2_npc_shield_ricochet_damage_scale"):GetFloat(),
+							AmmoType = "AR2"
+						})
 					end
 				end
 			end

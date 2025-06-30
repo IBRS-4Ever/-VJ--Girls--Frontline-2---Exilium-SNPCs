@@ -5,7 +5,7 @@ local CharacterName = {
 	["english"] = "Andoris: ",
 	["japanese"] = "アンドリス：",
 	}
-local CharacterColor = Color(110,100,140) // Todo: Change Color!!!
+local CharacterColor = Color(100,100,140)
 
 local GF2Subtitle = { -- add new tables inside here
 	

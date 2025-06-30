@@ -9,8 +9,7 @@ ENT.AnimTbl_MeleeAttack = "meleeattack01"
 
 ENT.HealAllies = true 
 ENT.HealDistance = 750
-ENT.HealAmount = 25
-ENT.HealDelay = 1
+ENT.HealAmount = 3
 
 ENT.Element = "water"
 

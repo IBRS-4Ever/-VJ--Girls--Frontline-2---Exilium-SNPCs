@@ -16,7 +16,7 @@ SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_lose_sextans_cannon_d")
 SWEP.Primary.Force = 1
-SWEP.Primary.ClipSize = 10
+SWEP.Primary.ClipSize = 99999
 SWEP.Primary.Ammo = "ar2"
 SWEP.NPC_CustomSpread = 0
 SWEP.NPC_BeforeFireSound = {"NPC_Strider.Charge"}

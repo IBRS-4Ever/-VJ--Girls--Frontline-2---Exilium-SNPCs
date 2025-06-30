@@ -4,4 +4,4 @@ ENT.PrintName 		= "Lind"
 ENT.Category		= "Girls' Frontline 2"
 
 ENT.SquadName		= "#GF2_SquadName_FrostfallSquad"
-ENT.BodyModel		= "SSD-62D"
+ENT.BodyModel		= "SST-05"

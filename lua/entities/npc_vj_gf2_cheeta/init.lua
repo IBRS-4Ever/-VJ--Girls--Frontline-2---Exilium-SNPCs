@@ -11,8 +11,7 @@ ENT.GrenadeAttackEntity = "obj_gf2_cheeta_grenade"
 
 ENT.HealAllies = true 
 ENT.HealDistance = 500
-ENT.HealAmount = 10
-ENT.HealDelay = 1
+ENT.HealAmount = 2
 
 ENT.Element = "fire"
 ENT.Element_FireIgniteTime = 3
