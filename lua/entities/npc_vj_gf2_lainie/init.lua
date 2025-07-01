@@ -19,8 +19,8 @@ ENT.SoundTbl_MedicReceiveHeal = {SndPrefix.."get_heal1.wav",SndPrefix.."get_heal
 
 ENT.AnimationSpeed = 1.5
 
-ENT.IsHolo = false 
-ENT.HoloENT = nil 
+ENT.IsHolo = false
+ENT.HoloENT = NULL
 
 function ENT:GF2_CustomInitialize()
 	if self.IsHolo then

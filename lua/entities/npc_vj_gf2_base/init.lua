@@ -28,7 +28,10 @@ ENT.CanFlinch = 2
 ENT.FlinchDamageTypes = {DMG_BLAST,DMG_DISSOLVE}
 ENT.FlinchChance = 1
 ENT.AnimTbl_Flinch = ACT_FLINCH_PHYSICS
-ENT.HitGroupFlinching_Values = {{HitGroup = {HITGROUP_HEAD}, Animation = {ACT_FLINCH_HEAD}}, {HitGroup = {HITGROUP_LEFTARM}, Animation = {ACT_FLINCH_LEFTARM}}, {HitGroup = {HITGROUP_RIGHTARM}, Animation = {ACT_FLINCH_RIGHTARM}}, {HitGroup = {HITGROUP_LEFTLEG}, Animation = {ACT_FLINCH_LEFTLEG}}, {HitGroup = {HITGROUP_RIGHTLEG}, Animation = {ACT_FLINCH_RIGHTLEG}}}
+ENT.AnimTbl_MeleeAttack = {ACT_MELEE_ATTACK1, ACT_MELEE_ATTACK2}
+ENT.AnimTbl_GrenadeAttack = {"grenThrow","grenDrop"}
+ENT.TimeUntilMeleeAttackDamage = false
+ENT.FlinchHitGroupMap = {{HitGroup = HITGROUP_HEAD, Animation = ACT_FLINCH_HEAD}, {HitGroup = HITGROUP_LEFTARM, Animation = ACT_FLINCH_LEFTARM}, {HitGroup = HITGROUP_RIGHTARM, Animation = ACT_FLINCH_RIGHTARM}, {HitGroup = HITGROUP_LEFTLEG, Animation = ACT_FLINCH_LEFTLEG}, {HitGroup = HITGROUP_RIGHTLEG, Animation = ACT_FLINCH_RIGHTLEG}}
 
 ENT.OnPlayerSightSoundChance = 2
 
@@ -50,8 +53,6 @@ ENT.Element_ElectricDamage = 0
 ENT.Element_FireIgniteTime = 0
 ENT.Element_FreezingRadius = 0
 ENT.Element_AcidTime = 0
-
-ENT.LastHitTimer = CurTime()
 
 function ENT:GF2_CustomInitialize() end
 function ENT:GF2_CustomOnThink() end
@@ -262,7 +263,6 @@ function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup)
 end
 
 function ENT:CustomOnTakeDamage_AfterDamage() 
-	self.LastHitTimer = CurTime() + 5
 	if self:Health() <= (self:GetMaxHealth() / 2) then
 		self:OnHalfHealth()
 	end
@@ -331,4 +331,122 @@ function ENT:GF2_CustomOnRemove() end
 function ENT:CustomOnRemove()
 	timer.Remove("GF2_HealTimer_"..self:EntIndex())
 	self:GF2_CustomOnRemove()
+end
+
+function ENT:SetAnimationTranslations(wepHoldType)
+	local isFemale = VJ.AnimExists(self, ACT_IDLE_ANGRY_PISTOL)
+	self.AnimationTranslations[ACT_RANGE_ATTACK2] 				= VJ.SequenceToActivity(self, "shootAR2alt")
+		
+	self.AnimationTranslations[ACT_COVER_LOW] 					= {ACT_COVER, "vjseq_Leanwall_CrouchLeft_A_idle", "vjseq_Leanwall_CrouchLeft_B_idle", "vjseq_Leanwall_CrouchLeft_C_idle", "vjseq_Leanwall_CrouchLeft_D_idle"}
+		
+	self.AnimationTranslations[ACT_WALK_CROUCH] 				= ACT_WALK_CROUCH_RIFLE
+	self.AnimationTranslations[ACT_WALK_CROUCH_AIM] 			= ACT_WALK_CROUCH_AIM_RIFLE
+		
+	self.AnimationTranslations[ACT_RUN] 						= ACT_RUN_RIFLE
+	self.AnimationTranslations[ACT_RUN_AGITATED] 				= ACT_RUN_RIFLE
+	self.AnimationTranslations[ACT_RUN_PROTECTED] 				= ACT_RUN_CROUCH_RIFLE
+	self.AnimationTranslations[ACT_RUN_CROUCH] 					= ACT_RUN_CROUCH_RIFLE
+	self.AnimationTranslations[ACT_RUN_CROUCH_AIM] 				= ACT_RUN_CROUCH_AIM_RIFLE
+	
+	if wepHoldType == "ar2" or wepHoldType == "smg" then
+		if wepHoldType == "ar2" then
+			self.AnimationTranslations[ACT_RANGE_ATTACK1] 			= ACT_RANGE_ATTACK_AR2
+			self.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 	= ACT_GESTURE_RANGE_ATTACK_AR2
+			self.AnimationTranslations[ACT_RANGE_ATTACK1_LOW] 		= ACT_RANGE_ATTACK_AR2_LOW
+			self.AnimationTranslations[ACT_IDLE] 					= VJ.SequenceToActivity(self, "Idle1_AR2")
+		elseif wepHoldType == "smg" then
+			self.AnimationTranslations[ACT_RANGE_ATTACK1] 			= ACT_RANGE_ATTACK_SMG1
+			self.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 	= ACT_GESTURE_RANGE_ATTACK_SMG1
+			self.AnimationTranslations[ACT_RANGE_ATTACK1_LOW] 		= ACT_RANGE_ATTACK_SMG1_LOW
+			self.AnimationTranslations[ACT_IDLE] 					= ACT_IDLE_SMG1
+		end
+
+		self.AnimationTranslations[ACT_WALK] 						= VJ.SequenceToActivity(self, "walkeasy_all")
+		self.AnimationTranslations[ACT_WALK_AGITATED] 				= ACT_WALK_RIFLE
+		self.AnimationTranslations[ACT_WALK_AIM] 					= ACT_WALK_AIM_RIFLE
+		
+		self.AnimationTranslations[ACT_RUN_AIM] 					= ACT_RUN_AIM_RIFLE
+	elseif wepHoldType == "crossbow" or wepHoldType == "shotgun" then
+		self.AnimationTranslations[ACT_RANGE_ATTACK1] 				= ACT_RANGE_ATTACK_SHOTGUN
+		self.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 		= wepHoldType == "crossbow" and ACT_GESTURE_RANGE_ATTACK_AR2 or ACT_GESTURE_RANGE_ATTACK_SHOTGUN
+		self.AnimationTranslations[ACT_RANGE_ATTACK1_LOW] 			= ACT_RANGE_ATTACK_SHOTGUN_LOW
+		self.AnimationTranslations[ACT_RELOAD] 						= ACT_RELOAD_SHOTGUN
+		self.AnimationTranslations[ACT_RELOAD_LOW] 					= ACT_RELOAD_SHOTGUN_LOW
+		
+		self.AnimationTranslations[ACT_IDLE] 						= ACT_IDLE_SMG1
+		self.AnimationTranslations[ACT_IDLE_ANGRY] 					= ACT_IDLE_ANGRY_SHOTGUN
+		
+		self.AnimationTranslations[ACT_WALK] 						= ACT_WALK_AIM_SHOTGUN
+		self.AnimationTranslations[ACT_WALK_AIM] 					= ACT_WALK_AIM_SHOTGUN
+		
+		self.AnimationTranslations[ACT_RUN_AIM] 					= ACT_RUN_AIM_SHOTGUN
+	elseif wepHoldType == "rpg" then
+		self.AnimationTranslations[ACT_RANGE_ATTACK1] 				= ACT_RANGE_ATTACK_RPG
+		self.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 		= VJ.SequenceToActivity(self, "gesture_shoot_rpg")
+		self.AnimationTranslations[ACT_RANGE_ATTACK1_LOW] 			= VJ.SequenceToActivity(self, "shootRPGc")
+		self.AnimationTranslations[ACT_RELOAD] 						= ACT_RELOAD_SMG1
+		self.AnimationTranslations[ACT_RELOAD_LOW] 					= ACT_RELOAD_SMG1_LOW
+		
+		self.AnimationTranslations[ACT_IDLE] 						= ACT_IDLE_RPG
+		self.AnimationTranslations[ACT_IDLE_ANGRY] 					= ACT_IDLE_ANGRY_RPG
+		
+		self.AnimationTranslations[ACT_WALK] 						= ACT_WALK_RPG
+		self.AnimationTranslations[ACT_WALK_AGITATED] 				= ACT_WALK_AIM_RIFLE_STIMULATED
+		self.AnimationTranslations[ACT_WALK_AIM] 					= ACT_WALK_AIM_RIFLE
+		
+		self.AnimationTranslations[ACT_RUN] 						= ACT_RUN_RPG
+		self.AnimationTranslations[ACT_RUN_AIM] 					= ACT_RUN_AIM_RIFLE
+	elseif wepHoldType == "pistol" then
+		self.AnimationTranslations[ACT_RANGE_ATTACK1] 				= ACT_RANGE_ATTACK_PISTOL
+		self.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 		= ACT_GESTURE_RANGE_ATTACK_PISTOL
+		self.AnimationTranslations[ACT_RANGE_ATTACK1_LOW] 			= ACT_RANGE_ATTACK_PISTOL_LOW
+		self.AnimationTranslations[ACT_COVER_LOW] 					= {"crouchidle_panicked4", "vjseq_crouchidlehide"}
+		self.AnimationTranslations[ACT_RELOAD] 						= ACT_RELOAD_PISTOL
+		self.AnimationTranslations[ACT_RELOAD_LOW] 					= isFemale and ACT_RELOAD_SMG1_LOW or ACT_RELOAD_PISTOL_LOW -- Only males have covered pistol reload
+		
+		self.AnimationTranslations[ACT_IDLE] 						= isFemale and ACT_IDLE_PISTOL or ACT_IDLE -- Only females have pistol idle animation
+		self.AnimationTranslations[ACT_IDLE_ANGRY] 					= isFemale and ACT_IDLE_ANGRY_PISTOL or VJ.SequenceToActivity(self, "idle_ar2_aim") -- Only females have angry pistol animation
+		
+		self.AnimationTranslations[ACT_WALK] 						= VJ.SequenceToActivity(self, "walk_relaxed_all_Pistol")
+		self.AnimationTranslations[ACT_WALK_AIM] 					= isFemale and ACT_WALK_AIM_PISTOL or PICK({VJ.SequenceToActivity(self, "walkaimall1_ar2"), VJ.SequenceToActivity(self, "walkalertaim_ar2_all1")})
+		self.AnimationTranslations[ACT_WALK_CROUCH_AIM] 			= ACT_WALK_CROUCH_AIM_RIFLE
+		
+		self.AnimationTranslations[ACT_RUN_AIM] 					= isFemale and ACT_RUN_AIM_PISTOL or VJ.SequenceToActivity(self, "run_alert_aiming_ar2_all")
+		self.AnimationTranslations[ACT_RUN_CROUCH_AIM] 				= ACT_RUN_CROUCH_AIM_RIFLE
+	elseif wepHoldType == "revolver" then
+		self.AnimationTranslations[ACT_RANGE_ATTACK1] 				= VJ.SequenceToActivity(self, "shootp2")
+		self.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 		= VJ.SequenceToActivity(self, "gesture_shoot_357")
+		self.AnimationTranslations[ACT_RANGE_ATTACK1_LOW] 			= VJ.SequenceToActivity(self, "shootp2c")
+		self.AnimationTranslations[ACT_COVER_LOW] 					= {VJ.SequenceToActivity(self, "crouchidle_panicked4"), VJ.SequenceToActivity(self, "vjseq_crouchidlehide")}
+		self.AnimationTranslations[ACT_RELOAD] 						= VJ.SequenceToActivity(self, "reload_357")
+		self.AnimationTranslations[ACT_RELOAD_LOW] 					= VJ.SequenceToActivity(self, "reload_357_low") -- Only males have covered pistol reload
+		
+		self.AnimationTranslations[ACT_IDLE] 						= isFemale and ACT_IDLE_PISTOL or ACT_IDLE -- Only females have pistol idle animation
+		self.AnimationTranslations[ACT_IDLE_ANGRY] 					= isFemale and ACT_IDLE_ANGRY_PISTOL or VJ.SequenceToActivity(self, "idle_ar2_aim") -- Only females have angry pistol animation
+
+		self.AnimationTranslations[ACT_WALK] 						= VJ.SequenceToActivity(self, "walk_relaxed_all_Pistol")
+		self.AnimationTranslations[ACT_WALK_AIM] 					= isFemale and ACT_WALK_AIM_PISTOL or PICK({VJ.SequenceToActivity(self, "walkaimall1_ar2"), VJ.SequenceToActivity(self, "walkalertaim_ar2_all1")})
+		self.AnimationTranslations[ACT_WALK_CROUCH_AIM] 			= ACT_WALK_CROUCH_AIM_RIFLE
+
+		self.AnimationTranslations[ACT_RUN_AIM] 					= isFemale and ACT_RUN_AIM_PISTOL or VJ.SequenceToActivity(self, "run_alert_aiming_ar2_all")
+		self.AnimationTranslations[ACT_RUN_CROUCH_AIM] 				= ACT_RUN_CROUCH_AIM_RIFLE
+	elseif wepHoldType == "melee" or wepHoldType == "melee2" or wepHoldType == "knife" then
+		self.AnimationTranslations[ACT_RANGE_ATTACK1] 				= {ACT_MELEE_ATTACK_SWING, ACT_MELEE_ATTACK2, VJ.SequenceToActivity(self, "thrust")}
+		self.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 		= false
+		
+		self.AnimationTranslations[ACT_IDLE] 						= VJ.SequenceToActivity(self, "batonidle1")
+		self.AnimationTranslations[ACT_IDLE_ANGRY] 					= VJ.SequenceToActivity(self, "batonangryidle1")
+		
+		self.AnimationTranslations[ACT_WALK] 						= VJ.SequenceToActivity(self, "walk_hold_baton_angry")
+		self.AnimationTranslations[ACT_WALK_AIM] 					= false
+		
+		self.AnimationTranslations[ACT_RUN] 						= VJ.SequenceToActivity(self, "run_hold_baton_angry")
+		self.AnimationTranslations[ACT_RUN_AIM] 					= false
+		self.AnimationTranslations[ACT_RUN_AGITATED] 				= false
+	else -- Unarmed!
+		self.AnimationTranslations[ACT_IDLE] 						= VJ.SequenceToActivity(self, "idle_unarmed")
+		self.AnimationTranslations[ACT_WALK] 						= VJ.SequenceToActivity(self, "WalkUnarmed_all")
+		self.AnimationTranslations[ACT_RUN] 						= VJ.SequenceToActivity(self, "rununarmed_all")
+		self.AnimationTranslations[ACT_RUN_AGITATED] 				= VJ.SequenceToActivity(self, "rununarmed_all")
+	end
 end

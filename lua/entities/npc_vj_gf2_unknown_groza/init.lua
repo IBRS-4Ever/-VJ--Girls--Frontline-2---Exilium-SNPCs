@@ -93,13 +93,11 @@ function ENT:OnHalfHealth()
 	Colphne.AnimationSpeed = 2.5
 	Colphne.Rappelling = true
 	Colphne.VJ_NPC_Class = self.VJ_NPC_Class
-	Colphne.AnimTbl_MeleeAttack = "meleeattack01"
 	Colphne.HealAllies = true 
 	Colphne.HealDistance = 750
 	Colphne.HealAmount = 25
 	Colphne.HealDelay = 1
 	Colphne.Element = "water"
-	Colphne.RappellingAnim = "jump_holding_glide"
 	Colphne:Spawn()
 	Colphne:Give("weapon_vj_gf2_taurus_curve")
 
@@ -118,14 +116,17 @@ function ENT:OnHalfHealth()
 	Charolic.ShouldFollow = false
 	Charolic:Spawn()
 	function Charolic:SetAnimationTranslations()
-		Charolic.AnimationTranslations[ACT_RANGE_ATTACK1] 				= ACT_MELEE_ATTACK1
-		Charolic.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 		= false -- Don't play anything for melee!
-		Charolic.AnimationTranslations[ACT_IDLE] 						= VJ.SequenceToActivity(Charolic, "idle_unarmed")
-		Charolic.AnimationTranslations[ACT_IDLE_ANGRY] 					= VJ.SequenceToActivity(Charolic, "idle_unarmed")
-		Charolic.AnimationTranslations[ACT_WALK_AIM] 					= ACT_WALK_AIM_RIFLE
-		Charolic.AnimationTranslations[ACT_RUN_AIM] 					= ACT_RUN_AIM_RIFLE
+		Charolic.AnimationTranslations[ACT_RANGE_ATTACK1] 				= {ACT_MELEE_ATTACK_SWING, ACT_MELEE_ATTACK2, VJ.SequenceToActivity(Charolic, "thrust")}
+		Charolic.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 		= false
+		Charolic.AnimationTranslations[ACT_IDLE] 						= VJ.SequenceToActivity(Charolic, "batonidle1")
+		Charolic.AnimationTranslations[ACT_IDLE_ANGRY] 					= VJ.SequenceToActivity(Charolic, "batonangryidle1")
+		
 		Charolic.AnimationTranslations[ACT_RUN] 						= VJ.SequenceToActivity(Charolic, "run_protected_all")
+		Charolic.AnimationTranslations[ACT_RUN_AIM] 					= false
+		Charolic.AnimationTranslations[ACT_RUN_AGITATED] 				= false
+	
 		Charolic.AnimationTranslations[ACT_WALK] 						= VJ.SequenceToActivity(Charolic, "walk_p_all_stimulated")
+		Charolic.AnimationTranslations[ACT_WALK_AIM] 					= false
 	end
 
 	function Charolic:GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 

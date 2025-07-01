@@ -18,7 +18,7 @@ ENT.SoundTbl_UnFollowPlayer = {SndPrefix.."unfollow1.wav"}
 ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav"}
 ENT.SoundTbl_MedicReceiveHeal = {SndPrefix.."get_heal1.wav",SndPrefix.."get_heal2.wav",SndPrefix.."get_heal3.wav",SndPrefix.."get_heal4.wav"}
 
-ENT.Drone = nil 
+ENT.Drone = NULL
 
 function ENT:GF2_CustomInitialize() 
 	local Drone = ents.Create("npc_vj_gf2_tololo_uav")
