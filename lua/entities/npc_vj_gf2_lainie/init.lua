@@ -59,6 +59,7 @@ function ENT:CustomOnAlert(ent)
 		Holo.Owner = self
 		Holo.IsHolo = true
 		Holo:Spawn()
+		Holo:Give("weapon_vj_gf2_ump40")
 		self.HoloENT = Holo
 	end
 	print("Alert")

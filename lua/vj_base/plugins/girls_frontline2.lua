@@ -469,16 +469,35 @@ if CLIENT then
 		local DollName = string.format(language.GetPhrase("vj_gf2_snpcs.Name"),Entity.PrintName)
 		local DollSquad = string.format(language.GetPhrase("vj_gf2_snpcs.Affiliation"),language.GetPhrase(Entity.SquadName))
 		local DollModel = string.format(language.GetPhrase("vj_gf2_snpcs.BodyModel"),Entity.BodyModel)
-		local DollWeapon = string.format(language.GetPhrase("vj_gf2_snpcs.ImprintID"),Entity:GetActiveWeapon().PrintName)
+		local DollWeapon = string.format(language.GetPhrase("vj_gf2_snpcs.ImprintID"),language.GetPhrase(Entity:GetActiveWeapon().PrintName))
 
 		hook.Add( "HUDPaint", "VJ_GF2_Controller_HUD", function()
-			surface.SetFont("DermaLarge")
-			local tW, tH = surface.GetTextSize( DollName.."\n"..DollSquad.."\n"..DollModel.."\n"..DollWeapon )
-			local padX = 20
-			local padY = 5
-			surface.SetDrawColor( 0, 0, 0, 100 )
-			surface.DrawRect( 16, 32, tW + padX * 2, tH + padY * 2 )
-			draw.DrawText(DollName.."\n"..DollSquad.."\n"..DollModel.."\n"..DollWeapon, "DermaLarge", 32, 32)
+			if IsValid(Entity) then
+				surface.SetFont("DermaLarge")
+				local padX = 20
+				local padY = 5
+				local PosX = 0.1
+				local PosY = 0.1
+				local Text = DollName.."\n"..DollSquad.."\n"..DollModel.."\n"..DollWeapon
+				local tW, tH = surface.GetTextSize( Text )
+				surface.SetDrawColor( 0, 0, 0, 100 )
+				surface.DrawRect( ScrW() * PosX - (tW+padX * 2)/2, ScrH() * PosY, tW + padX * 2, tH + padY * 2 )
+				draw.DrawText(Text, "DermaLarge", ScrW() * PosX, ScrH() * PosY, color_white, 1)
+	
+				local PosX = 0.9
+				local PosY = 0.9
+				local Text = Entity:GetActiveWeapon().PrintName.."\n"..Entity:GetActiveWeapon():Clip1().."|"..Entity:GetActiveWeapon():GetMaxClip1()
+				local tW, tH = surface.GetTextSize( Text )
+				surface.DrawRect( ScrW() * PosX - (tW+padX * 2)/2, ScrH() * PosY, tW + padX * 2, tH + padY * 2 )
+				draw.DrawText(Text, "DermaLarge", ScrW() * PosX, ScrH() * PosY, color_white, 1)
+
+				local PosX = 0.1
+				local PosY = 0.9
+				local Text = "#Valve_Hud_HEALTH".."\n"..Entity:Health().."|"..Entity:GetMaxHealth()
+				local tW, tH = surface.GetTextSize( Text )
+				surface.DrawRect( ScrW() * PosX - (tW+padX * 2)/2, ScrH() * PosY, tW + padX * 2, tH + padY * 2 )
+				draw.DrawText(Text, "DermaLarge", ScrW() * PosX, ScrH() * PosY, color_white, 1)
+			end
 		end )
 	end )
 
