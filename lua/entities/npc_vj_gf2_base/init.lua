@@ -30,7 +30,7 @@ ENT.FlinchChance = 1
 ENT.AnimTbl_Flinch = ACT_FLINCH_PHYSICS
 ENT.AnimTbl_MeleeAttack = {ACT_MELEE_ATTACK1, ACT_MELEE_ATTACK2}
 ENT.AnimTbl_GrenadeAttack = {"grenThrow","grenDrop"}
-ENT.TimeUntilMeleeAttackDamage = false
+--ENT.TimeUntilMeleeAttackDamage = false
 ENT.FlinchHitGroupMap = {{HitGroup = HITGROUP_HEAD, Animation = ACT_FLINCH_HEAD}, {HitGroup = HITGROUP_LEFTARM, Animation = ACT_FLINCH_LEFTARM}, {HitGroup = HITGROUP_RIGHTARM, Animation = ACT_FLINCH_RIGHTARM}, {HitGroup = HITGROUP_LEFTLEG, Animation = ACT_FLINCH_LEFTLEG}, {HitGroup = HITGROUP_RIGHTLEG, Animation = ACT_FLINCH_RIGHTLEG}}
 
 ENT.OnPlayerSightSoundChance = 2
@@ -335,6 +335,7 @@ end
 
 function ENT:SetAnimationTranslations(wepHoldType)
 	local isFemale = VJ.AnimExists(self, ACT_IDLE_ANGRY_PISTOL)
+	if !self.Weapon_AimTurnDiff then self.Weapon_AimTurnDiff_Def = 0.71120220422745 end
 	self.AnimationTranslations[ACT_RANGE_ATTACK2] 				= VJ.SequenceToActivity(self, "shootAR2alt")
 		
 	self.AnimationTranslations[ACT_COVER_LOW] 					= {ACT_COVER, "vjseq_Leanwall_CrouchLeft_A_idle", "vjseq_Leanwall_CrouchLeft_B_idle", "vjseq_Leanwall_CrouchLeft_C_idle", "vjseq_Leanwall_CrouchLeft_D_idle"}
@@ -353,11 +354,13 @@ function ENT:SetAnimationTranslations(wepHoldType)
 			self.AnimationTranslations[ACT_RANGE_ATTACK1] 			= ACT_RANGE_ATTACK_AR2
 			self.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 	= ACT_GESTURE_RANGE_ATTACK_AR2
 			self.AnimationTranslations[ACT_RANGE_ATTACK1_LOW] 		= ACT_RANGE_ATTACK_AR2_LOW
+			self.AnimationTranslations[ACT_IDLE_ANGRY] 				= VJ.SequenceToActivity(self, "combatidle1_ar1")
 			self.AnimationTranslations[ACT_IDLE] 					= VJ.SequenceToActivity(self, "Idle1_AR2")
 		elseif wepHoldType == "smg" then
 			self.AnimationTranslations[ACT_RANGE_ATTACK1] 			= ACT_RANGE_ATTACK_SMG1
 			self.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 	= ACT_GESTURE_RANGE_ATTACK_SMG1
 			self.AnimationTranslations[ACT_RANGE_ATTACK1_LOW] 		= ACT_RANGE_ATTACK_SMG1_LOW
+			self.AnimationTranslations[ACT_IDLE_ANGRY] 				= ACT_IDLE_ANGRY_SMG1
 			self.AnimationTranslations[ACT_IDLE] 					= ACT_IDLE_SMG1
 		end
 
