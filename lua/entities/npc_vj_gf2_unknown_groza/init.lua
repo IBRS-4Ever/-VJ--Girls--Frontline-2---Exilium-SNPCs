@@ -115,7 +115,7 @@ function ENT:OnHalfHealth()
 	Charolic.NextAnyAttackTime_Melee = 0.1
 	Charolic.ShouldFollow = false
 	Charolic:Spawn()
-	function Charolic:SetAnimationTranslations()
+	function Charolic:GF2_CustomOnSetAnimationTranslations()
 		Charolic.AnimationTranslations[ACT_RANGE_ATTACK1] 				= {ACT_MELEE_ATTACK_SWING, ACT_MELEE_ATTACK2, VJ.SequenceToActivity(Charolic, "thrust")}
 		Charolic.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 		= false
 		Charolic.AnimationTranslations[ACT_IDLE] 						= VJ.SequenceToActivity(Charolic, "batonidle1")

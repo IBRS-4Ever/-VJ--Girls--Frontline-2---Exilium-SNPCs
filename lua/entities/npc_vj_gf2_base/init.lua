@@ -333,7 +333,9 @@ function ENT:CustomOnRemove()
 	self:GF2_CustomOnRemove()
 end
 
-function ENT:SetAnimationTranslations(wepHoldType)
+function ENT:GF2_CustomOnSetAnimationTranslations(wepHoldType) end
+
+function ENT:CustomOnSetAnimationTranslations(wepHoldType)
 	local isFemale = VJ.AnimExists(self, ACT_IDLE_ANGRY_PISTOL)
 	if !self.Weapon_AimTurnDiff then self.Weapon_AimTurnDiff_Def = 0.71120220422745 end
 	self.AnimationTranslations[ACT_RANGE_ATTACK2] 				= VJ.SequenceToActivity(self, "shootAR2alt")
@@ -452,4 +454,5 @@ function ENT:SetAnimationTranslations(wepHoldType)
 		self.AnimationTranslations[ACT_RUN] 						= VJ.SequenceToActivity(self, "rununarmed_all")
 		self.AnimationTranslations[ACT_RUN_AGITATED] 				= VJ.SequenceToActivity(self, "rununarmed_all")
 	end
+	self:GF2_CustomOnSetAnimationTranslations(wepHoldType)
 end
