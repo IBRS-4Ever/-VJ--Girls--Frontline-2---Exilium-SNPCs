@@ -24,20 +24,6 @@ ENT.TimeUntilMeleeAttackDamage = 0.1
 ENT.NextMeleeAttackTime = 0.1
 ENT.NextAnyAttackTime_Melee = 0.1
 
-function ENT:SetAnimationTranslations(wepHoldType)
-	self.AnimationTranslations[ACT_RANGE_ATTACK1] 				= {ACT_MELEE_ATTACK_SWING, ACT_MELEE_ATTACK2, VJ.SequenceToActivity(self, "thrust")}
-	self.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 		= false
-	self.AnimationTranslations[ACT_IDLE] 						= VJ.SequenceToActivity(self, "batonidle1")
-	self.AnimationTranslations[ACT_IDLE_ANGRY] 					= VJ.SequenceToActivity(self, "batonangryidle1")
-	
-	self.AnimationTranslations[ACT_RUN] 						= VJ.SequenceToActivity(self, "run_protected_all")
-	self.AnimationTranslations[ACT_RUN_AIM] 					= false
-	self.AnimationTranslations[ACT_RUN_AGITATED] 				= false
-
-	self.AnimationTranslations[ACT_WALK] 						= VJ.SequenceToActivity(self, "walk_p_all_stimulated")
-	self.AnimationTranslations[ACT_WALK_AIM] 					= false
-end
-
 function ENT:GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
 	dmginfo:ScaleDamage(0.25)
 end

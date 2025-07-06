@@ -115,19 +115,6 @@ function ENT:OnHalfHealth()
 	Charolic.NextAnyAttackTime_Melee = 0.1
 	Charolic.ShouldFollow = false
 	Charolic:Spawn()
-	function Charolic:GF2_CustomOnSetAnimationTranslations()
-		Charolic.AnimationTranslations[ACT_RANGE_ATTACK1] 				= {ACT_MELEE_ATTACK_SWING, ACT_MELEE_ATTACK2, VJ.SequenceToActivity(Charolic, "thrust")}
-		Charolic.AnimationTranslations[ACT_GESTURE_RANGE_ATTACK1] 		= false
-		Charolic.AnimationTranslations[ACT_IDLE] 						= VJ.SequenceToActivity(Charolic, "batonidle1")
-		Charolic.AnimationTranslations[ACT_IDLE_ANGRY] 					= VJ.SequenceToActivity(Charolic, "batonangryidle1")
-		
-		Charolic.AnimationTranslations[ACT_RUN] 						= VJ.SequenceToActivity(Charolic, "run_protected_all")
-		Charolic.AnimationTranslations[ACT_RUN_AIM] 					= false
-		Charolic.AnimationTranslations[ACT_RUN_AGITATED] 				= false
-	
-		Charolic.AnimationTranslations[ACT_WALK] 						= VJ.SequenceToActivity(Charolic, "walk_p_all_stimulated")
-		Charolic.AnimationTranslations[ACT_WALK_AIM] 					= false
-	end
 
 	function Charolic:GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
 		dmginfo:ScaleDamage(0.25)

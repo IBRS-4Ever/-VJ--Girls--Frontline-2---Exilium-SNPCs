@@ -1,24 +1,12 @@
-"VertexlitGeneric"
+VertexLitGeneric
 {
-	"$basetexture" "models/gfl2_blusphere/blusphere_cloth1_d"
-	"$bumpmap" "models\gfl2_blusphere\blusphere_cloth1_n"
-	//"$translucent" "1"
-	//"$model" "1"
-	//"$nodecal" "1"
-	//"$nocull" "1"
-	//"$alphatest" 1
-	//"$allowalphatocoverage" 1
-	"$halflambert" "1"
-	
-	//"$lightwarptexture" "models\gfl2_blusphere\lightwarptexture"
+	$basetexture "models/gfl2_blusphere/blusphere_cloth1_d"
+	$bumpmap "models/gfl2_blusphere/blusphere_cloth1_n"
 
-	"$phong" "1"
-	"$phongboost"	"1"
-	"$phongalbedotint" "1"
-	"$phongexponenttexture" "models\gfl2_blusphere\blusphere_cloth1_e"
-	"$phongfresnelranges"	"[1 2 3]"
-
-	//"$rimlight"               "1"
-	//"$rimlightexponent"       "1"
-	//"$rimlightboost"          "1"
+	$phong 1
+	$phongexponenttexture "models/gfl2_blusphere/blusphere_cloth1_e"
+	$phongfresnelranges "[1 2 3]"
+	$halflambert 1
+	$phongalbedotint 1
+	$phongboost 2
 }
