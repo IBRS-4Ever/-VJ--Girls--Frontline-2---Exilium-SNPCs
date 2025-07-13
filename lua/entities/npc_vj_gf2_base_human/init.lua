@@ -4,7 +4,7 @@ include('shared.lua')
 --ENT.IsGF2SNPC = true
 ENT.DropWeaponOnDeath = false
 ENT.Bleeds = true
-ENT.BloodColor = "red"
+ENT.BloodColor = VJ.BLOOD_COLOR_RED
 ENT.HasBloodParticle = true
 ENT.HasBloodPool = true
 ENT.HasBloodDecal = true

@@ -1,7 +1,6 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
---local Name = "lainie"
-local Name = "lenna"
+local Name = "lainie"
 local SndPrefix = "vo/jp/"..Name.."/"
 ENT.Model = {"models/gf2/"..Name.."_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
@@ -42,7 +41,6 @@ function ENT:GF2_CustomInitialize()
 end
 
 function ENT:OnResetEnemy() 
-	print("Reset")
 	if IsValid(self.HoloENT) then
 		self.HoloENT:Remove()
 	end
@@ -62,7 +60,6 @@ function ENT:CustomOnAlert(ent)
 		Holo:Give("weapon_vj_gf2_ump40")
 		self.HoloENT = Holo
 	end
-	print("Alert")
 end
 
 function ENT:GF2_CustomOnRemove()

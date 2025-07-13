@@ -1,22 +1,20 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.Model = {"models/gf2/dushevnaya_combat.mdl"}
-ENT.StartHealth = GetConVarNumber("vj_gf2_dushevnaya_h")
-ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_dushevnaya_d")
+local Name = "dushevnaya"
+local SndPrefix = "vo/jp/"..Name.."/"
+ENT.Model = {"models/gf2/"..Name.."_combat.mdl"}
+ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
+ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
 ENT.Element = "freezing"
 ENT.Element_FreezingRadius = 150
 
-ENT.SoundTbl_Idle = {"vo/jp/dushevnaya/idle1.wav","vo/jp/dushevnaya/idle2.wav","vo/jp/dushevnaya/idle3.wav","vo/jp/dushevnaya/idle4.wav","vo/jp/dushevnaya/idle5.wav","vo/jp/dushevnaya/idle6.wav","vo/jp/dushevnaya/idle7.wav","vo/jp/dushevnaya/idle8.wav","vo/jp/dushevnaya/idle9.wav","vo/jp/dushevnaya/idle10.wav"}
-ENT.SoundTbl_OnPlayerSight = {"vo/jp/dushevnaya/player_sight1.wav","vo/jp/dushevnaya/player_sight2.wav","vo/jp/dushevnaya/player_sight3.wav","vo/jp/dushevnaya/player_sight4.wav","vo/jp/dushevnaya/player_sight5.wav","vo/jp/dushevnaya/player_sight6.wav","vo/jp/dushevnaya/player_sight7.wav","vo/jp/dushevnaya/player_sight8.wav","vo/jp/dushevnaya/player_sight9.wav","vo/jp/dushevnaya/player_sight10.wav","vo/jp/dushevnaya/player_sight11.wav","vo/jp/dushevnaya/player_sight12.wav","vo/jp/dushevnaya/player_sight13.wav"}
-ENT.SoundTbl_Alert = {"vo/jp/dushevnaya/alert1.wav","vo/jp/dushevnaya/alert2.wav","vo/jp/dushevnaya/alert3.wav"}
-ENT.SoundTbl_Pain = {"vo/jp/dushevnaya/hit1.wav","vo/jp/dushevnaya/hit2.wav","vo/jp/dushevnaya/hit3.wav","vo/jp/dushevnaya/hit4.wav","vo/jp/dushevnaya/hit5.wav","vo/jp/dushevnaya/hit6.wav","vo/jp/dushevnaya/hit7.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"vo/jp/dushevnaya/killed_enemy1.wav","vo/jp/dushevnaya/killed_enemy2.wav","vo/jp/dushevnaya/killed_enemy3.wav"}
-ENT.SoundTbl_FollowPlayer = {"vo/jp/dushevnaya/follow1.wav","vo/jp/dushevnaya/follow2.wav"}
---ENT.SoundTbl_UnFollowPlayer = {"vo/jp/dushevnaya/unfollow1.wav","vo/jp/dushevnaya/unfollow2.wav"}
-ENT.SoundTbl_Death = {"vo/jp/dushevnaya/die1.wav","vo/jp/dushevnaya/hit6.wav","vo/jp/dushevnaya/hit7.wav"}
---ENT.SoundTbl_MedicReceiveHeal = {"vo/jp/dushevnaya/get_heal1.wav","vo/jp/dushevnaya/get_heal2.wav","vo/jp/dushevnaya/get_heal3.wav","vo/jp/dushevnaya/get_heal4.wav","vo/jp/dushevnaya/get_heal5.wav","vo/jp/dushevnaya/get_heal6.wav","vo/jp/dushevnaya/get_heal7.wav","vo/jp/dushevnaya/get_heal8.wav"}
---[[ 
-ENT.Shield = 150
-ENT.ShieldCoolDown = 90
- ]]
+ENT.SoundTbl_Idle = {SndPrefix.."idle1.wav",SndPrefix.."idle2.wav",SndPrefix.."idle3.wav",SndPrefix.."idle4.wav",SndPrefix.."idle5.wav",SndPrefix.."idle6.wav",SndPrefix.."idle7.wav",SndPrefix.."idle8.wav",SndPrefix.."idle9.wav",SndPrefix.."idle10.wav"}
+ENT.SoundTbl_OnPlayerSight = {SndPrefix.."player_sight1.wav",SndPrefix.."player_sight2.wav",SndPrefix.."player_sight3.wav",SndPrefix.."player_sight4.wav",SndPrefix.."player_sight5.wav",SndPrefix.."player_sight6.wav",SndPrefix.."player_sight7.wav",SndPrefix.."player_sight8.wav",SndPrefix.."player_sight9.wav",SndPrefix.."player_sight10.wav",SndPrefix.."player_sight11.wav",SndPrefix.."player_sight12.wav",SndPrefix.."player_sight13.wav"}
+ENT.SoundTbl_Alert = {SndPrefix.."alert1.wav",SndPrefix.."alert2.wav",SndPrefix.."alert3.wav"}
+ENT.SoundTbl_Pain = {SndPrefix.."hit1.wav",SndPrefix.."hit2.wav",SndPrefix.."hit3.wav",SndPrefix.."hit4.wav",SndPrefix.."hit5.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav"}
+ENT.SoundTbl_OnKilledEnemy = {SndPrefix.."killed_enemy1.wav",SndPrefix.."killed_enemy2.wav",SndPrefix.."killed_enemy3.wav"}
+ENT.SoundTbl_FollowPlayer = {SndPrefix.."follow1.wav",SndPrefix.."follow2.wav"}
+--ENT.SoundTbl_UnFollowPlayer = {SndPrefix.."unfollow1.wav",SndPrefix.."unfollow2.wav"}
+ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav"}
+--ENT.SoundTbl_MedicReceiveHeal = {SndPrefix.."get_heal1.wav",SndPrefix.."get_heal2.wav",SndPrefix.."get_heal3.wav",SndPrefix.."get_heal4.wav",SndPrefix.."get_heal5.wav",SndPrefix.."get_heal6.wav",SndPrefix.."get_heal7.wav",SndPrefix.."get_heal8.wav"}

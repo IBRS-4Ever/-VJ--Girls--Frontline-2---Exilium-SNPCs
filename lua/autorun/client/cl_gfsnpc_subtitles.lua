@@ -1,6 +1,7 @@
 
-CreateClientConVar("vj_gf2_subtitles", 0, "Display Subtitles.")
+CreateClientConVar("vj_gf2_subtitles", 1, "Display Subtitles.")
 CreateClientConVar("vj_gf2_subtitles_language", "english", "Subtitles' language.")
+CreateClientConVar("vj_gf2_subtitles_fallback", 0, "Subtitles will fallback to Chinese if doesn't support current language.")
 
 GF2_Subtitles_Table = GF2_Subtitles_Table or {}
 local GF2_SoundToSubtitle = {}
@@ -53,7 +54,13 @@ local function GF2_LoadSubtitles()
 			local col = v2.textcol or color_white
 			local text
 			if istable(v2.text) then
-				if v2.text[Lang] then text = v2.text[Lang] else continue end
+				if v2.text[Lang] then 
+					text = v2.text[Lang] 
+				elseif GetConVar("vj_gf2_subtitles_fallback"):GetBool() then
+					text = v2.text["schinese"]
+				else
+					continue
+				end
 			else
 				text = v2.text
 			end
