@@ -2,7 +2,7 @@ AddCSLuaFile("shared.lua")
 include('shared.lua')
 ENT.Model = {"models/gf2/golyat.mdl"}
 ENT.StartHealth = 500
-ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_E"}
+ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_PMC"}
 ENT.Bleeds = false 
 
 ENT.HasDeathCorpse = false

@@ -91,6 +91,7 @@ VJ.AddNPC("#vj_gf2_snpcs.Golyat_Fire","npc_vj_gf2_golyat_fire",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Ice","npc_vj_gf2_golyat_ice",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Tank","npc_vj_gf2_golyat_tank",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Blusphere", "npc_vj_gf2_blusphere",vCatUnf)
+VJ.AddNPC("#vj_gf2_snpcs.Deichgraf", "npc_vj_gf2_deichgraf",vCatUnf)
 
 -- Weapons
 VJ.AddNPCWeapon("OM 50", "weapon_vj_gf2_om50", vCat)
@@ -417,6 +418,7 @@ AddConvars["vj_gf2_npc_unknown_groza_hack_dolls"] = 1 -- Unknown Doll hack dolls
 AddConvars["vj_gf2_npc_unknown_groza_switch_weapons"] = 1 -- Unknown Doll switch weapons.
 AddConvars["vj_gf2_npc_unknown_groza_summon_dummy"] = 1 -- Unknown Doll summon dummies.
 AddConvars["vj_gf2_npc_golyat_damage_friendly"] = 1 -- Golyat deals damage to all NPCs.
+AddConvars["vj_gf2_npc_deichgraf_missile_count"] = 6 -- How many missiles to launch in a roll.
 
 for k, v in pairs(AddConvars) do
 	if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
@@ -469,6 +471,7 @@ if CLIENT then
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Switching_Weapons", "vj_gf2_npc_unknown_groza_switch_weapons")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Summon_Dummy", "vj_gf2_npc_unknown_groza_summon_dummy")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Golyat_Damage_Friendly", "vj_gf2_npc_golyat_damage_friendly")
+				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Deichgraf.Missile_Count", "vj_gf2_npc_deichgraf_missile_count", 1, 12, 0)
 			else
 				Panel:Help("#vjbase.menu.general.admin.not")
 				Panel:ControlHelp("#vjbase.menu.general.admin.only")
