@@ -3,8 +3,11 @@ include('shared.lua')
 ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_PMC"}
 ENT.Model = {"models/gf2/deichgraf_gun.mdl"}
 
-ENT.NextMissileAtkT = CurTime()
+ENT.NextMissileAtkT = CurTime() + 3
 ENT.MissileCount = 0
+
+ENT.NextSpawnGolyatTimer = CurTime()
+ENT.Deichgraf_Gloyat = {}
 
 local BulletPos = Vector(90, -25, 120)
 local MissilePos = Vector(-50, 50, 120)
@@ -17,6 +20,20 @@ function ENT:Tank_OnThinkActive()
 	local Target = self:GetParent():GetEnemy()
 	if !IsValid(Target) then return end
 	if !self:IsLineOfSightClear(Target) then return end
+	if self:GetPos():Distance(Target:GetPos()) < 256 and self.NextSpawnGolyatTimer < CurTime() then
+		if !IsValid(self.Deichgraf_Gloyat) then
+			local Golyat = ents.Create("npc_vj_gf2_golyat_tank")
+			Golyat:SetPos(self:GetParent():GetPos()+self:GetParent():GetUp()*50)
+			Golyat:SetAngles(self:GetAngles())
+			Golyat:SetOwner(self:GetParent())
+			Golyat.Owner = self:GetParent()
+			Golyat:Spawn()
+			self.Deichgraf_Gloyat = Golyat
+			self.NextSpawnGolyatTimer = CurTime() + 30
+		else
+			self.NextSpawnGolyatTimer = CurTime()
+		end
+	end
 	if CurTime() > self.NextMissileAtkT then
 		if self.MissileCount < GetConVar("vj_gf2_npc_deichgraf_missile_count"):GetInt() then
 			local Pos = self:GetPos()
