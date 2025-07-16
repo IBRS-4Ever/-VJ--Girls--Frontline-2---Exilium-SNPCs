@@ -26,7 +26,7 @@ ENT.Shield = 1000
 ENT.ShieldRadius = 100
 ENT.ShieldCoolDown = 60
 
-ENT.GF2CannotBeHecked = true
+ENT.GF2_DeepBlock = true
 
 ENT.AnimationSpeed = 1.5
 

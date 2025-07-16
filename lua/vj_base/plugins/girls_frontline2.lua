@@ -90,7 +90,6 @@ VJ.AddNPC("#vj_gf2_snpcs.Golyat_Red","npc_vj_gf2_golyat_red",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Football","npc_vj_gf2_golyat_football",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Fire","npc_vj_gf2_golyat_fire",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Ice","npc_vj_gf2_golyat_ice",vCatUnf)
-VJ.AddNPC("#vj_gf2_snpcs.Golyat_Tank","npc_vj_gf2_golyat_tank",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Blusphere", "npc_vj_gf2_blusphere",vCatUnf)
 VJ.AddNPC("#vj_gf2_snpcs.Deichgraf", "npc_vj_gf2_deichgraf",vCatUnf)
 

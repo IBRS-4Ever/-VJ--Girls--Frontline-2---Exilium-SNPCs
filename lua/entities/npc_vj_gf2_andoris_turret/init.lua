@@ -2,7 +2,7 @@ AddCSLuaFile("shared.lua")
 include('shared.lua')
 ENT.Model = {"models/prop/gfl2_andoris_turret.mdl"}
 ENT.StartHealth = 250
-ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_F", "CLASS_PLAYER_ALLY"}
+ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_ELMO", "CLASS_PLAYER_ALLY"}
 ENT.Bleeds = false
 
 ENT.MovementType = VJ_MOVETYPE_STATIONARY

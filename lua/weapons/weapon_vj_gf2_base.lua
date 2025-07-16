@@ -132,7 +132,7 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 
 					if self.Owner.BodyModel == "DUAL DSI-8" and GetConVar("vj_gf2_npc_leva_hacking"):GetBool() then -- Leva
 						if ent:IsPlayer() then return end
-						if ent.IsGF2SNPC and ent.GF2CannotBeHecked then return end
+						if ent.IsGF2SNPC and ent.GF2_DeepBlock then return end
 						if math.random(1,100) <= 5 then
 							if ent:IsNPC() then ent.VJ_NPC_Class = self.Owner.VJ_NPC_Class end
 							for id, EntTarget in ents.Iterator() do

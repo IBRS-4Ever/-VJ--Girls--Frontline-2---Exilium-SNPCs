@@ -16,6 +16,8 @@ ENT.Tank_Shell_VelocitySpeed = 3000
 ENT.Tank_Shell_MuzzleFlashPos = BulletPos
 ENT.Tank_Shell_ParticlePos = BulletPos
 
+ENT.GF2_DeepBlock = true
+
 function ENT:Tank_OnThinkActive()
 	local Target = self:GetParent():GetEnemy()
 	if !IsValid(Target) then return end

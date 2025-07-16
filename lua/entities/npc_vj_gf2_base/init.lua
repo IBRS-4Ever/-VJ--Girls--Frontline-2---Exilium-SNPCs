@@ -10,7 +10,7 @@ ENT.HasBloodPool = false
 ENT.HasBloodDecal = false
 ENT.HullType = HULL_HUMAN
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_F", "CLASS_PLAYER_ALLY"}
+ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_ELMO", "CLASS_PLAYER_ALLY"}
 ENT.HasMeleeAttack = true
 ENT.HasGrenadeAttack = false
 
@@ -53,6 +53,8 @@ ENT.Element_ElectricDamage = 0
 ENT.Element_FireIgniteTime = 0
 ENT.Element_FreezingRadius = 0
 ENT.Element_AcidTime = 0
+
+ENT.GF2_DeepBlock = false
 
 function ENT:GF2_CustomInitialize() end
 function ENT:GF2_CustomOnThink() end

@@ -1,6 +1,6 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_E","CLASS_GIRLS_FRONTLINE_E"}
+ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_PMC","CLASS_GIRLS_FRONTLINE_GirardGroup"}
 local Name = "sextans"
 local SndPrefix = "vo/jp/"..Name.."/"
 ENT.Model = {"models/gf2/"..Name.."_combat.mdl"}

@@ -16,7 +16,7 @@ ENT.HasItemDropsOnDeath = true
 ENT.ItemDropsOnDeathChance = 1
 ENT.ItemDropsOnDeath_EntityList = {"obj_gf2_klukai_grenade"}
  ]]
-ENT.GF2CannotBeHecked = true
+ENT.GF2_DeepBlock = true
 ENT.Rappelling = false 
 ENT.RappellingAnim = "rappelloop"
 ENT.ShouldFollow = true

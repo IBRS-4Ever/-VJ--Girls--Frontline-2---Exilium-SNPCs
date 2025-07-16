@@ -7,3 +7,5 @@ ENT.StartHealth = 1500
 ENT.Tank_GunnerENT = "npc_vj_gf2_deichgraf_gunner"
 ENT.Tank_CollisionBoundSize = 100
 ENT.Tank_CollisionBoundUp = 160
+
+ENT.GF2_DeepBlock = true
