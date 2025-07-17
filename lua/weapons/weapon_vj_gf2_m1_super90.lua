@@ -10,8 +10,7 @@ SWEP.WorldModel = "models/prop/gfl2_lotta_benelli_m1.mdl"
 SWEP.HoldType = "shotgun"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.9
-SWEP.NPC_TimeUntilFire = 0.3
-SWEP.NPC_TimeUntilFireExtraTimers = {0.3}
+SWEP.NPC_TimeUntilFire = 0.2
 --SWEP.NPC_ExtraFireSound = {"weapons/shotgun/shotgun_cock.wav"}
 SWEP.NPC_ReloadSound = {"weapons/sg/reload.wav"}
 SWEP.NPC_FiringDistanceScale = 0.5

@@ -9,7 +9,7 @@ SWEP.Category = "GF2"
 SWEP.WorldModel = "models/prop/gfl2_belka_g28.mdl"
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.NPC_NextPrimaryFire = 0.1
+SWEP.NPC_NextPrimaryFire = 0.25
 SWEP.NPC_ReloadSound = {"weapons/ar/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------

@@ -2,7 +2,7 @@ AddCSLuaFile("shared.lua")
 include('shared.lua')
 local Name = "andoris"
 local SndPrefix = "vo/jp/"..Name.."/"
-ENT.Model = {"models/npc/gfl2_"..Name.."_npc.mdl"}
+ENT.Model = {"models/gf2/"..Name.."_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 

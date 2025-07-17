@@ -1,0 +1,3 @@
+AddCSLuaFile("shared.lua")
+include('shared.lua')
+ENT.Model = {"models/gf2/belka_enigmatic_phantoms_dream.mdl"}
