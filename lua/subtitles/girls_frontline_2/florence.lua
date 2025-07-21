@@ -86,6 +86,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName,
 		text = { -- ID: 
 			["schinese"] = "我上了！", 
+			["english"] = "I'm going!",
 		},
 		subjectcol = CharacterColor,
 	},

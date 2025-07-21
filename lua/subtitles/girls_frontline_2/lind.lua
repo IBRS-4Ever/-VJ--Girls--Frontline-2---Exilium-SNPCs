@@ -86,6 +86,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName, 
 		text = { -- ID: 
 			["schinese"] = "令人绝望……", 
+			["english"] = "Hopeless...",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -131,6 +132,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName, 
 		text = { -- ID: 
 			["schinese"] = "真野蛮……", 
+			["english"] = "Brutal...", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -203,6 +205,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName, 
 		text = { -- ID: 
 			["schinese"] = "去死。", 
+			["english"] = "Go to hell.", 
 		},
 		subjectcol = CharacterColor,
 	},

@@ -1,6 +1,6 @@
-ENT.Base 			= "npc_vj_human_base"
+ENT.Base 			= "npc_vj_gf2_base"
 ENT.Type 			= "ai"
-ENT.PrintName 		= "GF2 BASE"
+ENT.PrintName 		= "GF2 BASE Human"
 ENT.Category		= "Girls' Frontline 2"
 ENT.Author			= "IBRS"
 

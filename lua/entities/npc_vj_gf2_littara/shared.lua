@@ -3,5 +3,5 @@ ENT.Type 			= "ai"
 ENT.PrintName 		= "Littara"
 ENT.Category		= "Girls' Frontline 2"
 
---ENT.SquadName		= "#GF2_SquadName_TaskForceDEFY"
+ENT.SquadName		= "#GF2_SquadName_DollCommunity"
 --ENT.BodyModel		= "CSD-09B4M"

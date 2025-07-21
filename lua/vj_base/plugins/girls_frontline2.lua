@@ -100,6 +100,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Springfield","npc_vj_gf2_springfield",{"weapon_vj
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Springfield_QueenInRadiance","npc_vj_gf2_springfield_queen_in_radiance",{"weapon_vj_gf2_m1903"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Yoohee","npc_vj_gf2_yoohee",{"weapon_vj_gf2_k2"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Yoohee_MiracleSweetheart","npc_vj_gf2_yoohee_miracle_sweetheart",{"weapon_vj_gf2_k2"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Balthilde","npc_vj_gf2_balthilde",{"weapon_vj_gf2_ls26"},vCatUnf)
 
 VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCatUnf)
@@ -263,6 +264,7 @@ util.PrecacheModel("models/gf2/springfield_combat.mdl")
 util.PrecacheModel("models/gf2/springfield_queen_in_radiance.mdl")
 util.PrecacheModel("models/gf2/yoohee_combat.mdl")
 util.PrecacheModel("models/gf2/yoohee_miracle_sweetheart.mdl")
+util.PrecacheModel("models/gf2/balthilde_combat.mdl")
 
 -- Weapon Models
 util.PrecacheModel("models/weapons/w_nemesis_om50.mdl")
@@ -407,6 +409,8 @@ VJ.AddConVar("vj_gf2_springfield_h",300)
 VJ.AddConVar("vj_gf2_springfield_d",25)
 VJ.AddConVar("vj_gf2_yoohee_h",425)
 VJ.AddConVar("vj_gf2_yoohee_d",50)
+VJ.AddConVar("vj_gf2_balthilde_h",450)
+VJ.AddConVar("vj_gf2_balthilde_d",50)
 
 VJ.AddConVar("vj_gf2_om50_d",150)
 VJ.AddConVar("vj_gf2_ak_alfa_d",40)

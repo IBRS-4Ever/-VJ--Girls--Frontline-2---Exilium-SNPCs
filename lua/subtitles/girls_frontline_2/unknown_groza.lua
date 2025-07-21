@@ -14,6 +14,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName, 
 		text = { -- ID: 
 			["schinese"] = "……抹除……", 
+			["english"] = "...Wipe...", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -23,6 +24,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName, 
 		text = { -- ID: 
 			["schinese"] = "……销毁……", 
+			["english"] = "...Destory...", 
 		},
 		subjectcol = CharacterColor,
 	},
@@ -32,6 +34,7 @@ local GF2Subtitle = { -- add new tables inside here
 		subject = CharacterName, 
 		text = { -- ID: 
 			["schinese"] = "……指令……清除…………目标……全体……", 
+			["english"] = "...Objective......wipe out...Target...all", 
 		},
 		subjectcol = CharacterColor,
 	},
