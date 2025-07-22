@@ -1,6 +1,6 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_Varjager"}
+ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_Varjager","CLASS_GIRLS_FRONTLINE_Varjager"}
 ENT.Model = {"models/bandits/varyag.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_varjager_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_varjager_d")
