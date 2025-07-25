@@ -3,5 +3,5 @@ ENT.Type 			= "ai"
 ENT.PrintName 		= "Yoohee"
 ENT.Category		= "Girls' Frontline 2"
 
-ENT.SquadName		= "#GF2_SquadName_POL03"
+ENT.SquadName		= "#GF2_SquadName_SparkleSquad"
 ENT.BodyModel		= "SSD-62D"

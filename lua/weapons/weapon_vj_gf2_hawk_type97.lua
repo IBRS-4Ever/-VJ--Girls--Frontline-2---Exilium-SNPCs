@@ -6,12 +6,12 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "Hawk Type 97"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_qiuhua_hawk_type_97.mdl"
+SWEP.WorldModel = "models/weapons/w_qiuhua_hawk_type_97.mdl"
 SWEP.HoldType = "shotgun"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.9
 SWEP.NPC_TimeUntilFire = 0.3
---SWEP.NPC_ExtraFireSound = {"weapons/shotgun/shotgun_cock.wav"}
+SWEP.NPC_ExtraFireSound = {"weapons/shotgun/shotgun_cock.wav"}
 SWEP.NPC_ReloadSound = {"weapons/sg/reload.wav"}
 SWEP.NPC_FiringDistanceScale = 0.5
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------

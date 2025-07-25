@@ -3,5 +3,5 @@ ENT.Type 			= "ai"
 ENT.PrintName 		= "Peri"
 ENT.Category		= "Girls' Frontline 2"
 
---ENT.SquadName		= "#GF2_SquadName_TaskForceDEFY"
---ENT.BodyModel		= "CSD-09B4M"
+ENT.SquadName		= "#GF2_SquadName_ELMO"
+ENT.BodyModel		= "SSD-62D"
