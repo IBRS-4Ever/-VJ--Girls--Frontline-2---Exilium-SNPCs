@@ -6,14 +6,14 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "RO635"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_robella_ro635.mdl"
+SWEP.WorldModel = "models/weapons/w_robella_ro635.mdl"
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.08
 SWEP.NPC_ReloadSound = {"weapons/smg/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.Primary.Damage = GetConVarNumber("vj_gf2_kp31_d")
+SWEP.Primary.Damage = GetConVarNumber("vj_gf2_ro635_d")
 SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 20
 SWEP.Primary.Ammo = "SMG1"

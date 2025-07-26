@@ -298,6 +298,7 @@ util.PrecacheModel("models/weapons/w_lose_sextans_cannon.mdl")
 util.PrecacheModel("models/weapons/w_lind_aa12.mdl")
 util.PrecacheModel("models/weapons/w_alva_an94.mdl")
 util.PrecacheModel("models/weapons/w_qiuhua_hawk_type_97.mdl")
+util.PrecacheModel("models/weapons/w_robella_ro635.mdl")
 
 -- Grenade Models
 util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -442,17 +443,17 @@ VJ.AddConVar("vj_gf2_qbz95_d",55)
 VJ.AddConVar("vj_gf2_xcr_d",40)
 VJ.AddConVar("vj_gf2_g36_d",30)
 VJ.AddConVar("vj_gf2_an94_d",40)
-VJ.AddConVar("vj_gf2_g28_d",40)
-VJ.AddConVar("vj_gf2_g36k_d",40)
-VJ.AddConVar("vj_gf2_k2_d",40)
+VJ.AddConVar("vj_gf2_g28_d",75)
+VJ.AddConVar("vj_gf2_g36k_d",30)
+VJ.AddConVar("vj_gf2_k2_d",35)
 
 -- RF
 VJ.AddConVar("vj_gf2_om50_d",150)
 VJ.AddConVar("vj_gf2_wa2000_d",125)
 VJ.AddConVar("vj_gf2_ksvk_d",250)
-VJ.AddConVar("vj_gf2_vsk94_d",40)
-VJ.AddConVar("vj_gf2_m1891_d",40)
-VJ.AddConVar("vj_gf2_m1903_d",40)
+VJ.AddConVar("vj_gf2_vsk94_d",80)
+VJ.AddConVar("vj_gf2_m1891_d",160)
+VJ.AddConVar("vj_gf2_m1903_d",180)
 
 -- SMG
 VJ.AddConVar("vj_gf2_mp7_d",25)
@@ -462,15 +463,15 @@ VJ.AddConVar("vj_gf2_ump40_d",35)
 VJ.AddConVar("vj_gf2_ump45_d",40)
 VJ.AddConVar("vj_gf2_kp31_d",25)
 VJ.AddConVar("vj_gf2_csls06_d",30)
-VJ.AddConVar("vj_gf2_mp5_d",40)
-VJ.AddConVar("vj_gf2_ppsh41_d",40)
+VJ.AddConVar("vj_gf2_mp5_d",30)
+VJ.AddConVar("vj_gf2_ppsh41_d",25)
 VJ.AddConVar("vj_gf2_ro635_d",40)
 
 -- SG
 VJ.AddConVar("vj_gf2_spas12_d",40)
 VJ.AddConVar("vj_gf2_vepr_12_d",25)
 VJ.AddConVar("vj_gf2_aa12_d",35)
-VJ.AddConVar("vj_gf2_hawk_type97_d",40)
+VJ.AddConVar("vj_gf2_hawk_type97_d",45)
 VJ.AddConVar("vj_gf2_m1_super90_d",40)
 
 -- Pistol
@@ -482,7 +483,7 @@ VJ.AddConVar("vj_gf2_pa15_d",15)
 
 -- MG
 VJ.AddConVar("vj_gf2_galil_arm_d",40)
-VJ.AddConVar("vj_gf2_ls26_d",40)
+VJ.AddConVar("vj_gf2_ls26_d",50)
 VJ.AddConVar("vj_gf2_pkp_sp_d",75)
 
 -- Other

@@ -10,12 +10,10 @@ local CharacterColor = Color(90,90,130)
 local GF2Subtitle = { -- add new tables inside here
 	
 	{
-		snd = "vo/jp/alva/alert1.wav", 
+		snd = "vo/jp/alva/idle1.wav", 
 		subject = CharacterName, 
 		text = { -- ID: 78239
-			["schinese"] = "该清理一下了！", 
-			["english"] = "Time to clean up!", 
-			["japanese"] = "汚物は消毒！",
+			["schinese"] = "Idle1", 
 		},
 		subjectcol = CharacterColor,
 	},
