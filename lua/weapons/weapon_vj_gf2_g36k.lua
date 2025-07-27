@@ -13,7 +13,7 @@ SWEP.NPC_NextPrimaryFire = 0.1
 SWEP.NPC_ReloadSound = {"weapons/ar/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.Primary.Damage = GetConVarNumber("vj_gf2_xcr_d")
+SWEP.Primary.Damage = GetConVarNumber("vj_gf2_g36k_d")
 SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.Ammo = "SMG1"
@@ -24,7 +24,7 @@ SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
-SWEP.MagazingModel = "models/prop/gfl2_andoris_g36k_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_andoris_g36k_magazine.mdl"
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_G36K.Shot",

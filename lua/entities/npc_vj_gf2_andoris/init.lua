@@ -31,6 +31,7 @@ function ENT:CustomOnAlert(ent)
 	Turret:SetOwner(self)
 	Turret.Owner = self
 	Turret:Spawn()
+	Turret:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 	function Turret:CustomOnRemove()
 		table.RemoveByValue(self:GetOwner().Turrets, Turret)
 	end

@@ -24,7 +24,7 @@ SWEP.Primary.Sound = "GF2_SNPC.Weapon_AN94.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_AN94.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 
-SWEP.MagazingModel = "models/prop/gfl2_alva_an94_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_alva_an94_magazine.mdl"
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_AN94.Shot",

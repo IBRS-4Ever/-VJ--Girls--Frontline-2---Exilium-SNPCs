@@ -13,7 +13,7 @@ SWEP.NPC_NextPrimaryFire = 0.1
 SWEP.NPC_ReloadSound = {"weapons/smg/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.Primary.Damage = GetConVarNumber("vj_gf2_ump9_d")
+SWEP.Primary.Damage = GetConVarNumber("vj_gf2_ump40_d")
 SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 25
 SWEP.Primary.Ammo = "SMG1"
@@ -25,7 +25,7 @@ SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
-SWEP.MagazingModel = "models/prop/gfl2_ump40_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_ump40_magazine.mdl"
 
 SWEP.Attachment_LaserColor = Color(230,190,70)
 

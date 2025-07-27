@@ -25,7 +25,7 @@ SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_ShotgunShell1"
 
-SWEP.MagazingModel = "models/prop/gfl2_vepley_vepr12_sr_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_vepley_vepr12_sr_magazine.mdl"
 SWEP.MagazineAngle = Angle(0,180,0)
 
 sound.Add({

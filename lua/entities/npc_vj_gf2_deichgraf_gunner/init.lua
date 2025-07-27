@@ -22,7 +22,7 @@ function ENT:Tank_OnThinkActive()
 	local Target = self:GetParent():GetEnemy()
 	if !IsValid(Target) then return end
 	if !self:IsLineOfSightClear(Target) then return end
-	if self:GetPos():Distance(Target:GetPos()) < 256 and self.NextSpawnGolyatTimer < CurTime() then
+	if self:GetPos():Distance(Target:GetPos()) < 512 and self.NextSpawnGolyatTimer < CurTime() then
 		if !IsValid(self.Deichgraf_Gloyat) then
 			local Golyat = ents.Create("npc_vj_gf2_golyat_tank")
 			Golyat:SetPos(self:GetParent():GetPos()+self:GetParent():GetUp()*50)

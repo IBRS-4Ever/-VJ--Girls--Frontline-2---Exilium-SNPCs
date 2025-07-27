@@ -24,7 +24,7 @@ SWEP.Primary.Sound = "GF2_SNPC.Weapon_G11.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_G11.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 
-SWEP.MagazingModel = "models/prop/gfl2_mechty_g11_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_mechty_g11_magazine.mdl"
 
 SWEP.PrimaryEffects_SpawnShells = false
 

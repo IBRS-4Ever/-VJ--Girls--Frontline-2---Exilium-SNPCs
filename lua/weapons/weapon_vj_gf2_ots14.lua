@@ -29,7 +29,7 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 SWEP.Secondary.Automatic = true
 SWEP.Secondary.Ammo = "SMG1_Grenade"
 
-SWEP.MagazingModel = "models/prop/gfl2_groza_ots14_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_groza_ots14_magazine.mdl"
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_OTs14.Shot",

@@ -14,7 +14,7 @@ SWEP.NPC_TimeUntilFire = 0.1
 SWEP.NPC_ReloadSound = {"weapons/ar2/npc_ar2_reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.Primary.Damage = GetConVarNumber("vj_gf2_pkp_sp_d")
+SWEP.Primary.Damage = GetConVarNumber("vj_gf2_ls26_d")
 SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 50
 SWEP.Primary.Ammo = "SMG1"
@@ -25,7 +25,7 @@ SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
-SWEP.MagazingModel = "models/prop/gfl2_littara_galil_arm_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_littara_galil_arm_magazine.mdl"
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_Galil_ARM.Shot",

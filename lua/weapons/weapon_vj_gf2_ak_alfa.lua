@@ -26,7 +26,7 @@ SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
-SWEP.MagazingModel = "models/prop/gfl2_ak_alfa_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_ak_alfa_magazine.mdl"
 
 SWEP.Attachment_LaserColor = Color(10,160,130)
 

@@ -6,14 +6,14 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "G28"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_belka_g28.mdl"
+SWEP.WorldModel = "models/weapons/w_belka_g28.mdl"
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.25
 SWEP.NPC_ReloadSound = {"weapons/ar/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.Primary.Damage = GetConVarNumber("vj_gf2_xcr_d")
+SWEP.Primary.Damage = GetConVarNumber("vj_gf2_g28_d")
 SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 20
 SWEP.Primary.Ammo = "SMG1"
@@ -24,7 +24,21 @@ SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
-SWEP.MagazingModel = "models/prop/gfl2_belka_g28_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_belka_g28_magazine.mdl"
+
+SWEP.Attachment_LaserColor = Color(190,115,30)
+
+function SWEP:GF2_CustomOnInitialize()
+	timer.Simple(0.1, function()
+		if SERVER then return end
+		if !IsValid(self) then return end
+		local Laser = math.random(0,1)
+		if Laser == 1 then
+			self:SetBodygroup(self:FindBodygroupByName( "flashlight_laser" ),1)
+			self.Attachment_Laser = true
+		end
+	end)
+end
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_G28.Shot",

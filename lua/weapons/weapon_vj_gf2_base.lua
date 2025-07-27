@@ -8,22 +8,20 @@ SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.MadeForNPCsOnly = true -- Is this weapon meant to be for NPCs only?
 
-SWEP.MagazingModel = false
+SWEP.MagazineModel = false
 SWEP.MagazineAngle = Angle(0,90,0)
 
-SWEP.Attachment_Laser = false 
+SWEP.Attachment_Laser = false
 SWEP.Attachment_LaserColor = Color(255,255,255)
-SWEP.Attachment_Flashlight = false 
-
-SWEP.BulletDamageMultiper = 0.5
+SWEP.Attachment_Flashlight = false
 
 function SWEP:GF2_CustomOnInitialize() end
 
 function SWEP:CustomOnInitialize() 
-	DropMagazine = GetConVar("vj_gf2_drop_magazings"):GetBool()
-	MagazineRemoveTimer = GetConVar("vj_gf2_magazingremovetime"):GetInt()
+	DropMagazine = GetConVar("vj_gf2_drop_magazines"):GetBool()
+	MagazineRemoveTimer = GetConVar("vj_gf2_magazineremovetime"):GetInt()
 	self:SetSkin( math.random( 0, self:SkinCount() - 1 ) )
-	if self.MagazingModel then util.PrecacheModel( self.MagazingModel ) end
+	if self.MagazineModel then util.PrecacheModel( self.MagazineModel ) end
 	if GetConVar("vj_gf2_draw_bullets"):GetBool() then
 		if self.Owner.Element == "water" then
 			self.Primary.TracerType = "vj_gf2_effect_bullet_trace_water"
@@ -45,20 +43,21 @@ function SWEP:CustomOnPrimaryAttack_AfterShoot()
 end
 
 function SWEP:CustomOnReload() 
-	if DropMagazine and self.MagazingModel then
-		local Magazing = ents.Create("prop_physics")
-		Magazing:SetModel(self.MagazingModel)
-		Magazing:SetPos(self.Owner:GetBonePosition(self.Owner:LookupBone("ValveBiped.Bip01_R_Hand")))
-		Magazing:SetAngles(self.Owner:GetAngles()+self.MagazineAngle)
-		Magazing:SetOwner(self)
-		Magazing:SetCollisionGroup(COLLISION_GROUP_WEAPON)
-
+	if DropMagazine and self.MagazineModel then
+		local Magazine = ents.Create("prop_physics")
+		Magazine:SetModel(self.MagazineModel)
+		Magazine:SetPos(self.Owner:GetBonePosition(self.Owner:LookupBone("ValveBiped.Bip01_R_Hand")))
+		Magazine:SetAngles(self.Owner:GetAngles()+self.MagazineAngle)
+		Magazine:SetOwner(self)
+		Magazine:SetCollisionGroup(COLLISION_GROUP_WEAPON)
+		Magazine:Spawn()
+		
 		if self:Clip1() == 0 then
-			Magazing:SetBodygroup(Magazing:FindBodygroupByName( "bullets" ),1)
-			Magazing:SetBodygroup(Magazing:FindBodygroupByName( "shells" ),1) -- VEPR-12
+			Magazine:SetBodygroup(Magazine:FindBodygroupByName( "bullets" ),1)
+			Magazine:SetBodygroup(Magazine:FindBodygroupByName( "shells" ),1) -- VEPR-12
 			self:SetBodygroup(self:FindBodygroupByName( "bullets" ),1) -- PKP-SP
 		end
-		Magazing:Spawn()
+		
 		if self:GetClass() == "weapon_vj_gf2_taurus_curve" then
 			self:SetBodygroup(self:FindBodygroupByName( "magazine" ),2)
 		else
@@ -66,13 +65,13 @@ function SWEP:CustomOnReload()
 		end
 
 		timer.Simple( MagazineRemoveTimer, function() 
-			if IsValid(Magazing) then Magazing:Remove() end
+			if IsValid(Magazine) then Magazine:Remove() end
 		end)
 	end
 end
 
 function SWEP:CustomOnReload_Finish()
-	if DropMagazine and self.MagazingModel then
+	if DropMagazine and self.MagazineModel then
 		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),0)
 		self:SetBodygroup(self:FindBodygroupByName( "bullets" ),0)
 		return true 
@@ -131,8 +130,8 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 					ent:TakeDamageInfo( DmgInfo )
 
 					if self.Owner.BodyModel == "DUAL DSI-8" and GetConVar("vj_gf2_npc_leva_hacking"):GetBool() then -- Leva
-						if ent:IsPlayer() then return end
-						if ent.IsGF2SNPC and ent.GF2_DeepBlock then return end
+						if ent:IsPlayer() then continue end
+						if ent.IsGF2SNPC and ent.GF2_DeepBlock then continue end
 						if math.random(1,100) <= 5 then
 							if ent:IsNPC() then ent.VJ_NPC_Class = self.Owner.VJ_NPC_Class end
 							for id, EntTarget in ents.Iterator() do
@@ -203,6 +202,7 @@ function SWEP:CustomOnPrimaryAttack_BulletCallback(attacker, tr, dmginfo)
 		for id, ent in pairs( ents.FindInSphere( HitPos, self.Owner.Element_FreezingRadius * GetConVar("vj_gf2_npc_element_freezing_radius_multipler"):GetFloat()  ) ) do
 			if ent == self.Owner or ent:GetClass() == "obj_vj_bullseye" then continue end
 			if ent:Alive() then
+				if ent.IsGF2SNPC and ent.GF2_DeepBlock then continue end
 				if self.Owner:CheckRelationship(ent) == D_HT then
 					if ent:IsNPC() then ent:SetSchedule(SCHED_SLEEP) end
 					-- if ent:IsPlayer() then ent:SetLaggedMovementValue(0.5) end

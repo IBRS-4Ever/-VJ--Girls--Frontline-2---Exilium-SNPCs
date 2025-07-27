@@ -491,8 +491,8 @@ VJ.AddConVar("vj_gf2_lose_sextans_cannon_d",250)
 
 -- Menu --
 local AddConvars = {}
-AddConvars["vj_gf2_drop_magazings"] = 1 -- Drop Magazines?
-AddConvars["vj_gf2_magazingremovetime"] = 15 -- Magazine Remove time.
+AddConvars["vj_gf2_drop_magazines"] = 1 -- Drop Magazines?
+AddConvars["vj_gf2_magazineremovetime"] = 15 -- Magazine Remove time.
 AddConvars["vj_gf2_death_expressions"] = 1 -- Death Expressions?
 AddConvars["vj_gf2_death_fingerpose"] = 1 -- Death Finger Pose?
 AddConvars["vj_gf2_npc_random_bodygroups"] = 1 -- Random Bodygroup for SNPCs?
@@ -526,6 +526,7 @@ AddConvars["vj_gf2_npc_unknown_groza_switch_weapons"] = 1 -- Unknown Doll switch
 AddConvars["vj_gf2_npc_unknown_groza_summon_dummy"] = 1 -- Unknown Doll summon dummies.
 AddConvars["vj_gf2_npc_golyat_damage_friendly"] = 1 -- Golyat deals damage to all NPCs.
 AddConvars["vj_gf2_npc_deichgraf_missile_count"] = 6 -- How many missiles to launch in a roll.
+AddConvars["vj_gf2_npc_voice_language"] = "jp" -- Voice Language.
 
 for k, v in pairs(AddConvars) do
 	if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
@@ -540,9 +541,9 @@ if CLIENT then
 		spawnmenu.AddToolMenuOption( "DrVrej", "SNPC Configures", "Girls' Frontline 2: Exilium", "#vj_gf2_snpcs.settings.Title", "", "", function(Panel) 
 			if game.SinglePlayer() or LocalPlayer():IsAdmin() then
 				Panel:Help("#vjbase.menu.general.admin.only")
-				Panel:CheckBox("#vj_gf2_snpcs.settings.DropMagazines", "vj_gf2_drop_magazings")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.DropMagazines", "vj_gf2_drop_magazines")
 				Panel:ControlHelp("#vj_gf2_snpcs.settings.DropMagazines.Desc")
-				Panel:NumSlider("#vj_gf2_snpcs.settings.MagazineRemoveTimer", "vj_gf2_magazingremovetime", 5, 60, 0)
+				Panel:NumSlider("#vj_gf2_snpcs.settings.MagazineRemoveTimer", "vj_gf2_magazineremovetime", 5, 60, 0)
 				Panel:ControlHelp("#vj_gf2_snpcs.settings.MagazineRemoveTimer.Desc")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.DeathExpressions", "vj_gf2_death_expressions")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.DeathFingerPose", "vj_gf2_death_fingerpose")

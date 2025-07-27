@@ -11,11 +11,11 @@ SWEP.HoldType = "shotgun"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.9
 SWEP.NPC_TimeUntilFire = 0.2
---SWEP.NPC_ExtraFireSound = {"weapons/shotgun/shotgun_cock.wav"}
+SWEP.NPC_ExtraFireSound = {"weapons/shotgun/shotgun_cock.wav"}
 SWEP.NPC_ReloadSound = {"weapons/sg/reload.wav"}
 SWEP.NPC_FiringDistanceScale = 0.5
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.Primary.Damage = GetConVarNumber("vj_gf2_spas12_d")
+SWEP.Primary.Damage = GetConVarNumber("vj_gf2_m1_super90_d")
 SWEP.Primary.Force = 1
 SWEP.Primary.NumberOfShots = 12
 SWEP.Primary.ClipSize = 5

@@ -25,7 +25,7 @@ SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
-SWEP.MagazingModel = "models/prop/gfl2_suomi_kp31_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_suomi_kp31_magazine.mdl"
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_KP31.Shot",

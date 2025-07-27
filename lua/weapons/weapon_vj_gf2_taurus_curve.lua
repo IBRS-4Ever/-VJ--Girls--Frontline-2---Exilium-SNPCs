@@ -23,7 +23,7 @@ SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
-SWEP.MagazingModel = "models/prop/gfl2_colphne_taurus_curve_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_colphne_taurus_curve_magazine.mdl"
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_TaurusCurve.Shot",
