@@ -102,6 +102,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Springfield_QueenInRadiance","npc_vj_gf2_springfi
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Yoohee","npc_vj_gf2_yoohee",{"weapon_vj_gf2_k2"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Yoohee_MiracleSweetheart","npc_vj_gf2_yoohee_miracle_sweetheart",{"weapon_vj_gf2_k2"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Balthilde","npc_vj_gf2_balthilde",{"weapon_vj_gf2_ls26"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Voymastina","npc_vj_gf2_voymastina",{"weapon_vj_gf2_ak15"},vCatUnf)
+--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Voymastina_Elwin","npc_vj_gf2_voymastina_elwin",{"weapon_vj_gf2_ak15"},vCatUnf)
 
 VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCatUnf)
@@ -153,6 +155,7 @@ VJ.AddNPCWeapon("G36", "weapon_vj_gf2_g36", vCat)
 VJ.AddNPCWeapon("PA-15", "weapon_vj_gf2_pa15", vCat)
 VJ.AddNPCWeapon("AA-12", "weapon_vj_gf2_aa12", vCat)
 VJ.AddNPCWeapon("AN-94", "weapon_vj_gf2_an94", vCat)
+VJ.AddNPCWeapon("AK-15", "weapon_vj_gf2_ak15", vCat)
 VJ.AddNPCWeapon("LS-26", "weapon_vj_gf2_ls26", vCat)
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_plasma_cannon", "weapon_vj_gf2_lose_sextans_cannon", vCat)
 
@@ -299,6 +302,8 @@ util.PrecacheModel("models/weapons/w_lind_aa12.mdl")
 util.PrecacheModel("models/weapons/w_alva_an94.mdl")
 util.PrecacheModel("models/weapons/w_qiuhua_hawk_type_97.mdl")
 util.PrecacheModel("models/weapons/w_robella_ro635.mdl")
+util.PrecacheModel("models/weapons/w_macqiato_wa2000.mdl")
+util.PrecacheModel("models/weapons/w_belka_g28.mdl")
 
 -- Grenade Models
 util.PrecacheModel("models/prop/gfl2_cheeta_lollipop_grenade.mdl")
@@ -348,6 +353,8 @@ VJ.AddConVar("vj_gf2_belka_h",225)
 VJ.AddConVar("vj_gf2_belka_d",25)
 VJ.AddConVar("vj_gf2_yoohee_h",425)
 VJ.AddConVar("vj_gf2_yoohee_d",50)
+VJ.AddConVar("vj_gf2_voymastina_h",550)
+VJ.AddConVar("vj_gf2_voymastina_d",150)
 
 -- SMG
 VJ.AddConVar("vj_gf2_cheeta_h",250)
@@ -446,6 +453,7 @@ VJ.AddConVar("vj_gf2_an94_d",40)
 VJ.AddConVar("vj_gf2_g28_d",75)
 VJ.AddConVar("vj_gf2_g36k_d",30)
 VJ.AddConVar("vj_gf2_k2_d",35)
+VJ.AddConVar("vj_gf2_ak15_d",65)
 
 -- RF
 VJ.AddConVar("vj_gf2_om50_d",150)

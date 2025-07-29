@@ -2,7 +2,7 @@ AddCSLuaFile("shared.lua")
 include('shared.lua')
 local Name = "blusphere"
 local SndPrefix = "vo/jp/"..Name.."/"
-ENT.Model = {"models/gf2/blusphere.mdl"}
+ENT.Model = {"models/prop/gfl2_blusphere.mdl"}
 ENT.StartHealth = 1000
 ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_E"}
 ENT.Bleeds = false 
