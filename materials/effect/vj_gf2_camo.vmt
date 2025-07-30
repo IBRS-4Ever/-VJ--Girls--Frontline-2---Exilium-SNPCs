@@ -1,0 +1,24 @@
+Refract
+{
+	$phong 1
+	$phongexponent 5
+	$phongamount "[1 1 1 1]"
+
+	$refract 1
+	$normalmap "dev/water_normal"
+	$refractamount 0.13
+	$bluramount 1
+
+	$dudvmap "dev/water_dudv"
+	$model 1
+
+	Proxies
+	{
+		TextureScroll
+		{
+			texturescrollvar "$bumptransform"
+			texturescrollrate 0.01
+			texturescrollangle 180
+		}
+	}
+}

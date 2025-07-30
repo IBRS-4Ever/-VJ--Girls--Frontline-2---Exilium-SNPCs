@@ -17,6 +17,8 @@ function ENT:CustomOnDraw()
 	if self:GetNWInt( "Shield" ) > 0 then
 		if GetConVar("vj_gf2_draw_shield"):GetBool() then
 			render.SetMaterial( Material("models/props_combine/portalball001_sheet") )
+			--render.SetMaterial( Material("models/wireframe") )
+			--render.SetMaterial( Material("effect/vj_gf2_camo") )
 			local pos = self:GetBonePosition(0)
 			render.DrawSphere( pos, 50, 30, 30, Color( 255, 255, 255, 100 ) )
 		end

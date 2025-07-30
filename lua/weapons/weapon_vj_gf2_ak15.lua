@@ -6,7 +6,7 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "AK-15"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_voymastina_ak15_magazine.mdl"
+SWEP.WorldModel = "models/prop/gfl2_voymastina_ak15.mdl"
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.1
@@ -22,7 +22,7 @@ SWEP.Primary.Sound = "GF2_SNPC.Weapon_AK15.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_AK15.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 
-SWEP.MagazineModel = "models/prop/gfl2_alva_an94_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_voymastina_ak15_magazine.mdl"
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_AK15.Shot",

@@ -47,12 +47,12 @@ function ENT:Tank_OnThinkActive()
 			Missile:Spawn()
 
 			local landingPos = Target:GetPos()
-			local vel = ((landingPos - Missile:GetPos()) + (self:GetUp()*300 + self:GetForward()*500 + self:GetRight()*math.Rand(-20, 20)))
 			local phys = Missile:GetPhysicsObject()
 			if IsValid(phys) then
+				phys:SetMass(10)
 				phys:Wake()
 				phys:AddAngleVelocity(Vector(math.Rand(500, 500), math.Rand(500, 500), math.Rand(500, 500)))
-				phys:SetVelocity(vel)
+				phys:SetVelocity(VJ.CalculateTrajectory(self, Target, "Curve", Missile:GetPos(), 1, 10))
 			end
 			self.MissileCount = self.MissileCount + 1
 			self.NextMissileAtkT = CurTime() + 0.1

@@ -23,7 +23,7 @@ ENT.ShouldFollow = true
 
 function ENT:GF2_CustomInitialize()
 	util.SpriteTrail( self, self:LookupAttachment("eyes"), Color( 255, 0, 0), false, 32, 0, 1, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
-	if GetConVar("vj_gf2_npc_unknown_groza_camo"):GetBool() then self:SetMaterial("models/props_combine/stasisshield_sheet") end
+	if GetConVar("vj_gf2_npc_unknown_groza_camo"):GetBool() then self:SetMaterial("effect/vj_gf2_camo") end
 
 	if self.Rappelling then
 		self:SetGroundEntity(NULL)

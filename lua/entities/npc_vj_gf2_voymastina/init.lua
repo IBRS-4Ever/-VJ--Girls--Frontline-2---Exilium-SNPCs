@@ -1,6 +1,6 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-local Name = "voymastina "
+local Name = "voymastina"
 local SndPrefix = "vo/jp/"..Name.."/"
 ENT.Model = {"models/npc/gfl2_voymastina_npc.mdl"}
 --ENT.Model = {"models/gf2/"..Name.."_combat.mdl"}
