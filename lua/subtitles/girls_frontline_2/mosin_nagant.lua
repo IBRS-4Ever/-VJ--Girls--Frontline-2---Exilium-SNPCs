@@ -3,7 +3,7 @@ GF2_Subtitles_Table = GF2_Subtitles_Table or {} -- don't touch
 local CharacterName = {
 	["schinese"] = "莫辛纳甘：",
 	["english"] = "Mosin-Nagant: ",
-	--["japanese"] = "センタウレイシー：",
+	["japanese"] = "モシン・ナガン：",
 	}
 local CharacterColor = Color(195,150,35)
 

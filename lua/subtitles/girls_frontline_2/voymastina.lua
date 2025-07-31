@@ -1,16 +1,16 @@
 GF2_Subtitles_Table = GF2_Subtitles_Table or {} -- don't touch
 
 local CharacterName = {
-	["schinese"] = "莉塔拉：",
-	["english"] = "Littara: ",
-	["japanese"] = "リッタラ：",
+	["schinese"] = "威玛西娜：",
+	["english"] = "Voymastina: ",
+	--["japanese"] = "センタウレイシー：",
 	}
-local CharacterColor = Color(205,130,80)
+local CharacterColor = Color(90,90,130)
 
 local GF2Subtitle = { -- add new tables inside here
 	
 	{
-		snd = "vo/jp/littara/idle1.wav", 
+		snd = "vo/jp/voymastina/idle1.wav", 
 		subject = CharacterName, 
 		text = { -- ID: 78239
 			["schinese"] = "Idle1", 
