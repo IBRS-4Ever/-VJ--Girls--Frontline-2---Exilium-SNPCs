@@ -6,6 +6,10 @@ ENT.Model = {"models/gf2/"..Name.."_combat.mdl"}
 ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
+ENT.HasGrenadeAttack = true
+ENT.GrenadeAttackChance = 2
+ENT.GrenadeAttackEntity = "obj_gf2_lainie_grenade"
+
 ENT.SoundTbl_Idle = {SndPrefix.."idle1.wav",SndPrefix.."idle2.wav",SndPrefix.."idle3.wav",SndPrefix.."idle4.wav",SndPrefix.."idle5.wav"}
 ENT.SoundTbl_OnPlayerSight = {SndPrefix.."player_sight1.wav",SndPrefix.."player_sight2.wav",SndPrefix.."player_sight3.wav",SndPrefix.."player_sight4.wav",SndPrefix.."player_sight5.wav",SndPrefix.."player_sight6.wav",SndPrefix.."player_sight7.wav",SndPrefix.."player_sight8.wav"}
 ENT.SoundTbl_Alert = {SndPrefix.."alert1.wav",SndPrefix.."alert2.wav",SndPrefix.."alert3.wav",SndPrefix.."alert4.wav",SndPrefix.."alert5.wav",SndPrefix.."alert6.wav"}
@@ -23,6 +27,7 @@ ENT.HoloENT = NULL
 
 function ENT:GF2_CustomInitialize()
 	if self.IsHolo then
+		self.HasGrenadeAttack = false
 		self:SetMaterial("models/props_combine/stasisshield_sheet")
 		self.SoundTbl_Idle = {}
 		self.SoundTbl_Alert = {}
@@ -39,28 +44,6 @@ function ENT:GF2_CustomInitialize()
 				self:Follow(self.Owner)
 			end
 		end)
-	end
-end
-
-function ENT:OnResetEnemy() 
-	if IsValid(self.HoloENT) then
-		self.HoloENT:Remove()
-	end
-end
-
-function ENT:CustomOnAlert(ent) 
-	if self.IsHolo then return end
-	if !IsValid(self.HoloENT) then
-		local Pos = self:GetPos()
-		local Holo = ents.Create("npc_vj_gf2_lainie")
-		Holo:SetPos(Pos+self:GetForward() * 50)
-		Holo:SetAngles(self:GetAngles())
-		Holo:SetOwner(self)
-		Holo.Owner = self
-		Holo.IsHolo = true
-		Holo:Spawn()
-		Holo:Give("weapon_vj_gf2_ump40")
-		self.HoloENT = Holo
 	end
 end
 

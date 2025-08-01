@@ -48,7 +48,7 @@ local vezZ100 = Vector(0, 0, 100)
 function ENT:DeathEffects(data,phys)
 	local selfPos = self:GetPos()
 	
-	ParticleEffect("vj_explosion1", self:GetPos(), defAngle, nil)
+	--ParticleEffect("vj_explosion1", self:GetPos(), defAngle, nil)
 	
 	local effectData = EffectData()
 	effectData:SetOrigin(self:GetPos())

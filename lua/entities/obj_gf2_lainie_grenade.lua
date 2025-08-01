@@ -41,41 +41,21 @@ function ENT:CustomOnInitialize()
 	self:EmitSound("sfx/grenade_throw_1.wav")
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-local defAngle = Angle(0, 0, 0)
-local vecZ4 = Vector(0, 0, 4)
-local vezZ100 = Vector(0, 0, 100)
 
 function ENT:DeathEffects(data,phys)
-	local selfPos = self:GetPos()
-	
-	ParticleEffect("vj_explosion1", self:GetPos(), defAngle, nil)
-	
-	local effectData = EffectData()
-	effectData:SetOrigin(self:GetPos())
-	util.Effect("Explosion", effectData)
-	
-	local expLight = ents.Create("light_dynamic")
-	expLight:SetKeyValue("brightness", "4")
-	expLight:SetKeyValue("distance", "300")
-	expLight:SetLocalPos(selfPos)
-	expLight:SetLocalAngles(self:GetAngles())
-	expLight:Fire("Color", "255 150 0")
-	expLight:SetParent(self)
-	expLight:Spawn()
-	expLight:Activate()
-	expLight:Fire("TurnOn", "", 0)
-	self:DeleteOnRemove(expLight)
-	util.ScreenShake(self:GetPos(), 100, 200, 1, 2500)
+	if IsValid(self.Owner.HoloENT) then
+		self.Owner.HoloENT:Remove()
+	end
+	local Pos = self:GetPos()
+	local Holo = ents.Create(self.Owner:GetClass())
+	Holo:SetPos(Pos)
+	--Holo:SetAngles(self:GetAngles())
+	Holo:SetOwner(self.Owner)
+	Holo.Owner = self.Owner
+	Holo.IsHolo = true
+	Holo:Spawn()
+	Holo:Give("weapon_vj_gf2_ump40")
+	self.Owner.HoloENT = Holo
 
-	self:SetLocalPos(selfPos + vecZ4) -- Because the entity is too close to the ground
-	local tr = util.TraceLine({
-		start = self:GetPos(),
-		endpos = self:GetPos() - vezZ100,
-		filter = self
-	})
-	util.Decal(VJ_PICK(self.DecalTbl_DeathDecals), tr.HitPos + tr.HitNormal, tr.HitPos - tr.HitNormal)
-	
-	self:DoDamageCode()
-	self:SetDeathVariablesTrue(nil, nil, false)
 	self:Remove()
 end
