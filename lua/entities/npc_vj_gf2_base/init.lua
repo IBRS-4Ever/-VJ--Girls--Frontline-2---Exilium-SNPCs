@@ -56,10 +56,39 @@ ENT.Element_AcidTime = 0
 
 ENT.GF2_DeepBlock = false
 
+ENT.Character = false
+
+local CollisionGroup
+
 function ENT:GF2_CustomInitialize() end
 function ENT:GF2_CustomOnThink() end
 function ENT:GF2_CustomOnThink_AiEnabled() end
 function ENT:OnHalfHealth() end
+
+function ENT:FindSounds(name)
+	local SoundTable = {}
+	local path = "vo/"..GetConVar("vj_gf2_npc_voice_language"):GetString().."/"..self.Character.."/"
+	local Sounds = file.Find("sound/"..path..name.."*.wav", "GAME")
+	for i, Snd in ipairs(Sounds) do
+		SoundTable[i] = path..Snd
+	end
+	return SoundTable
+end
+
+function ENT:SetUpSoundTable()
+	if self.Character then
+		self.SoundTbl_Idle = self:FindSounds("idle")
+		self.SoundTbl_OnPlayerSight = self:FindSounds("player_sight")
+		self.SoundTbl_Alert = self:FindSounds("alert")
+		self.SoundTbl_Pain = self:FindSounds("hit")
+		self.SoundTbl_OnKilledEnemy = self:FindSounds("killed_enemy")
+		self.SoundTbl_FollowPlayer = self:FindSounds("follow")
+		self.SoundTbl_UnFollowPlayer = self:FindSounds("unfollow")
+		--self.SoundTbl_Death = self:FindSounds("die") and self:FindSounds("hit")
+		self.SoundTbl_MedicReceiveHeal = self:FindSounds("get_heal")
+		self.SoundTbl_GrenadeAttack = self:FindSounds("grenade_attack")
+	end
+end
 
 function ENT:Controller_Initialize(ply, controlEnt) 
 	util.AddNetworkString( "GF2_DollInfo" )
@@ -140,7 +169,17 @@ function ENT:CustomOnInitialize()
 			end
 		end
 	end
+	CollisionGroup = self:GetCollisionGroup()
+	self:SetUpSoundTable()
 	self:GF2_CustomInitialize()
+end
+
+function ENT:OnFollow(status, ent)
+	if status == "Start" then
+		self:SetCollisionGroup(COLLISION_GROUP_PASSABLE_DOOR)
+	else
+		self:SetCollisionGroup(CollisionGroup)
+	end
 end
 
 function ENT:CustomInitialize()
