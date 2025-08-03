@@ -6,7 +6,8 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "G36K"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_andoris_g36k.mdl"
+SWEP.WorldModel = "models/weapons/w_andoris_g36k.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.1
