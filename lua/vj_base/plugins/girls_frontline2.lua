@@ -592,7 +592,7 @@ if CLIENT then
 				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Deichgraf.Missile_Count", "vj_gf2_npc_deichgraf_missile_count", 1, 12, 0)
 				local GF2_VOICE_LANGUAGE = Panel:ComboBox("#vj_gf2_snpcs.settings.NPC_VoiceLanguage", "vj_gf2_npc_voice_language")
 				--GF2_VOICE_LANGUAGE:AddChoice("English", "en", false, "flags16/us.png")
-				--GF2_VOICE_LANGUAGE:AddChoice("简体中文", "cn", false, "flags16/cn.png")
+				GF2_VOICE_LANGUAGE:AddChoice("简体中文", "cn", false, "flags16/cn.png")
 				GF2_VOICE_LANGUAGE:AddChoice("日本語", "jp", false, "flags16/jp.png")
 			else
 				Panel:Help("#vjbase.menu.general.admin.not")

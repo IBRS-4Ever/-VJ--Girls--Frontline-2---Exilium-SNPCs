@@ -46,7 +46,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/vector/follow1.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "了解。", 
+			["schinese"] = "收到。", 
 			["english"] = "Yes.", 
 			["japanese"] = "了解。", 
 		},
@@ -57,7 +57,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/vector/follow2.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "明白。", 
+			["schinese"] = "是。", 
 			["english"] = "Roger that.", 
 		},
 		subjectcol = CharacterColor,
@@ -519,7 +519,7 @@ local GF2Subtitle = { -- add new tables inside here
 			["english"] = "Hmm... you've endured me for so long, you must be at your limit.", 
 		},
 		subjectcol = CharacterColor,
-	}
+	},
 
 }
 

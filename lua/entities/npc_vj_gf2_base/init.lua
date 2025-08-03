@@ -72,6 +72,13 @@ function ENT:FindSounds(name)
 	for i, Snd in ipairs(Sounds) do
 		SoundTable[i] = path..Snd
 	end
+	if #SoundTable == 0 then
+		local path = "vo/jp/"..self.Character.."/"
+		local Sounds = file.Find("sound/"..path..name.."*.wav", "GAME")
+		for i, Snd in ipairs(Sounds) do
+			SoundTable[i] = path..Snd
+		end
+	end
 	return SoundTable
 end
 
