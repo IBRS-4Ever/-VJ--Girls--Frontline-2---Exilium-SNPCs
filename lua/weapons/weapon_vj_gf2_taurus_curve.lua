@@ -7,6 +7,7 @@ SWEP.PrintName = "Taurus Curve"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_colphne_taurus_curve.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "pistol"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.3

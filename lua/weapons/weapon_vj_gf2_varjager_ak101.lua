@@ -7,6 +7,7 @@ SWEP.PrintName = "AK-101"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/bandits/w_ak101.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.15

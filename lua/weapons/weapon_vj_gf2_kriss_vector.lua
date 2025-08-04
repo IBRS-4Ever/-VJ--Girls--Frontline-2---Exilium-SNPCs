@@ -7,6 +7,7 @@ SWEP.PrintName = "KRISS Vector"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_vector_kriss_vector.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.1

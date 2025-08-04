@@ -7,6 +7,7 @@ SWEP.PrintName = "AK Alfa"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_tololo_ak_alfa.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "smg"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 1

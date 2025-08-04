@@ -1,3 +1,4 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.Model = {"models/gf2/daiyan_exquisite_jade.mdl"}
+ENT.Model = "models/gf2/daiyan_exquisite_jade.mdl"
+util.PrecacheModel(ENT.Model)

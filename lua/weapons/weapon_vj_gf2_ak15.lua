@@ -6,7 +6,8 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "AK-15"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_voymastina_ak15.mdl"
+SWEP.WorldModel = "models/weapons/w_voymastina_ak15.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.1

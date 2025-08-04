@@ -7,6 +7,7 @@ SWEP.PrintName = "PA-15"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_florence_pa-15.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "pistol"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.2

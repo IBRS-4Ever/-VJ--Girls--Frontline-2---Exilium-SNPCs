@@ -7,6 +7,7 @@ SWEP.PrintName = "#vj_gf2_snpcs.weapon_plasma_cannon"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_lose_sextans_cannon.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "rpg"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 3

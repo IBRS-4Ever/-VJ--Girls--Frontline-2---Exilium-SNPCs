@@ -1,7 +1,8 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
 ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_PMC"}
-ENT.Model = {"models/gf2/deichgraf_gun.mdl"}
+ENT.Model = "models/gf2/deichgraf_gun.mdl"
+util.PrecacheModel(ENT.Model)
 
 ENT.NextMissileAtkT = CurTime() + 3
 ENT.MissileCount = 0

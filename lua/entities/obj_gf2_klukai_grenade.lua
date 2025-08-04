@@ -17,7 +17,8 @@ end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 if !SERVER then return end
 
-ENT.Model = {"models/prop/gfl2_klukai_flashbang.mdl"} -- The models it should spawn with | Picks a random one from the table
+ENT.Model = "models/prop/gfl2_klukai_flashbang.mdl" -- The models it should spawn with | Picks a random one from the table
+util.PrecacheModel(ENT.Model)
 ENT.MoveCollideType = nil
 ENT.CollisionGroupType = nil
 ENT.SolidType = SOLID_VPHYSICS

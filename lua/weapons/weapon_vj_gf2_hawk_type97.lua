@@ -7,6 +7,7 @@ SWEP.PrintName = "Hawk Type 97"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_qiuhua_hawk_type_97.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "shotgun"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.9

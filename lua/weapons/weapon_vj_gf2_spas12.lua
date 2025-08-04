@@ -7,6 +7,7 @@ SWEP.PrintName = "SPAS-12"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_sabrina_spas12.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "shotgun"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.9

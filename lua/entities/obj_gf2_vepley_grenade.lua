@@ -17,7 +17,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 if !SERVER then return end
 
-ENT.Model = {"models/prop/gfl2_peritya_grenade.mdl"} -- No model yet, use peritya's for now.
+ENT.Model = "models/prop/gfl2_peritya_grenade.mdl" -- No model yet, use peritya's for now.
 ENT.MoveCollideType = nil
 ENT.CollisionGroupType = nil
 ENT.SolidType = SOLID_VPHYSICS

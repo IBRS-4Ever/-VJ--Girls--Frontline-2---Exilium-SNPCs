@@ -7,6 +7,7 @@ SWEP.PrintName = "M1895 Revolver"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_nagant_m1895_revolver.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "revolver"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 1

@@ -1,3 +1,4 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.Model = {"models/npc/gfl2_voymastina_erwin_npc.mdl"}
+ENT.Model = "models/gf2/voymastina_erwin.mdl"
+util.PrecacheModel(ENT.Model)

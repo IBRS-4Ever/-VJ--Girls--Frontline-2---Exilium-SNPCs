@@ -1,0 +1,8 @@
+UnlitGeneric
+{
+	$basetexture "vgui/entities/npc_vj_gf2_klukai_cerulean_breaker"
+
+	$vertexcolor 1
+	$vertexalpha 1
+	$nolod 1
+}

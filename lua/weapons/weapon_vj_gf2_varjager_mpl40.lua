@@ -10,6 +10,7 @@ SWEP.NPC_NextPrimaryFire = 0.1 -- Next time it can use primary fire
 SWEP.NPC_TimeUntilFire = 0.1 -- How much time until the bullet/projectile is fired?
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/bandits/w_mpl40.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.WorldModel_UseCustomPosition = true -- Should the gun use custom position? This can be used to fix guns that are in the crotch
 SWEP.WorldModel_CustomPositionAngle = Vector(180, 0, 0)
 SWEP.WorldModel_CustomPositionOrigin = Vector(2, -2, 0)

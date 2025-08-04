@@ -7,6 +7,7 @@ SWEP.PrintName = "CS/LS06"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_zhaohui_csls06.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "smg"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.08

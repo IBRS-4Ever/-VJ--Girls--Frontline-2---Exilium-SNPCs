@@ -1,6 +1,7 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.Model = {"models/gf2/golyat.mdl"}
+ENT.Model = "models/gf2/golyat.mdl"
+util.PrecacheModel(ENT.Model)
 ENT.StartHealth = 500
 ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_PMC"}
 ENT.Bleeds = false 

@@ -1,3 +1,4 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.Model = {"models/gf2/yoohee_miracle_sweetheart.mdl"}
+ENT.Model = "models/gf2/yoohee_miracle_sweetheart.mdl"
+util.PrecacheModel(ENT.Model)

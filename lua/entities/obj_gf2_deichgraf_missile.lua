@@ -17,7 +17,8 @@ end
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 if !SERVER then return end
 
-ENT.Model = {"models/prop/gfl2_peritya_grenade.mdl"}
+ENT.Model = "models/prop/gfl2_peritya_grenade.mdl"
+util.PrecacheModel(ENT.Model)
 ENT.MoveCollideType = nil
 ENT.CollisionGroupType = nil
 ENT.SolidType = SOLID_VPHYSICS

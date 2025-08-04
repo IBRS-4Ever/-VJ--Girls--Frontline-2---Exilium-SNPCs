@@ -7,6 +7,7 @@ SWEP.PrintName = "Revolver"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/prop/gfl2_sextans_revolver.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "revolver"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.75

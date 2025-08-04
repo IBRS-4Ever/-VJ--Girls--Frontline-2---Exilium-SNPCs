@@ -7,6 +7,7 @@ SWEP.PrintName = "M1 Super 90"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/prop/gfl2_lotta_benelli_m1.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "shotgun"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.9

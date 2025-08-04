@@ -3,10 +3,11 @@ AddCSLuaFile()
 if (!file.Exists("autorun/vj_base_autorun.lua","LUA")) then return end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Base = "weapon_vj_gf2_base"
-SWEP.PrintName = "Mosin"
+SWEP.PrintName = "Mosin-Nagant"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/bandits/w_mosin.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 1.6

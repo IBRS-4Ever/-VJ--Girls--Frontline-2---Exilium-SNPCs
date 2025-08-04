@@ -1,3 +1,4 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.Model = {"models/gf2/nemesis_serene_dark_river.mdl"}
+ENT.Model = "models/gf2/nemesis_serene_dark_river.mdl"
+util.PrecacheModel(ENT.Model)

@@ -3,7 +3,8 @@ include('shared.lua')
 local Name = "dushevnaya"
 ENT.Character = Name
 local SndPrefix = "vo/jp/"..Name.."/"
-ENT.Model = {"models/gf2/"..Name.."_combat.mdl"}
+ENT.Model = "models/gf2/"..Name.."_combat.mdl"
+util.PrecacheModel(ENT.Model)
 ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 

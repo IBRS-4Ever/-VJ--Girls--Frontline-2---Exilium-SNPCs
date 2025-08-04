@@ -7,6 +7,7 @@ SWEP.PrintName = "CZ 75"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_faye_cz75.mdl"
+util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "pistol"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.1
