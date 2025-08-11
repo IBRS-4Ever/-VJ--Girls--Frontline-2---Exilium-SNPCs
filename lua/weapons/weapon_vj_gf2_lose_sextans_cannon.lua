@@ -8,7 +8,7 @@ SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_lose_sextans_cannon.mdl"
 util.PrecacheModel(SWEP.WorldModel)
-SWEP.HoldType = "rpg"
+SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 3
 SWEP.NPC_TimeUntilFire = 1

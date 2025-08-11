@@ -10,7 +10,6 @@ ENT.HasBloodPool = false
 ENT.HasBloodDecal = false
 ENT.HullType = HULL_HUMAN
 ---------------------------------------------------------------------------------------------------------------------------------------------
-ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_ELMO", "CLASS_PLAYER_ALLY"}
 ENT.HasMeleeAttack = true
 ENT.HasGrenadeAttack = false
 
@@ -55,6 +54,14 @@ ENT.Element_FreezingRadius = 0
 ENT.Element_AcidTime = 0
 
 ENT.GF2_DeepBlock = false
+
+ENT.GF2_Class_ELMO = true
+ENT.GF2_Class_Varjagers = false
+ENT.GF2_Class_ELID = false
+ENT.GF2_Class_PMC = false
+ENT.GF2_Class_GirardGroup = false
+ENT.GF2_Class_Paradeus = false
+ENT.GF2_Class_URNC = false
 
 ENT.Character = false
 
@@ -175,6 +182,28 @@ function ENT:CustomOnInitialize()
 				self:SetBodygroup(i, choice)
 			end
 		end
+	end
+	if self.GF2_Class_ELMO then
+		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_PLAYER_ALLY"
+		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_ELMO"
+	end
+	if self.GF2_Class_ELID then
+		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_ELID"
+	end
+	if self.GF2_Class_PMC then
+		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_PMC"
+	end
+	if self.GF2_Class_GirardGroup then
+		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_GirardGroup"
+	end
+	if self.GF2_Class_Paradeus then
+		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_Paradeus"
+	end
+	if self.GF2_Class_URNC then
+		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_URNC"
+	end
+	if self.GF2_Class_Varjagers then
+		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_Varjagers"
 	end
 	CollisionGroup = self:GetCollisionGroup()
 	self:SetUpSoundTable()

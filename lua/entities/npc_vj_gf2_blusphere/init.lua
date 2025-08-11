@@ -5,7 +5,7 @@ local SndPrefix = "vo/jp/"..Name.."/"
 ENT.Model = "models/prop/gfl2_blusphere.mdl"
 util.PrecacheModel(ENT.Model)
 ENT.StartHealth = 1000
-ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_E"}
+ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_PMC","CLASS_GIRLS_FRONTLINE_GirardGroup"}
 ENT.Bleeds = false 
 
 ENT.HasDeathCorpse = false

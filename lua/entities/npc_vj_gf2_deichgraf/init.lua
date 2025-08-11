@@ -1,7 +1,7 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
 ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_PMC"}
-ENT.Model = "models/gf2/deichgraf_base.mdl"
+ENT.Model = "models/prop/gfl2_deichgraf_base.mdl"
 util.PrecacheModel(ENT.Model)
 ENT.StartHealth = 1500
 

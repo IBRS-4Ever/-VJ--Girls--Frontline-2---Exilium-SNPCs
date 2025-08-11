@@ -1,6 +1,7 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-ENT.VJ_NPC_Class = {"CLASS_GIRLS_FRONTLINE_Varjager","CLASS_GIRLS_FRONTLINE_Varjager"}
+ENT.GF2_Class_ELMO = false
+ENT.GF2_Class_Varjagers = true
 ENT.Model = "models/bandits/varyag.mdl"
 util.PrecacheModel(ENT.Model)
 util.PrecacheModel("models/bandits/varyag_shield.mdl")
