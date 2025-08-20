@@ -162,7 +162,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/tololo/hit7.wav",
 		subject = CharacterName,
 		text = {
-			["schinese"] = "失误了...！", 
+			["schinese"] = "失误了……！", 
 			["english"] = "Wrong judgment...!", 
 		},
 		subjectcol = CharacterColor,
@@ -181,9 +181,10 @@ local GF2Subtitle = { -- add new tables inside here
 	{
 		snd = "vo/jp/tololo/idle2.wav",
 		subject = CharacterName,
-		text = {
-			["schinese"] = "看似遥远的事务并非遥不可及，人类既然能上太空摘星，也就能实现个人的终极理想。", 
-			["english"] = "What seems distant is never truly out of reach. If humanity can reach for the stars, then we can certainly achieve our ultimate dreams.", 
+		text = { -- ID: 77798
+			["schinese"] = "看似遥远的事物并非遥不可及，人类既然能上太空摘星，也就能实现个人的终极理想。", 
+			["english"] = "What seems distant is never truly out of reach. If humanity can reach for the stars, then we can certainly achieve our ultimate dreams.",
+			["japanese"] = "遠いように見えるものも決して届かないわけではない。人類が空を行き星を掴んだように、個人の理想も叶えられるはずです。",
 		},
 		subjectcol = CharacterColor,
 	},
@@ -213,7 +214,7 @@ local GF2Subtitle = { -- add new tables inside here
 		snd = "vo/jp/tololo/idle5.wav",
 		subject = CharacterName,
 		text = { -- ID: 77801
-			["schinese"] = "这是琼玖队长送我的发饰，盈盈的月光石有着天空的颜色", 
+			["schinese"] = "这是琼玖队长送我的发饰，盈盈的月光石有着天空的颜色。", 
 			["english"] = "This hair accessory was a gift from Leader Qiongjiu. The shimmering moonstone gleams softly, carrying the color of the sky.", 
 			["japanese"] = "空を思わせる綺麗なムーンストーン。これは、瓊玖隊長が送ってくれた髪飾りです。",
 		},

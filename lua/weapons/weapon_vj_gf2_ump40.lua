@@ -6,7 +6,7 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "UMP40"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/weapons/w_leva_hk_ump45.mdl"
+SWEP.WorldModel = "models/weapons/w_lainie_hk_ump40.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "smg"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 
 SWEP.MagazineModel = "models/prop/gfl2_ump40_magazine.mdl"
 
-SWEP.Attachment_LaserColor = Color(230,190,70)
+SWEP.Attachment_LaserColor = Color(155,170,90)
 
 function SWEP:GF2_CustomOnInitialize()
 	timer.Simple(0.1, function()

@@ -39,4 +39,13 @@ function ENT:CustomOnDraw()
 		cam.End3D2D()
 	end
 	self:GF2_CustomOnDraw()
+--[[ 	local Shadow = ClientsideModel( self:GetModel() )
+	for i = 0, Shadow:GetBoneCount() do
+		local Pos, Ang = self:GetBonePosition(i)
+		if Pos then Shadow:ManipulateBonePosition(i,Pos) end
+		if Ang then Shadow:ManipulateBoneAngles(i,Ang) end
+		timer.Simple(0.1,function() 
+			if IsValid(Shadow) then Shadow:Remove() end
+		end)
+	end ]]
 end
