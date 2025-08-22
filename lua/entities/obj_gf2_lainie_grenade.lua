@@ -28,8 +28,7 @@ ENT.RadiusDamage = 125 -- How much damage should it deal? Remember this is a rad
 ENT.RadiusDamageUseRealisticRadius = true -- Should the damage decrease the farther away the enemy is from the position that the projectile hit?
 ENT.RadiusDamageType = DMG_BLAST -- Damage type
 ENT.RadiusDamageForce = 90 -- Put the force amount it should apply | false = Don't apply any force
-ENT.DecalTbl_DeathDecals = {"Scorch"}
-ENT.SoundTbl_OnCollide = {"sfx/cheeta_grenade_explode.wav"}
+ENT.DecalTbl_DeathDecals = false
 ---------------------------------------------------------------------------------------------------------------------------------------------
 function ENT:CustomPhysicsObjectOnInitialize(phys)
 	phys:Wake()

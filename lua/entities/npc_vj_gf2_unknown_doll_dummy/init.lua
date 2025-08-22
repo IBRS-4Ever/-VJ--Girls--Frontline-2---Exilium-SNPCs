@@ -3,15 +3,15 @@ include('shared.lua')
 ENT.DropWeaponOnDeath = false
 ENT.GF2_Class_ELMO = false
 ENT.GF2_Class_PMC = true
-ENT.StartHealth = GetConVarNumber("vj_gf2_unknown_groza_dummy_h")
-ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_unknown_groza_dummy_d")
+ENT.StartHealth = GetConVarNumber("vj_gf2_unknown_doll_dummy_h")
+ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_unknown_doll_dummy_d")
 
-ENT.SoundTbl_OnPlayerSight = {"vo/jp/unknown_groza/alert1.wav","vo/jp/unknown_groza/alert2.wav","vo/jp/unknown_groza/alert3.wav","vo/jp/unknown_groza/alert4.wav"}
-ENT.SoundTbl_Alert = {"vo/jp/unknown_groza/alert1.wav","vo/jp/unknown_groza/alert2.wav","vo/jp/unknown_groza/alert3.wav","vo/jp/unknown_groza/alert4.wav"}
-ENT.SoundTbl_Pain = {"vo/jp/unknown_groza/hit1.wav","vo/jp/unknown_groza/hit2.wav","vo/jp/unknown_groza/hit3.wav"}
-ENT.SoundTbl_OnKilledEnemy = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_groza/skill2.wav","vo/jp/unknown_groza/skill3.wav","vo/jp/unknown_groza/skill4.wav"}
-ENT.SoundTbl_Death = {"vo/jp/unknown_groza/die1.wav"}
-ENT.SoundTbl_GrenadeAttack = {"vo/jp/unknown_groza/skill1.wav","vo/jp/unknown_groza/skill2.wav","vo/jp/unknown_groza/skill3.wav","vo/jp/unknown_groza/skill4.wav"}
+ENT.SoundTbl_OnPlayerSight = {"vo/jp/unknown_doll/alert1.wav","vo/jp/unknown_doll/alert2.wav","vo/jp/unknown_doll/alert3.wav","vo/jp/unknown_doll/alert4.wav"}
+ENT.SoundTbl_Alert = {"vo/jp/unknown_doll/alert1.wav","vo/jp/unknown_doll/alert2.wav","vo/jp/unknown_doll/alert3.wav","vo/jp/unknown_doll/alert4.wav"}
+ENT.SoundTbl_Pain = {"vo/jp/unknown_doll/hit1.wav","vo/jp/unknown_doll/hit2.wav","vo/jp/unknown_doll/hit3.wav"}
+ENT.SoundTbl_OnKilledEnemy = {"vo/jp/unknown_doll/skill1.wav","vo/jp/unknown_doll/skill2.wav","vo/jp/unknown_doll/skill3.wav","vo/jp/unknown_doll/skill4.wav"}
+ENT.SoundTbl_Death = {"vo/jp/unknown_doll/die1.wav"}
+ENT.SoundTbl_GrenadeAttack = {"vo/jp/unknown_doll/skill1.wav","vo/jp/unknown_doll/skill2.wav","vo/jp/unknown_doll/skill3.wav","vo/jp/unknown_doll/skill4.wav"}
 --[[ 
 ENT.HasItemDropsOnDeath = true
 ENT.ItemDropsOnDeathChance = 1
@@ -24,7 +24,7 @@ ENT.ShouldFollow = true
 
 function ENT:GF2_CustomInitialize()
 	util.SpriteTrail( self, self:LookupAttachment("eyes"), Color( 255, 0, 0), false, 32, 0, 1, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
-	if GetConVar("vj_gf2_npc_unknown_groza_camo"):GetBool() then self:SetMaterial("effect/vj_gf2_camo") end
+	if GetConVar("vj_gf2_npc_unknown_doll_camo"):GetBool() then self:SetMaterial("effect/vj_gf2_camo") end
 
 	if self.Rappelling then
 		self:SetGroundEntity(NULL)

@@ -81,7 +81,7 @@ function ENT:DeathEffects(data,phys)
 end
 
 function ENT:CustomOnDoDamage(data, phys, hitEnts)
-	if !GetConVar("vj_gf2_npc_unknown_groza_hack_dolls"):GetBool() then return end
+	if !GetConVar("vj_gf2_npc_unknown_doll_hack_dolls"):GetBool() then return end
 	if hitEnts then
 		for id, ent in ipairs(hitEnts) do
 			if ent.IsGF2SNPC then

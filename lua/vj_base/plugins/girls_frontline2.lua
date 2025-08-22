@@ -70,7 +70,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_Tactical","npc_vj_gf2_charolic_tactical"
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Papasha","npc_vj_gf2_papasha",{"weapon_vj_gf2_ppsh41"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Florence","npc_vj_gf2_florence",{"weapon_vj_gf2_pa15"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Florence_MarvelousYamPastry","npc_vj_gf2_florence_marvelous_yam_pastry",{"weapon_vj_gf2_pa15"},vCat)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapon_vj_gf2_ots14"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Doll","npc_vj_gf2_unknown_doll",{"weapon_vj_gf2_ots14"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapon_vj_gf2_unknown_groza_weapon"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Soldier","npc_vj_gf2_varjager_soldier",{"weapon_vj_gf2_varjager_ak101","weapon_vj_gf2_varjager_ak74","weapon_vj_gf2_varjager_akm_plam"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Medic","npc_vj_gf2_varjager_medic",{"weapon_vj_glock17","weapon_vj_gf2_varjager_aks74u","weapon_vj_gf2_varjager_akmsu"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Warrior","npc_vj_gf2_varjager_warrior",{"weapon_vj_gf2_varjager_axe","weapon_vj_gf2_varjager_mpl40","weapon_vj_gf2_varjager_taiga"},vCat)
@@ -107,6 +108,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Yoohee_MiracleSweetheart","npc_vj_gf2_yoohee_mira
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Balthilde","npc_vj_gf2_balthilde",{"weapon_vj_gf2_ls26"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Voymastina","npc_vj_gf2_voymastina",{"weapon_vj_gf2_ak15"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Voymastina_Erwin","npc_vj_gf2_voymastina_erwin",{"weapon_vj_gf2_ak15"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Scout_Vanguard","npc_vj_gf2_scout_vanguard",{"weapon_vj_flaregun"},vCatUnf)
 
 VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCatUnf)
@@ -161,6 +163,7 @@ VJ.AddNPCWeapon("AN-94", "weapon_vj_gf2_an94", vCat)
 VJ.AddNPCWeapon("AK-15", "weapon_vj_gf2_ak15", vCat)
 VJ.AddNPCWeapon("LS-26", "weapon_vj_gf2_ls26", vCat)
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_plasma_cannon", "weapon_vj_gf2_lose_sextans_cannon", vCat)
+VJ.AddNPCWeapon("Pulse-Rifle", "weapon_vj_gf2_unknown_groza_weapon", vCat)
 
 VJ.AddNPCWeapon("AK-101", "weapon_vj_gf2_varjager_ak101", vCat)
 VJ.AddNPCWeapon("AK-74", "weapon_vj_gf2_varjager_ak74", vCat)
@@ -306,14 +309,19 @@ VJ.AddConVar("vj_gf2_ullrid_h",400)
 VJ.AddConVar("vj_gf2_ullrid_d",100)
 
 -- Others
-VJ.AddConVar("vj_gf2_unknown_groza_h",1000)
-VJ.AddConVar("vj_gf2_unknown_groza_d",200)
-VJ.AddConVar("vj_gf2_unknown_groza_dummy_h",250)
-VJ.AddConVar("vj_gf2_unknown_groza_dummy_d",50)
+VJ.AddConVar("vj_gf2_unknown_doll_h",1000)
+VJ.AddConVar("vj_gf2_unknown_doll_d",200)
+VJ.AddConVar("vj_gf2_unknown_doll_dummy_h",250)
+VJ.AddConVar("vj_gf2_unknown_doll_dummy_d",50)
+VJ.AddConVar("vj_gf2_unknown_groza_h",1250)
+VJ.AddConVar("vj_gf2_unknown_groza_d",250)
 VJ.AddConVar("vj_gf2_sextans_h",1500)
 VJ.AddConVar("vj_gf2_sextans_d",100)
 VJ.AddConVar("vj_gf2_lose_sextans_h",3000)
 VJ.AddConVar("vj_gf2_lose_sextans_d",200)
+
+VJ.AddConVar("vj_gf2_scout_vanguard_h",250)
+VJ.AddConVar("vj_gf2_scout_vanguard_d",50)
 
 -- Weapons
 -- AR
@@ -331,6 +339,7 @@ VJ.AddConVar("vj_gf2_g28_d",75)
 VJ.AddConVar("vj_gf2_g36k_d",30)
 VJ.AddConVar("vj_gf2_k2_d",35)
 VJ.AddConVar("vj_gf2_ak15_d",65)
+VJ.AddConVar("vj_gf2_unknown_groza_weapon_d",75)
 
 -- RF
 VJ.AddConVar("vj_gf2_om50_d",150)
@@ -405,10 +414,10 @@ AddConvars["vj_gf2_animation_speed_modifier"] = 1 -- Animation Modifier.
 AddConvars["vj_gf2_npc_find_cover_on_reload"] = 1 -- Find Cover On Reload.
 AddConvars["vj_gf2_npc_charolic_ignite_target"] = 1 -- Charolic Ignite Targets.
 AddConvars["vj_gf2_npc_leva_hacking"] = 1 -- Leva Hacking.
-AddConvars["vj_gf2_npc_unknown_groza_camo"] = 1 -- Unknown Doll have camo.
-AddConvars["vj_gf2_npc_unknown_groza_hack_dolls"] = 1 -- Unknown Doll hack dolls.
-AddConvars["vj_gf2_npc_unknown_groza_switch_weapons"] = 1 -- Unknown Doll switch weapons.
-AddConvars["vj_gf2_npc_unknown_groza_summon_dummy"] = 1 -- Unknown Doll summon dummies.
+AddConvars["vj_gf2_npc_unknown_doll_camo"] = 1 -- Unknown Doll have camo.
+AddConvars["vj_gf2_npc_unknown_doll_hack_dolls"] = 1 -- Unknown Doll hack dolls.
+AddConvars["vj_gf2_npc_unknown_doll_switch_weapons"] = 1 -- Unknown Doll switch weapons.
+AddConvars["vj_gf2_npc_unknown_doll_summon_dummy"] = 1 -- Unknown Doll summon dummies.
 AddConvars["vj_gf2_npc_golyat_damage_friendly"] = 1 -- Golyat deals damage to all NPCs.
 AddConvars["vj_gf2_npc_deichgraf_missile_count"] = 6 -- How many missiles to launch in a roll.
 AddConvars["vj_gf2_npc_voice_language"] = "jp" -- Voice Language.
@@ -459,10 +468,10 @@ if CLIENT then
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_AnimationSpeedModifier", "vj_gf2_animation_speed_modifier")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Leva_Hacking", "vj_gf2_npc_leva_hacking")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Charolic_Ignite_Target", "vj_gf2_npc_charolic_ignite_target")
-				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Camo", "vj_gf2_npc_unknown_groza_camo")
-				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Hacking", "vj_gf2_npc_unknown_groza_hack_dolls")
-				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Switching_Weapons", "vj_gf2_npc_unknown_groza_switch_weapons")
-				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Groza_Summon_Dummy", "vj_gf2_npc_unknown_groza_summon_dummy")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Doll_Camo", "vj_gf2_npc_unknown_doll_camo")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Doll_Hacking", "vj_gf2_npc_unknown_doll_hack_dolls")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Doll_Switching_Weapons", "vj_gf2_npc_unknown_doll_switch_weapons")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Unknown_Doll_Summon_Dummy", "vj_gf2_npc_unknown_doll_summon_dummy")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Golyat_Damage_Friendly", "vj_gf2_npc_golyat_damage_friendly")
 				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Deichgraf.Missile_Count", "vj_gf2_npc_deichgraf_missile_count", 1, 12, 0)
 				local GF2_VOICE_LANGUAGE = Panel:ComboBox("#vj_gf2_snpcs.settings.NPC_VoiceLanguage", "vj_gf2_npc_voice_language")

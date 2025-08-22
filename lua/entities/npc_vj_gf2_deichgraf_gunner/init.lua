@@ -8,7 +8,7 @@ ENT.NextMissileAtkT = CurTime() + 3
 ENT.MissileCount = 0
 
 ENT.NextSpawnGolyatTimer = CurTime()
-ENT.Deichgraf_Gloyat = {}
+ENT.Deichgraf_Gloyat = nil
 
 local BulletPos = Vector(90, -25, 120)
 local MissilePos = Vector(-50, 50, 120)

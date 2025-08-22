@@ -34,7 +34,7 @@ function ENT:GF2_CustomInitialize()
 	end
 end
 
-function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
+function ENT:GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
 	if self.HasShield then dmginfo:ScaleDamage(0.5) else dmginfo:ScaleDamage(0.75) end
 end
 

@@ -187,24 +187,12 @@ function ENT:CustomOnInitialize()
 		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_PLAYER_ALLY"
 		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_ELMO"
 	end
-	if self.GF2_Class_ELID then
-		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_ELID"
-	end
-	if self.GF2_Class_PMC then
-		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_PMC"
-	end
-	if self.GF2_Class_GirardGroup then
-		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_GirardGroup"
-	end
-	if self.GF2_Class_Paradeus then
-		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_Paradeus"
-	end
-	if self.GF2_Class_URNC then
-		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_URNC"
-	end
-	if self.GF2_Class_Varjagers then
-		self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_Varjagers"
-	end
+	if self.GF2_Class_ELID then self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_ELID" end
+	if self.GF2_Class_PMC then self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_PMC" end
+	if self.GF2_Class_GirardGroup then self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_GirardGroup" end
+	if self.GF2_Class_Paradeus then self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_Paradeus" end
+	if self.GF2_Class_URNC then self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_URNC" end
+	if self.GF2_Class_Varjagers then self.VJ_NPC_Class[#self.VJ_NPC_Class + 1] = "CLASS_GIRLS_FRONTLINE_Varjagers" end
 	CollisionGroup = self:GetCollisionGroup()
 	self:SetUpSoundTable()
 	self:GF2_CustomInitialize()

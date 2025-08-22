@@ -1,8 +1,8 @@
 GF2_Subtitles_Table = GF2_Subtitles_Table or {} -- don't touch
 
 local CharacterName = {
-	["schinese"] = "闪电？：",
-	["english"] = "Groza?: ",
+	["schinese"] = "不明人形：",
+	["english"] = "Unknown Doll: ",
 	--["japanese"] = "ブルースフィア：",
 	}
 local CharacterColor = Color(255,0,0)
@@ -10,82 +10,76 @@ local CharacterColor = Color(255,0,0)
 local GF2Subtitle = { -- add new tables inside here
 	
 	{
-		snd = "vo/jp/unknown_groza/alert1.wav", 
+		snd = "vo/jp/unknown_doll/alert1.wav", 
 		subject = CharacterName, 
 		text = { -- ID: 
-			["schinese"] = "正在执行摧毁指令，没有谈判的余地。", 
+			["schinese"] = "……抹除……", 
+			["english"] = "...Wipe...", 
 		},
 		subjectcol = CharacterColor,
 	},
 	
 	{
-		snd = "vo/jp/unknown_groza/alert2.wav", 
+		snd = "vo/jp/unknown_doll/alert2.wav", 
 		subject = CharacterName, 
 		text = { -- ID: 
-			["schinese"] = "全面清除。", 
+			["schinese"] = "……销毁……", 
+			["english"] = "...Destory...", 
 		},
 		subjectcol = CharacterColor,
 	},
 	
 	{
-		snd = "vo/jp/unknown_groza/alert3.wav", 
+		snd = "vo/jp/unknown_doll/alert3.wav", 
 		subject = CharacterName, 
 		text = { -- ID: 
-			["schinese"] = "碾碎他们。", 
+			["schinese"] = "……指令……清除…………目标……全体……", 
+			["english"] = "...Objective......wipe out...Target...all", 
 		},
 		subjectcol = CharacterColor,
 	},
 	
 	{
-		snd = "vo/jp/unknown_groza/alert4.wav", 
+		snd = "vo/jp/unknown_doll/die1.wav", 
 		subject = CharacterName, 
 		text = { -- ID: 
-			["schinese"] = "巩固阵线。", 
+			["schinese"] = "……必须……要……完成……任务……", 
 		},
 		subjectcol = CharacterColor,
 	},
 	
 	{
-		snd = "vo/jp/unknown_groza/alert5.wav", 
+		snd = "vo/jp/unknown_doll/skill1.wav", 
 		subject = CharacterName, 
 		text = { -- ID: 
-			["schinese"] = "干得不错，但……到此为止吧！", 
+			["schinese"] = "……我会让你后悔……", 
 		},
 		subjectcol = CharacterColor,
 	},
 	
 	{
-		snd = "vo/jp/unknown_groza/die1.wav", 
+		snd = "vo/jp/unknown_doll/skill2.wav", 
 		subject = CharacterName, 
 		text = { -- ID: 
-			["schinese"] = "……作战失败……不可能……", 
+			["schinese"] = "……无效的抵抗……", 
 		},
 		subjectcol = CharacterColor,
 	},
 	
 	{
-		snd = "vo/jp/unknown_groza/killed_enemy1.wav", 
+		snd = "vo/jp/unknown_doll/skill3.wav", 
 		subject = CharacterName, 
 		text = { -- ID: 
-			["schinese"] = "无路可逃。", 
+			["schinese"] = "……到此为止了……", 
 		},
 		subjectcol = CharacterColor,
 	},
 	
 	{
-		snd = "vo/jp/unknown_groza/killed_enemy2.wav", 
+		snd = "vo/jp/unknown_doll/skill4.wav", 
 		subject = CharacterName, 
 		text = { -- ID: 
-			["schinese"] = "品尝绝望吧。", 
-		},
-		subjectcol = CharacterColor,
-	},
-	
-	{
-		snd = "vo/jp/unknown_groza/killed_enemy3.wav", 
-		subject = CharacterName, 
-		text = { -- ID: 
-			["schinese"] = "评估……切换战斗形态。", 
+			["schinese"] = "……投降……已经晚了……", 
 		},
 		subjectcol = CharacterColor,
 	},
