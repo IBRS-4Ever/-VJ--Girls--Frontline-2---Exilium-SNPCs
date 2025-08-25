@@ -36,6 +36,7 @@ end
 
 function ENT:GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
 	if self.HasShield then dmginfo:ScaleDamage(0.5) else dmginfo:ScaleDamage(0.75) end
+	return true
 end
 
 function ENT:CustomOnDeath_BeforeCorpseSpawned()

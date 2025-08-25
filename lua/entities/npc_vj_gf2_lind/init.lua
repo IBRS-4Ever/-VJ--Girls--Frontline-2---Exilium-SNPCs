@@ -25,6 +25,7 @@ ENT.Element_AcidTime = 3
 
 ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."die2.wav",SndPrefix.."die3.wav"}
 
-function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup)
+function ENT:GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup)
 	dmginfo:ScaleDamage(0.75)
+	return true
 end

@@ -18,6 +18,6 @@ ENT.TimeUntilMeleeAttackDamage = 0.1
 ENT.NextMeleeAttackTime = 0.1
 ENT.NextAnyAttackTime_Melee = 0.1
 
-function ENT:GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 
+function ENT:GF2_CustomOnTakeDamage_AfterDamage(dmginfo, hitgroup) 
 	dmginfo:ScaleDamage(0.25)
 end
