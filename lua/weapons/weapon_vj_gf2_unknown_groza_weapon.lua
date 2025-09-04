@@ -6,7 +6,7 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "Pulse-Rifle"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_unknown_groza_weapon.mdl"
+SWEP.WorldModel = "models/weapons/w_unknown_groza_weapon.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "smg"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -23,9 +23,9 @@ SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.3
 SWEP.Primary.Sound = "GF2_SNPC.Weapon_OTs14.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_OTs14.Shot_Dist"
+SWEP.PrimaryEffects_MuzzleParticles = {"vj_rifle_full_blue"}
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
-SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
-SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
+SWEP.PrimaryEffects_SpawnShells = false
 SWEP.Primary.TracerType = "AR2Tracer"
 
 SWEP.Secondary.Automatic = true

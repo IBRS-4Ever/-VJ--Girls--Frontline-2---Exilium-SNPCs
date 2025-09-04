@@ -15,7 +15,7 @@ ENT.MeleeAttackDamage = 500
 ENT.MeleeAttackDamageType = DMG_BLAST
 ENT.CanFlinch = true
 ENT.FlinchChance = 5
-ENT.FlinchCooldown = 0
+ENT.FlinchCooldown = 5
 ENT.AnimTbl_Flinch = ACT_SMALL_FLINCH
 
 ENT.MeleeAttackDistance = 200 -- How close an enemy has to be to trigger a melee attack | false = Auto calculate on initialize based on its collision bounds
