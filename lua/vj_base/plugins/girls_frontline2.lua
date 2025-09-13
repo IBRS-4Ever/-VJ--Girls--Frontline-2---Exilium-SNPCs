@@ -109,6 +109,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Balthilde","npc_vj_gf2_balthilde",{"weapon_vj_gf2
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Voymastina","npc_vj_gf2_voymastina",{"weapon_vj_gf2_ak15"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Voymastina_Erwin","npc_vj_gf2_voymastina_erwin",{"weapon_vj_gf2_ak15"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Scout_Vanguard","npc_vj_gf2_scout_vanguard",{"weapon_vj_flaregun"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lewis","npc_vj_gf2_lewis",{"weapon_vj_gf2_lewis_gun"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lewis_Sunscreen_Battle","npc_vj_gf2_lewis_sunscreen_battle",{"weapon_vj_gf2_lewis_gun"},vCatUnf)
 
 VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCatUnf)
@@ -164,6 +166,7 @@ VJ.AddNPCWeapon("AK-15", "weapon_vj_gf2_ak15", vCat)
 VJ.AddNPCWeapon("LS-26", "weapon_vj_gf2_ls26", vCat)
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_plasma_cannon", "weapon_vj_gf2_lose_sextans_cannon", vCat)
 VJ.AddNPCWeapon("Pulse-Rifle", "weapon_vj_gf2_unknown_groza_weapon", vCat)
+VJ.AddNPCWeapon("Lewis Gun", "weapon_vj_gf2_lewis_gun", vCat)
 
 VJ.AddNPCWeapon("AK-101", "weapon_vj_gf2_varjager_ak101", vCat)
 VJ.AddNPCWeapon("AK-74", "weapon_vj_gf2_varjager_ak74", vCat)
@@ -289,6 +292,8 @@ VJ.AddConVar("vj_gf2_littara_h",300)
 VJ.AddConVar("vj_gf2_littara_d",50)
 VJ.AddConVar("vj_gf2_balthilde_h",450)
 VJ.AddConVar("vj_gf2_balthilde_d",50)
+VJ.AddConVar("vj_gf2_lewis_h",350)
+VJ.AddConVar("vj_gf2_lewis_d",25)
 
 -- Pistol
 VJ.AddConVar("vj_gf2_nagant_h",250)
@@ -379,6 +384,7 @@ VJ.AddConVar("vj_gf2_pa15_d",15)
 VJ.AddConVar("vj_gf2_galil_arm_d",40)
 VJ.AddConVar("vj_gf2_ls26_d",50)
 VJ.AddConVar("vj_gf2_pkp_sp_d",75)
+VJ.AddConVar("vj_gf2_lewis_gun_d",35)
 
 -- Other
 VJ.AddConVar("vj_gf2_lose_sextans_cannon_d",250)

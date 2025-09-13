@@ -38,8 +38,11 @@ function SWEP:CustomOnInitialize()
 	self:GF2_CustomOnInitialize()
 end
 
+function SWEP:GF2_CustomOnPrimaryAttack_AfterShoot() end
+
 function SWEP:CustomOnPrimaryAttack_AfterShoot()
 	if GetConVar("vj_gf2_infinite_ammo"):GetBool() then self:SetClip1(self.Primary.ClipSize) end
+	self:GF2_CustomOnPrimaryAttack_AfterShoot()
 end
 
 function SWEP:CustomOnReload() 
@@ -70,12 +73,15 @@ function SWEP:CustomOnReload()
 	end
 end
 
+function SWEP:GF2_CustomOnReload_Finish() end
+
 function SWEP:CustomOnReload_Finish()
 	if DropMagazine and self.MagazineModel then
 		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),0)
 		self:SetBodygroup(self:FindBodygroupByName( "bullets" ),0)
 		return true 
 	end
+	self:GF2_CustomOnReload_Finish()
 end
 
 function SWEP:BulletPenetrate(attacker, trace, dmginfo) end
