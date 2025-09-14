@@ -6,7 +6,7 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "MP5"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_peri_mp5.mdl"
+SWEP.WorldModel = "models/weapons/w_peri_mp5.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "smg"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------

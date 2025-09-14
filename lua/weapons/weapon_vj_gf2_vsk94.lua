@@ -6,7 +6,7 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "VSK-94"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_nikketa_vsk_94.mdl"
+SWEP.WorldModel = "models/weapons/w_nikketa_vsk_94.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------

@@ -6,7 +6,7 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "PPSH-41"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_papasha_ppsh41.mdl"
+SWEP.WorldModel = "models/weapons/w_papasha_ppsh41.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------

@@ -6,7 +6,7 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "LS-26"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_littara_galil_arm.mdl"
+SWEP.WorldModel = "models/weapons/w_balthilde_ls26.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -20,16 +20,16 @@ SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 50
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.5
-SWEP.Primary.Sound = "GF2_SNPC.Weapon_Galil_ARM.Shot"
-SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_Galil_ARM.Shot_Dist"
+SWEP.Primary.Sound = "GF2_SNPC.Weapon_LS26.Shot"
+SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_LS26.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
 
-SWEP.MagazineModel = "models/prop/gfl2_littara_galil_arm_magazine.mdl"
+SWEP.MagazineModel = "models/prop/gfl2_balthilde_ls26_magazine.mdl"
 
 sound.Add({
-	name = "GF2_SNPC.Weapon_Galil_ARM.Shot",
+	name = "GF2_SNPC.Weapon_LS26.Shot",
 	channel = CHAN_WEAPON,
 	volume = 1.0,
 	level = 80,
@@ -38,7 +38,7 @@ sound.Add({
 })
 
 sound.Add({
-	name = "GF2_SNPC.Weapon_Galil_ARM.Shot_Dist",
+	name = "GF2_SNPC.Weapon_LS26.Shot_Dist",
 	channel = CHAN_AUTO,
 	volume = 1.0,
 	level = 140,

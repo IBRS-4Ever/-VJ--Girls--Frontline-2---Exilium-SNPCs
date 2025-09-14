@@ -6,7 +6,7 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "M1 Super 90"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_lotta_benelli_m1.mdl"
+SWEP.WorldModel = "models/weapons/w_lotta_benelli_m1.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "shotgun"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------

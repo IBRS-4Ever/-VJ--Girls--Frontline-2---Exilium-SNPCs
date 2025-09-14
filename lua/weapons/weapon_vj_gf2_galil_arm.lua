@@ -6,7 +6,7 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "Galil ARM"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_littara_galil_arm.mdl"
+SWEP.WorldModel = "models/weapons/w_littara_galil_arm.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
