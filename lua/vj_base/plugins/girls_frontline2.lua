@@ -46,6 +46,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lenna_FlyingPhantom","npc_vj_gf2_lenna_flying_pha
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Leva","npc_vj_gf2_leva",{"weapon_vj_gf2_ump45"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Leva_DiamondFlower","npc_vj_gf2_leva_diamond_flower",{"weapon_vj_gf2_ump45"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Jiangyu","npc_vj_gf2_jiangyu",{"weapon_vj_gf2_qbz97"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Jiangyu_RaindropCleavingBlades","npc_vj_gf2_jiangyu_raindrop_cleaving_blades",{"weapon_vj_gf2_qbz97"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai","npc_vj_gf2_klukai",{"weapon_vj_gf2_hk416"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_AstralLuminous","npc_vj_gf2_klukai_astral_luminous",{"weapon_vj_gf2_hk416"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_SpeedStar","npc_vj_gf2_klukai_speed_star",{"weapon_vj_gf2_hk416"},vCat)
