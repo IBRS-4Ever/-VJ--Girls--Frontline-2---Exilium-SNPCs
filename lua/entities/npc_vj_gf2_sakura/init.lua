@@ -1,6 +1,6 @@
 AddCSLuaFile("shared.lua")
 include('shared.lua')
-local Name = "suomi"
+local Name = "sakura"
 ENT.Character = Name
 local SndPrefix = "vo/jp/"..Name.."/"
 ENT.Model = "models/gf2/"..Name.."_combat.mdl"

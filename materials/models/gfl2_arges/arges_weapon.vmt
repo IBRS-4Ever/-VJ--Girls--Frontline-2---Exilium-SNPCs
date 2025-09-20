@@ -15,4 +15,7 @@ VertexLitGeneric
 	$halflambert 1
 	$phongalbedotint 1
 	$phongboost 2
+
+	$selfillum 1
+	$selfillummask "models/gfl2_arges/arges_weapon_glow"
 }
