@@ -16,22 +16,24 @@ ENT.SoundTbl_Death = {"vo/jp/varjager/die1.wav","vo/jp/varjager/die2.wav","vo/jp
 ENT.HasShield = false
 
 function ENT:GF2_CustomInitialize()
-	if self.HasShield then
-		local ShieldBone = self:LookupBone("ValveBiped.Bip01_L_Forearm")
-		local ShieldBonePos, ShieldBoneAng = self:GetBonePosition(ShieldBone)
-		local Shield = ents.Create("prop_physics")
-		Shield:SetModel("models/bandits/varyag_shield.mdl")
-		Shield:SetPos(ShieldBonePos + self:GetForward() * 2 + self:GetUp() * -54 + self:GetRight() * 6)
-		Shield:FollowBone(self,ShieldBone)
-		Shield:SetAngles(self:GetAngles() + Angle(0,0,60))
-		Shield:PhysicsInit(SOLID_VPHYSICS)
-		Shield:SetMoveType(MOVETYPE_VPHYSICS)
-		Shield:SetSolid(SOLID_VPHYSICS)
-		Shield:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
-		Shield:SetOwner(self)
-		Shield:Spawn()
-		Shield:Activate()
-	end
+	timer.Simple(0.1, function() 
+		if self.HasShield then
+			local ShieldBone = self:LookupBone("ValveBiped.Bip01_L_Forearm")
+			local ShieldBonePos, ShieldBoneAng = self:GetBonePosition(ShieldBone)
+			local Shield = ents.Create("prop_physics")
+			Shield:SetModel("models/bandits/varyag_shield.mdl")
+			Shield:SetPos(ShieldBonePos + self:GetForward() * 2 + self:GetUp() * -54 + self:GetRight() * 6)
+			Shield:FollowBone(self,ShieldBone)
+			Shield:SetAngles(self:GetAngles() + Angle(0,0,60))
+			Shield:PhysicsInit(SOLID_VPHYSICS)
+			Shield:SetMoveType(MOVETYPE_VPHYSICS)
+			Shield:SetSolid(SOLID_VPHYSICS)
+			Shield:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
+			Shield:SetOwner(self)
+			Shield:Spawn()
+			Shield:Activate()
+		end
+	end)
 end
 
 function ENT:GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) 

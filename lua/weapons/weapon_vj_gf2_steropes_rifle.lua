@@ -3,7 +3,7 @@ AddCSLuaFile()
 if (!file.Exists("autorun/vj_base_autorun.lua","LUA")) then return end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Base = "weapon_vj_gf2_base"
-SWEP.PrintName = "Rifle"
+SWEP.PrintName = "#vj_gf2_snpcs.weapon_pulse_rifle"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_steropes_rifle.mdl"

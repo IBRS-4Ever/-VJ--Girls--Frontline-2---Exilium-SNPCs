@@ -15,6 +15,8 @@ SWEP.Attachment_Laser = false
 SWEP.Attachment_LaserColor = Color(255,255,255)
 SWEP.Attachment_Flashlight = false
 
+SWEP.Primary.Infinite = false
+
 function SWEP:GF2_CustomOnInitialize() end
 
 function SWEP:CustomOnInitialize() 
@@ -41,7 +43,7 @@ end
 function SWEP:GF2_CustomOnPrimaryAttack_AfterShoot() end
 
 function SWEP:CustomOnPrimaryAttack_AfterShoot()
-	if GetConVar("vj_gf2_infinite_ammo"):GetBool() then self:SetClip1(self.Primary.ClipSize) end
+	if GetConVar("vj_gf2_infinite_ammo"):GetBool() or self.Primary.Infinite then self:SetClip1(self.Primary.ClipSize) end
 	self:GF2_CustomOnPrimaryAttack_AfterShoot()
 end
 

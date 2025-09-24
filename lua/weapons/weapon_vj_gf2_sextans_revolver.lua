@@ -16,7 +16,7 @@ SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = 75
 SWEP.Primary.Force = 1
-SWEP.Primary.ClipSize = 6
+SWEP.Primary.Infinite = true
 SWEP.Primary.Ammo = "357"
 SWEP.NPC_CustomSpread = 0
 SWEP.Primary.Sound = "GF2_SNPC.Weapon_M1895.Shot"
