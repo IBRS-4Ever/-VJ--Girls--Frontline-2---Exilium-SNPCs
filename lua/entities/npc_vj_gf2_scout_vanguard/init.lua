@@ -84,7 +84,7 @@ function ENT:GF2_CustomOnThink_AiEnabled()
 		if IsValid(self.Summoned_Jord) then self.Summoned_Jord:Follow(self) end
 	end)
 
-	self.NextSpawnTimer = CurTime() + 1
+	self.NextSpawnTimer = CurTime() + 120
 end
 
 function ENT:GF2_CustomOnRemove()
