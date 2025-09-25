@@ -15,6 +15,10 @@ ENT.Element = "electric"
 ENT.Element_ElectricRadius = 75
 ENT.Element_ElectricDamage = 3
 
+function ENT:GF2_CustomOnTakeDamage_AfterDamage(dmginfo, hitgroup) 
+	dmginfo:ScaleDamage(0.25)
+end
+
 --ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."die2.wav",SndPrefix.."die3.wav",SndPrefix.."hit6.wav"}
 --[[ 
 function ENT:GF2_CustomInitialize()

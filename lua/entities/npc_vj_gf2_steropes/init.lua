@@ -21,6 +21,10 @@ ENT.NextMissileAtkT = CurTime()
 
 --ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."die2.wav",SndPrefix.."die3.wav",SndPrefix.."hit6.wav"}
 
+function ENT:GF2_CustomOnTakeDamage_AfterDamage(dmginfo, hitgroup) 
+	dmginfo:ScaleDamage(0.25)
+end
+
 function ENT:GF2_CustomInitialize()
 	timer.Simple(0.1, function() 
 		local RPGBone = self:LookupBone("ValveBiped.Bip01_Spine4")
