@@ -10,6 +10,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_Tactical","npc_vj_gf2_nemesis_tactical",{
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_WanderingStarTrial","npc_vj_gf2_nemesis_wandering_star_trial",{"weapon_vj_gf2_om50"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_SereneDarkRiver","npc_vj_gf2_nemesis_serene_dark_river",{"weapon_vj_gf2_om50"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo","npc_vj_gf2_tololo",{"weapon_vj_gf2_ak_alfa"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo_HorizonCruise","npc_vj_gf2_tololo_horizon_cruise",{"weapon_vj_gf2_ak_alfa"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo_TwilightMilkyWay","npc_vj_gf2_tololo_twilight_milky_way",{"weapon_vj_gf2_ak_alfa"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Cheeta","npc_vj_gf2_cheeta",{"weapon_vj_gf2_mp7"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Cheeta_CircuitSparks","npc_vj_gf2_cheeta_circuit_sparks",{"weapon_vj_gf2_mp7"},vCat)
