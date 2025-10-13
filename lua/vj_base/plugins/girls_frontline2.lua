@@ -115,6 +115,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Voymastina_Erwin","npc_vj_gf2_voymastina_erwin",{
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Scout_Vanguard","npc_vj_gf2_scout_vanguard",{"weapon_vj_flaregun"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lewis","npc_vj_gf2_lewis",{"weapon_vj_gf2_lewis_gun"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lewis_Sunscreen_Battle","npc_vj_gf2_lewis_sunscreen_battle",{"weapon_vj_gf2_lewis_gun"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Helen","npc_vj_gf2_helen",{"weapon_vj_gf2_dp12"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Helen_StarlitWaltz","npc_vj_gf2_helen_starlit_waltz",{"weapon_vj_gf2_dp12"},vCatUnf)
 
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Arges","npc_vj_gf2_arges",{"weapon_vj_gf2_arges_smg"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Brontes","npc_vj_gf2_brontes",{"weapon_vj_gf2_brontes_shotgun"},vCatUnf)
@@ -175,6 +177,7 @@ VJ.AddNPCWeapon("AN-94", "weapon_vj_gf2_an94", vCat)
 VJ.AddNPCWeapon("AK-15", "weapon_vj_gf2_ak15", vCat)
 VJ.AddNPCWeapon("LS-26", "weapon_vj_gf2_ls26", vCat)
 VJ.AddNPCWeapon("Lewis Gun", "weapon_vj_gf2_lewis_gun", vCat)
+VJ.AddNPCWeapon("DP-12", "weapon_vj_gf2_dp12", vCat)
 
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_plasma_cannon", "weapon_vj_gf2_lose_sextans_cannon", vCat)
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_pulse_rifle", "weapon_vj_gf2_unknown_groza_weapon", vCat)
@@ -304,6 +307,8 @@ VJ.AddConVar("vj_gf2_lotta_h",350)
 VJ.AddConVar("vj_gf2_lotta_d",70)
 VJ.AddConVar("vj_gf2_qiuhua_h",375)
 VJ.AddConVar("vj_gf2_qiuhua_d",90)
+VJ.AddConVar("vj_gf2_helen_h",400)
+VJ.AddConVar("vj_gf2_helen_d",50)
 
 -- MG
 VJ.AddConVar("vj_gf2_peritya_h",500)
@@ -403,6 +408,7 @@ VJ.AddConVar("vj_gf2_vepr_12_d",25)
 VJ.AddConVar("vj_gf2_aa12_d",35)
 VJ.AddConVar("vj_gf2_hawk_type97_d",45)
 VJ.AddConVar("vj_gf2_m1_super90_d",40)
+VJ.AddConVar("vj_gf2_dp12_d",30)
 
 -- Pistol
 VJ.AddConVar("vj_gf2_m1895_revolver_d",75)
@@ -452,6 +458,7 @@ AddConvars["vj_gf2_npc_element_acid_damage_multipler"] = 0.1 -- Acid damage mult
 AddConvars["vj_gf2_npc_element_water_enabled"] = 1 -- Enable Water Effects.
 AddConvars["vj_gf2_npc_element_water_hp_reduce_rate"] = 0.01 -- Enable Water Effects.
 AddConvars["vj_gf2_infinite_ammo"] = 0 -- Infinite Ammo.
+AddConvars["vj_gf2_bullet_damage_multipler"] = 1 -- Bullet Multiplier.
 AddConvars["vj_gf2_speed_modifier"] = 1 -- Speed Modifier.
 AddConvars["vj_gf2_animation_speed_modifier"] = 1 -- Animation Modifier.
 AddConvars["vj_gf2_npc_find_cover_on_reload"] = 1 -- Find Cover On Reload.
@@ -486,6 +493,7 @@ if CLIENT then
 				Panel:CheckBox("#vj_gf2_snpcs.settings.DeathFingerPose", "vj_gf2_death_fingerpose")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_RandomBodygroups", "vj_gf2_npc_random_bodygroups")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.InfiniteAmmo", "vj_gf2_infinite_ammo")
+				--Panel:NumSlider("#vj_gf2_snpcs.settings.BulletDamageMultipler", "vj_gf2_bullet_damage_multipler", 0, 1, 2)
 				Panel:CheckBox("#vj_gf2_snpcs.settings.FindCoverOnReload", "vj_gf2_npc_find_cover_on_reload")
 				Panel:Help("#vj_gf2_snpcs.settings.NPC_Shield.Title")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Shield", "vj_gf2_npc_shield")
