@@ -8,7 +8,7 @@ SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.WorldModel = "models/weapons/w_brontes_shotgun.mdl"
 util.PrecacheModel(SWEP.WorldModel)
-SWEP.HoldType = "ar2"
+SWEP.HoldType = "shotgun"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.NPC_NextPrimaryFire = 0.4
 SWEP.NPC_FiringDistanceScale = 0.75
