@@ -47,11 +47,11 @@ ENT.HealAmount = 1
 ENT.HealDelay = 1
 
 ENT.Element = "default"
-ENT.Element_ElectricRadius = 0
-ENT.Element_ElectricDamage = 0
-ENT.Element_FireIgniteTime = 0
-ENT.Element_FreezingRadius = 0
-ENT.Element_AcidTime = 0
+ENT.Element_ElectricRadius = 50
+ENT.Element_ElectricDamage = 5
+ENT.Element_FireIgniteTime = 3
+ENT.Element_FreezingRadius = 75
+ENT.Element_AcidTime = 3
 
 ENT.GF2_DeepBlock = false
 
