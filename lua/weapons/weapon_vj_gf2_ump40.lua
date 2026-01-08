@@ -20,8 +20,8 @@ SWEP.Primary.ClipSize = 25
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.5
 SWEP.NPC_FiringDistanceScale = 0.85
-SWEP.Primary.Sound = "GF2_SNPC.Weapon_UMP45.Shot"
-SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_UMP45.Shot_Dist"
+SWEP.Primary.Sound = "GF2_SNPC.Weapon_UMP40.Shot"
+SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_UMP40.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
@@ -43,7 +43,7 @@ function SWEP:GF2_CustomOnInitialize()
 end
 
 sound.Add({
-	name = "GF2_SNPC.Weapon_UMP45.Shot",
+	name = "GF2_SNPC.Weapon_UMP40.Shot",
 	channel = CHAN_WEAPON,
 	volume = 1.0,
 	level = 80,
@@ -52,7 +52,7 @@ sound.Add({
 })
 
 sound.Add({
-	name = "GF2_SNPC.Weapon_UMP45.Shot_Dist",
+	name = "GF2_SNPC.Weapon_UMP40.Shot_Dist",
 	channel = CHAN_AUTO,
 	volume = 1.0,
 	level = 140,

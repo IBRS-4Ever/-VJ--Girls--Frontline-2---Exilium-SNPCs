@@ -1,8 +1,0 @@
-UnlitGeneric
-{
-	$basetexture "vgui/entities/npc_vj_gf2_qiuhua_compassion_and_care"
-
-	$vertexcolor 1
-	$vertexalpha 1
-	$nolod 1
-}

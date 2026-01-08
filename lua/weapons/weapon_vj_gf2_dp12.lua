@@ -6,30 +6,30 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "#weapon_vj_gf2_dp12"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/weapons/w_lind_aa12.mdl"
+SWEP.WorldModel = "models/prop/gfl2_helen_dp12.mdl"
 util.PrecacheModel(SWEP.WorldModel)
-SWEP.HoldType = "ar2"
+SWEP.HoldType = "shotgun"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.NPC_NextPrimaryFire = 0.2
+SWEP.NPC_NextPrimaryFire = 0.5
+SWEP.NPC_TimeUntilFire = 0.3
+SWEP.NPC_TimeUntilFireExtraTimers = {0.3}
 SWEP.NPC_ReloadSound = {"weapons/sg/reload.wav"}
 SWEP.NPC_FiringDistanceScale = 0.5
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_dp12_d")
 SWEP.Primary.Force = 1
 SWEP.Primary.NumberOfShots = 12
-SWEP.Primary.ClipSize = 20
+SWEP.Primary.ClipSize = 14
 SWEP.Primary.Ammo = "Buckshot"
-SWEP.NPC_CustomSpread = 1
-SWEP.Primary.Sound = "GF2_SNPC.Weapon_AA12.Shot"
-SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_AA12.Shot_Dist"
+SWEP.NPC_CustomSpread = 3
+SWEP.Primary.Sound = "GF2_SNPC.Weapon_DP12.Shot"
+SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_DP12.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_ShotgunShell1"
 
-SWEP.MagazineModel = "models/prop/gfl2_lind_aa12_magazine.mdl"
-
 sound.Add({
-	name = "GF2_SNPC.Weapon_AA12.Shot",
+	name = "GF2_SNPC.Weapon_DP12.Shot",
 	channel = CHAN_WEAPON,
 	volume = 1.0,
 	level = 80,
@@ -38,7 +38,7 @@ sound.Add({
 })
 
 sound.Add({
-	name = "GF2_SNPC.Weapon_AA12.Shot_Dist",
+	name = "GF2_SNPC.Weapon_DP12.Shot_Dist",
 	channel = CHAN_AUTO,
 	volume = 1.0,
 	level = 140,

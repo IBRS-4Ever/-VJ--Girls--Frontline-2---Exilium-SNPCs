@@ -1,8 +1,0 @@
-UnlitGeneric
-{
-	$basetexture "vgui/entities/npc_vj_gf2_lotta_rookie_athlete"
-
-	$vertexcolor 1
-	$vertexalpha 1
-	$nolod 1
-}

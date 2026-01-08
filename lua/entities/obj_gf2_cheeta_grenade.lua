@@ -37,7 +37,7 @@ function ENT:CustomPhysicsObjectOnInitialize(phys)
 	phys:SetBuoyancyRatio(0)
 end
 ---------------------------------------------------------------------------------------------------------------------------------------------
-function ENT:CustomOnInitialize()
+function ENT:Init()
 	util.SpriteTrail( self, 0, Color( 255, 0, 0 ), false, 32, 0, 5, 1 / ( 15 + 1 ) * 0.5, "trails/laser" )
 	self:SetModelScale(5)
 	self:EmitSound("sfx/grenade_throw_1.wav")

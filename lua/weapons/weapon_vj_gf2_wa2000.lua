@@ -20,8 +20,8 @@ SWEP.Primary.Damage = GetConVarNumber("vj_gf2_wa2000_d")
 SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 6
 SWEP.Primary.Ammo = "ar2"
-SWEP.Primary.Sound = "GF2_SNPC.Weapon_wa2000.Shot"
-SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_wa2000.Shot_Dist"
+SWEP.Primary.Sound = "GF2_SNPC.Weapon_WA2000.Shot"
+SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_WA2000.Shot_Dist"
 SWEP.NPC_CustomSpread = 0
 SWEP.NPC_FiringDistanceScale = 1.5
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
@@ -34,7 +34,7 @@ SWEP.Element = "freezing"
 SWEP.Element_FreezingRadius = 150
 
 sound.Add({
-	name = "GF2_SNPC.Weapon_wa2000.Shot",
+	name = "GF2_SNPC.Weapon_WA2000.Shot",
 	channel = CHAN_WEAPON,
 	volume = 1.0,
 	level = 80,
@@ -43,7 +43,7 @@ sound.Add({
 })
 
 sound.Add({
-	name = "GF2_SNPC.Weapon_wa2000.Shot_Dist",
+	name = "GF2_SNPC.Weapon_WA2000.Shot_Dist",
 	channel = CHAN_AUTO,
 	volume = 1.0,
 	level = 140,

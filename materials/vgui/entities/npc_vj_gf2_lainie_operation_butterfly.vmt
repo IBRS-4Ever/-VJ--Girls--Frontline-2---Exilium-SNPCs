@@ -1,8 +1,0 @@
-UnlitGeneric
-{
-	$basetexture "vgui/entities/npc_vj_gf2_lainie_operation_butterfly"
-
-	$vertexcolor 1
-	$vertexalpha 1
-	$nolod 1
-}

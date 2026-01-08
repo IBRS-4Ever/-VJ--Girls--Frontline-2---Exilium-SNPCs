@@ -14,13 +14,13 @@ SWEP.NPC_NextPrimaryFire = 0.1
 SWEP.NPC_ReloadSound = {"weapons/smg/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.Primary.Damage = GetConVarNumber("vj_gf2_ump9_d")
+SWEP.Primary.Damage = GetConVarNumber("vj_gf2_type100_d")
 SWEP.Primary.Force = 1
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.Ammo = "SMG1"
 SWEP.NPC_CustomSpread = 0.5
 SWEP.NPC_FiringDistanceScale = 0.85
-SWEP.Primary.Sound = "GF2_SNPC.Weapon_UMP9.Shot"
+SWEP.Primary.Sound = "GF2_SNPC.Weapon_Type100.Shot"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
 SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
@@ -28,7 +28,7 @@ SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
 SWEP.MagazineModel = "models/prop/gfl2_sakura_type100_magazine.mdl"
 
 sound.Add({
-	name = "GF2_SNPC.Weapon_UMP9.Shot",
+	name = "GF2_SNPC.Weapon_Type100.Shot",
 	channel = CHAN_WEAPON,
 	volume = 1.0,
 	level = 80,

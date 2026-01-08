@@ -16,7 +16,7 @@ SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_m200_d")
 SWEP.Primary.Force = 1
-SWEP.Primary.ClipSize = 5
+SWEP.Primary.ClipSize = 7
 SWEP.Primary.Ammo = "ar2"
 SWEP.Primary.Sound = "GF2_SNPC.Weapon_M200.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_M200.Shot_Dist"

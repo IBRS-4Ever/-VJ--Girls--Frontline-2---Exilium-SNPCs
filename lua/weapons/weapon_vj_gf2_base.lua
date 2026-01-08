@@ -19,7 +19,7 @@ SWEP.Primary.Infinite = false
 
 function SWEP:GF2_CustomOnInitialize() end
 
-function SWEP:CustomOnInitialize() 
+function SWEP:Init() 
 	DropMagazine = GetConVar("vj_gf2_drop_magazines"):GetBool()
 	MagazineRemoveTimer = GetConVar("vj_gf2_magazineremovetime"):GetInt()
 	self:SetSkin( math.random( 0, self:SkinCount() - 1 ) )

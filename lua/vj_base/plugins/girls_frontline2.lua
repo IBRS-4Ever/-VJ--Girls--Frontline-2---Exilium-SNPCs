@@ -27,6 +27,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nagant","npc_vj_gf2_nagant",{"weapon_vj_gf2_m1895
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nagant_SummerPitcher","npc_vj_gf2_nagant_summer_pitcher",{"weapon_vj_gf2_m1895_revolver"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi","npc_vj_gf2_suomi",{"weapon_vj_gf2_kp31"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi_MidsummerPixie","npc_vj_gf2_suomi_midsummer_pixie",{"weapon_vj_gf2_kp31"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Suomi_FlurryKorvatunturi","npc_vj_gf2_suomi_flurry_korvatunturi",{"weapon_vj_gf2_kp31"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sabrina","npc_vj_gf2_sabrina",{"weapon_vj_gf2_spas12"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sabrina_BerryZabaione","npc_vj_gf2_sabrina_berry_zabaione",{"weapon_vj_gf2_spas12"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Mechty","npc_vj_gf2_mechty",{"weapon_vj_gf2_g11"},vCat)
@@ -72,14 +73,11 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_Tactical","npc_vj_gf2_charolic_tactical"
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Papasha","npc_vj_gf2_papasha",{"weapon_vj_gf2_ppsh41"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Florence","npc_vj_gf2_florence",{"weapon_vj_gf2_pa15"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Florence_MarvelousYamPastry","npc_vj_gf2_florence_marvelous_yam_pastry",{"weapon_vj_gf2_pa15"},vCat)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapon_vj_gf2_unknown_groza_weapon"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Soldier","npc_vj_gf2_varjager_soldier",{"weapon_vj_gf2_varjager_ak101","weapon_vj_gf2_varjager_ak74","weapon_vj_gf2_varjager_akm_plam"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Medic","npc_vj_gf2_varjager_medic",{"weapon_vj_glock17","weapon_vj_gf2_varjager_aks74u","weapon_vj_gf2_varjager_akmsu"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Warrior","npc_vj_gf2_varjager_warrior",{"weapon_vj_gf2_varjager_axe","weapon_vj_gf2_varjager_mpl40","weapon_vj_gf2_varjager_taiga"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Sniper","npc_vj_gf2_varjager_sniper",{"weapon_vj_gf2_varjager_mosin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Heavy","npc_vj_gf2_varjager_heavy",{"weapon_vj_rpg","weapon_vj_spas12","weapon_vj_gf2_varjager_akm_drum","weapon_vj_gf2_varjager_rpd"},vCat)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans","npc_vj_gf2_sextans",{"weapon_vj_gf2_sextans_revolver","weapon_vj_gf2_sextans_flintlock"},vCatUnf)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lose_Sextans","npc_vj_gf2_lose_sextans",{"weapon_vj_gf2_lose_sextans_cannon"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Andoris","npc_vj_gf2_andoris",{"weapon_vj_gf2_g36k"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Andoris_MidnightWhispers","npc_vj_gf2_andoris_midnight_whispers",{"weapon_vj_gf2_g36k"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lind","npc_vj_gf2_lind",{"weapon_vj_gf2_aa12"},vCat)
@@ -113,7 +111,6 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Yoohee_MiracleSweetheart","npc_vj_gf2_yoohee_mira
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Balthilde","npc_vj_gf2_balthilde",{"weapon_vj_gf2_ls26"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Voymastina","npc_vj_gf2_voymastina",{"weapon_vj_gf2_ak15"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Voymastina_Erwin","npc_vj_gf2_voymastina_erwin",{"weapon_vj_gf2_ak15"},vCatUnf)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Scout_Vanguard","npc_vj_gf2_scout_vanguard",{"weapon_vj_flaregun"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lewis","npc_vj_gf2_lewis",{"weapon_vj_gf2_lewis_gun"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lewis_Sunscreen_Battle","npc_vj_gf2_lewis_sunscreen_battle",{"weapon_vj_gf2_lewis_gun"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Helen","npc_vj_gf2_helen",{"weapon_vj_gf2_dp12"},vCatUnf)
@@ -133,6 +130,10 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Brontes","npc_vj_gf2_brontes",{"weapon_vj_gf2_bro
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Jord","npc_vj_gf2_jord",{"weapon_vj_gf2_jord_flamethrower"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Steropes","npc_vj_gf2_steropes",{"weapon_vj_gf2_steropes_rifle"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Surtr","npc_vj_gf2_surtr",{"weapon_vj_gf2_surtr_weapon1","weapon_vj_gf2_surtr_weapon2"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapon_vj_gf2_unknown_groza_weapon"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Scout_Vanguard","npc_vj_gf2_scout_vanguard",{"weapon_vj_flaregun"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans","npc_vj_gf2_sextans",{"weapon_vj_gf2_sextans_revolver","weapon_vj_gf2_sextans_flintlock"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lose_Sextans","npc_vj_gf2_lose_sextans",{"weapon_vj_gf2_lose_sextans_cannon"},vCatUnf)
 
 VJ.AddNPC("#vj_gf2_snpcs.Golyat","npc_vj_gf2_golyat_base",vCat)
 VJ.AddNPC("#vj_gf2_snpcs.Golyat_Electric","npc_vj_gf2_golyat_electric",vCatUnf)
@@ -411,7 +412,7 @@ VJ.AddConVar("vj_gf2_ksvk_d",250)
 VJ.AddConVar("vj_gf2_vsk94_d",80)
 VJ.AddConVar("vj_gf2_m1891_d",160)
 VJ.AddConVar("vj_gf2_m1903_d",180)
-VJ.AddConVar("vj_gf2_dsr50_d",200)
+VJ.AddConVar("vj_gf2_dsr50_d",450)
 VJ.AddConVar("vj_gf2_m200_d",300)
 
 -- SMG
@@ -488,6 +489,7 @@ AddConvars["vj_gf2_bullet_damage_multipler"] = 1 -- Bullet Multiplier.
 AddConvars["vj_gf2_speed_modifier"] = 1 -- Speed Modifier.
 AddConvars["vj_gf2_animation_speed_modifier"] = 1 -- Animation Modifier.
 AddConvars["vj_gf2_npc_find_cover_on_reload"] = 1 -- Find Cover On Reload.
+AddConvars["vj_gf2_npc_use_pose_parameter_movement"] = 0 -- Find Cover On Reload.
 AddConvars["vj_gf2_npc_charolic_ignite_target"] = 1 -- Charolic Ignite Targets.
 AddConvars["vj_gf2_npc_leva_hacking"] = 1 -- Leva Hacking.
 AddConvars["vj_gf2_npc_golyat_damage_friendly"] = 1 -- Golyat deals damage to all NPCs.
@@ -517,6 +519,7 @@ if CLIENT then
 				Panel:CheckBox("#vj_gf2_snpcs.settings.InfiniteAmmo", "vj_gf2_infinite_ammo")
 				--Panel:NumSlider("#vj_gf2_snpcs.settings.BulletDamageMultipler", "vj_gf2_bullet_damage_multipler", 0, 1, 2)
 				Panel:CheckBox("#vj_gf2_snpcs.settings.FindCoverOnReload", "vj_gf2_npc_find_cover_on_reload")
+				--Panel:CheckBox("#vj_gf2_snpcs.settings.UsePoseParameterMovement", "vj_gf2_npc_use_pose_parameter_movement")
 				Panel:Help("#vj_gf2_snpcs.settings.NPC_Shield.Title")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Shield", "vj_gf2_npc_shield")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Shield_ExceedMaxHealth", "vj_gf2_npc_shield_exceed_maxhealth")

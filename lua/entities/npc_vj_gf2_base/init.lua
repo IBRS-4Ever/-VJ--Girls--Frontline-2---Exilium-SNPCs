@@ -171,7 +171,7 @@ function ENT:GiveShield()
 	end
 end
 
-function ENT:CustomOnInitialize()
+function ENT:Init()
 	if GetConVar( "vj_gf2_npc_random_bodygroups" ):GetBool() then
 		local num_bodygroups = self:GetNumBodyGroups()
 		for i = 0, num_bodygroups - 1 do
@@ -212,6 +212,7 @@ end
 
 function ENT:CustomInitialize()
 	if !self.Weapon_FindCoverOnReload then self.Weapon_FindCoverOnReload = GetConVar("vj_gf2_npc_find_cover_on_reload"):GetBool() end
+	if !self.UsePoseParameterMovement then self.UsePoseParameterMovement = GetConVar("vj_gf2_npc_use_pose_parameter_movement"):GetBool() end
 	if self.ShieldCoolDown then self:SetNWFloat( "ShieldCoolDown", self.ShieldCoolDown + CurTime() ) end
 	if self.Shield then timer.Simple( 1, function() if IsValid(self) then self:GiveShield() end end ) end
 	if self.HealAllies then 
@@ -221,7 +222,7 @@ function ENT:CustomInitialize()
 	end
 end
 
-function ENT:CustomOnThink()
+function ENT:OnThink()
 	if self.ShieldCoolDown and self:GetNWFloat( "ShieldCoolDown" ) <= CurTime() then
 		self:GiveShield()
 		self:SetNWFloat( "ShieldCoolDown", self.ShieldCoolDown + CurTime() )
@@ -249,7 +250,12 @@ function ENT:CustomOnThink_AIEnabled()
 	self:GF2_CustomOnThink_AiEnabled()
 end
 
-function ENT:CustomOnWeaponReload() end
+--[[ 
+function ENT:CustomOnWeaponReload() 
+	self:SetSchedule(SCHED_FORCED_GO_RUN)
+	self:AddGesture(ACT_GESTURE_RELOAD)
+end
+ ]]
 function ENT:GF2_CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup) end
 function ENT:GF2_CustomOnTakeDamage_AfterDamage(dmginfo, hitgroup) end
 

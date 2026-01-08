@@ -10,13 +10,13 @@ SWEP.WorldModel = "models/prop/gfl2_loreley_dsr50.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.NPC_NextPrimaryFire = 1.5
+SWEP.NPC_NextPrimaryFire = 3
 SWEP.NPC_ReloadSound = {"weapons/rf/reload.wav"}
 SWEP.NPC_HasSecondaryFire = false
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_dsr50_d")
 SWEP.Primary.Force = 1
-SWEP.Primary.ClipSize = 5
+SWEP.Primary.ClipSize = 3
 SWEP.Primary.Ammo = "ar2"
 SWEP.Primary.Sound = "GF2_SNPC.Weapon_DSR50.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_DSR50.Shot_Dist"
