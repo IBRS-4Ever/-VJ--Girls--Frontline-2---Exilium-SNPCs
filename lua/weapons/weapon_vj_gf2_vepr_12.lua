@@ -24,7 +24,7 @@ SWEP.Primary.Sound = "GF2_SNPC.Weapon_VEPR12.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_VEPR12.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
-SWEP.PrimaryEffects_ShellType = "VJ_Weapon_ShotgunShell1"
+SWEP.PrimaryEffects_ShellType = "ShotgunShellEject"
 
 SWEP.MagazineModel = "models/prop/gfl2_vepley_vepr12_sr_magazine.mdl"
 SWEP.MagazineAngle = Angle(0,180,0)

@@ -25,7 +25,7 @@ SWEP.Primary.Sound = "GF2_SNPC.Weapon_OTs14.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_OTs14.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
-SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
+SWEP.PrimaryEffects_ShellType = "RifleShellEject"
 
 SWEP.Secondary.Automatic = true
 SWEP.Secondary.Ammo = "SMG1_Grenade"

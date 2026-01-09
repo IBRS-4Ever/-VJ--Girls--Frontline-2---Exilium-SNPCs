@@ -26,7 +26,7 @@ SWEP.Primary.Sound = "GF2_SNPC.Weapon_Hawk_Type97.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_Hawk_Type97.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
-SWEP.PrimaryEffects_ShellType = "VJ_Weapon_ShotgunShell1"
+SWEP.PrimaryEffects_ShellType = "ShotgunShellEject"
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_Hawk_Type97.Shot",

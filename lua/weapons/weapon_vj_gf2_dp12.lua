@@ -6,11 +6,11 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "#weapon_vj_gf2_dp12"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_helen_dp12.mdl"
+SWEP.WorldModel = "models/weapons/w_helen_dp12.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "shotgun"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.NPC_NextPrimaryFire = 0.5
+SWEP.NPC_NextPrimaryFire = 0.7
 SWEP.NPC_TimeUntilFire = 0.3
 SWEP.NPC_TimeUntilFireExtraTimers = {0.3}
 SWEP.NPC_ReloadSound = {"weapons/sg/reload.wav"}
@@ -24,9 +24,13 @@ SWEP.Primary.Ammo = "Buckshot"
 SWEP.NPC_CustomSpread = 3
 SWEP.Primary.Sound = "GF2_SNPC.Weapon_DP12.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_DP12.Shot_Dist"
-SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
+SWEP.PrimaryEffects_MuzzleAttachment = "muzzle_l"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
-SWEP.PrimaryEffects_ShellType = "VJ_Weapon_ShotgunShell1"
+SWEP.PrimaryEffects_ShellType = "ShotgunShellEject"
+
+function SWEP:CustomOnPrimaryAttack_AfterShoot(status, statusData)
+	self.PrimaryEffects_MuzzleAttachment = (((self:Clip1() % 2 == 0) and "muzzle_l") or "muzzle_r")
+end
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_DP12.Shot",

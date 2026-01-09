@@ -26,7 +26,7 @@ SWEP.NPC_CustomSpread = 0
 SWEP.NPC_FiringDistanceScale = 1.5
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
-SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
+SWEP.PrimaryEffects_ShellType = "ShellEject"
 
 SWEP.MagazineModel = "models/prop/gfl2_macqiato_wa2000_magazine.mdl"
 

@@ -22,6 +22,8 @@ SWEP.NPC_CustomSpread = 0.3
 SWEP.Primary.Sound = "GF2_SNPC.Weapon_AK15.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_AK15.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
+SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
+SWEP.PrimaryEffects_ShellType = "RifleShellEject"
 
 SWEP.MagazineModel = "models/prop/gfl2_voymastina_ak15_magazine.mdl"
 

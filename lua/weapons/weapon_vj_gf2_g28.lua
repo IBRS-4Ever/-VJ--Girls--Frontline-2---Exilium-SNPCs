@@ -23,7 +23,7 @@ SWEP.Primary.Sound = "GF2_SNPC.Weapon_G28.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_G28.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
-SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
+SWEP.PrimaryEffects_ShellType = "RifleShellEject"
 
 SWEP.MagazineModel = "models/prop/gfl2_belka_g28_magazine.mdl"
 

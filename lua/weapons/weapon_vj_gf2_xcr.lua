@@ -23,7 +23,7 @@ SWEP.Primary.Sound = "GF2_SNPC.Weapon_XCR.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_XCR.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
-SWEP.PrimaryEffects_ShellType = "VJ_Weapon_RifleShell1"
+SWEP.PrimaryEffects_ShellType = "RifleShellEject"
 
 SWEP.MagazineModel = "models/prop/gfl2_xcr_magazine.mdl"
 

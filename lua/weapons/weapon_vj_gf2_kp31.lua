@@ -24,7 +24,7 @@ SWEP.Primary.Sound = "GF2_SNPC.Weapon_KP31.Shot"
 SWEP.Primary.DistantSound = "GF2_SNPC.Weapon_KP31.Shot_Dist"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
-SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
+SWEP.PrimaryEffects_ShellType = "ShellEject"
 
 SWEP.MagazineModel = "models/prop/gfl2_suomi_kp31_magazine.mdl"
 

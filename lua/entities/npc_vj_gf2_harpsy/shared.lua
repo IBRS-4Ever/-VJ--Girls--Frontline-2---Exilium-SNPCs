@@ -3,5 +3,5 @@ ENT.Type 			= "ai"
 ENT.PrintName 		= "Harpsy"
 ENT.Category		= "Girls' Frontline 2"
 
---ENT.SquadName		= "H.I.D.E. 404"
---ENT.BodyModel		= "SSD-62D"
+ENT.SquadName		= "#GF2_SquadName_404TeamB"
+ENT.BodyModel		= "SSD-62D"

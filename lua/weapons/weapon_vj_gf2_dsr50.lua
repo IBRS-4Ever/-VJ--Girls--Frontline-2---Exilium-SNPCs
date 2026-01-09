@@ -6,7 +6,7 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "#weapon_vj_gf2_dsr50"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_loreley_dsr50.mdl"
+SWEP.WorldModel = "models/weapons/w_loreley_dsr50.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "ar2"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -24,7 +24,7 @@ SWEP.NPC_CustomSpread = 0
 SWEP.NPC_FiringDistanceScale = 1.5
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
-SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
+SWEP.PrimaryEffects_ShellType = "ShellEject"
 
 SWEP.MagazineModel = "models/prop/gfl2_loreley_dsr50_magazine.mdl"
 

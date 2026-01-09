@@ -47,7 +47,7 @@ function SWEP:CustomOnPrimaryAttack_AfterShoot()
 	self:GF2_CustomOnPrimaryAttack_AfterShoot()
 end
 
-function SWEP:CustomOnReload() 
+function SWEP:CustomOnReload()
 	if DropMagazine and self.MagazineModel then
 		local Magazine = ents.Create("prop_physics")
 		Magazine:SetModel(self.MagazineModel)

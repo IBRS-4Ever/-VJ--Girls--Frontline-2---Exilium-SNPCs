@@ -6,7 +6,7 @@ SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "#weapon_vj_gf2_type100"
 SWEP.Category = "GF2"
 	-- Main Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.WorldModel = "models/prop/gfl2_sakura_type100.mdl"
+SWEP.WorldModel = "models/weapons/w_sakura_type100.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "smg"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ SWEP.NPC_FiringDistanceScale = 0.85
 SWEP.Primary.Sound = "GF2_SNPC.Weapon_Type100.Shot"
 SWEP.PrimaryEffects_MuzzleAttachment = "muzzle"
 SWEP.PrimaryEffects_ShellAttachment = "ejectbrass"
-SWEP.PrimaryEffects_ShellType = "VJ_Weapon_PistolShell1"
+SWEP.PrimaryEffects_ShellType = "ShellEject"
 
 SWEP.MagazineModel = "models/prop/gfl2_sakura_type100_magazine.mdl"
 

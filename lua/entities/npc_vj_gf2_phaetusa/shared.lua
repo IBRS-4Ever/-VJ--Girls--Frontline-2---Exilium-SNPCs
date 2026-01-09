@@ -3,5 +3,5 @@ ENT.Type 			= "ai"
 ENT.PrintName 		= "Phaetusa"
 ENT.Category		= "Girls' Frontline 2"
 
---ENT.SquadName		= "#GF2_SquadName_DollCommunity"
---ENT.BodyModel		= "SSD-62G"
+ENT.SquadName		= "#GF2_SquadName_DollCommunity"
+ENT.BodyModel		= "DUAL DSI-9"

@@ -5,7 +5,7 @@ if (!file.Exists("autorun/vj_base_autorun.lua","LUA")) then return end
 SWEP.Base = "weapon_vj_gf2_base"
 SWEP.PrintName = "#weapon_vj_gf2_cinderthorn"
 SWEP.MadeForNPCsOnly = true
-SWEP.WorldModel = "models/prop/gfl2_phaetusa_sword.mdl"
+SWEP.WorldModel = "models/weapons/w_phaetusa_sword.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "melee"
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
