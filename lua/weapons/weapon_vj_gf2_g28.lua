@@ -28,18 +28,7 @@ SWEP.PrimaryEffects_ShellType = "RifleShellEject"
 SWEP.MagazineModel = "models/prop/gfl2_belka_g28_magazine.mdl"
 
 SWEP.Attachment_LaserColor = Color(190,115,30)
-
-function SWEP:GF2_CustomOnInitialize()
-	timer.Simple(0.1, function()
-		if SERVER then return end
-		if !IsValid(self) then return end
-		local Laser = math.random(0,1)
-		if Laser == 1 then
-			self:SetBodygroup(self:FindBodygroupByName( "flashlight_laser" ),1)
-			self.Attachment_Laser = true
-		end
-	end)
-end
+SWEP.Attachment_LaserBodygroup = "flashlight_laser"
 
 sound.Add({
 	name = "GF2_SNPC.Weapon_G28.Shot",

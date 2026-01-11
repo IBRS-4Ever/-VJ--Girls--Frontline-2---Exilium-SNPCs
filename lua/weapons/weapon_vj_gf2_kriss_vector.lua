@@ -29,18 +29,15 @@ SWEP.PrimaryEffects_ShellType = "ShellEject"
 SWEP.MagazineModel = "models/prop/gfl2_vector_kriss_vector_magazine.mdl"
 
 function SWEP:GF2_CustomOnInitialize()
-	timer.Simple(0.1, function()
-		if CLIENT then return end
-		if !IsValid(self) then return end
-		local Silencer = math.random(0,1)
-		if Silencer == 1 then
-			self:SetBodygroup(self:FindBodygroupByName( "muzzle_device" ),1)
-			self.PrimaryEffects_MuzzleFlash = false
-			self.Attachment_Silencer = true
-			self.Primary.HasDistantSound = false
-			self.Primary.Sound = "GF2_SNPC.Weapon_KRISS_Vector.Shot_Silencer"
-		end
-	end)
+	if CLIENT then return end
+	if !IsValid(self) then return end
+	local Silencer = math.random(0,1)
+	if Silencer == 1 then
+		self:SetBodygroup(self:FindBodygroupByName( "muzzle_device" ),1)
+		self.PrimaryEffects_MuzzleFlash = false
+		self.Primary.HasDistantSound = false
+		self.Primary.Sound = "GF2_SNPC.Weapon_KRISS_Vector.Shot_Silencer"
+	end
 end
 
 sound.Add({

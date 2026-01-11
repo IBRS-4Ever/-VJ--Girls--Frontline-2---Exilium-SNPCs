@@ -28,18 +28,6 @@ SWEP.MagazineModel = "models/prop/gfl2_faye_cz75_magazine.mdl"
 
 SWEP.Attachment_LaserColor = Color(175,50,50)
 
-function SWEP:GF2_CustomOnInitialize()
-	timer.Simple(0.1, function()
-		if SERVER then return end
-		if !IsValid(self) then return end
-		local Laser = math.random(0,1)
-		if Laser == 1 then
-			self:SetBodygroup(self:FindBodygroupByName( "flashlight" ),1)
-			self.Attachment_Laser = true
-		end
-	end)
-end
-
 sound.Add({
 	name = "GF2_SNPC.Weapon_CZ75.Shot",
 	channel = CHAN_WEAPON,

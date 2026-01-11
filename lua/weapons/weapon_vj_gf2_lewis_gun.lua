@@ -46,9 +46,9 @@ sound.Add({
 })
 
 function SWEP:GF2_CustomOnPrimaryAttack_AfterShoot() 
-	self:ManipulateBoneAngles( self:LookupBone("mag"),self:GetManipulateBoneAngles(self:LookupBone("mag")) + Angle(0,-15,0) )
+	if SERVER then self:ManipulateBoneAngles( self:LookupBone("mag"),self:GetManipulateBoneAngles(self:LookupBone("mag")) + Angle(0,-15,0) ) end
 end
 
 function SWEP:GF2_CustomOnReload_Finish() 
-	self:ManipulateBoneAngles( self:LookupBone("mag"),Angle(0,0,0) )
+	if SERVER then self:ManipulateBoneAngles( self:LookupBone("mag"),Angle(0,0,0) ) end
 end

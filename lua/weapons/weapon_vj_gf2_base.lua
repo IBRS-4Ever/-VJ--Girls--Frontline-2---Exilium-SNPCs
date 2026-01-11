@@ -11,8 +11,8 @@ SWEP.MadeForNPCsOnly = true -- Is this weapon meant to be for NPCs only?
 SWEP.MagazineModel = false
 SWEP.MagazineAngle = Angle(0,90,0)
 
-SWEP.Attachment_Laser = false
-SWEP.Attachment_LaserColor = Color(255,255,255)
+SWEP.Attachment_LaserColor = false
+SWEP.Attachment_LaserBodygroup = "flashlight"
 SWEP.Attachment_Flashlight = false
 
 SWEP.Primary.Infinite = false
@@ -35,6 +35,16 @@ function SWEP:Init()
 			self.Primary.TracerType = "vj_gf2_effect_bullet_trace_freezing"
 		elseif self.Owner.Element == "electric" then
 			self.Primary.TracerType = "vj_gf2_effect_bullet_trace_electric"
+		end
+	end
+	if SERVER then
+		if !IsValid(self) then return end
+		if self.Attachment_LaserColor then
+			local Laser = math.random(0,1)
+			if Laser == 1 then
+				self:SetBodygroup(self:FindBodygroupByName( self.Attachment_LaserBodygroup ),1)
+				self:SetNWBool( "Laser", true )
+			end
 		end
 	end
 	self:GF2_CustomOnInitialize()
@@ -230,8 +240,9 @@ end
 hook.Add("PostDrawTranslucentRenderables", "GF2SNPC_DrawGunLaser", function()
 	if GetConVar("vj_gf2_attachment_draw_laser"):GetBool() then
 		for _, weapon in ipairs(ents.FindByClass("weapon_vj_gf2_*")) do
-			if weapon.Attachment_Laser then
+			if weapon:GetNWBool( "Laser" ) then
 				local Attachment = weapon:GetAttachment(weapon:LookupAttachment("laser"))
+				if !Attachment then return end
 				local startPos = Attachment.Pos
 				local endPos = startPos + (Attachment.Ang:Forward() * 99999)
 				
