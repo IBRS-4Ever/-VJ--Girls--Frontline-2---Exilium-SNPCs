@@ -468,40 +468,42 @@ VJ.AddConVar("vj_gf2_surtr_weapon2_d",15)
 
 -- Menu --
 local AddConvars = {}
-AddConvars["vj_gf2_drop_magazines"] = 1 -- Drop Magazines?
-AddConvars["vj_gf2_magazineremovetime"] = 15 -- Magazine Remove time.
-AddConvars["vj_gf2_death_expressions"] = 1 -- Death Expressions?
-AddConvars["vj_gf2_death_fingerpose"] = 1 -- Death Finger Pose?
-AddConvars["vj_gf2_npc_random_bodygroups"] = 1 -- Random Bodygroup for SNPCs?
+AddConvars["vj_gf2_drop_magazines"] = 1 -- Drop magazines?
+AddConvars["vj_gf2_magazineremovetime"] = 15 -- Magazine remove time.
+AddConvars["vj_gf2_death_expressions"] = 1 -- Death expressions?
+AddConvars["vj_gf2_death_fingerpose"] = 1 -- Death finger pose?
+AddConvars["vj_gf2_npc_random_bodygroups"] = 1 -- Random bodygroup for SNPCs?
 AddConvars["vj_gf2_npc_shield_multipler"] = 1 -- Shield multipler.
 AddConvars["vj_gf2_npc_shield_radius_multipler"] = 1 -- Shield radius multipler.
-AddConvars["vj_gf2_npc_shield"] = 1 -- Enable Shield.
+AddConvars["vj_gf2_npc_shield"] = 1 -- Enable shield.
 AddConvars["vj_gf2_npc_shield_ricochet"] = 1 -- Shield can ricochet bullets.
-AddConvars["vj_gf2_npc_shield_ricochet_chance"] = 10
+AddConvars["vj_gf2_npc_shield_ricochet_chance"] = 10 -- Shield ricochet chance.
 AddConvars["vj_gf2_npc_shield_ricochet_damage_scale"] = 0.25 -- Shield ricochet bullets damage scale.
 AddConvars["vj_gf2_npc_shield_exceed_maxhealth"] = 0 -- Shield can exceed max health.
-AddConvars["vj_gf2_npc_element_electric_enabled"] = 1 -- Enable Electric Effects.
+AddConvars["vj_gf2_npc_element_electric_enabled"] = 1 -- Enable electric effects.
 AddConvars["vj_gf2_npc_element_electric_damage_multipler"] = 1 -- Electric damage multipler.
 AddConvars["vj_gf2_npc_element_electric_radius_multipler"] = 1 -- Electric radius multipler.
-AddConvars["vj_gf2_npc_element_freezing_enabled"] = 1 -- Enable Freezing Effects.
+AddConvars["vj_gf2_npc_element_freezing_enabled"] = 1 -- Enable freezing effects.
 AddConvars["vj_gf2_npc_element_freezing_radius_multipler"] = 1 -- Freezing radius multipler.
-AddConvars["vj_gf2_npc_element_fire_enabled"] = 1 -- Enable Fire Effects.
-AddConvars["vj_gf2_npc_element_acid_enabled"] = 1 -- Enable Acid Effects.
+AddConvars["vj_gf2_npc_element_fire_enabled"] = 1 -- Enable fire effects.
+AddConvars["vj_gf2_npc_element_acid_enabled"] = 1 -- Enable acid effects.
 AddConvars["vj_gf2_npc_element_acid_time_multipler"] = 1 -- Acid time multipler.
 AddConvars["vj_gf2_npc_element_acid_damage_multipler"] = 0.1 -- Acid damage multipler.
-AddConvars["vj_gf2_npc_element_water_enabled"] = 1 -- Enable Water Effects.
-AddConvars["vj_gf2_npc_element_water_hp_reduce_rate"] = 0.01 -- Enable Water Effects.
-AddConvars["vj_gf2_infinite_ammo"] = 0 -- Infinite Ammo.
-AddConvars["vj_gf2_bullet_damage_multipler"] = 1 -- Bullet Multiplier.
-AddConvars["vj_gf2_speed_modifier"] = 1 -- Speed Modifier.
-AddConvars["vj_gf2_animation_speed_modifier"] = 1 -- Animation Modifier.
-AddConvars["vj_gf2_npc_find_cover_on_reload"] = 1 -- Find Cover On Reload.
-AddConvars["vj_gf2_npc_use_pose_parameter_movement"] = 0 -- Find Cover On Reload.
-AddConvars["vj_gf2_npc_charolic_ignite_target"] = 1 -- Charolic Ignite Targets.
-AddConvars["vj_gf2_npc_leva_hacking"] = 1 -- Leva Hacking.
+AddConvars["vj_gf2_npc_element_water_enabled"] = 1 -- Enable water effects.
+AddConvars["vj_gf2_npc_element_water_hp_reduce_rate"] = 0.01 -- Enable water effects.
+AddConvars["vj_gf2_infinite_ammo"] = 0 -- Infinite ammo.
+AddConvars["vj_gf2_bullet_damage_multipler"] = 1 -- Bullet multiplier.
+AddConvars["vj_gf2_speed_modifier"] = 1 -- Speed modifier.
+AddConvars["vj_gf2_animation_speed_modifier"] = 1 -- Animation modifier.
+AddConvars["vj_gf2_npc_find_cover_on_reload"] = 1 -- Find cover on reload.
+AddConvars["vj_gf2_npc_use_pose_parameter_movement"] = 0 -- Use pose parameter movement.
+AddConvars["vj_gf2_npc_charolic_ignite_target"] = 1 -- Charolic ignite targets.
+AddConvars["vj_gf2_npc_leva_hacking"] = 1 -- Leva hacking.
 AddConvars["vj_gf2_npc_golyat_damage_friendly"] = 1 -- Golyat deals damage to all NPCs.
 AddConvars["vj_gf2_npc_deichgraf_missile_count"] = 6 -- How many missiles to launch in a roll.
-AddConvars["vj_gf2_npc_voice_language"] = "jp" -- Voice Language.
+AddConvars["vj_gf2_npc_voice_language"] = "jp" -- Voice language.
+AddConvars["vj_gf2_npc_drop_weapon_on_death"] = 0 -- Drop weapon on death.
+AddConvars["vj_gf2_npc_drop_item_on_death"] = 0 -- Drop weapon on death.
 
 for k, v in pairs(AddConvars) do
 	if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
@@ -520,6 +522,8 @@ if CLIENT then
 				Panel:ControlHelp("#vj_gf2_snpcs.settings.DropMagazines.Desc")
 				Panel:NumSlider("#vj_gf2_snpcs.settings.MagazineRemoveTimer", "vj_gf2_magazineremovetime", 5, 60, 0)
 				Panel:ControlHelp("#vj_gf2_snpcs.settings.MagazineRemoveTimer.Desc")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.DropWeapon", "vj_gf2_npc_drop_weapon_on_death")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.DropItem", "vj_gf2_npc_drop_item_on_death")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.DeathExpressions", "vj_gf2_death_expressions")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.DeathFingerPose", "vj_gf2_death_fingerpose")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_RandomBodygroups", "vj_gf2_npc_random_bodygroups")
@@ -616,10 +620,5 @@ if CLIENT then
 
 	net.Receive( "GF2_DollInfo_End", function( len, ply )
 		hook.Remove("HUDPaint", "VJ_GF2_Controller_HUD")
-	end)
-
-	net.Receive( "GF2_DollHacked", function( len, ply )
-		local Entity = net.ReadEntity()
-		chat.AddText(string.format(language.GetPhrase("vj_gf2_snpcs.FireWallBreached"),Entity.PrintName))
 	end)
 end
