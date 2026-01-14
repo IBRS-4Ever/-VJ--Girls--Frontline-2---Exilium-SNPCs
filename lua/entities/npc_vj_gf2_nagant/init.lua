@@ -9,7 +9,6 @@ ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
 ENT.Element = "acid"
-ENT.Element_AcidDamage = 5
 ENT.Element_AcidTime = 5
 
 ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."hit7.wav",SndPrefix.."hit8.wav"}

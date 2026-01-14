@@ -11,7 +11,7 @@ ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 ENT.Element = "acid"
 ENT.Element_AcidTime = 3
 
-ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav"}
+ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."die2.wav",SndPrefix.."die3.wav"}
 
 ENT.AnimationSpeed = 3
 

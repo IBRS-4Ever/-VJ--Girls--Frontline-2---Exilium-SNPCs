@@ -67,6 +67,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Centaureissi_50DaysWithReissi","npc_vj_gf2_centau
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Dushevnaya","npc_vj_gf2_dushevnaya",{"weapon_vj_gf2_ksvk"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella","npc_vj_gf2_robella",{"weapon_vj_gf2_ro635"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella_FutureNavigator","npc_vj_gf2_robella_future_navigator",{"weapon_vj_gf2_ro635"},vCatUnf)
+--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella_Skin2","npc_vj_gf2_robella_skin2",{"weapon_vj_gf2_ro635"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic","npc_vj_gf2_charolic",{"weapon_vj_gf2_blade"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_LeapingRabbit","npc_vj_gf2_charolic_leaping_rabbit",{"weapon_vj_gf2_blade"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_Tactical","npc_vj_gf2_charolic_tactical",{"weapon_vj_gf2_blade"},vCat)
@@ -124,6 +125,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sakura","npc_vj_gf2_sakura",{"weapon_vj_gf2_type1
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sakura_TaleOfTheButterflies","npc_vj_gf2_sakura_tale_of_the_butterflies",{"weapon_vj_gf2_type100"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Phaetusa","npc_vj_gf2_phaetusa",{"weapon_vj_gf2_cinderthorn"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Phaetusa_EternalNightGarden","npc_vj_gf2_phaetusa_eternal_night_garden",{"weapon_vj_gf2_cinderthorn"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Basti","npc_vj_gf2_basti",{"weapon_vj_gf2_mk23"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Basti_PeachSoda","npc_vj_gf2_basti_peach_soda",{"weapon_vj_gf2_mk23"},vCatUnf)
 
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Arges","npc_vj_gf2_arges",{"weapon_vj_gf2_arges_smg"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Brontes","npc_vj_gf2_brontes",{"weapon_vj_gf2_brontes_shotgun"},vCatUnf)
@@ -197,6 +200,7 @@ VJ.AddNPCWeapon("#weapon_vj_gf2_m200", "weapon_vj_gf2_m200", vCat)
 VJ.AddNPCWeapon("#weapon_vj_gf2_tmp", "weapon_vj_gf2_tmp", vCat)
 VJ.AddNPCWeapon("#weapon_vj_gf2_dsr50", "weapon_vj_gf2_dsr50", vCat)
 VJ.AddNPCWeapon("#weapon_vj_gf2_cinderthorn", "weapon_vj_gf2_cinderthorn", vCat)
+VJ.AddNPCWeapon("#weapon_vj_gf2_mk23", "weapon_vj_gf2_mk23", vCat)
 
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_plasma_cannon", "weapon_vj_gf2_lose_sextans_cannon", vCat)
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_pulse_rifle", "weapon_vj_gf2_unknown_groza_weapon", vCat)
@@ -345,7 +349,7 @@ VJ.AddConVar("vj_gf2_balthilde_d",50)
 VJ.AddConVar("vj_gf2_lewis_h",350)
 VJ.AddConVar("vj_gf2_lewis_d",25)
 
--- Pistol
+-- HG
 VJ.AddConVar("vj_gf2_nagant_h",250)
 VJ.AddConVar("vj_gf2_nagant_d",25)
 VJ.AddConVar("vj_gf2_colphne_h",200)
@@ -356,6 +360,8 @@ VJ.AddConVar("vj_gf2_faye_h",275)
 VJ.AddConVar("vj_gf2_faye_d",30)
 VJ.AddConVar("vj_gf2_florence_h",225)
 VJ.AddConVar("vj_gf2_florence_d",15)
+VJ.AddConVar("vj_gf2_basti_h",250)
+VJ.AddConVar("vj_gf2_basti_d",20)
 
 -- Melee
 VJ.AddConVar("vj_gf2_charolic_h",350)
@@ -437,12 +443,13 @@ VJ.AddConVar("vj_gf2_hawk_type97_d",45)
 VJ.AddConVar("vj_gf2_m1_super90_d",40)
 VJ.AddConVar("vj_gf2_dp12_d",30)
 
--- Pistol
+-- HG
 VJ.AddConVar("vj_gf2_m1895_revolver_d",75)
 VJ.AddConVar("vj_gf2_taurus_curve_d",15)
 VJ.AddConVar("vj_gf2_aps_d",15)
 VJ.AddConVar("vj_gf2_cz75_d",20)
 VJ.AddConVar("vj_gf2_pa15_d",15)
+VJ.AddConVar("vj_gf2_mk23_d",20)
 
 -- MG
 VJ.AddConVar("vj_gf2_galil_arm_d",40)
@@ -614,5 +621,5 @@ if CLIENT then
 	net.Receive( "GF2_DollHacked", function( len, ply )
 		local Entity = net.ReadEntity()
 		chat.AddText(string.format(language.GetPhrase("vj_gf2_snpcs.FireWallBreached"),Entity.PrintName))
-	end )
+	end)
 end
