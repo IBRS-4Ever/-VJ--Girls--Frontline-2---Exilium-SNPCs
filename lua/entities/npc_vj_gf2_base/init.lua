@@ -169,6 +169,18 @@ function ENT:GiveShield()
 end
 
 function ENT:Init()
+	if !self.Weapon_FindCoverOnReload then self.Weapon_FindCoverOnReload = GetConVar("vj_gf2_npc_find_cover_on_reload"):GetBool() end
+	if !self.UsePoseParameterMovement and self.Model_PM then
+		self.UsePoseParameterMovement = GetConVar("vj_gf2_npc_use_pose_parameter_movement"):GetBool()
+		--self:SetModel(self.Model_PM)
+	end
+	if self.ShieldCoolDown then self:SetNWFloat( "ShieldCoolDown", self.ShieldCoolDown + CurTime() ) end
+	if self.Shield then timer.Simple( 1, function() if IsValid(self) then self:GiveShield() end end ) end
+	if self.HealAllies then 
+		timer.Create( "GF2_HealTimer_"..self:EntIndex(), self.HealDelay, 0, function() 
+			self:HealAlly()
+		end)
+	end
 	self.DropWeaponOnDeath = GetConVar("vj_gf2_npc_drop_weapon_on_death"):GetBool()
 	self.HasItemDropsOnDeath = GetConVar("vj_gf2_npc_drop_item_on_death"):GetBool()
 	if GetConVar( "vj_gf2_npc_random_bodygroups" ):GetBool() then
@@ -206,21 +218,6 @@ function ENT:OnFollow(status, ent)
 		self:SetCollisionGroup(COLLISION_GROUP_PASSABLE_DOOR)
 	else
 		self:SetCollisionGroup(CollisionGroup)
-	end
-end
-
-function ENT:CustomInitialize()
-	if !self.Weapon_FindCoverOnReload then self.Weapon_FindCoverOnReload = GetConVar("vj_gf2_npc_find_cover_on_reload"):GetBool() end
-	if !self.UsePoseParameterMovement and self.Model_PM then
-		self.UsePoseParameterMovement = GetConVar("vj_gf2_npc_use_pose_parameter_movement"):GetBool()
-		--self:SetModel(self.Model_PM)
-	end
-	if self.ShieldCoolDown then self:SetNWFloat( "ShieldCoolDown", self.ShieldCoolDown + CurTime() ) end
-	if self.Shield then timer.Simple( 1, function() if IsValid(self) then self:GiveShield() end end ) end
-	if self.HealAllies then 
-		timer.Create( "GF2_HealTimer_"..self:EntIndex(), self.HealDelay, 0, function() 
-			self:HealAlly()
-		end)
 	end
 end
 
@@ -345,7 +342,16 @@ function ENT:CustomOnTakeDamage_AfterDamage()
 		self:OnHalfHealth()
 	end
 end
-
+--[[ 
+function ENT:OnDeath()
+	if self.Character then
+		util.AddNetworkString( "GF2_DollDestoryed" )
+		net.Start( "GF2_DollDestoryed" )
+			net.WriteEntity( self )
+		net.Broadcast()
+	end
+end
+ ]]
 function ENT:OnCreateDeathCorpse(dmginfo,hitgroup,GetCorpse)
 	if GetConVar("vj_gf2_death_expressions"):GetBool() then
 		local Exp = {

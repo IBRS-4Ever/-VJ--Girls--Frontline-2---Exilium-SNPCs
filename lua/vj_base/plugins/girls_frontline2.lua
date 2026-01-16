@@ -621,4 +621,9 @@ if CLIENT then
 	net.Receive( "GF2_DollInfo_End", function( len, ply )
 		hook.Remove("HUDPaint", "VJ_GF2_Controller_HUD")
 	end)
+
+	net.Receive( "GF2_DollDestoryed", function( len, ply )
+		local Entity = net.ReadEntity()
+		chat.AddText(string.format(language.GetPhrase("vj_gf2_snpcs.Destoryed"),Entity.PrintName))
+	end)
 end
