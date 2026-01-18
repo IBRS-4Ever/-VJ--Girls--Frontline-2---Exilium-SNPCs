@@ -67,7 +67,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Centaureissi_50DaysWithReissi","npc_vj_gf2_centau
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Dushevnaya","npc_vj_gf2_dushevnaya",{"weapon_vj_gf2_ksvk"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella","npc_vj_gf2_robella",{"weapon_vj_gf2_ro635"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella_FutureNavigator","npc_vj_gf2_robella_future_navigator",{"weapon_vj_gf2_ro635"},vCatUnf)
---VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella_Skin2","npc_vj_gf2_robella_skin2",{"weapon_vj_gf2_ro635"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella_EnforcerOfTheLaw","npc_vj_gf2_robella_enforcer_of_the_law",{"weapon_vj_gf2_ro635"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic","npc_vj_gf2_charolic",{"weapon_vj_gf2_blade"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_LeapingRabbit","npc_vj_gf2_charolic_leaping_rabbit",{"weapon_vj_gf2_blade"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Charolic_Tactical","npc_vj_gf2_charolic_tactical",{"weapon_vj_gf2_blade"},vCat)
