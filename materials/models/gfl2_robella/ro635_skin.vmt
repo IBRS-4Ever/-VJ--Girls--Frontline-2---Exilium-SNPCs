@@ -14,11 +14,11 @@ VertexLitGeneric
 	$phongfresnelranges "[2 4 6]"
 	$halflambert 1
 	$phongalbedotint 1
-	$phongalbedoboost 5
+	$phongboost 1.2
 
 	$rimlight 1
 	$rimlightexponent 250
-	$rimlightboost 1
+	$rimlightboost 0.1
 
 	$nodecal 1
 

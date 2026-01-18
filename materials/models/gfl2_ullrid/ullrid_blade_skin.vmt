@@ -11,14 +11,14 @@ VertexLitGeneric
 
 	$phong 1
 	$phongexponenttexture "models/gfl2_ullrid/ullrid_blade_skin_e"
-	$phongfresnelranges "[1 2 3]"
+	$phongfresnelranges "[2 4 6]"
 	$halflambert 1
 	$phongalbedotint 1
-	$phongboost 4
+	$phongboost 1.2
 
 	$rimlight 1
 	$rimlightexponent 250
-	$rimlightboost 2
+	$rimlightboost 0.1
 
 	$nodecal 1
 
