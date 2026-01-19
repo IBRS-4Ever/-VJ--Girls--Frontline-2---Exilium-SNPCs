@@ -12,6 +12,8 @@ ENT.HullType = HULL_HUMAN
 ENT.HasMeleeAttack = true
 ENT.HasGrenadeAttack = false
 
+ENT.DisableFootStepSoundTimer = true
+
 --ENT.Weapon_MaxDistance = 6000 -- 3000
 
 --ENT.SightDistance = 25000 -- 6500

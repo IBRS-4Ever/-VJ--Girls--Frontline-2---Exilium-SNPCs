@@ -285,6 +285,94 @@ local GF2Subtitle = {
 	},
 
 	{
+		snd = "vo/jp/lenna/player_sight2.wav",
+		subject = CharacterName,
+		text = { -- ID: 198553
+			["schinese"] = "唔……我不太一样了？嗯……多少还是会有些成长的吧，各种方面。",
+			["english"] = "Huh... so I look different? Hm... I guess I've grown in more ways than one.",
+			["japanese"] = "え……前と違う？うーん……まぁ、一応成長してはいるからね、いろいろと。",
+		},
+		subjectcol = CharacterColor,
+	},
+
+	{
+		snd = "vo/jp/lenna/player_sight4.wav",
+		subject = CharacterName,
+		text = { -- ID: 198554
+			["schinese"] = "唔……刚刚，在想指挥官的事哦。呼呼♪会在意家人是理所当然的吧？",
+			["english"] = "Ah... I was just thinking about you, Commander. Hehe♪ It's only natural to think about your family, right?",
+			["japanese"] = "あ……さっき、指揮官のこと考えてたんだ。フフ♪家族を気にかけるのは当然でしょ？",
+		},
+		subjectcol = CharacterColor,
+	},
+
+	{
+		snd = "vo/jp/lenna/player_sight5.wav",
+		subject = CharacterName,
+		text = { -- ID: 198555
+			["schinese"] = "嘿嘿♪指挥官我养的天竺葵终于开花了哦！这次一定不会让它枯萎了！",
+			["english"] = "Hehe♪ Commander, the geraniums I was raising bloomed at last! I won't let them wither this time!",
+			["japanese"] = "へへ♪指揮官、わたしの育てたゼラニウムがついに咲いたんだ！今度こそ枯らさないぞー！",
+		},
+		subjectcol = CharacterColor,
+	},
+
+	{
+		snd = "vo/jp/lenna/player_sight7.wav",
+		subject = CharacterName,
+		text = { -- ID: 198556
+			["schinese"] = "哦？看来指挥官你需要保养一下鼻梁骨呢——噗哈哈哈哈，吓到了吗？我学得很像吧♪",
+			["english"] = "Oh? You'd better mind your nose, Commander— Pfhahaha, did I scare you? Looks like I managed to imitate her well♪",
+			["japanese"] = "あら？指揮官、どうやら鼻筋のケアが必要みたいね？……プハハハハ！どう、びっくりした？へへへ、似てるでしょ♪",
+		},
+		subjectcol = CharacterColor,
+	},
+
+	{
+		snd = "vo/jp/lenna/player_sight9.wav",
+		subject = CharacterName,
+		text = { -- ID: 198557
+			["schinese"] = "指挥官，谢谢你一直以来的照顾。那么，这次是“感激之吻”——哈哈哈，你当真了吧？指挥官的眼神，和以前一样呢♪",
+			["english"] = "Commander, thank you for taking care of me all this time. Here's a smooch of gratitude for you— Hahaha, did you think I really meant thatl? That look in your eyes is just like before♪",
+			["japanese"] = "指揮官、いままで本当にありがとう。これは「感謝のちゅー」だよ。……アハハ、本気にした？指揮官のその眼、前とおんなじだ♪",
+		},
+		subjectcol = CharacterColor,
+	},
+
+	{
+		snd = "vo/jp/lenna/player_sight10.wav",
+		subject = CharacterName,
+		text = { -- ID: 198560
+			["schinese"] = "咦？指挥官，快看那边！快看！……啾♪嘿嘿，这次是认真的哦，没想到吧？",
+			["english"] = "Hm? Commander, look, over there! ...(smch)♪ Hehe, I meant that this time. Didn't expect that, huh?",
+			["japanese"] = "あ！指揮官、早くあっち見て！あっち！……ちゅっ♪へへ、今のはおふざけじゃないよ。どう？思いもよらなかったでしょ？",
+		},
+		subjectcol = CharacterColor,
+	},
+
+	{
+		snd = "vo/jp/lenna/player_sight11.wav",
+		subject = CharacterName,
+		text = { -- ID: 198559
+			["schinese"] = "嘿嘿♪突然出现的话，肯定会把指挥官吓一跳吧？指挥官吃惊的表情，好想看啊~哎哎哎哎哎？指挥官你什么时候……怎么突然出现啦！",
+			["english"] = "Hehe♪ I bet the Commander will be super scared if I pop out now. Ah, I want to see the look of surprise on the Commander's aiiiiieeeee?! Commander, when did you... what are you doing here?!",
+			["japanese"] = "へへ♪突然現れれば、指揮官きっと驚くよね？ビックリした指揮官の顔、楽しみだな～。でもあれれ～？指揮官ってばいつになったら……ってなんでいきなり出てくるの？！",
+		},
+		subjectcol = CharacterColor,
+	},
+
+	{
+		snd = "vo/jp/lenna/player_sight13.wav",
+		subject = CharacterName,
+		text = { -- ID: 198558
+			["schinese"] = "嗯嗯……指挥官，我觉得你也许很适合朋克风格的衣服哦！要尝试一下吗？我知道一家不错的店，下次逛街一起去吧~？",
+			["english"] = "Mmm... Commander, I think you might look great in punk fashion! Want to give it a try? I know a place that specializes in it, want to go there with me next time?",
+			["japanese"] = "うんうん……指揮官にはきっとパンク系のファッションが似合うと思うんだよね！よかったら試してみない？いい店知ってるんだ、一緒に行こう～？",
+		},
+		subjectcol = CharacterColor,
+	},
+
+	{
 		snd = "vo/jp/lenna/unfollow1.wav",
 		subject = CharacterName,
 		text = { -- ID: 78725

@@ -11,6 +11,8 @@ util.PrecacheModel(ENT.Model)
 ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
+ENT.HullType = HULL_MEDIUM_TALL
+
 ENT.Element = "electric"
 ENT.Element_ElectricRadius = 75
 ENT.Element_ElectricDamage = 3

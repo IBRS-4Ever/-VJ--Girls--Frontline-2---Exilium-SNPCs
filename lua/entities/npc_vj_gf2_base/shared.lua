@@ -49,3 +49,4 @@ function ENT:CustomOnDraw()
 		end)
 	end ]]
 end
+function ENT:MatFootStepQCEvent(data) end

@@ -12,6 +12,8 @@ util.PrecacheModel(ENT.Model)
 ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
+ENT.HullType = HULL_MEDIUM_TALL
+
 ENT.Element = "fire"
 ENT.Element_FireIgniteTime = 3
 
