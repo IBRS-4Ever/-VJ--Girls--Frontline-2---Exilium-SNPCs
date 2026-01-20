@@ -1,6 +1,6 @@
 GF2_DustyJournal = GF2_DustyJournal or {} -- don't touch
 
-GF2_DustyJournal["cheeta/story1"] = [[メンタルの接続を確認……異常なし。
+local Story1 = [[メンタルの接続を確認……異常なし。
 素体機能を確認……異常なし。
 セルフメンテナンス完了……起動中……成功。
 
@@ -89,7 +89,7 @@ GF2_DustyJournal["cheeta/story1"] = [[メンタルの接続を確認……異常
 
 ログ閲覧を終了……確認。]]
 
-GF2_DustyJournal["cheeta/story2"] = [[メンタルの接続を確認……異常なし。
+local Story2 = [[メンタルの接続を確認……異常なし。
 素体機能を確認……異常なし。
 セルフメンテナンス完了……起動中……成功。
 
@@ -171,7 +171,7 @@ GF2_DustyJournal["cheeta/story2"] = [[メンタルの接続を確認……異常
 
 ログ閲覧を終了……確認。]]
 
-GF2_DustyJournal["cheeta/story3"] = [[メンタルの接続を確認……異常なし。
+local Story3 = [[メンタルの接続を確認……異常なし。
 素体機能を確認……異常なし。
 セルフメンテナンス完了……起動中……成功。
 
@@ -245,7 +245,7 @@ GF2_DustyJournal["cheeta/story3"] = [[メンタルの接続を確認……異常
 損Str=98*[23;検出&739!
 強(cb321!=936?ダウン]]
 
-GF2_DustyJournal["cheeta/story4"] = [[メンタルの接続を確認……異常なし。
+local Story4 = [[メンタルの接続を確認……異常なし。
 素体機能を確認……異常なし。
 セルフメンテナンス完了……起動中……成功。
 
@@ -354,7 +354,7 @@ GF2_DustyJournal["cheeta/story4"] = [[メンタルの接続を確認……異常
 
 ログ閲覧を終了……確認。]]
 
-GF2_DustyJournal["cheeta/story5"] = [[メンタルの接続を確認……異常なし。
+local Story5 = [[メンタルの接続を確認……異常なし。
 素体機能を確認……異常なし。
 セルフメンテナンス完了……起動中……成功。
 
@@ -429,3 +429,14 @@ GF2_DustyJournal["cheeta/story5"] = [[メンタルの接続を確認……異常
 うん、やっぱ天才じゃん！
 
 ログ閲覧を終了……確認。]]
+
+GF2_DustyJournal["cheeta"] = {
+	Series = "溶断"
+	Chapters = {
+		[1] = Story1,
+		[2] = Story2,
+		[3] = Story3,
+		[4] = Story4,
+		[5] = Story5,
+	}
+}

@@ -1,6 +1,6 @@
 GF2_DustyJournal = GF2_DustyJournal or {} -- don't touch
 
-GF2_DustyJournal["cheeta/story1"] = [[心智链接确认……无异常
+local Story1 = [[心智链接确认……无异常
 素体机能确认……无异常
 自检完成……启动中……成功
 
@@ -89,7 +89,7 @@ GF2_DustyJournal["cheeta/story1"] = [[心智链接确认……无异常
 
 日志模块……关闭……已确认]]
 
-GF2_DustyJournal["cheeta/story2"] = [[心智链接确认……无异常
+local Story2 = [[心智链接确认……无异常
 素体机能确认……无异常
 自检完成……启动中……成功
 
@@ -171,7 +171,7 @@ GF2_DustyJournal["cheeta/story2"] = [[心智链接确认……无异常
 
 日志模块……关闭……已确认]]
 
-GF2_DustyJournal["cheeta/story3"] = [[心智链接确认……无异常
+local Story3 = [[心智链接确认……无异常
 素体机能确认……无异常
 自检完成……启动中……成功
 
@@ -245,7 +245,7 @@ GF2_DustyJournal["cheeta/story3"] = [[心智链接确认……无异常
 检测Str=98*[23;损&739!
 强(cb321!=936?闭]]
 
-GF2_DustyJournal["cheeta/story4"] = [[心智链接确认……无异常
+local Story4 = [[心智链接确认……无异常
 素体机能确认……无异常
 自检完成……启动中……成功
 
@@ -354,7 +354,7 @@ GF2_DustyJournal["cheeta/story4"] = [[心智链接确认……无异常
 
 日志模块……关闭……已确认]]
 
-GF2_DustyJournal["cheeta/story5"] = [[心智链接确认……无异常
+local Story5 = [[心智链接确认……无异常
 素体机能确认……无异常
 自检完成……启动中……成功
 
@@ -429,3 +429,14 @@ GF2_DustyJournal["cheeta/story5"] = [[心智链接确认……无异常
 嗯，我果然是天才吧！
 
 日志模块……关闭……已确认]]
+
+GF2_DustyJournal["cheeta"] = {
+	Series = "熔断点"
+	Chapters = {
+		[1] = Story1,
+		[2] = Story2,
+		[3] = Story3,
+		[4] = Story4,
+		[5] = Story5,
+	}
+}

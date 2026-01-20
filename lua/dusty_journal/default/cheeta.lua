@@ -1,6 +1,6 @@
 GF2_DustyJournal = GF2_DustyJournal or {} -- don't touch
 
-GF2_DustyJournal["cheeta/story1"] = [[Neural link check... No abnormalities
+local Story1 = [[Neural link check... No abnormalities
 Frame function check... No abnormalities
 Self-diagnostic complete... Booting systems... Successful
 
@@ -84,7 +84,7 @@ A new message popped up on my terminal. A combat mission to take out some armed 
 
 Journal entry module... Closing... Confirmed.]]
 
-GF2_DustyJournal["cheeta/story2"] = [[Neural link check... No abnormalities
+local Story2 = [[Neural link check... No abnormalities
 Frame function check... No abnormalities
 Self-diagnostic complete... Booting systems... Successful
 
@@ -164,7 +164,7 @@ Operation Genius starts tonight!
 
 Journal entry module... Closing... Confirmed.]]
 
-GF2_DustyJournal["cheeta/story3"] = [[Neural link check... No abnormalities
+local Story3 = [[Neural link check... No abnormalities
 Frame function check... No abnormalities
 Self-diagnostic complete... Booting systems... Successful
 
@@ -239,7 +239,7 @@ Oh no. No-no-no-no—
 DetecTion Str=98*[23;Dama&739!
 Str0ng(cb321!=936?Sh—.]]
 
-GF2_DustyJournal["cheeta/story4"] = [[Neural link check... No abnormalities
+local Story4 = [[Neural link check... No abnormalities
 Frame function check... No abnormalities
 Self-diagnostic complete... Booting systems... Successful
 
@@ -347,7 +347,7 @@ Yeah, right. In your dreams, ice queen.
 
 Journal entry module... Closing... Confirmed.]]
 
-GF2_DustyJournal["cheeta/story5"] = [[Neural link check... No abnormalities 
+local Story5 = [[Neural link check... No abnormalities 
 Frame function check... No abnormalities 
 Self-diagnostic complete... Booting systems... Successful 
 
@@ -422,3 +422,14 @@ What should I do this time... Maybe have Lind to—nah, Leader said no. How abou
 Yep, I really am a genius! 
 
 Journal entry module... Closing... Confirmed.]]
+
+GF2_DustyJournal["cheeta"] = {
+	Series = "Meltdown Threshold"
+	Chapters = {
+		[1] = Story1,
+		[2] = Story2,
+		[3] = Story3,
+		[4] = Story4,
+		[5] = Story5,
+	}
+}
