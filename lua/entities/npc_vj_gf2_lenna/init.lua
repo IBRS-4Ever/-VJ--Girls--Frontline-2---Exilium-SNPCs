@@ -42,18 +42,19 @@ function ENT:DisableCloak()
 end
 
 function ENT:GF2_CustomOnThink()
-	--print(self:GetNWBool( "cloaking" ),self:GetNWFloat( "cloak_timer" ),self:GetNWFloat( "cloak_timer" )-CurTime(),CurTime())
 	if IsValid(self:GetEnemy()) then
 		if self:GetNWFloat( "cloak_timer" ) < CurTime() then
 			if self:GetNWBool( "cloaking" ) then
 				self:DisableCloak()
-				print("Disabled Cloak")
 			else
 				self:EnableCloak()
-				print("Enabled Cloak")
 			end
 		end
 	elseif self:GetNPCState() != NPC_STATE_ALERT && self:GetNPCState() != NPC_STATE_COMBAT then
 		if self:GetNWBool( "cloaking" ) then self:DisableCloak() print("Disabled Cloak") end
 	end
+end
+
+function ENT:OnDeath()
+	self:DisableCloak()
 end

@@ -122,12 +122,12 @@ end
 function ENT:HealAlly()
 	if self.HealDistance then
 		for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.HealDistance ) ) do
-			if (ent != self and self:CheckRelationship(ent) == D_HT or !ent:Alive()) then continue end
+			if (ent != self and self:CheckRelationship(ent) != D_LI or !ent:Alive()) then continue end
 			ent:SetHealth( math.Clamp(ent:Health() + self.HealAmount, 0, ent:GetMaxHealth()) )
 		end
 	else
 		for id, ent in ents.Iterator() do
-			if (ent != self and self:CheckRelationship(ent) == D_HT or !ent:Alive()) then continue end
+			if (ent != self and self:CheckRelationship(ent) != D_LI or !ent:Alive()) then continue end
 			ent:SetHealth( math.Clamp(ent:Health() + self.HealAmount, 0, ent:GetMaxHealth()) )
 		end
 	end
@@ -138,7 +138,7 @@ function ENT:GiveShield()
 	if self.ShieldRadius then
 		for id, ent in pairs( ents.FindInSphere( self:GetPos(), self.ShieldRadius * GetConVar("vj_gf2_npc_shield_radius_multipler"):GetFloat() ) ) do
 			if ent.IsGF2SNPC then
-				if (ent != self and self:CheckRelationship(ent) == D_HT) then continue end
+				if (ent != self and self:CheckRelationship(ent) != D_LI) then continue end
 				if GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool() then
 					ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat() )
 					ent:EmitSound("items/battery_pickup.wav")
@@ -154,7 +154,7 @@ function ENT:GiveShield()
 	else
 		for id, ent in ents.Iterator() do
 			if ent.IsGF2SNPC then
-				if (ent != self and self:CheckRelationship(ent) == D_HT) then continue end
+				if (ent != self and self:CheckRelationship(ent) != D_LI) then continue end
 				if GetConVar("vj_gf2_npc_shield_exceed_maxhealth"):GetBool() then
 					ent:SetNWInt( "Shield", ent:GetNWInt( "Shield" ) + self.Shield * GetConVar("vj_gf2_npc_shield_multipler"):GetFloat() )
 					ent:EmitSound("items/battery_pickup.wav")

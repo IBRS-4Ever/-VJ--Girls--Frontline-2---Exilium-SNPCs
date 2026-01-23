@@ -252,8 +252,6 @@ hook.Add("PostDrawTranslucentRenderables", "GF2SNPC_DrawGunLaser", function()
 					filter = {weapon}
 				})
 	
-				render.SetMaterial(Material("effects/blueflare1"))
-				render.DrawSprite(startPos, 8, 8, weapon.Attachment_LaserColor)
 				render.SetMaterial(Material("effects/laser1"))
 				render.DrawBeam(startPos, tr.HitPos, 1, 0, 1, weapon.Attachment_LaserColor)
 	
