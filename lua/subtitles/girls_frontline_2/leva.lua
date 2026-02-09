@@ -157,7 +157,7 @@ local GF2Subtitle = {
 		subject = CharacterName,
 		text = { -- ID: 197663
 			["schinese"] = "接下来，我们的合作将会更加紧密哟，期不期待呀，指挥官？",
-			["english"] = "We'll be working closer and closer together from now on. Looking forward to it, Commander?",
+			["english"] = "We'll soon be in a closer partnership than ever before~ Aren't you looking forward to it, Commander~?",
 			["japanese"] = "これからはもっと密に連携を取っていくわよ。楽しみね、指揮官。",
 		},
 		subjectcol = CharacterColor,

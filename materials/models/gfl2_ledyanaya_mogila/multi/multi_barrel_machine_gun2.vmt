@@ -1,0 +1,25 @@
+VertexLitGeneric
+{
+	$basetexture "models/gfl2_ledyanaya_mogila/multi/multi_barrel_machine_gun2_d"
+	$bumpmap "models/gfl2_ledyanaya_mogila/multi/multi_barrel_machine_gun_n"
+
+	$envmap "env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[0.02 0.02 0.02]"
+
+	$phong 1
+	$phongexponenttexture "models/gfl2_ledyanaya_mogila/multi/multi_barrel_machine_gun_e"
+	$phongfresnelranges "[2 4 6]"
+	$halflambert 1
+	$phongalbedotint 1
+	$phongboost 2
+
+	$rimlight 1
+	$rimlightexponent 250
+	$rimlightboost 1
+
+	$nodecal 1
+
+	$ambientocclusion 1
+	$rimmask 1
+}

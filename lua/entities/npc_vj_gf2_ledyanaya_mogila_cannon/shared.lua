@@ -1,0 +1,5 @@
+ENT.Base 			= "npc_vj_creature_base"
+ENT.Type 			= "ai"
+ENT.PrintName 		= "#npc_vj_gf2_ledyanaya_mogila_cannon"
+ENT.Category		= "Girls' Frontline 2"
+ENT.Author			= "IBRS"
