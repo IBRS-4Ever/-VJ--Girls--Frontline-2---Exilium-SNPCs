@@ -8,8 +8,6 @@ util.PrecacheModel(ENT.Model)
 ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
-ENT.Element = "fire"
-
 ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."hit6.wav",SndPrefix.."hit7.wav"}
 
 ENT.AnimationSpeed = 3

@@ -42,12 +42,6 @@ function ENT:OnRangeAttackExecute(status, enemy, projectile)
 				timer.Simple( 7, function()
 					local Target = tr.Entity
 					local HitPos = tr.HitPos
-					local Normal = tr.Normal
-					local HitSpark = EffectData()
-						HitSpark:SetOrigin(HitPos)
-						HitSpark:SetNormal(-Normal)
-					util.Effect("MetalSpark", HitSpark, true, true )
-					
 					for id, ent in pairs( ents.FindInSphere( HitPos, 2048 * GetConVar("vj_gf2_npc_element_electric_radius_multipler"):GetFloat() ) ) do
 						if ent == self or ent:GetClass() == "obj_vj_bullseye" then continue end
 						if ent:IsNPC() or ent:IsPlayer() and ent:Alive() then
@@ -59,13 +53,6 @@ function ENT:OnRangeAttackExecute(status, enemy, projectile)
 								DmgInfo:SetDamageType( DMG_PLASMA )
 					
 								ent:TakeDamageInfo( DmgInfo )
-
-								if ent == Target then continue end
-								if !(ent:GetBonePosition(0)) then continue end
-								local ElectricSpark = EffectData()
-									ElectricSpark:SetOrigin(ent:GetBonePosition(0))
-									ElectricSpark:SetNormal(-Normal)
-								util.Effect("MetalSpark", ElectricSpark, true, true )
 							end
 						end
 					end

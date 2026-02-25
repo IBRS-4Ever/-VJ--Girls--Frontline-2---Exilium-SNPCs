@@ -10,7 +10,7 @@ SWEP.WorldModel = "models/weapons/w_basti_mk23.mdl"
 util.PrecacheModel(SWEP.WorldModel)
 SWEP.HoldType = "pistol"
 	-- NPC Settings ---------------------------------------------------------------------------------------------------------------------------------------------
-SWEP.NPC_NextPrimaryFire = 0.3
+SWEP.NPC_NextPrimaryFire = 0.6
 SWEP.NPC_ReloadSound = {"Weapon_SMG1.NPC_Reload"}
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage = GetConVarNumber("vj_gf2_mk23_d")
