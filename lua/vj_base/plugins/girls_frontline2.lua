@@ -9,6 +9,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis","npc_vj_gf2_nemesis",{"weapon_vj_gf2_om5
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_Tactical","npc_vj_gf2_nemesis_tactical",{"weapon_vj_gf2_om50"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_WanderingStarTrial","npc_vj_gf2_nemesis_wandering_star_trial",{"weapon_vj_gf2_om50"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_SereneDarkRiver","npc_vj_gf2_nemesis_serene_dark_river",{"weapon_vj_gf2_om50"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_Gnosis","npc_vj_gf2_nemesis_gnosis",{"weapon_vj_gf2_om50"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo","npc_vj_gf2_tololo",{"weapon_vj_gf2_ak_alfa"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo_HorizonCruise","npc_vj_gf2_tololo_horizon_cruise",{"weapon_vj_gf2_ak_alfa"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo_TwilightMilkyWay","npc_vj_gf2_tololo_twilight_milky_way",{"weapon_vj_gf2_ak_alfa"},vCat)
@@ -47,12 +48,14 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lenna_EnergeticMagic","npc_vj_gf2_lenna_energetic
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lenna_FlyingPhantom","npc_vj_gf2_lenna_flying_phantom",{"weapon_vj_gf2_ump9"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Leva","npc_vj_gf2_leva",{"weapon_vj_gf2_ump45"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Leva_DiamondFlower","npc_vj_gf2_leva_diamond_flower",{"weapon_vj_gf2_ump45"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Leva_SultryTempo","npc_vj_gf2_leva_sultry_tempo",{"weapon_vj_gf2_ump45"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Jiangyu","npc_vj_gf2_jiangyu",{"weapon_vj_gf2_qbz97"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Jiangyu_RaindropCleavingBlades","npc_vj_gf2_jiangyu_raindrop_cleaving_blades",{"weapon_vj_gf2_qbz97"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai","npc_vj_gf2_klukai",{"weapon_vj_gf2_hk416","weapon_vj_gf2_hk416_skin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_AstralLuminous","npc_vj_gf2_klukai_astral_luminous",{"weapon_vj_gf2_hk416","weapon_vj_gf2_hk416_skin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_SpeedStar","npc_vj_gf2_klukai_speed_star",{"weapon_vj_gf2_hk416","weapon_vj_gf2_hk416_skin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_CeruleanBreaker","npc_vj_gf2_klukai_cerulean_breaker",{"weapon_vj_gf2_hk416","weapon_vj_gf2_hk416_skin"},vCat)
+--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_Wedding","npc_vj_gf2_klukai_cerulean_breaker",{"weapon_vj_gf2_hk416","weapon_vj_gf2_hk416_skin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Zhaohui","npc_vj_gf2_zhaohui",{"weapon_vj_gf2_csls06"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Zhaohui_RapidGrid","npc_vj_gf2_zhaohui_rapid_grid",{"weapon_vj_gf2_csls06"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Daiyan","npc_vj_gf2_daiyan",{"weapon_vj_gf2_qbz95"},vCat)
@@ -65,6 +68,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sharkry_SwimsuitIdol","npc_vj_gf2_sharkry_swimsui
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Centaureissi","npc_vj_gf2_centaureissi",{"weapon_vj_gf2_g36"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Centaureissi_50DaysWithReissi","npc_vj_gf2_centaureissi_50_days_with_reissi",{"weapon_vj_gf2_g36"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Dushevnaya","npc_vj_gf2_dushevnaya",{"weapon_vj_gf2_ksvk"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Dushevnaya_TomorrowsSavior","npc_vj_gf2_dushevnaya_tomorrows_savior",{"weapon_vj_gf2_ksvk"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella","npc_vj_gf2_robella",{"weapon_vj_gf2_ro635"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella_FutureNavigator","npc_vj_gf2_robella_future_navigator",{"weapon_vj_gf2_ro635"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Robella_EnforcerOfTheLaw","npc_vj_gf2_robella_enforcer_of_the_law",{"weapon_vj_gf2_ro635"},vCatUnf)
@@ -125,6 +129,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Basti","npc_vj_gf2_basti",{"weapon_vj_gf2_mk23"},
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Basti_PeachSoda","npc_vj_gf2_basti_peach_soda",{"weapon_vj_gf2_mk23"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Liushih","npc_vj_gf2_liushih",{"weapon_vj_gf2_general_liu_rifle"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Liushih_BeautyInTheEast","npc_vj_gf2_liushih_beauty_in_the_east",{"weapon_vj_gf2_general_liu_rifle"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.OTs-14","npc_vj_gf2_ots14",{"weapon_vj_gf2_ots14_3a"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.OTs-14_DestinedLoveReprised","npc_vj_gf2_ots14_destined_love_reprised",{"weapon_vj_gf2_ots14_3a"},vCatUnf)
 
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Arges","npc_vj_gf2_arges",{"weapon_vj_gf2_arges_smg"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Brontes","npc_vj_gf2_brontes",{"weapon_vj_gf2_brontes_shotgun"},vCatUnf)
@@ -135,6 +141,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapo
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Scout_Vanguard","npc_vj_gf2_scout_vanguard",{"weapon_vj_flaregun"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans","npc_vj_gf2_sextans",{"weapon_vj_gf2_sextans_revolver","weapon_vj_gf2_sextans_flintlock"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans_Paradeus","npc_vj_gf2_sextans_paradeus",{"weapon_vj_gf2_sextans_paradeus_cannon"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Isomer","npc_vj_gf2_isomer",{"weapon_vj_gf2_isomer_rifle"},vCatUnf)
 
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Soldier","npc_vj_gf2_varjager_soldier",{"weapon_vj_gf2_varjager_ak101","weapon_vj_gf2_varjager_ak74","weapon_vj_gf2_varjager_akm_plam"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Medic","npc_vj_gf2_varjager_medic",{"weapon_vj_glock17","weapon_vj_gf2_varjager_aks74u","weapon_vj_gf2_varjager_akmsu"},vCat)
@@ -207,6 +214,7 @@ VJ.AddNPCWeapon("#weapon_vj_gf2_dsr50", "weapon_vj_gf2_dsr50", vCat)
 VJ.AddNPCWeapon("#weapon_vj_gf2_cinderthorn", "weapon_vj_gf2_cinderthorn", vCat)
 VJ.AddNPCWeapon("#weapon_vj_gf2_mk23", "weapon_vj_gf2_mk23", vCat)
 VJ.AddNPCWeapon("#weapon_vj_gf2_general_liu_rifle", "weapon_vj_gf2_general_liu_rifle", vCat)
+VJ.AddNPCWeapon("#weapon_vj_gf2_ots14_3a", "weapon_vj_gf2_ots14_3a", vCat)
 
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_plasma_cannon", "weapon_vj_gf2_sextans_paradeus_cannon", vCat)
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_pulse_rifle", "weapon_vj_gf2_unknown_groza_weapon", vCat)
@@ -215,7 +223,8 @@ VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_pulse_shotgun", "weapon_vj_gf2_brontes_sho
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_pulse_rifle", "weapon_vj_gf2_steropes_rifle", vCat)
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_pulse_rifle", "weapon_vj_gf2_surtr_weapon1", vCat)
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_pulse_shotgun", "weapon_vj_gf2_surtr_weapon2", vCat)
-VJ.AddNPCWeapon("Flamethrower", "weapon_vj_gf2_jord_flamethrower", vCat)
+VJ.AddNPCWeapon("#weapon_vj_gf2_jord_flamethrower", "weapon_vj_gf2_jord_flamethrower", vCat)
+VJ.AddNPCWeapon("#weapon_vj_gf2_isomer_rifle","weapon_vj_gf2_isomer_rifle", vCat)
 
 VJ.AddNPCWeapon("AK-101", "weapon_vj_gf2_varjager_ak101", vCat)
 VJ.AddNPCWeapon("AK-74", "weapon_vj_gf2_varjager_ak74", vCat)
@@ -286,6 +295,10 @@ VJ.AddConVar("vj_gf2_yoohee_h",425)
 VJ.AddConVar("vj_gf2_yoohee_d",50)
 VJ.AddConVar("vj_gf2_voymastina_h",550)
 VJ.AddConVar("vj_gf2_voymastina_d",150)
+VJ.AddConVar("vj_gf2_isomer_h",300)
+VJ.AddConVar("vj_gf2_isomer_d",25)
+VJ.AddConVar("vj_gf2_ots14_h",300)
+VJ.AddConVar("vj_gf2_ots14_d",70)
 
 -- SMG
 VJ.AddConVar("vj_gf2_cheeta_h",250)
@@ -332,6 +345,8 @@ VJ.AddConVar("vj_gf2_cheyanne_h",300)
 VJ.AddConVar("vj_gf2_cheyanne_d",40)
 VJ.AddConVar("vj_gf2_liushih_h",300)
 VJ.AddConVar("vj_gf2_liushih_d",20)
+VJ.AddConVar("vj_gf2_nemesis_gnosis_h",250)
+VJ.AddConVar("vj_gf2_nemesis_gnosis_d",50)
 
 -- SG
 VJ.AddConVar("vj_gf2_sabrina_h",350)
@@ -418,6 +433,8 @@ VJ.AddConVar("vj_gf2_g36k_d",30)
 VJ.AddConVar("vj_gf2_k2_d",35)
 VJ.AddConVar("vj_gf2_ak15_d",65)
 VJ.AddConVar("vj_gf2_unknown_groza_weapon_d",75)
+VJ.AddConVar("vj_gf2_isomer_rifle_d",25)
+VJ.AddConVar("vj_gf2_ots14_3a_d",55)
 
 -- RF
 VJ.AddConVar("vj_gf2_om50_d",150)
@@ -513,6 +530,7 @@ AddConvars["vj_gf2_npc_deichgraf_missile_count"] = 6 -- How many missiles to lau
 AddConvars["vj_gf2_npc_voice_language"] = "jp" -- Voice language.
 AddConvars["vj_gf2_npc_drop_weapon_on_death"] = 0 -- Drop weapon on death.
 AddConvars["vj_gf2_npc_drop_item_on_death"] = 0 -- Drop weapon on death.
+AddConvars["vj_gf2_npc_mechty_default_powerup"] = 0 -- Drop weapon on death.
 
 for k, v in pairs(AddConvars) do
 	if !ConVarExists( k ) then CreateConVar( k, v, {FCVAR_ARCHIVE} ) end
@@ -563,12 +581,13 @@ if CLIENT then
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_SpeedModifier", "vj_gf2_speed_modifier")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_AnimationSpeedModifier", "vj_gf2_animation_speed_modifier")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Leva_Hacking", "vj_gf2_npc_leva_hacking")
+				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Mechty_Default_Powerup", "vj_gf2_npc_mechty_default_powerup")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Charolic_Ignite_Target", "vj_gf2_npc_charolic_ignite_target")
 				Panel:CheckBox("#vj_gf2_snpcs.settings.NPC_Golyat_Damage_Friendly", "vj_gf2_npc_golyat_damage_friendly")
 				Panel:NumSlider("#vj_gf2_snpcs.settings.NPC_Deichgraf.Missile_Count", "vj_gf2_npc_deichgraf_missile_count", 1, 12, 0)
 				local GF2_VOICE_LANGUAGE = Panel:ComboBox("#vj_gf2_snpcs.settings.NPC_VoiceLanguage", "vj_gf2_npc_voice_language")
 				--GF2_VOICE_LANGUAGE:AddChoice("English", "en", false, "flags16/us.png")
-				GF2_VOICE_LANGUAGE:AddChoice("简体中文", "cn", false, "flags16/cn.png")
+				--GF2_VOICE_LANGUAGE:AddChoice("简体中文", "cn", false, "flags16/cn.png")
 				GF2_VOICE_LANGUAGE:AddChoice("日本語", "jp", false, "flags16/jp.png")
 			else
 				Panel:Help("#vjbase.menu.general.admin.not")

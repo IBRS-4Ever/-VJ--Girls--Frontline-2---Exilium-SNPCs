@@ -1,7 +1,7 @@
 VertexLitGeneric
 {
-	$basetexture "models/gfl2_nemesis/om50_nemesis_d"
-	$bumpmap "models/gfl2_nemesis/om50_nemesis_n"
+	$basetexture "models/gfl2_nemesis/om50_nemesis_skin_d"
+	$bumpmap "models/gfl2_nemesis/om50_nemesis_skin_n"
 
 	$nocull 1
 
@@ -10,7 +10,7 @@ VertexLitGeneric
 	$envmaptint "[0.02 0.02 0.02]"
 
 	$phong 1
-	$phongexponenttexture "models/gfl2_nemesis/om50_nemesis_e"
+	$phongexponenttexture "models/gfl2_nemesis/om50_nemesis_skin_e"
 	$phongfresnelranges "[2 4 6]"
 	$halflambert 1
 	$phongalbedotint 1

@@ -41,7 +41,7 @@ function ENT:OnRangeAttackExecute(status, enemy, projectile)
 			Num = 1,
 			Src = spawnPos,
 			Dir = (enemy:GetPos() + enemy:OBBCenter()) - spawnPos,
-			Spread = 0.1,
+			Spread = Vector( 0.1, 0.1, 0 ),
 			Tracer = 1,
 			TracerName = "vj_gf2_effect_bullet_trace_water",
 			Force = 1,

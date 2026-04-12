@@ -15,7 +15,7 @@ ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."die2.wav"}
 
 ENT.BoostMode = false 
 
-function ENT:OnHalfHealth() 
+function ENT:MechtyPowerUp()
 	if self.BoostMode then return end
 	self:SetHealth(self:Health() + self:GetMaxHealth() / 4)
 	self.AnimationSpeed = 2
@@ -44,4 +44,14 @@ function ENT:OnHalfHealth()
 	Weapon.NPC_NextPrimaryFire = 0.05
 
 	self.BoostMode = true
+end
+
+function ENT:OnWeaponCanFire()
+	if ( GetConVar("vj_gf2_npc_mechty_default_powerup"):GetBool() ) then
+		self:MechtyPowerUp()
+	end
+end
+
+function ENT:OnHalfHealth() 
+	self:MechtyPowerUp()
 end
