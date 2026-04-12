@@ -3,5 +3,5 @@ ENT.Type 			= "ai"
 ENT.PrintName 		= "OTs-14"
 ENT.Category		= "Girls' Frontline 2"
 
-ENT.SquadName		= "#GF2_SquadName_GrozaSquad"
+ENT.SquadName		= "#GF2_SquadName_3rdGen"
 ENT.BodyModel		= "SST-05A2-X"
