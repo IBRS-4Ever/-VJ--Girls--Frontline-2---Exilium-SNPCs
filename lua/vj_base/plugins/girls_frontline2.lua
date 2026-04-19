@@ -131,6 +131,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Liushih","npc_vj_gf2_liushih",{"weapon_vj_gf2_gen
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Liushih_BeautyInTheEast","npc_vj_gf2_liushih_beauty_in_the_east",{"weapon_vj_gf2_general_liu_rifle"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.OTs-14","npc_vj_gf2_ots14",{"weapon_vj_gf2_ots14_3a"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.OTs-14_DestinedLoveReprised","npc_vj_gf2_ots14_destined_love_reprised",{"weapon_vj_gf2_ots14_3a"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Soppo","npc_vj_gf2_soppo",{"weapon_vj_gf2_m4_sopmodii"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Soppo_RedlineRanger","npc_vj_gf2_soppo_redline_ranger",{"weapon_vj_gf2_m4_sopmodii"},vCatUnf)
 
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Arges","npc_vj_gf2_arges",{"weapon_vj_gf2_arges_smg"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Brontes","npc_vj_gf2_brontes",{"weapon_vj_gf2_brontes_shotgun"},vCatUnf)
@@ -139,8 +141,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Steropes","npc_vj_gf2_steropes",{"weapon_vj_gf2_s
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Surtr","npc_vj_gf2_surtr",{"weapon_vj_gf2_surtr_weapon1","weapon_vj_gf2_surtr_weapon2"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Unknown_Groza","npc_vj_gf2_unknown_groza",{"weapon_vj_gf2_unknown_groza_weapon"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Scout_Vanguard","npc_vj_gf2_scout_vanguard",{"weapon_vj_flaregun"},vCatUnf)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans","npc_vj_gf2_sextans",{"weapon_vj_gf2_sextans_revolver","weapon_vj_gf2_sextans_flintlock"},vCatUnf)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans_Paradeus","npc_vj_gf2_sextans_paradeus",{"weapon_vj_gf2_sextans_paradeus_cannon"},vCatUnf)
+--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans","npc_vj_gf2_sextans",{"weapon_vj_gf2_sextans_revolver","weapon_vj_gf2_sextans_flintlock"},vCatUnf)
+--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Sextans_Paradeus","npc_vj_gf2_sextans_paradeus",{"weapon_vj_gf2_sextans_paradeus_cannon"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Isomer","npc_vj_gf2_isomer",{"weapon_vj_gf2_isomer_rifle"},vCatUnf)
 
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Varjager_Soldier","npc_vj_gf2_varjager_soldier",{"weapon_vj_gf2_varjager_ak101","weapon_vj_gf2_varjager_ak74","weapon_vj_gf2_varjager_akm_plam"},vCat)
@@ -215,6 +217,7 @@ VJ.AddNPCWeapon("#weapon_vj_gf2_cinderthorn", "weapon_vj_gf2_cinderthorn", vCat)
 VJ.AddNPCWeapon("#weapon_vj_gf2_mk23", "weapon_vj_gf2_mk23", vCat)
 VJ.AddNPCWeapon("#weapon_vj_gf2_general_liu_rifle", "weapon_vj_gf2_general_liu_rifle", vCat)
 VJ.AddNPCWeapon("#weapon_vj_gf2_ots14_3a", "weapon_vj_gf2_ots14_3a", vCat)
+VJ.AddNPCWeapon("#weapon_vj_gf2_m4_sopmodii", "weapon_vj_gf2_m4_sopmodii", vCat)
 
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_plasma_cannon", "weapon_vj_gf2_sextans_paradeus_cannon", vCat)
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_pulse_rifle", "weapon_vj_gf2_unknown_groza_weapon", vCat)
@@ -299,6 +302,8 @@ VJ.AddConVar("vj_gf2_isomer_h",300)
 VJ.AddConVar("vj_gf2_isomer_d",25)
 VJ.AddConVar("vj_gf2_ots14_h",300)
 VJ.AddConVar("vj_gf2_ots14_d",70)
+VJ.AddConVar("vj_gf2_soppo_h",300)
+VJ.AddConVar("vj_gf2_soppo_d",70)
 
 -- SMG
 VJ.AddConVar("vj_gf2_cheeta_h",250)
@@ -435,6 +440,7 @@ VJ.AddConVar("vj_gf2_ak15_d",65)
 VJ.AddConVar("vj_gf2_unknown_groza_weapon_d",75)
 VJ.AddConVar("vj_gf2_isomer_rifle_d",25)
 VJ.AddConVar("vj_gf2_ots14_3a_d",55)
+VJ.AddConVar("vj_gf2_m4_sopmodii_d",40)
 
 -- RF
 VJ.AddConVar("vj_gf2_om50_d",150)

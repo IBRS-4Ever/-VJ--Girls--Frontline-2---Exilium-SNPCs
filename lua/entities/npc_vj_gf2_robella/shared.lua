@@ -3,5 +3,5 @@ ENT.Type 			= "ai"
 ENT.PrintName 		= "Robella"
 ENT.Category		= "Girls' Frontline 2"
 
-ENT.SquadName		= "AR Team"
+ENT.SquadName		= "#GF2_SquadName_ARTeam"
 ENT.BodyModel		= "PPD-02"

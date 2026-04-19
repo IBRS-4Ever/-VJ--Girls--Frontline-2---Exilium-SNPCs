@@ -23,6 +23,23 @@ function SWEP:Init()
 	DropMagazine = GetConVar("vj_gf2_drop_magazines"):GetBool()
 	MagazineRemoveTimer = GetConVar("vj_gf2_magazineremovetime"):GetInt()
 	if self.MagazineModel then util.PrecacheModel( self.MagazineModel ) end
+	if SERVER then
+		if !IsValid(self) then return end
+		self:SetSkin( math.random( 0, self:SkinCount() - 1 ) )
+		if self.Attachment_LaserColor then
+			local Laser = math.random(0,1)
+			if Laser == 1 then
+				self:SetBodygroup(self:FindBodygroupByName( self.Attachment_LaserBodygroup ),1)
+				self:SetNWBool( "Laser", true )
+			end
+		end
+	end
+	self:GF2_CustomOnInitialize()
+end
+
+function SWEP:GF2_CustomOnPrimaryAttack_BeforeShoot() end
+
+function SWEP:CustomOnPrimaryAttack_BeforeShoot()
 	if GetConVar("vj_gf2_draw_bullets"):GetBool() then
 		if self.Owner.Element == "water" then
 			self.Primary.TracerType = "vj_gf2_effect_bullet_trace_water"
@@ -36,18 +53,7 @@ function SWEP:Init()
 			self.Primary.TracerType = "vj_gf2_effect_bullet_trace_electric"
 		end
 	end
-	if SERVER then
-		if !IsValid(self) then return end
-		self:SetSkin( math.random( 0, self:SkinCount() - 1 ) )
-		if self.Attachment_LaserColor then
-			local Laser = math.random(0,1)
-			if Laser == 1 then
-				self:SetBodygroup(self:FindBodygroupByName( self.Attachment_LaserBodygroup ),1)
-				self:SetNWBool( "Laser", true )
-			end
-		end
-	end
-	self:GF2_CustomOnInitialize()
+	self:GF2_CustomOnPrimaryAttack_BeforeShoot()
 end
 
 function SWEP:GF2_CustomOnPrimaryAttack_AfterShoot() end
