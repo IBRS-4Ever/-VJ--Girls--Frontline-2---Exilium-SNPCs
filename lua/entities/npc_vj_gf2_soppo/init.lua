@@ -8,7 +8,7 @@ util.PrecacheModel(ENT.Model)
 ENT.StartHealth = GetConVarNumber("vj_gf2_"..Name.."_h")
 ENT.MeleeAttackDamage = GetConVarNumber("vj_gf2_"..Name.."_d")
 
-ENT.Element = "fire"
+ENT.ElementTable = {"freezing","fire"}
 ENT.Element_FireIgniteTime = 5
 ENT.Element_FreezingRadius = 150
 
@@ -19,10 +19,5 @@ ENT.GrenadeAttackEntity = "obj_gf2_soppo_grenade"
 ENT.SoundTbl_Death = {SndPrefix.."die1.wav",SndPrefix.."hit5.wav",SndPrefix.."hit6.wav"}
 
 function ENT:OnFireBullet(data)
-	local num = math.random(1,2)
-	if num == 2 then
-		self.Element = "freezing"
-	else
-		self.Element = "fire"
-	end
+	self.Element = self.ElementTable[ math.random( #self.ElementTable ) ]
 end

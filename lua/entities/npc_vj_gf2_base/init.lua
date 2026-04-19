@@ -287,11 +287,11 @@ function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup)
 						else
 							self:FireBullets({
 								Attacker = self,
-								Inflictor = self,
+								Inflictor = Inflictor,
 								Num = BulletCount,
 								Src = Pos,
 								Dir = (Attacker:GetPos() + Attacker:OBBCenter()) - Pos,
-								Spread = Vector(0.01,0.01,0),
+								Spread = Vector(3,3,0),
 								Tracer = 1,
 								Force = 1,
 								Damage = (BulletDamage / BulletCount) * GetConVar("vj_gf2_npc_shield_ricochet_damage_scale"):GetFloat(),
@@ -301,11 +301,11 @@ function ENT:CustomOnTakeDamage_BeforeDamage(dmginfo, hitgroup)
 					else
 						self:FireBullets({
 							Attacker = self,
-							Inflictor = self,
+							Inflictor = Inflictor,
 							Num = BulletCount,
 							Src = Pos,
 							Dir = VectorRand(-1,1),
-							Spread = Vector(0.1,0.1,0),
+							Spread = Vector(0,0,0),
 							Tracer = 1,
 							Force = 1,
 							Damage = (BulletDamage / BulletCount) * GetConVar("vj_gf2_npc_shield_ricochet_damage_scale"):GetFloat(),

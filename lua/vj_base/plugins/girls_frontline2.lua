@@ -9,7 +9,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis","npc_vj_gf2_nemesis",{"weapon_vj_gf2_om5
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_Tactical","npc_vj_gf2_nemesis_tactical",{"weapon_vj_gf2_om50"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_WanderingStarTrial","npc_vj_gf2_nemesis_wandering_star_trial",{"weapon_vj_gf2_om50"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_SereneDarkRiver","npc_vj_gf2_nemesis_serene_dark_river",{"weapon_vj_gf2_om50"},vCat)
-VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_Gnosis","npc_vj_gf2_nemesis_gnosis",{"weapon_vj_gf2_om50"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Nemesis_Gnosis","npc_vj_gf2_nemesis_gnosis",{"weapon_vj_gf2_om50"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo","npc_vj_gf2_tololo",{"weapon_vj_gf2_ak_alfa"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo_HorizonCruise","npc_vj_gf2_tololo_horizon_cruise",{"weapon_vj_gf2_ak_alfa"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Tololo_TwilightMilkyWay","npc_vj_gf2_tololo_twilight_milky_way",{"weapon_vj_gf2_ak_alfa"},vCat)
