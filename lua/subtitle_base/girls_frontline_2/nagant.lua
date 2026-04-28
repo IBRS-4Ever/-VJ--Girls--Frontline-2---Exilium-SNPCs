@@ -1,0 +1,188 @@
+Subtitle_Base_Table = Subtitle_Base_Table or {} -- don't touch
+
+local CharacterName = {
+	["schinese"] = "纳甘：",
+	["default"] = "Nagant: ",
+	["japanese"] = "ナガン：",
+}
+local CharacterColor = Color(50,100,165)
+
+Subtitle_Base_Table["vo/jp/nagant/alert1.wav"] = {
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78170
+		["schinese"] = "当心！", 
+		["default"] = "Watch out!", 
+		["japanese"] = "気をつけるのじゃ！",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/alert2.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78177
+		["schinese"] = "就让老人家来给你上一课吧！", 
+		["default"] = "Now, let this old veteran teach you a lesson!", 
+		["japanese"] = "この年寄りが戦い方というものを教えてやろう！",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/die1.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78176
+		["schinese"] = "这些家伙，懂不懂什么是尊老爱幼啊！呜，我的帽子……", 
+		["default"] = "Do these guys even understand the concept of respecting elders? Ugh, my hat...", 
+		["japanese"] = "こやつめ、「老人を尊び、子どもを愛する」ということを知らんのか！うわぁっ、わしの帽子がぁ……",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/follow1.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78610
+		["schinese"] = "吭……", 
+		["default"] = "Hmm...", 
+		["japanese"] = "ゴホン",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/follow2.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78614
+		["schinese"] = "牛奶吗……", 
+		["default"] = "Milk...?", 
+		["japanese"] = "牛乳か……",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/follow3.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 43391
+		["schinese"] = "你好~", 
+		["default"] = "Hi~", 
+		["japanese"] = "こんにちは～。",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/hit7.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78615
+		["schinese"] = "住手！", 
+		["default"] = "Stop it!", 
+		["japanese"] = "やーめーるーのーじゃー！",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/idle1.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78670
+		["schinese"] = "不论做什么事都要堂堂正正，这可是我这个前辈总结的为人处世之道哦！", 
+		["default"] = "No matter what you do, you must do it with dignity! That's the most important lesson I've learned as a senior!", 
+		["japanese"] = "何事も正々堂々と。これは、先輩であるわしが導きだした処世術である！",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/idle4.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78231
+		["schinese"] = "小家伙们总说我这老人家的战术已经过时了，但我要让她们知道，不听老人言，吃亏在眼前！", 
+		["default"] = "The youngsters keep saying my strategies are outdated, but I'll show them—ignore the wisdom of their elders, and you'll suffer the consequences!", 
+		["japanese"] = "娘たちは皆、わしの戦術をいつも古臭いと言っておる。じゃが、わしの言うことを聞かねば罰が当たることを、奴らに分かってもらわねばならん！",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/idle5.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78230
+		["schinese"] = "最近有些听不懂那些孩子们的聊天内容呢……是不是该多看看潮流资讯什么的？", 
+		["default"] = "Lately, I've had trouble understanding the younger ones' conversations... Maybe I should keep up with the current trends or something?", 
+		["japanese"] = "最近、若いもんの会話についていけないことがあってのう……わしもそろそろ流行りを追ったほうがいいのじゃろうか？",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/idle6.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78232
+		["schinese"] = "斯捷奇金……啊不对，现在应该叫她科谢尼娅，都是因为她，我的钱包从来都没有鼓过！", 
+		["default"] = "Stechkin... no wait, she's Ksenia now. It's all because of her that my wallet's never been full!", 
+		["japanese"] = "スチェッキン……あーいや、今はクシーニヤじゃったか？あやつのせいで、わしの財布が潤ったことなどないのじゃ！",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/idle9.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78233
+		["schinese"] = "喂喂喂，你们这些后辈未免也太不相信我的社会经验了吧？我怎么可能被骗啦！欸？不、不会吧？", 
+		["default"] = "Hey, hey, hey! You youngsters seriously don't have faith in my life experience? There's no way I'd get scammed! Eh? N-no way, right?", 
+		["japanese"] = "こらこらこら、いくら後輩でも、わしの社会経験を信用しなさ過ぎじゃろう！わしが騙されているわけあるか！えっと、な、ないよな？",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/killed_enemy1.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78173
+		["schinese"] = "看——招！", 
+		["default"] = "Take—this!", 
+		["japanese"] = "くーらえー！",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/killed_enemy2.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78174
+		["schinese"] = "结束了！", 
+		["default"] = "It's over!", 
+		["japanese"] = "終わりじゃ！",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/killed_enemy3.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78175
+		["schinese"] = "哼哼，看到了吗？这就是前辈和你们这些新人的差距。", 
+		["default"] = "Hehe, see that? That's the difference between a veteran like me and you rookies.", 
+		["japanese"] = "ふふん、見たか。これがベテランとおぬしら新人との差じゃ。",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/killed_enemy4.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78171
+		["schinese"] = "可别小瞧前辈！", 
+		["default"] = "Don't underestimate your senior!", 
+		["japanese"] = "先輩を甘く見ないことじゃ！",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/killed_enemy5.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78172
+		["schinese"] = "还差得远呢，小屁孩。", 
+		["default"] = "A thousand years too early, kiddo.", 
+		["japanese"] = "まだまだ青二才よのう。",
+	},
+}
+
+Subtitle_Base_Table["vo/jp/nagant/unfollow1.wav"] = { 
+	Speaker = CharacterName,
+	SpeakerColor = CharacterColor,
+	Subtitle = { -- ID: 78612
+		["schinese"] = "哦呀。", 
+		["default"] = "Oya.", 
+		["japanese"] = "おやおや。",
+	},
+}

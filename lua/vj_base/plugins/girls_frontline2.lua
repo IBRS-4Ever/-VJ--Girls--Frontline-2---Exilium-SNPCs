@@ -55,7 +55,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai","npc_vj_gf2_klukai",{"weapon_vj_gf2_hk416
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_AstralLuminous","npc_vj_gf2_klukai_astral_luminous",{"weapon_vj_gf2_hk416","weapon_vj_gf2_hk416_skin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_SpeedStar","npc_vj_gf2_klukai_speed_star",{"weapon_vj_gf2_hk416","weapon_vj_gf2_hk416_skin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_CeruleanBreaker","npc_vj_gf2_klukai_cerulean_breaker",{"weapon_vj_gf2_hk416","weapon_vj_gf2_hk416_skin"},vCat)
---VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_Wedding","npc_vj_gf2_klukai_cerulean_breaker",{"weapon_vj_gf2_hk416","weapon_vj_gf2_hk416_skin"},vCat)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Klukai_IndigoOath","npc_vj_gf2_klukai_indigo_oath",{"weapon_vj_gf2_hk416","weapon_vj_gf2_hk416_skin"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Zhaohui","npc_vj_gf2_zhaohui",{"weapon_vj_gf2_csls06"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Zhaohui_RapidGrid","npc_vj_gf2_zhaohui_rapid_grid",{"weapon_vj_gf2_csls06"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Daiyan","npc_vj_gf2_daiyan",{"weapon_vj_gf2_qbz95"},vCat)
@@ -601,14 +601,6 @@ if CLIENT then
 			end
 			Panel:Help("")
 			Panel:Help("#vjbase.menu.settings.client.label")
-			Panel:CheckBox("#vj_gf2_snpcs.settings.EnableSubtitles", "vj_gf2_subtitles")
-			Panel:CheckBox("#vj_gf2_snpcs.settings.SubtitlesFallback", "vj_gf2_subtitles_fallback")
-			Panel:ControlHelp("#vj_gf2_snpcs.settings.SubtitlesFallback.Help")
-			local gf2_subtitle_language_combo_box = Panel:ComboBox("#vj_gf2_snpcs.settings.SubtitleLanguage", "vj_gf2_subtitles_language")
-			gf2_subtitle_language_combo_box:AddChoice("English", "english", false, "flags16/us.png")
-			gf2_subtitle_language_combo_box:AddChoice("简体中文", "schinese", false, "flags16/cn.png")
-			gf2_subtitle_language_combo_box:AddChoice("日本語", "japanese", false, "flags16/jp.png")
-
 			Panel:CheckBox("#vj_gf2_snpcs.settings.DrawShield", "vj_gf2_draw_shield")
 			Panel:CheckBox("#vj_gf2_snpcs.settings.Attachment_DrawLaser", "vj_gf2_attachment_draw_laser")
 			Panel:CheckBox("#vj_gf2_snpcs.settings.DrawBullets", "vj_gf2_draw_bullets")
