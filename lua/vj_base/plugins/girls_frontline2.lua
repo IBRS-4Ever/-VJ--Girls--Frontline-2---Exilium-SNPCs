@@ -133,6 +133,8 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.OTs-14","npc_vj_gf2_ots14",{"weapon_vj_gf2_ots14_
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.OTs-14_DestinedLoveReprised","npc_vj_gf2_ots14_destined_love_reprised",{"weapon_vj_gf2_ots14_3a"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Soppo","npc_vj_gf2_soppo",{"weapon_vj_gf2_m4_sopmodii"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Soppo_RedlineRanger","npc_vj_gf2_soppo_redline_ranger",{"weapon_vj_gf2_m4_sopmodii"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Mityl","npc_vj_gf2_mityl",{"weapon_vj_gf2_p90"},vCatUnf)
+--VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Mityl_Outfit","npc_vj_gf2_mityl_outfit",{"weapon_vj_gf2_p90"},vCatUnf)
 
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Arges","npc_vj_gf2_arges",{"weapon_vj_gf2_arges_smg"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Brontes","npc_vj_gf2_brontes",{"weapon_vj_gf2_brontes_shotgun"},vCatUnf)
@@ -218,6 +220,7 @@ VJ.AddNPCWeapon("#weapon_vj_gf2_mk23", "weapon_vj_gf2_mk23", vCat)
 VJ.AddNPCWeapon("#weapon_vj_gf2_general_liu_rifle", "weapon_vj_gf2_general_liu_rifle", vCat)
 VJ.AddNPCWeapon("#weapon_vj_gf2_ots14_3a", "weapon_vj_gf2_ots14_3a", vCat)
 VJ.AddNPCWeapon("#weapon_vj_gf2_m4_sopmodii", "weapon_vj_gf2_m4_sopmodii", vCat)
+VJ.AddNPCWeapon("#weapon_vj_gf2_p90", "weapon_vj_gf2_p90", vCat)
 
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_plasma_cannon", "weapon_vj_gf2_sextans_paradeus_cannon", vCat)
 VJ.AddNPCWeapon("#vj_gf2_snpcs.weapon_pulse_rifle", "weapon_vj_gf2_unknown_groza_weapon", vCat)
@@ -330,6 +333,8 @@ VJ.AddConVar("vj_gf2_harpsy_h",250)
 VJ.AddConVar("vj_gf2_harpsy_d",30)
 VJ.AddConVar("vj_gf2_sakura_h",225)
 VJ.AddConVar("vj_gf2_sakura_d",25)
+VJ.AddConVar("vj_gf2_mityl_h",350)
+VJ.AddConVar("vj_gf2_mityl_d",40)
 
 -- RF
 VJ.AddConVar("vj_gf2_nemesis_h",200)
@@ -466,6 +471,7 @@ VJ.AddConVar("vj_gf2_ppsh41_d",25)
 VJ.AddConVar("vj_gf2_ro635_d",40)
 VJ.AddConVar("vj_gf2_tmp_d",30)
 VJ.AddConVar("vj_gf2_type100_d",25)
+VJ.AddConVar("vj_gf2_p90_d",30)
 
 -- SG
 VJ.AddConVar("vj_gf2_spas12_d",40)
