@@ -75,6 +75,7 @@ function SWEP:CustomOnReload()
 		
 		if self:Clip1() == 0 then
 			Magazine:SetBodygroup(Magazine:FindBodygroupByName( "bullets" ),1)
+			Magazine:SetBodygroup(Magazine:FindBodygroupByName( "bullet" ),1)
 			Magazine:SetBodygroup(Magazine:FindBodygroupByName( "shells" ),1) -- VEPR-12
 			self:SetBodygroup(self:FindBodygroupByName( "bullets" ),1) -- PKP-SP
 		end
@@ -97,6 +98,7 @@ function SWEP:CustomOnReload_Finish()
 	if DropMagazine and self.MagazineModel then
 		self:SetBodygroup(self:FindBodygroupByName( "magazine" ),0)
 		self:SetBodygroup(self:FindBodygroupByName( "bullets" ),0)
+		self:SetBodygroup(self:FindBodygroupByName( "bullet" ),0)
 		return true 
 	end
 	self:GF2_CustomOnReload_Finish()
