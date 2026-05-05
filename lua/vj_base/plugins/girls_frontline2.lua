@@ -85,6 +85,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lind","npc_vj_gf2_lind",{"weapon_vj_gf2_aa12"},vC
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Lind_TheSunNeverRises","npc_vj_gf2_lind_the_sun_never_rises",{"weapon_vj_gf2_aa12"},vCat)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Alva","npc_vj_gf2_alva",{"weapon_vj_gf2_an94"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Alva_Antje","npc_vj_gf2_alva_antje",{"weapon_vj_gf2_an94"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Alva_WisteriaTidings","npc_vj_gf2_alva_wisteria_tidings",{"weapon_vj_gf2_an94"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Ullrid","npc_vj_gf2_ullrid",{"weapon_vj_gf2_feathered_edge"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Belka","npc_vj_gf2_belka",{"weapon_vj_gf2_g28"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Belka_EnigmaticPhantomsDream","npc_vj_gf2_belka_enigmatic_phantoms_dream",{"weapon_vj_gf2_g28"},vCatUnf)
@@ -134,7 +135,7 @@ VJ.AddNPC_HUMAN("#vj_gf2_snpcs.OTs-14_DestinedLoveReprised","npc_vj_gf2_ots14_de
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Soppo","npc_vj_gf2_soppo",{"weapon_vj_gf2_m4_sopmodii"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Soppo_RedlineRanger","npc_vj_gf2_soppo_redline_ranger",{"weapon_vj_gf2_m4_sopmodii"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Mityl","npc_vj_gf2_mityl",{"weapon_vj_gf2_p90"},vCatUnf)
---VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Mityl_Outfit","npc_vj_gf2_mityl_outfit",{"weapon_vj_gf2_p90"},vCatUnf)
+VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Mityl_SunsetMemories","npc_vj_gf2_mityl_sunset_memories",{"weapon_vj_gf2_p90"},vCatUnf)
 
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Arges","npc_vj_gf2_arges",{"weapon_vj_gf2_arges_smg"},vCatUnf)
 VJ.AddNPC_HUMAN("#vj_gf2_snpcs.Brontes","npc_vj_gf2_brontes",{"weapon_vj_gf2_brontes_shotgun"},vCatUnf)

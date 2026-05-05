@@ -20,10 +20,11 @@ Subtitle_Base_Table["vo/jp/groza/alert1.wav"] = {
 Subtitle_Base_Table["vo/jp/groza/alert2.wav"] = {
 	Speaker = CharacterName,
 	SpeakerColor = CharacterColor,
-	Subtitle = { -- ID: 78479
-		["schinese"] = "跑得掉吗？", 
-		["default"] = "Think you can get away?", 
-		["japanese"] = "逃げられると思う？", 
+	Subtitle = {
+		["schinese"] = "跑得掉吗？",
+		["default"] = "Think you can get away?",
+		["japanese"] = "逃げられると思う？",
+		["korean"] = "도망칠 수 있겠어?",
 	},
 }
 
@@ -111,19 +112,21 @@ Subtitle_Base_Table["vo/jp/groza/follow2.wav"] = {
 	Speaker = CharacterName,
 	SpeakerColor = CharacterColor,
 	Subtitle = {
-		["schinese"] = "准备就绪。", 
-		["default"] = "Ready to go.", 
-		["japanese"] = "準備完了よ。", 
+		["schinese"] = "准备就绪。",
+		["default"] = "Ready to go.",
+		["japanese"] = "準備完了よ。",
+		["korean"] = "준비 완료.",
 	},
 }
 
 Subtitle_Base_Table["vo/jp/groza/follow3.wav"] = {
 	Speaker = CharacterName,
 	SpeakerColor = CharacterColor,
-	Subtitle = { -- ID: 78440
-		["schinese"] = "这么匆忙？别担心。闪电，乐意效劳。", 
-		["default"] = "In a rush? Don't worry. Groza is at your service.", 
-		["japanese"] = "あら、慌ただしいのね？……心配ご無用よ。このグローザが、慎んでお仕えするわ。", 
+	Subtitle = {
+		["schinese"] = "这么匆忙？别担心。闪电，乐意效劳。",
+		["default"] = "In a rush? Don't worry. Groza is at your service.",
+		["japanese"] = "あら、慌ただしいのね？……心配ご無用よ。このグローザが、慎んでお仕えするわ。",
+		["korean"] = "어머, 너무 서두르는 거 아니야? ...걱정할 필요 없어. 이 그로자가 기꺼이 보좌할게.",
 	},
 }
 
@@ -231,10 +234,11 @@ Subtitle_Base_Table["vo/jp/groza/idle1.wav"] = {
 Subtitle_Base_Table["vo/jp/groza/idle2.wav"] = {
 	Speaker = CharacterName,
 	SpeakerColor = CharacterColor,
-	Subtitle = { -- ID: 78599
-		["schinese"] = "今天的日程还没有完成。需要现在查阅一下吗，指挥官？", 
+	Subtitle = {
+		["schinese"] = "今天的日程还没有完成。需要现在查阅一下吗，指挥官？",
 		["default"] = "We're not done with what's been scheduled today. Do you need to look it over, Commander?",
-		["japanese"] = "今日のタスクはまだ終わってないわ。指揮官、進捗を確認する必要は？", 
+		["japanese"] = "今日のタスクはまだ終わってないわ。指揮官、進捗を確認する必要は？",
+		["korean"] = "오늘 스케줄이 아직 안 끝났어. 지휘관, 지금 확인 필요해?",
 	},
 }
 
@@ -257,20 +261,22 @@ Subtitle_Base_Table["vo/jp/groza/idle4.wav"] = {
 Subtitle_Base_Table["vo/jp/groza/idle5.wav"] = {
 	Speaker = CharacterName,
 	SpeakerColor = CharacterColor,
-	Subtitle = { -- ID: 78436
-		["schinese"] = "稳定的信赖关系能够带来完美的胜利。", 
+	Subtitle = {
+		["schinese"] = "稳定的信赖关系能够带来完美的胜利。",
 		["default"] = "Stable trust leads to perfect victories.",
-		["japanese"] = "確かな信頼が、完璧な勝利をもたらすわ。", 
+		["japanese"] = "確かな信頼が、完璧な勝利をもたらすわ。",
+		["korean"] = "확실한 신뢰가 완벽한 승리를 가져오는 법이지.",
 	},
 }
 
 Subtitle_Base_Table["vo/jp/groza/idle6.wav"] = {
 	Speaker = CharacterName,
 	SpeakerColor = CharacterColor,
-	Subtitle = { -- ID: 78437
-		["schinese"] = "指挥官，美玲在找她的收藏品你有看——请问，您背后藏的是？", 
-		["default"] = "Commander, Mayling is looking for her collection, have you seen-excuse me, what are you hiding behind your back?",
-		["japanese"] = "指揮官、メイリンのコレクションを見なか……ちょっと、背後に隠してるのは何？", 
+	Subtitle = {
+		["schinese"] = "指挥官，美玲在找她的收藏品你有看——请问，您背后藏的是？",
+		["default"] = "Commander, Mayling is looking for her collection, have you seen—excuse me, what are you hiding behind your back?",
+		["japanese"] = "指揮官、メイリンのコレクションを見なか……ちょっと、背後に隠してるのは何？",
+		["korean"] = "지휘관, 혹시 메이링 수집품 못 봤... 지휘관? 지금 등 뒤에 뭘 숨기고 있는 걸까?",
 	},
 }
 
@@ -293,20 +299,22 @@ Subtitle_Base_Table["vo/jp/groza/idle8.wav"] = {
 Subtitle_Base_Table["vo/jp/groza/idle9.wav"] = {
 	Speaker = CharacterName,
 	SpeakerColor = CharacterColor,
-	Subtitle = { -- ID: 78438
-		["schinese"] = "本月收支平衡。松了口气？可以轻松一些了，指挥官。", 
+	Subtitle = {
+		["schinese"] = "本月收支平衡。松了口气？可以轻松一些了，指挥官。",
 		["default"] = "This month's budget is balanced. Feeling relieved? You can relax a bit now, Commander.",
-		["japanese"] = "今月の収支は、うまくバランスがとれているわね。ほっとした？これで気が楽になるわね、指揮官。", 
+		["japanese"] = "今月の収支は、うまくバランスがとれているわね。ほっとした？これで気が楽になるわね、指揮官。",
+		["korean"] = "이번 달은 수입 지출이 딱 균형이네. 후훗, 마음이 좀 편해졌어? 이걸로 한시름 놨네, 지휘관.",
 	},
 }
 
 Subtitle_Base_Table["vo/jp/groza/idle10.wav"] = {
 	Speaker = CharacterName,
 	SpeakerColor = CharacterColor,
-	Subtitle = { -- ID: 78439
-		["schinese"] = "是新的定制茶具。指挥官，来休息一下，喝杯茶如何？", 
+	Subtitle = {
+		["schinese"] = "是新的定制茶具。指挥官，来休息一下，喝杯茶如何？",
 		["default"] = "It's a new custom tea set. Commander, how about taking a break and having a cup of tea?",
-		["japanese"] = "新しいティーセットが届いたの。指揮官、お茶でもいかが？", 
+		["japanese"] = "新しいティーセットが届いたの。指揮官、お茶でもいかが？",
+		["korean"] = "새로운 티 세트가 도착했어. 지휘관, 잠깐 티 타임 어때?",
 	},
 }
 

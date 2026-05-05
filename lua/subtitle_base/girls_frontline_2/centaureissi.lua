@@ -70,10 +70,11 @@ Subtitle_Base_Table["vo/jp/centaureissi/follow2.wav"] = {
 Subtitle_Base_Table["vo/jp/centaureissi/idle2.wav"] = {
 	Speaker = CharacterName,
 	SpeakerColor = CharacterColor,
-	Subtitle = { -- ID: 78597
-		["schinese"] = "活力十足是件好事，但我还是希望，夏克里小姐能把精力平均分配到工作和演出上。", 
-		["default"] = "Being energetic is good, but I still wish that Miss Sharkry could balance her energy between work and performances.", 
+	Subtitle = {
+		["schinese"] = "活力十足是件好事，但我还是希望，夏克里小姐能把精力平均分配到工作和演出上。",
+		["default"] = "Being energetic is good, but I still wish that Miss Sharkry could balance her energy between work and performances.",
 		["japanese"] = "元気があるのはいいことですが、シャークリーにはもう少し仕事とライブ活動のバランスを取っていただきたいものです。",
+		["korean"] = "기운이 넘치는 건 좋은 일이지만, 샤크리는 일과 공연의 비중을 좀 균형 있게 조정해 줬으면 좋겠군요.",
 	},
 }
 
